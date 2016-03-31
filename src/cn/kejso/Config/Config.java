@@ -5,8 +5,14 @@ public class Config {
 	//mybatis配置文件
 	public static final  String   Mybatis_config="mybatis_config.xml"; 
 	
+	//每插入多少条记录打印info
+	public static final  int      Inertinfo_per_number=10;
+	
+	//爬虫运行结束后的分割线
+	public static final  String   Spider_Info_line="################################";
+	
 	//mysql info
-	public static final  String   Insert_info=" insert {} .";
+	public static final  String   Insert_info=" have insert {} units.";
 	
 	//Mybatis插入语句
 	public static final  String   Insert_statement="SqlMapper.#Mapper.insert#";

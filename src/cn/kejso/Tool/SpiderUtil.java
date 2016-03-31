@@ -87,7 +87,6 @@ public class SpiderUtil {
 			else
 				fields.add(null);
 		}
-		System.out.println(fields.toString());
 		return fields;
 	}
 	

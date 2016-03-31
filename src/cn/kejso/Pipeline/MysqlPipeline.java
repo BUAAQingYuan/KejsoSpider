@@ -44,8 +44,6 @@ public class MysqlPipeline implements Pipeline {
 	@Override
 	public void process(ResultItems resultItems, Task task) {
 		
-		long start = System.currentTimeMillis();
-		logger.info("mysqlpipeline start ...");
 		//判断存储类型
 		if(resultItems.get(Config.PipeLine_Type).toString().equals(Config.PipeLine_TypeList))
 		{
@@ -57,7 +55,6 @@ public class MysqlPipeline implements Pipeline {
 		}
 		
 		count++;
-		logger.info("mysqlpipeline end .Cost time:{}��",(System.currentTimeMillis() - start) / 1000.0);
 	}
 	
 	
@@ -70,7 +67,8 @@ public class MysqlPipeline implements Pipeline {
 		
 		String  statent=SpiderUtil.getInsertStatement(moban);
 		
-		logger.info(SpiderUtil.getMysqlinsertInfo(moban),count);
+		if(count%Config.Inertinfo_per_number==0)
+			logger.info(SpiderUtil.getMysqlinsertInfo(moban),count);
 		
 		//新建表
 		/*
@@ -103,7 +101,8 @@ public class MysqlPipeline implements Pipeline {
 		
 		String  statent=SpiderUtil.getInsertStatement(moban);
 		
-		logger.info(SpiderUtil.getMysqlinsertInfo(moban),count);	
+		if(count%Config.Inertinfo_per_number==0)
+			logger.info(SpiderUtil.getMysqlinsertInfo(moban),count);	
 		
 		Map<String,Object> map=new HashMap<String,Object>();
 		map.put("tablename",template.getContentconfig().getTablename());

@@ -24,15 +24,15 @@ public class RunSpider {
        */
 	
 		
-	   Spider.create(new ContentPageProcess(template))//.startUrls(SpiderUtil.getTargetUrls(template))
+	   Spider.create(new ContentPageProcess(template)).startUrls(SpiderUtil.getTargetUrls(template))
 	                                                  .scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+template.getTaskname()))
 	   												  .thread(template.getThreadnum())
 	   												  .addPipeline(new MysqlPipeline(template))
 	   												  .run();
-	   												  
+	   System.out.println();									  
 		
 	  //Spider spider=new Spider(new ContentPageProcess(template));
-		
+	
 		
     }
 }
