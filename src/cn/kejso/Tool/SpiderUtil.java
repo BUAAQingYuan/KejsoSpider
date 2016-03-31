@@ -22,13 +22,13 @@ public class SpiderUtil {
 	private static Logger logger = LoggerFactory.getLogger(SpiderUtil.class);
 	private static SqlSessionFactory sessionFactory = null;
 	
-	//¼ÓÔØmybatisÅäÖÃÎÄ¼ş
+	//è¯»å–mybatisé…ç½®æ–‡ä»¶
 	static{
 		Reader reader=null;
 		try {
 			reader = Resources.getResourceAsReader(Config.Mybatis_config);
 		} catch (IOException e) {
-			logger.error("¶ÁÈ¡mybatisÅäÖÃÎÄ¼ş³ö´í!");
+			logger.error("è¯»å–mybatisé…ç½®æ–‡ä»¶å‡ºé”™!");
 			e.printStackTrace();
 		}
 		sessionFactory=new SqlSessionFactoryBuilder().build(reader);
@@ -39,7 +39,7 @@ public class SpiderUtil {
 		return sessionFactory.openSession();
 	}
 	
-	//»ñµÃmybatis ²åÈëÓï¾ä
+	//è·å¾—æ’å…¥è¯­å¥
 	public static String  getInsertStatement(String moban)
 	{
 		String insert=Config.Insert_statement.replaceAll("#",moban);
@@ -47,7 +47,7 @@ public class SpiderUtil {
 		
 	}
 	
-	//»ñµÃmybatis targeturlÓï¾ä
+	//è·å¾—ç›®æ ‡é“¾æ¥ targeturlè¯­å¥
 	public static String  getAllurlStatement(String moban)
 	{
 		String insert=Config.AllUrl_statement.replaceAll("#",moban);
@@ -55,7 +55,7 @@ public class SpiderUtil {
 	}
 	
 	
-	//»ñµÃmysqlÌáÊ¾ĞÅÏ¢
+	//è·å–æ•°æ®åº“æ’å…¥æç¤º
 	public static String  getMysqlinsertInfo(String moban)
 	{
 		String info=moban+Config.Insert_info;
@@ -63,7 +63,7 @@ public class SpiderUtil {
 		return info;
 	}
 	
-	//½âÎöÁĞ±íÒ³
+	//è§£ælist é¡µé¢é“¾æ¥
 	public static List<String>  getListUrls(String site,int start,int end)
 	{
 		List<String>  starturls=new ArrayList<String>();
@@ -74,7 +74,7 @@ public class SpiderUtil {
 		return starturls;
 	}
 	
-	//½âÎömapÓ³Éä×Ö¶Î
+	//è·å¾—map å±æ€§
 	public static List<String>  getMapFields(String field)
 	{
 		List<String>  fields=new ArrayList<String>();
@@ -91,7 +91,7 @@ public class SpiderUtil {
 		return fields;
 	}
 	
-	//»ñÈ¡Ö¸¶¨±íÖĞµÄurl
+	//è·å¾—targeturl
 	public static List<String> getTargetUrls(ListAndContentTemplate template)
 	{
 		SqlSession session=getSession();

@@ -13,10 +13,10 @@ import cn.kejso.Template.ToolEntity.ContentConfig;
 import cn.kejso.Template.ToolEntity.ListConfig;
 import cn.kejso.Template.ToolEntity.Tag;
 
-//¶ÁÈ¡ÅäÖÃÎÄ¼ş£¬¹¹ÔìÄ£°åÊµÌå
+//æ¨¡æ¿æ„é€ 
 public class TemplateConstructor {
 
-	//¶ÁÈ¡List-ContentÄ£Ê½µÄÅäÖÃÎÄ¼ş
+	//list-content
 	public  static  ListAndContentTemplate  getListAndContentTemplate(String configfile)
 	{
 		ListAndContentTemplate  template=new ListAndContentTemplate();
@@ -41,8 +41,7 @@ public class TemplateConstructor {
 		
 		template.setEnableproxy(xml.getBoolean("ProxyEnable"));
 		
-		//½âÎöListConfig
-		//Ìí¼ÓÁĞ±íurl
+		//ListConfig
 		String listurl=xml.getString("ListConfig.ListUrl");
 		List<String>  starturls=new ArrayList<String>();
 		boolean pageenable=xml.getBoolean("ListConfig.PageEnable");
@@ -72,7 +71,7 @@ public class TemplateConstructor {
 		
 		template.setListconfig(new ListConfig(starturls,listvalue,urlitem,tablename,listtags));
 		
-		//½âÎöContentConfig
+		//ContentConfig
 		String contenttable=xml.getString("ContentConfig.ContentTable");
 		
 		String item=xml.getString("ContentConfig.ContentItem");
