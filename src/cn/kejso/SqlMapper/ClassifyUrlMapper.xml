@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SqlMapper.ClassifyUrlMapper">
+
+	<resultMap type="ClassifyUrl"  id="ClassifyUrlMap">
+		<id property="id" column="id" />
+		<result property="title" column="title" />
+		<result property="url" column="url" />
+		<result property="classname" column="classname" />
+	</resultMap>
+	
+	<!-- 插入实体 -->
+	<insert id="insertClassifyUrl" parameterType="ClassifyUrl" useGeneratedKeys="true" keyProperty="id" statementType="STATEMENT">
+    	 insert into ${tablename} (title,url,classname)
+    	 		values('${entity.title}','${entity.url}','${entity.classname}')
+    </insert>
+    
+    <!-- 判断是否存在一张表 -->
+    <select id="existTable" parameterType="String" resultType="Integer">
+        select count(1)
+        from sys.systables
+        where LCASE(tablename)=#{tableName}
+    </select>
+    
+    <!-- 新建一张表 -->
+    <update id="createNewTable" parameterType="String">
+        create table ${tableName} (
+                            id int(11) NOT NULL AUTO_INCREMENT,
+  							title varchar(500) NOT NULL,
+  							url varchar(200) NOT NULL,
+  							classname varchar(500) DEFAULT NULL,
+  							PRIMARY KEY (id)
+                            )
+    </update>
+    
+    <!-- 获得所有ClassifyUrl-->
+	<select id="getAllClassifyUrl" resultMap="ClassifyUrlMap">
+	     select *
+	     from  ${tablename} 
+	</select>
+	
+	<!-- 获得所有url字段-->
+	<select id="getAllUrl" resultType="String">
+	     select url
+	     from  ${tablename} 
+	</select>
+	
+	
+	<select id="getPartClassifyUrl" resultMap="ClassifyUrlMap">
+	     select *
+	     from  classifywanfang where id  &gt;  116913 &amp;&amp; id &lt; 118062
+	</select>
+	
+</mapper>
