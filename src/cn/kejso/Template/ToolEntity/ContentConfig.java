@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Map.Entry;
 
 public class ContentConfig {
-	//ÄÚÈİÏîÁĞ±í
+	//é¡µé¢é¡¹
 	private  List<Tag>  tags;
-	//mapµÄmarkºÍcodeÂ·¾¶
+	//map
 	private  List<String> field;
 	private  String  mark;
 	private  String  code;

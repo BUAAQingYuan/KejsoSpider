@@ -3,14 +3,14 @@ package cn.kejso.Template.ToolEntity;
 import java.util.List;
 
 public class ListConfig {
-	//放入队列中的列表页
+	//鍒楄〃url
 	private  List<String>  starturls;
 	
 	private  boolean pageenable;
 	
-	//url模板类
+	//url瀹炰綋
 	private  String   urlitem;
-	//url表名
+	//url琛ㄥ悕
 	private  String   tablename;
 	
 	private  String   listvalue;

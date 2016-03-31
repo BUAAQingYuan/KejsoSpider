@@ -1,5 +1,6 @@
 package cn.kejso.Template;
 
+//模板基类
 public class AbstractTemplate {
 	
 	private  String   taskname;

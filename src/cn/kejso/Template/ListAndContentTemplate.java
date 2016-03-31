@@ -3,7 +3,7 @@ package cn.kejso.Template;
 import cn.kejso.Template.ToolEntity.ContentConfig;
 import cn.kejso.Template.ToolEntity.ListConfig;
 
-//列表-内容模式抓取模板
+//鍒楄〃-鍐呭妯″紡妯℃澘
 public class ListAndContentTemplate extends AbstractTemplate{
 		private  ListConfig  listconfig;
 		private  ContentConfig contentconfig;
