@@ -7,12 +7,12 @@ import cn.kejso.Template.ListAndContentTemplate;
 import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.processor.PageProcessor;
 
-//Á÷³Ì»¯µÄÅÀ³æÁ´
+//æµç¨‹åŒ–çš„çˆ¬è™«é“¾å¤„ç†
 public class SpiderChain {
 	
 	private List<Spider> spiderqueue=new ArrayList<Spider>();
 	
-	//Ìí¼ÓÅÀ³æÀı³Ì
+	//æ·»åŠ çˆ¬è™«èŠ‚ç‚¹
 	public SpiderChain AddSpiderNode(Spider spider)
 	{
 		return this;
