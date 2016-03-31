@@ -16,18 +16,18 @@ import us.codecraft.webmagic.selector.Selectable;
 
 public class UrlListProcessHandler {
 	
-	//·µ»ØÁ´½ÓÁĞ±íµÄ»ñÈ¡½Ó¿Ú
+	//å¤„ç†urlåˆ—è¡¨é¡µé¢
 	public<T>   List<T>  processUrlPage (Page page,ListAndContentTemplate template)  
 	{
-		//ÁĞ±í
+		//åˆ—è¡¨èŠ‚ç‚¹
 		List<Selectable> nodes=page.getHtml().xpath(template.getListconfig().getListvalue()).nodes();
 		
 		List<T>  paperurls=new ArrayList<T>();
 		
-		//Ä£°åÀà
+		//urlæ¨¡æ¿
 		String urlitem=template.getListconfig().getUrlitem();
 		
-		//ÊôĞÔÃû
+		//å±æ€§
 		List<Tag> attrs=template.getListconfig().getTags();
 		
 		for(Selectable one:nodes)

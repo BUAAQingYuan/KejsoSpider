@@ -11,13 +11,13 @@ import cn.kejso.Config.Config;
 import cn.kejso.Template.ListAndContentTemplate;
 import cn.kejso.Template.ToolEntity.Tag;
 
-//ÄÚÈİÒ³ÓĞmap¼üÖµ¶ÔµÄ´¦Àí
+//å¤„ç†å†…å®¹é¡µ
 public class ContentMapProcessHandler {
 		
 	public<T>   T  processContentPage (Page page,ListAndContentTemplate template) 
 	{
 		
-		//ÄÚÈİÏî
+		//é¡µé¢é¡¹
 		List<Tag> items=template.getContentconfig().getTags();
 		List<String> itemcontents=new ArrayList<String>();
 		for(Tag one:items)
@@ -25,29 +25,28 @@ public class ContentMapProcessHandler {
 			itemcontents.add(page.getHtml().xpath(one.getTagValue()).toString());
 		}
 		
-		//mapÏî
+		//mapé¡¹
 		//List<String> marks=page.getHtml().xpath(template.getContentconfig().getMark()).all();
 		List<String> code=page.getHtml().xpath(template.getContentconfig().getCode()).all();
 		
 		List<String> attrs=template.getContentconfig().getField();
 
-		//Ä£°åÀà
+		//å­˜å‚¨ç±»
 		String moban=template.getContentconfig().getItem();
 		
-		//¹¹ÔìÊµÀı
 		T url = null;
 		try {
 			Class clss = Class.forName(Config.StoredEntity+"."+moban);
 			url=(T) clss.newInstance();
 			
-			//ÄÚÈİÏî¸³Öµ
+			//é¡µé¢é¡¹å±æ€§Öµ
 			for(int i=0;i<items.size();i++ )
 			{
 				BeanUtils.setProperty(url, items.get(i).getTagname(), itemcontents.get(i));
 				
 			}
 			
-			//mapÏî¸³Öµ
+			//mapå±æ€§
 			
 			for(int i=0;i<code.size();i++ )
 			{
