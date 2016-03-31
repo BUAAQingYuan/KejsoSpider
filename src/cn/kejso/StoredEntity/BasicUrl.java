@@ -1,6 +1,6 @@
 package cn.kejso.StoredEntity;
 
-//url»ùÀà
+//urlåŸºç±»
 public class BasicUrl {
 	private  int  id;
 	private  String  title;

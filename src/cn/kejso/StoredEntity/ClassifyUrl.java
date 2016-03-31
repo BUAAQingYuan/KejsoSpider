@@ -1,6 +1,6 @@
 package cn.kejso.StoredEntity;
 
-//带有分类信息的url类
+//甯﹀垎绫讳俊鎭殑url
 public class ClassifyUrl extends BasicUrl{
 	private  String    classname;
 
