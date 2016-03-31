@@ -2,40 +2,40 @@ package cn.kejso.Config;
 
 public class Config {
 	
-	//mybatisÅäÖÃÎÄ¼ş
+	//mybatisé…ç½®æ–‡ä»¶
 	public static final  String   Mybatis_config="mybatis_config.xml"; 
 	
 	//mysql info
 	public static final  String   Insert_info=" insert {} .";
 	
-	//Mybatis ²åÈëÓï¾ä
+	//Mybatisæ’å…¥è¯­å¥
 	public static final  String   Insert_statement="SqlMapper.#Mapper.insert#";
 	
-	//Mybatis select-allÓï¾ä
+	//Mybatis select-allè¯­å¥
 	public static final  String   SelectAll_statement="SqlMapper.#Mapper.getAll#";
 	
-	//ÊÇ·ñ´æÔÚÒ»ÕÅ±í
+	//è¡¨æ˜¯å¦å­˜åœ¨
 	public static final  String   ClassifyUrl_existTable="SqlMapper.ClassifyUrlMapper.existTable";
-	//½¨Á¢ĞÂ±í
+	//æ–°å»ºè¡¨
 	public static final  String   ClassifyUrl_createTable="SqlMapper.ClassifyUrlMapper.createNewTable";
 	
-	//»ñÈ¡target urlÓï¾ä
+	//è·å¾—target urlè¯­å¥
 	public static final  String   AllUrl_statement="SqlMapper.#Mapper.getAllUrl";
 	
 	
-	//Ä£°åÀàËùÔÚµÄ°ü
+	//å­˜å‚¨å®ä½“
 	public static final  String   StoredEntity="cn.kejso.StoredEntity";
 	
 	
-	//pipeline±êÊ¶
-	//´æ´¢ÊµÌå
+	//pipeline
+	//å®ä½“æ ‡è¯†
 	public static final  String   PipeLine_Entity="storedEntity";
-	//´æ´¢ÀàĞÍ
+	//å­˜å‚¨ç±»å‹
 	public static final  String   PipeLine_Type="type";
 	public static final  String   PipeLine_TypeList="typeList";
 	public static final  String   PipeLine_TypeOne="typeOne";
 	
-	
+	//spiderç¼“å­˜
 	public static final  String   Spider_CacheDir="SpiderScheduler/cache/";
 	
 }
