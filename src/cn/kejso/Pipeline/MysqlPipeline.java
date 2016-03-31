@@ -31,7 +31,7 @@ public class MysqlPipeline implements Pipeline {
 	
 	private static Logger logger = LoggerFactory.getLogger(MysqlPipeline.class);
 	
-	//¼ÆÊı
+	//è®¡æ•°
 	private int  count=0;
 
 	public  MysqlPipeline(ListAndContentTemplate  template)
@@ -46,7 +46,7 @@ public class MysqlPipeline implements Pipeline {
 		
 		long start = System.currentTimeMillis();
 		logger.info("mysqlpipeline start ...");
-		//ÅĞ¶Ï·µ»ØÖµÀàĞÍ
+		//åˆ¤æ–­å­˜å‚¨ç±»å‹
 		if(resultItems.get(Config.PipeLine_Type).toString().equals(Config.PipeLine_TypeList))
 		{
 			InsertTypeList(resultItems,task);
@@ -57,11 +57,11 @@ public class MysqlPipeline implements Pipeline {
 		}
 		
 		count++;
-		logger.info("mysqlpipeline end .Cost time:{}Ãë",(System.currentTimeMillis() - start) / 1000.0);
+		logger.info("mysqlpipeline end .Cost time:{}ï¿½ï¿½",(System.currentTimeMillis() - start) / 1000.0);
 	}
 	
 	
-	//listÊı¾İ²åÈë
+	//listç±»
 	private void  InsertTypeList(ResultItems resultItems, Task task)
 	{
 		List<Object> urls=resultItems.get(Config.PipeLine_Entity);
@@ -72,7 +72,7 @@ public class MysqlPipeline implements Pipeline {
 		
 		logger.info(SpiderUtil.getMysqlinsertInfo(moban),count);
 		
-		//½¨Á¢ĞÂ±í
+		//æ–°å»ºè¡¨
 		/*
 		String exist=Config.ClassifyUrl_createTable;
 		Map<String,Object> createtable=new HashMap<String,Object>();
@@ -94,7 +94,7 @@ public class MysqlPipeline implements Pipeline {
 		session.commit();
 	}
 	
-	//²åÈëµ¥¸öÊµÌå
+	//å­˜å‚¨å•ä¸ªå®ä½“
 	private void  InsertTypeOne(ResultItems resultItems, Task task) 
 	{
 		Object result=resultItems.get(Config.PipeLine_Entity);
