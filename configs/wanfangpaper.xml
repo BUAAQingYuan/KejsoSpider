@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="ListAndContentTemplate">
+	<!-- 任务名称 -->
+	<TaskName>wanfang</TaskName>
+	<!-- 任务线程 -->
+	<Thread>2</Thread>
+	<!-- 是否开启代理 -->
+	<ProxyEnable>False</ProxyEnable>
+	
+	<!-- 列表页配置 -->
+	<ListConfig  name="listconfig">
+		<ListUrl>http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&amp;f=top&amp;p=#</ListUrl>
+		<PageEnable>true</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>5</PageEnd>
+		
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
+		
+		<!-- url选择的模板 -->
+		<UrlItem>ClassifyUrl</UrlItem>
+		
+		<!-- url存储的表名 -->
+		<SqlTable>kaka</SqlTable>
+		
+		<!--列表页的抓取字段  -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>title</TagName>
+			<TagValue>//a[@class='title']/text()</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//a[@class='title']/@href</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classname</TagName>
+			<TagValue>//div[@class='record-subtitle']/text()</TagValue>
+		</ListTag>
+	</ListConfig>
+	
+	<!-- 内容页的抓取字段 -->
+	<ContentConfig>
+		<!-- 内容存储表 -->
+		<ContentTable>falvpaper</ContentTable>
+		
+		<!-- 内容对应的类 -->
+		<ContentItem>BasicListItem</ContentItem>
+		
+		
+		<!-- title -->
+		<ContentTag>
+			<TagName>title</TagName>
+			<TagValue>//div[@class='section-baseinfo']/h1/text()</TagValue>
+		</ContentTag>
+		
+		<!-- brief -->
+		<ContentTag>
+			<TagName>brief</TagName>
+			<TagValue>//div[@class='section-baseinfo']//div[@class='text']/text()</TagValue>
+		</ContentTag>
+		
+		<!-- list -->
+		<ContentList>
+			<!-- 映射的字段 -->
+			<Field>library#titlenumber#department#level#timeline#promulgation#material#contentclass</Field>
+			
+			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
+			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/text()</Code>
+		</ContentList>
+		
+	</ContentConfig>
+</Configuration>
