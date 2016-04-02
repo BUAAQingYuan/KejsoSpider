@@ -3,6 +3,7 @@ package cn.kejso.Spider.Control;
 import java.util.List;
 
 import cn.kejso.Template.AbstractTemplate;
+import cn.kejso.Template.SpiderConf;
 import us.codecraft.webmagic.Spider;
 
 
@@ -13,7 +14,8 @@ public class SpiderContainer {
 	
 	private  Spider spider;
 	
-	private  AbstractTemplate  template;
+	private  SpiderConf template;
+	
 	
 	@FunctionalInterface  
 	public interface Function<T,E> {  
@@ -21,7 +23,7 @@ public class SpiderContainer {
 	}  
 	
 	//获取starturls的func
-	private  Function<Spider,AbstractTemplate>  getstarturlshandler=null;
+	private  Function<Spider,SpiderConf>  getstarturlshandler=null;
 	
 	public Spider getSpider() {
 		return spider;
@@ -31,13 +33,7 @@ public class SpiderContainer {
 		this.spider = spider;
 	}
 
-	public AbstractTemplate getTemplate() {
-		return template;
-	}
-
-	public void setTemplate(AbstractTemplate template) {
-		this.template = template;
-	}
+	
 	
 	public String getName() {
 		return name;
@@ -47,21 +43,28 @@ public class SpiderContainer {
 		this.name = name;
 	}
 	
-	
-	public  SpiderContainer(Spider spider,AbstractTemplate template)
-	{
-		this.spider=spider;
-		this.template=template;
+	public SpiderConf getTemplate() {
+		return template;
+	}
+
+	public void setTemplate(SpiderConf template) {
+		this.template = template;
 	}
 	
-	public  SpiderContainer(Spider spider,AbstractTemplate template,Function<Spider,AbstractTemplate> handler)
+	public  SpiderContainer(Spider spider,SpiderConf conf)
 	{
 		this.spider=spider;
-		this.template=template;
+		this.template=conf;
+	}
+	
+	public  SpiderContainer(Spider spider,SpiderConf conf,Function<Spider,SpiderConf> handler)
+	{
+		this.spider=spider;
+		this.template=conf;
 		this.getstarturlshandler=handler;
 	}
 	
-	public SpiderContainer AddgetStartUrlHandler(Function<Spider,AbstractTemplate> handler)
+	public SpiderContainer AddgetStartUrlHandler(Function<Spider,SpiderConf> handler)
 	{
 		this.getstarturlshandler=handler;
 		return this;
@@ -76,7 +79,7 @@ public class SpiderContainer {
 	
 	public List<String> getStartUrls()
 	{
-		return this.getstarturlshandler.apply(spider, template);
+		return this.getstarturlshandler.apply(this.spider, this.template);
 	}
 
 	
