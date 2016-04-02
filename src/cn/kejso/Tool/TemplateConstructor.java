@@ -6,20 +6,117 @@ import java.util.List;
 
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.HierarchicalConfiguration;
+import org.apache.commons.configuration.SubnodeConfiguration;
 import org.apache.commons.configuration.XMLConfiguration;
+import org.apache.commons.configuration.tree.ConfigurationNode;
 
+import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ListAndContentTemplate;
+import cn.kejso.Template.ToolEntity.BaseConfig;
 import cn.kejso.Template.ToolEntity.ContentConfig;
+import cn.kejso.Template.ToolEntity.GlobalConfig;
 import cn.kejso.Template.ToolEntity.ListConfig;
 import cn.kejso.Template.ToolEntity.Tag;
 
 //模板构造
 public class TemplateConstructor {
-
-	//list-content
-	public  static  ListAndContentTemplate  getListAndContentTemplate(String configfile)
+	
+	//解析ListConfig
+	public static  ListConfig  getListConfig(HierarchicalConfiguration sub)
 	{
-		ListAndContentTemplate  template=new ListAndContentTemplate();
+		//ListConfig
+		String listurl=sub.getString("ListUrl");
+		List<String>  starturls=new ArrayList<String>();
+		boolean pageenable=sub.getBoolean("PageEnable");
+		if(pageenable)
+		{	
+			int pagebegin=sub.getInt("PageStart");
+			int pageend=sub.getInt("PageEnd");
+			starturls=SpiderUtil.getListUrls(listurl, pagebegin, pageend);
+		}else{
+			starturls.add(listurl);
+		}
+						
+		String listvalue=sub.getString("ListValue");
+				
+		String tablename=sub.getString("SqlTable");
+		
+		String fields=sub.getString("TableFields");
+		
+		String unique=sub.getString("UniqueField");
+				
+		List tags=sub.configurationsAt("ListTag");
+		List<Tag>  listtags=new ArrayList<Tag>();
+		for(Iterator it = tags.iterator(); it.hasNext();)
+		{
+			HierarchicalConfiguration one = (HierarchicalConfiguration) it.next();
+			listtags.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
+		}
+		
+		return new ListConfig(starturls,listvalue,tablename,listtags,SpiderUtil.getMapFields(fields),unique);
+		
+	}
+	
+	//解析ContentConfig
+	public static  ContentConfig  getContentConfig(HierarchicalConfiguration sub)
+	{
+		String contenttable=sub.getString("ContentTable");
+		
+		String fields=sub.getString("TableFields");
+		String unique=sub.getString("UniqueField");
+		
+		List contentitem=sub.configurationsAt("ContentTag");
+		
+		List<Tag>  contenttags=new ArrayList<Tag>();
+		for(Iterator it = contentitem.iterator(); it.hasNext();)
+		{
+			HierarchicalConfiguration one = (HierarchicalConfiguration) it.next();
+			contenttags.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
+		}
+		
+		String mark=sub.getString("ContentList.Mark");
+		String code=sub.getString("ContentList.Code");
+		String field=sub.getString("ContentList.Field");
+		
+		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(fields),unique);
+	}
+	
+	/*
+	 * 读取配置文件中的config
+	 * 参数cls为config的类型
+	 * 参数name为config的name属性值
+	 */
+	public static BaseConfig   getDetailConfig(XMLConfiguration  xml,String cls,String name)
+	{
+		BaseConfig base = null;
+		
+		List items=xml.configurationsAt(cls);
+		
+		//找到指定的name
+		for(Iterator it = items.iterator(); it.hasNext();)
+		{
+			HierarchicalConfiguration sub = (HierarchicalConfiguration) it.next();
+			if(sub.getString("[@name]").equals(name))
+			{
+				//解析
+				if(cls.equals("ListConfig"))
+				{
+					base=getListConfig(sub);
+				}else if(cls.equals("ContentConfig"))
+				{
+					base=getContentConfig(sub);
+				}
+			}
+		}
+		
+		return  base;
+	}
+	
+	
+	
+	//读取配置的通用接口
+	public static List<SpiderConf>  getSpiderConf(String configfile)
+	{
 		XMLConfiguration  xml=null;
 		try {
 			xml=new XMLConfiguration(configfile);
@@ -28,73 +125,59 @@ public class TemplateConstructor {
 			e.printStackTrace();
 		}
 		
+		List<SpiderConf>  spiders=new ArrayList<SpiderConf>();
 		
-		if(xml.containsKey("TaskName"))
+		List items=xml.configurationsAt("Spiders.Spider");
+		//List<Tag>  contenttags=new ArrayList<Tag>();
+		for(Iterator it = items.iterator(); it.hasNext();)
 		{
-			template.setTaskname(xml.getString("TaskName"));
-		}
-		
-		if(xml.containsKey("Thread"))
-		{
-			template.setThreadnum(xml.getInt("Thread"));
-		}
-		
-		template.setEnableproxy(xml.getBoolean("ProxyEnable"));
-		
-		//ListConfig
-		String listurl=xml.getString("ListConfig.ListUrl");
-		List<String>  starturls=new ArrayList<String>();
-		boolean pageenable=xml.getBoolean("ListConfig.PageEnable");
-		
-		if(pageenable)
-		{	
-			int pagebegin=xml.getInt("ListConfig.PageStart");
-			int pageend=xml.getInt("ListConfig.PageEnd");
-			starturls=SpiderUtil.getListUrls(listurl, pagebegin, pageend);
-		}else{
-			starturls.add(listurl);
-		}
-		
-		
-		String listvalue=xml.getString("ListConfig.ListValue");
-		
-		String urlitem=xml.getString("ListConfig.UrlItem");
-		String tablename=xml.getString("ListConfig.SqlTable");
-		
-		List tags=xml.configurationsAt("ListConfig.ListTag");
-		List<Tag>  listtags=new ArrayList<Tag>();
-		for(Iterator it = tags.iterator(); it.hasNext();)
-		{
+			//解析每个Spider配置
 			HierarchicalConfiguration sub = (HierarchicalConfiguration) it.next();
-			listtags.add(new Tag(sub.getString("TagName"),sub.getString("TagValue")));
+			
+			SpiderConf spider=new SpiderConf();
+			spider.setName(sub.getString("[@name]"));
+			
+			String confclass=sub.getString("conf-def[@class]");
+			String confname=sub.getString("conf-def[@name]");
+			spider.setConfig(getDetailConfig(xml,confclass,confname));
+			
+			spider.setDependname(sub.getString("depend[@ref]"));
+			
+			spiders.add(spider);
 		}
 		
-		template.setListconfig(new ListConfig(starturls,listvalue,urlitem,tablename,listtags));
+		return spiders;
 		
-		//ContentConfig
-		String contenttable=xml.getString("ContentConfig.ContentTable");
-		
-		String item=xml.getString("ContentConfig.ContentItem");
-		
-		List contentitem=xml.configurationsAt("ContentConfig.ContentTag");
-		List<Tag>  contenttags=new ArrayList<Tag>();
-		for(Iterator it = contentitem.iterator(); it.hasNext();)
-		{
-			HierarchicalConfiguration sub = (HierarchicalConfiguration) it.next();
-			contenttags.add(new Tag(sub.getString("TagName"),sub.getString("TagValue")));
-		}
-		
-		String mark=xml.getString("ContentConfig.ContentList.Mark");
-		String code=xml.getString("ContentConfig.ContentList.Code");
-		String field=xml.getString("ContentConfig.ContentList.Field");
-		
-		template.setContentconfig(new ContentConfig(contenttags,contenttable,item,mark,code,SpiderUtil.getMapFields(field)));
-		
-		return template;
 	}
+	
+	
+	//获得全局配置
+	public static GlobalConfig  getGlobalConf(String configfile)
+	{
+		XMLConfiguration  xml=null;
+		try {
+			xml=new XMLConfiguration(configfile);
+		} catch (ConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		GlobalConfig global=new GlobalConfig();
+		global.setTaskname(xml.getString("TaskName"));
+		global.setThreadnum(xml.getInt("Thread"));
+		global.setEnableproxy(xml.getBoolean("ProxyEnable"));
+		
+		return global;
+	}
+	
 	
 	public static void main(String[] args)
 	{
-		TemplateConstructor.getListAndContentTemplate("configs\\wanfangpaper.xml");
+		//TemplateConstructor.getListAndContentTemplate("configs\\wanfangpaper.xml");
+		
+		//TemplateConstructor.getSpiderConf("configs\\wanfangpaper.xml");
+		
+		
+		
 	}
 }

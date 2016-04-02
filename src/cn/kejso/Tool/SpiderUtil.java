@@ -1,6 +1,11 @@
 package cn.kejso.Tool;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,6 +21,8 @@ import org.slf4j.LoggerFactory;
 
 import cn.kejso.Config.Config;
 import cn.kejso.Template.ListAndContentTemplate;
+import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.ListConfig;
 
 public class SpiderUtil {
 	
@@ -39,29 +46,7 @@ public class SpiderUtil {
 		return sessionFactory.openSession();
 	}
 	
-	//获得插入语句
-	public static String  getInsertStatement(String moban)
-	{
-		String insert=Config.Insert_statement.replaceAll("#",moban);
-		return insert;
-		
-	}
 	
-	//获得目标链接 targeturl语句
-	public static String  getAllurlStatement(String moban)
-	{
-		String insert=Config.AllUrl_statement.replaceAll("#",moban);
-		return insert;
-	}
-	
-	
-	//获取数据库插入提示
-	public static String  getMysqlinsertInfo(String moban)
-	{
-		String info=moban+Config.Insert_info;
-		
-		return info;
-	}
 	
 	//解析list 页面链接
 	public static List<String>  getListUrls(String site,int start,int end)
@@ -90,18 +75,21 @@ public class SpiderUtil {
 		return fields;
 	}
 	
-	//获得targeturl
-	public static List<String> getTargetUrls(ListAndContentTemplate template)
+	
+	//获得指定名字爬虫的SpiderConf
+	public static SpiderConf getSpiderConfByName(String name,List<SpiderConf> spiders)
 	{
-		SqlSession session=getSession();
+		SpiderConf target=null;
+		for(SpiderConf one:spiders)
+		{
+			if(one.getName().equals(name))
+			{
+				 target=one;
+				 break;
+			}
+		}
 		
-		String table=template.getListconfig().getTablename();
-		String statement=getAllurlStatement(template.getListconfig().getTablename());
-		Map<String,Object> map=new HashMap<String,Object>();
-		map.put("tablename",table);
-		
-		List<String> urls=session.selectList(statement, map);
-		return urls;
+		return target;
 	}
 	
 	

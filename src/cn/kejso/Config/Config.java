@@ -15,24 +15,17 @@ public class Config {
 	public static final  String   Insert_info=" have insert {} units.";
 	
 	//Mybatis插入语句
-	public static final  String   Insert_statement="SqlMapper.#Mapper.insert#";
+	public static final  String   Insert_statement="SqlMapper.TemplateMapper.insertEntity";
+		
+	//Mybatis 获得最后一条记录的id
+	public static final  String   TheLastId_statement="SqlMapper.TemplateMapper.getLastId";
 	
-	//Mybatis select-all语句
-	public static final  String   SelectAll_statement="SqlMapper.#Mapper.getAll#";
-	
-	//表是否存在
-	public static final  String   ClassifyUrl_existTable="SqlMapper.ClassifyUrlMapper.existTable";
 	//新建表
-	public static final  String   ClassifyUrl_createTable="SqlMapper.ClassifyUrlMapper.createNewTable";
+	public static final  String   CreateTable_statement="SqlMapper.TemplateMapper.createNewTable";
 	
 	//获得target url语句
-	public static final  String   AllUrl_statement="SqlMapper.#Mapper.getAllUrl";
-	
-	
-	//存储实体
-	public static final  String   StoredEntity="cn.kejso.StoredEntity";
-	
-	
+	public static final  String   AllUrl_statement="SqlMapper.TemplateMapper.getAllUrl";
+		
 	//pipeline
 	//实体标识
 	public static final  String   PipeLine_Entity="storedEntity";
@@ -43,5 +36,8 @@ public class Config {
 	
 	//spider缓存
 	public static final  String   Spider_CacheDir="SpiderScheduler/cache/";
-	
+	//error url
+	public static final  String   Spider_ErrorDir="SpiderScheduler/error/";
+	//mysql记录缓存
+	public static final  String   Spider_SQLCacheDir="MysqlCache/";
 }

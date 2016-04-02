@@ -2,14 +2,17 @@ package cn.kejso.PageProcess.ProcessHandler;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.beanutils.BeanUtils;
 
 import cn.kejso.Config.Config;
-import cn.kejso.StoredEntity.ClassifyUrl;
 import cn.kejso.Template.AbstractTemplate;
 import cn.kejso.Template.ListAndContentTemplate;
+import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.ListConfig;
 import cn.kejso.Template.ToolEntity.Tag;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.selector.Selectable;
@@ -17,18 +20,18 @@ import us.codecraft.webmagic.selector.Selectable;
 public class UrlListProcessHandler {
 	
 	//处理url列表页面
-	public<T>   List<T>  processUrlPage (Page page,ListAndContentTemplate template)  
+	public   List<Map<String,String>>  processUrlPage (Page page,SpiderConf template)  
 	{
+		
+		ListConfig config=(ListConfig)template.getConfig();
+		
 		//列表节点
-		List<Selectable> nodes=page.getHtml().xpath(template.getListconfig().getListvalue()).nodes();
+		List<Selectable> nodes=page.getHtml().xpath(config.getListvalue()).nodes();
 		
-		List<T>  paperurls=new ArrayList<T>();
-		
-		//url模板
-		String urlitem=template.getListconfig().getUrlitem();
+		List<Map<String,String>> entitys=new ArrayList<Map<String,String>>();
 		
 		//属性
-		List<Tag> attrs=template.getListconfig().getTags();
+		List<Tag> attrs=config.getTags();
 		
 		for(Selectable one:nodes)
 		{
@@ -38,28 +41,19 @@ public class UrlListProcessHandler {
 				contents.add(one.xpath(attrs.get(i).getTagValue()).toString());
 			}
 			
-			
-			try {
-				Class clss = Class.forName(Config.StoredEntity+"."+urlitem);
-				T url=(T) clss.newInstance();
+			Map<String,String> entity=new HashMap<String,String>();
 				
-				for(int i=0;i<attrs.size();i++ )
-				{
-					BeanUtils.setProperty(url, attrs.get(i).getTagname(), contents.get(i));
-					
-				}
-				
-				paperurls.add(url);
-				
-			} catch (ClassNotFoundException | IllegalAccessException | InvocationTargetException | InstantiationException e) {
-
-				e.printStackTrace();
+			for(int i=0;i<attrs.size();i++ )
+			{
+				entity.put(attrs.get(i).getTagname(), contents.get(i));
 			}
-		
+				
+			entitys.add(entity);
+	
 			
 		}
 
-		return paperurls;
+		return entitys;
 	}
 
 	

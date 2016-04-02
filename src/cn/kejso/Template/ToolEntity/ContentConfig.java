@@ -3,7 +3,7 @@ package cn.kejso.Template.ToolEntity;
 import java.util.List;
 import java.util.Map.Entry;
 
-public class ContentConfig {
+public class ContentConfig extends BaseConfig{
 	//页面项
 	private  List<Tag>  tags;
 	//map
@@ -11,17 +11,22 @@ public class ContentConfig {
 	private  String  mark;
 	private  String  code;
 	
-	private  String  item;
+	//sql
+	private  List<String> fields;
+	private  String  unique;
+	
 	private  String  tablename;
 
-	public ContentConfig(List<Tag> tags,String tablename,String item,String mark,String code,List<String> field)
+	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,List<String> field,List<String> fields,String unique)
 	{
 		this.tags=tags;
 		this.tablename=tablename;
-		this.item=item;
 		this.mark=mark;
 		this.code=code;
 		this.field=field;
+		
+		this.fields=fields;
+		this.unique=unique;
 	}
 	
 	public List<Tag> getTags() {
@@ -56,19 +61,27 @@ public class ContentConfig {
 		this.tablename = tablename;
 	}
 
-	public String getItem() {
-		return item;
-	}
-
-	public void setItem(String item) {
-		this.item = item;
-	}
-
 	public List<String> getField() {
 		return field;
 	}
 
 	public void setField(List<String> field) {
 		this.field = field;
+	}
+
+	public List<String> getFields() {
+		return fields;
+	}
+
+	public void setFields(List<String> fields) {
+		this.fields = fields;
+	}
+
+	public String getUnique() {
+		return unique;
+	}
+
+	public void setUnique(String unique) {
+		this.unique = unique;
 	}
 }

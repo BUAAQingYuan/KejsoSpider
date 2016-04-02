@@ -1,10 +1,12 @@
 package cn.kejso.PageProcess;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.kejso.Config.Config;
 import cn.kejso.PageProcess.ProcessHandler.UrlListProcessHandler;
 import cn.kejso.Template.ListAndContentTemplate;
+import cn.kejso.Template.SpiderConf;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.processor.PageProcessor;
@@ -12,10 +14,10 @@ import us.codecraft.webmagic.processor.PageProcessor;
 public class ListPageProcess  implements PageProcessor {
 	
 	private Site site;
-	private ListAndContentTemplate  template;
+	private SpiderConf  template;
 	
 	
-	public  ListPageProcess(ListAndContentTemplate template)
+	public  ListPageProcess(SpiderConf template)
 	{	
 		this.template=template;
 	}
@@ -31,7 +33,7 @@ public class ListPageProcess  implements PageProcessor {
 	public void process(Page page) {
 		
 		UrlListProcessHandler handler=new UrlListProcessHandler();
-		List<Object> paperurls= handler.processUrlPage(page,template);
+		List<Map<String,String>> paperurls= handler.processUrlPage(page,template);
 		page.putField(Config.PipeLine_Entity, paperurls);
 		page.putField(Config.PipeLine_Type, Config.PipeLine_TypeList);
 

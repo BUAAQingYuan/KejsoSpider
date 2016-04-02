@@ -7,18 +7,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.beanutils.BeanUtils;
-import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cn.kejso.Config.Config;
-import cn.kejso.StoredEntity.ClassifyUrl;
 import cn.kejso.Template.ListAndContentTemplate;
+import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.BaseConfig;
+import cn.kejso.Template.ToolEntity.ContentConfig;
+import cn.kejso.Template.ToolEntity.ListConfig;
 import cn.kejso.Tool.SpiderUtil;
+import cn.kejso.Tool.SqlUtil;
 import us.codecraft.webmagic.ResultItems;
 import us.codecraft.webmagic.Task;
 import us.codecraft.webmagic.pipeline.Pipeline;
@@ -27,17 +27,27 @@ public class MysqlPipeline implements Pipeline {
 	
 	private SqlSession session;
 	
-	private ListAndContentTemplate  template;
+	private SpiderConf  template;
 	
 	private static Logger logger = LoggerFactory.getLogger(MysqlPipeline.class);
 	
 	//计数
 	private int  count=0;
 
-	public  MysqlPipeline(ListAndContentTemplate  template)
+	public  MysqlPipeline(SpiderConf  template)
 	{
 		session=SpiderUtil.getSession();
 		this.template=template;
+		
+		BaseConfig config=template.getConfig();
+		//新建表
+		String exist=Config.CreateTable_statement;
+		Map<String,Object> createtable=new HashMap<String,Object>();
+		createtable.put("tableName", config.getTablename());
+		createtable.put("uniqueField",config.getUnique());
+		createtable.put("fields", config.getFields());
+		session.selectOne(exist, createtable);
+		logger.info("create table if table {} not exists.",config.getTablename());
 	}
 
 	
@@ -61,30 +71,22 @@ public class MysqlPipeline implements Pipeline {
 	//list类
 	private void  InsertTypeList(ResultItems resultItems, Task task)
 	{
-		List<Object> urls=resultItems.get(Config.PipeLine_Entity);
+		ListConfig config=(ListConfig) template.getConfig();
 		
-		String moban=template.getListconfig().getUrlitem();
+		List<Map<String,String>> urls=resultItems.get(Config.PipeLine_Entity);
 		
-		String  statent=SpiderUtil.getInsertStatement(moban);
+		String  statent=Config.Insert_statement;
 		
 		if(count%Config.Inertinfo_per_number==0)
-			logger.info(SpiderUtil.getMysqlinsertInfo(moban),count);
+			logger.info(SqlUtil.getMysqlinsertInfo(config.getTablename()),count);
 		
-		//新建表
-		/*
-		String exist=Config.ClassifyUrl_createTable;
-		Map<String,Object> createtable=new HashMap<String,Object>();
-		createtable.put("tableName", template.getListconfig().getTablename());
-		session.selectOne(exist, createtable);
-		logger.info("create table "+template.getListconfig().getTablename()+"...");
-		*/
-		
-		for(Object one:urls)
+		for(Map<String,String> one:urls)
 		{
-			//session.insert(statent,one);
 			Map<String,Object> map=new HashMap<String,Object>();
-			map.put("tablename",template.getListconfig().getTablename());
-			map.put("entity",one);
+			map.put("tablename",config.getTablename());
+			map.put("fields", config.getFields());
+			//首先将Map转换为List
+			map.put("entitys",SqlUtil.MapToListByFields(one, config.getFields()));
 			session.insert(statent, map);
 		}
 		
@@ -95,18 +97,19 @@ public class MysqlPipeline implements Pipeline {
 	//存储单个实体
 	private void  InsertTypeOne(ResultItems resultItems, Task task) 
 	{
-		Object result=resultItems.get(Config.PipeLine_Entity);
+		ContentConfig config=(ContentConfig) template.getConfig();
 		
-		String moban=template.getContentconfig().getItem();
+		Map<String,String> result=resultItems.get(Config.PipeLine_Entity);
 		
-		String  statent=SpiderUtil.getInsertStatement(moban);
+		String  statent=Config.Insert_statement;
 		
 		if(count%Config.Inertinfo_per_number==0)
-			logger.info(SpiderUtil.getMysqlinsertInfo(moban),count);	
+			logger.info(SqlUtil.getMysqlinsertInfo(config.getTablename()),count);	
 		
 		Map<String,Object> map=new HashMap<String,Object>();
-		map.put("tablename",template.getContentconfig().getTablename());
-		map.put("entity",result);
+		map.put("tablename",config.getTablename());
+		map.put("fields", config.getFields());
+		map.put("entitys",SqlUtil.MapToListByFields(result,config.getFields()));
 		session.insert(statent, map);
 		session.commit();
 	}

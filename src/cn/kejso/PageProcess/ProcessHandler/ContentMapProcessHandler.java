@@ -2,23 +2,29 @@ package cn.kejso.PageProcess.ProcessHandler;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.commons.beanutils.BeanUtils;
 
 import us.codecraft.webmagic.Page;
 import cn.kejso.Config.Config;
 import cn.kejso.Template.ListAndContentTemplate;
+import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.ContentConfig;
 import cn.kejso.Template.ToolEntity.Tag;
 
 //处理内容页
 public class ContentMapProcessHandler {
 		
-	public<T>   T  processContentPage (Page page,ListAndContentTemplate template) 
+	public   Map<String,String>  processContentPage (Page page,SpiderConf template) 
 	{
 		
+		ContentConfig config=(ContentConfig) template.getConfig();
+		
 		//页面项
-		List<Tag> items=template.getContentconfig().getTags();
+		List<Tag> items=config.getTags();
 		List<String> itemcontents=new ArrayList<String>();
 		for(Tag one:items)
 		{
@@ -27,41 +33,27 @@ public class ContentMapProcessHandler {
 		
 		//map项
 		//List<String> marks=page.getHtml().xpath(template.getContentconfig().getMark()).all();
-		List<String> code=page.getHtml().xpath(template.getContentconfig().getCode()).all();
+		List<String> code=page.getHtml().xpath(config.getCode()).all();
 		
-		List<String> attrs=template.getContentconfig().getField();
-
-		//存储类
-		String moban=template.getContentconfig().getItem();
+		List<String> attrs=config.getField();
 		
-		T url = null;
-		try {
-			Class clss = Class.forName(Config.StoredEntity+"."+moban);
-			url=(T) clss.newInstance();
+		Map<String,String> result=new HashMap<String,String>();
 			
-			//页面项属性ֵ
-			for(int i=0;i<items.size();i++ )
-			{
-				BeanUtils.setProperty(url, items.get(i).getTagname(), itemcontents.get(i));
-				
-			}
-			
-			//map属性
-			
-			for(int i=0;i<code.size();i++ )
-			{
-				if(attrs.get(i)!=null)
-				{
-					BeanUtils.setProperty(url, attrs.get(i), code.get(i));
-				}
-			}
-			
-			
-		} catch (ClassNotFoundException | IllegalAccessException | InvocationTargetException | InstantiationException e) {
-
-			e.printStackTrace();
+		//页面项
+		for(int i=0;i<items.size();i++ )
+		{
+			result.put(items.get(i).getTagname(), itemcontents.get(i));	
 		}
-		
-		return url;
+			
+		//map属性
+		for(int i=0;i<code.size();i++ )
+		{
+			if(attrs.get(i)!=null)
+			{
+				result.put(attrs.get(i), code.get(i));
+			}
+		}
+			
+		return result;
 	}
 }

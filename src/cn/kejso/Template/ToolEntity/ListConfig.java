@@ -2,27 +2,31 @@ package cn.kejso.Template.ToolEntity;
 
 import java.util.List;
 
-public class ListConfig {
+public class ListConfig  extends BaseConfig {
 	//列表url
 	private  List<String>  starturls;
 	
 	private  boolean pageenable;
 	
-	//url实体
-	private  String   urlitem;
 	//url表名
 	private  String   tablename;
+	//表的字段
+	private  List<String> fields;
+	//unique字段
+	private  String   unique;
 	
 	private  String   listvalue;
 	private  List<Tag>  tags;
 	
-	public ListConfig(List<String> starturls,String listvalue,String urlitem,String tablename,List<Tag> tags)
+	public ListConfig(List<String> starturls,String listvalue,String tablename,List<Tag> tags,List<String> fields,String unique)
 	{
 		this.starturls=starturls;
 		this.listvalue=listvalue;
-		this.urlitem=urlitem;
 		this.tablename=tablename;
 		this.tags=tags;
+		
+		this.fields=fields;
+		this.unique=unique;
 	}
 
 	
@@ -49,14 +53,6 @@ public class ListConfig {
 		this.listvalue = listvalue;
 	}
 
-	public String getUrlitem() {
-		return urlitem;
-	}
-
-	public void setUrlitem(String urlitem) {
-		this.urlitem = urlitem;
-	}
-
 	public String getTablename() {
 		return tablename;
 	}
@@ -75,5 +71,28 @@ public class ListConfig {
 
 	public void setStarturls(List<String> starturls) {
 		this.starturls = starturls;
+	}
+	
+
+	public List<String> getFields() {
+		return fields;
+	}
+
+
+
+	public void setFields(List<String> fields) {
+		this.fields = fields;
+	}
+
+
+
+	public String getUnique() {
+		return unique;
+	}
+
+
+
+	public void setUnique(String unique) {
+		this.unique = unique;
 	}
 }
