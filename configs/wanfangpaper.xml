@@ -17,38 +17,39 @@
 		<!-- 列表页中列表对应的value -->
 		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
 		
-		<!-- url选择的模板 -->
-		<UrlItem>ClassifyUrl</UrlItem>
-		
 		<!-- url存储的表名 -->
-		<SqlTable>kaka</SqlTable>
+		<SqlTable>urltest</SqlTable>
+		
+		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
+		<TableFields>ftitle#paperurl#fenlei</TableFields>
+		<UniqueField>paperurl</UniqueField>
 		
 		<!--列表页的抓取字段  -->
 		<ListTag>
 			<!-- 和数据表字段对应 -->
-			<TagName>title</TagName>
+			<TagName>ftitle</TagName>
 			<TagValue>//a[@class='title']/text()</TagValue>
 		</ListTag>
 		<ListTag>
 			<!-- 和数据表字段对应 -->
-			<TagName>url</TagName>
+			<TagName>paperurl</TagName>
 			<TagValue>//a[@class='title']/@href</TagValue>
 		</ListTag>
 		<ListTag>
 			<!-- 和数据表字段对应 -->
-			<TagName>classname</TagName>
+			<TagName>fenlei</TagName>
 			<TagValue>//div[@class='record-subtitle']/text()</TagValue>
 		</ListTag>
 	</ListConfig>
 	
 	<!-- 内容页的抓取字段 -->
-	<ContentConfig>
+	<ContentConfig name="contentconfig">
 		<!-- 内容存储表 -->
 		<ContentTable>falvpaper</ContentTable>
 		
-		<!-- 内容对应的类 -->
-		<ContentItem>BasicListItem</ContentItem>
-		
+		<!-- 表字段 -->
+		<TableFields>title#brief#library#titlenumber#department#level#timeline#promulgation#material#contentclass</TableFields>
+		<UniqueField>title</UniqueField>
 		
 		<!-- title -->
 		<ContentTag>
@@ -70,6 +71,17 @@
 			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
 			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/text()</Code>
 		</ContentList>
-		
 	</ContentConfig>
+	
+	<!--配置对应的爬虫 -->
+	<Spiders>
+		<Spider name="listspider">
+			<conf-def class="ListConfig" name="listconfig" />
+		</Spider>
+			
+		<Spider name="contentspider">
+			<depend ref="listspider" field="url" />
+			<conf-def class="ContentConfig" name="contentconfig" />
+		</Spider>
+	</Spiders>
 </Configuration>
