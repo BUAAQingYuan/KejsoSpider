@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<ProxySite>http://www.xicidaili.com/wn/#</ProxySite>
+	
+	<IP>//table[@id='ip_list']/tbody/tr/td[3]/text()</IP>
+	<Port>//table[@id='ip_list']/tbody/tr/td[4]/text()</Port>
+	<Anonymity>//table[@id='ip_list']/tbody/tr/td[6]/text()</Anonymity>
+	<Protocol>//table[@id='ip_list']/tbody/tr/td[7]/text()</Protocol>
+	
+	<PageEnable>true</PageEnable>
+	<PageStart>1</PageStart>
+	<PageEnd>5</PageEnd>
+</Configuration>
