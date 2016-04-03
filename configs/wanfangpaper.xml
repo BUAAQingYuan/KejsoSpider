@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration name="ListAndContentTemplate">
 	<!-- 任务名称 -->
-	<TaskName>wanfang</TaskName>
+	<TaskName>WanfangPaper</TaskName>
 	<!-- 任务线程 -->
 	<Thread>2</Thread>
 	<!-- 是否开启代理 -->
 	<ProxyEnable>False</ProxyEnable>
+	
 	
 	<!-- 列表页配置 -->
 	<ListConfig  name="listconfig">
@@ -67,13 +68,14 @@
 		<ContentList>
 			<!-- 映射的字段 -->
 			<Field>library#titlenumber#department#level#timeline#promulgation#material#contentclass</Field>
+			<MarkField>库别名称：#发文文号：#颁布部门：#效力级别：#时效性：#颁布日期：#实施日期：#内容分类：</MarkField>
 			
 			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
-			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/text()</Code>
+			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
 		</ContentList>
 	</ContentConfig>
 	
-	<!--配置对应的爬虫 -->
+	<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序-->
 	<Spiders>
 		<Spider name="listspider">
 			<conf-def class="ListConfig" name="listconfig" />

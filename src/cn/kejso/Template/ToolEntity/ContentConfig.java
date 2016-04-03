@@ -6,8 +6,10 @@ import java.util.Map.Entry;
 public class ContentConfig extends BaseConfig{
 	//页面项
 	private  List<Tag>  tags;
-	//map
+	//map映射field
 	private  List<String> field;
+	//map对应的mark
+	private	 List<String> markfield;
 	private  String  mark;
 	private  String  code;
 	
@@ -17,13 +19,14 @@ public class ContentConfig extends BaseConfig{
 	
 	private  String  tablename;
 
-	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,List<String> field,List<String> fields,String unique)
+	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,List<String> field,List<String> markfield,List<String> fields,String unique)
 	{
 		this.tags=tags;
 		this.tablename=tablename;
 		this.mark=mark;
 		this.code=code;
 		this.field=field;
+		this.markfield=markfield;
 		
 		this.fields=fields;
 		this.unique=unique;
@@ -83,5 +86,13 @@ public class ContentConfig extends BaseConfig{
 
 	public void setUnique(String unique) {
 		this.unique = unique;
+	}
+
+	public List<String> getMarkfield() {
+		return markfield;
+	}
+
+	public void setMarkfield(List<String> markfield) {
+		this.markfield = markfield;
 	}
 }

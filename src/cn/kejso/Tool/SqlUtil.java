@@ -9,6 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import cn.kejso.Config.Config;
 import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.BaseConfig;
 import cn.kejso.Template.ToolEntity.ListConfig;
 
 public class SqlUtil {
@@ -26,7 +27,7 @@ public class SqlUtil {
 		public static List<String> getTargetUrls(SpiderConf template)
 		{
 			SqlSession session=SpiderUtil.getSession();
-			ListConfig config=(ListConfig) template.getConfig();
+			BaseConfig config=template.getConfig();
 			String table=config.getTablename();
 			String statement=Config.AllUrl_statement;
 			Map<String,Object> map=new HashMap<String,Object>();
@@ -73,8 +74,17 @@ public class SqlUtil {
 			List<String> content=new ArrayList<String>();
 			for(String one:fields)
 			{
-				content.add(entity.get(one));
+				content.add(filterQuotation(entity.get(one)));
 			}
 			return content;
+		}
+		
+		//过滤单双引号
+		public static  String  filterQuotation(String field)
+		{
+			if(field!=null)
+				return field.replaceAll("\"", "").replaceAll("\'", "");
+			else
+				return "";
 		}
 }

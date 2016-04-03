@@ -12,7 +12,7 @@
   							</foreach> )
     	 				values(
     	 					<foreach collection="entitys" item="entity" open="" close="" separator=",">  
-   								'${entity}'
+   								"${entity}"
   							</foreach>)
     </insert>
         

@@ -71,7 +71,7 @@ public class MysqlPipeline implements Pipeline {
 	//list类
 	private void  InsertTypeList(ResultItems resultItems, Task task)
 	{
-		ListConfig config=(ListConfig) template.getConfig();
+		BaseConfig config=template.getConfig();
 		
 		List<Map<String,String>> urls=resultItems.get(Config.PipeLine_Entity);
 		
@@ -97,7 +97,7 @@ public class MysqlPipeline implements Pipeline {
 	//存储单个实体
 	private void  InsertTypeOne(ResultItems resultItems, Task task) 
 	{
-		ContentConfig config=(ContentConfig) template.getConfig();
+		BaseConfig config= template.getConfig();
 		
 		Map<String,String> result=resultItems.get(Config.PipeLine_Entity);
 		
@@ -109,6 +109,7 @@ public class MysqlPipeline implements Pipeline {
 		Map<String,Object> map=new HashMap<String,Object>();
 		map.put("tablename",config.getTablename());
 		map.put("fields", config.getFields());
+		//System.out.println(result.toString());
 		map.put("entitys",SqlUtil.MapToListByFields(result,config.getFields()));
 		session.insert(statent, map);
 		session.commit();

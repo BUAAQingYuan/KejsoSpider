@@ -40,4 +40,7 @@ public class Config {
 	public static final  String   Spider_ErrorDir="SpiderScheduler/error/";
 	//mysql记录缓存
 	public static final  String   Spider_SQLCacheDir="MysqlCache/";
+	
+	//useragent
+	public static final  String   Spider_userAgent="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; GTB5; .NET CLR 2.0.50727; CIBA";
 }

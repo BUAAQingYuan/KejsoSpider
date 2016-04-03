@@ -33,6 +33,9 @@ public class UrlListProcessHandler {
 		//属性
 		List<Tag> attrs=config.getTags();
 		
+		//常量字段
+		List<Tag> consts=config.getConsttags();
+		
 		for(Selectable one:nodes)
 		{
 			List<String> contents=new ArrayList<String>();
@@ -42,10 +45,17 @@ public class UrlListProcessHandler {
 			}
 			
 			Map<String,String> entity=new HashMap<String,String>();
-				
+			
+			//属性
 			for(int i=0;i<attrs.size();i++ )
 			{
 				entity.put(attrs.get(i).getTagname(), contents.get(i));
+			}
+			
+			//常量字段
+			for(int i=0;i<consts.size();i++)
+			{
+				entity.put(consts.get(i).getTagname(), consts.get(i).getTagValue());
 			}
 				
 			entitys.add(entity);

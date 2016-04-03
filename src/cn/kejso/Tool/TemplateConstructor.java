@@ -16,6 +16,7 @@ import cn.kejso.Template.ToolEntity.BaseConfig;
 import cn.kejso.Template.ToolEntity.ContentConfig;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
 import cn.kejso.Template.ToolEntity.ListConfig;
+import cn.kejso.Template.ToolEntity.PreConfig;
 import cn.kejso.Template.ToolEntity.Tag;
 
 //模板构造
@@ -53,7 +54,15 @@ public class TemplateConstructor {
 			listtags.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
 		}
 		
-		return new ListConfig(starturls,listvalue,tablename,listtags,SpiderUtil.getMapFields(fields),unique);
+		List consttags=sub.configurationsAt("ConstTag");
+		List<Tag>  listtags2=new ArrayList<Tag>();
+		for(Iterator it = consttags.iterator(); it.hasNext();)
+		{
+			HierarchicalConfiguration one = (HierarchicalConfiguration) it.next();
+			listtags2.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
+		}
+		
+		return new ListConfig(starturls,listvalue,tablename,listtags,SpiderUtil.getMapFields(fields),unique,listtags2);
 		
 	}
 	
@@ -77,8 +86,9 @@ public class TemplateConstructor {
 		String mark=sub.getString("ContentList.Mark");
 		String code=sub.getString("ContentList.Code");
 		String field=sub.getString("ContentList.Field");
+		String markfield=sub.getString("ContentList.MarkField");
 		
-		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(fields),unique);
+		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),unique);
 	}
 	
 	/*
@@ -105,6 +115,9 @@ public class TemplateConstructor {
 				}else if(cls.equals("ContentConfig"))
 				{
 					base=getContentConfig(sub);
+				}else if(cls.equals("PreConfig"))
+				{
+					base=getPreConfig(sub);
 				}
 			}
 		}
@@ -170,6 +183,21 @@ public class TemplateConstructor {
 		return global;
 	}
 	
+	//获得PreConfig
+	public static  PreConfig    getPreConfig(HierarchicalConfiguration sub)
+	{
+		String preurl=sub.getString("PreUrl");
+						
+		String prevalue=sub.getString("PreValue");
+				
+		String tablename=sub.getString("SqlTable");
+		
+		String fields=sub.getString("TableFields");
+		
+		String unique=sub.getString("UniqueField");
+				
+		return new PreConfig(preurl,prevalue,tablename,SpiderUtil.getMapFields(fields),unique);
+	}
 	
 	public static void main(String[] args)
 	{

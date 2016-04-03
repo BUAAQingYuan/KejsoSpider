@@ -32,10 +32,11 @@ public class ContentMapProcessHandler {
 		}
 		
 		//map项
-		//List<String> marks=page.getHtml().xpath(template.getContentconfig().getMark()).all();
-		List<String> code=page.getHtml().xpath(config.getCode()).all();
+		List<String> marks=page.getHtml().xpath(config.getMark()).all();
 		
+		List<String> code=page.getHtml().xpath(config.getCode()).all();
 		List<String> attrs=config.getField();
+		List<String> markfield=config.getMarkfield();
 		
 		Map<String,String> result=new HashMap<String,String>();
 			
@@ -46,14 +47,18 @@ public class ContentMapProcessHandler {
 		}
 			
 		//map属性
-		for(int i=0;i<code.size();i++ )
+		for(int i=0;i<attrs.size();i++ )
 		{
-			if(attrs.get(i)!=null)
+			//得到对应的mark
+			String currentmark=markfield.get(i);
+			//得到mark的配置i
+			int  pos=marks.indexOf(currentmark);
+			if(pos!=-1)
 			{
-				result.put(attrs.get(i), code.get(i));
+				result.put(attrs.get(i), code.get(pos));
 			}
 		}
-			
+		
 		return result;
 	}
 }

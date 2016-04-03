@@ -6,8 +6,6 @@ public class ListConfig  extends BaseConfig {
 	//列表url
 	private  List<String>  starturls;
 	
-	private  boolean pageenable;
-	
 	//url表名
 	private  String   tablename;
 	//表的字段
@@ -18,7 +16,10 @@ public class ListConfig  extends BaseConfig {
 	private  String   listvalue;
 	private  List<Tag>  tags;
 	
-	public ListConfig(List<String> starturls,String listvalue,String tablename,List<Tag> tags,List<String> fields,String unique)
+	//常量字段
+	private  List<Tag>  consttags;
+	
+	public ListConfig(List<String> starturls,String listvalue,String tablename,List<Tag> tags,List<String> fields,String unique,List<Tag> consttags)
 	{
 		this.starturls=starturls;
 		this.listvalue=listvalue;
@@ -27,15 +28,7 @@ public class ListConfig  extends BaseConfig {
 		
 		this.fields=fields;
 		this.unique=unique;
-	}
-
-	
-	
-	public boolean isPageenable() {
-		return pageenable;
-	}
-	public void setPageenable(boolean pageenable) {
-		this.pageenable = pageenable;
+		this.consttags=consttags;
 	}
 	
 	public List<Tag> getTags() {
@@ -94,5 +87,13 @@ public class ListConfig  extends BaseConfig {
 
 	public void setUnique(String unique) {
 		this.unique = unique;
+	}
+
+	public List<Tag> getConsttags() {
+		return consttags;
+	}
+
+	public void setConsttags(List<Tag> consttags) {
+		this.consttags = consttags;
 	}
 }
