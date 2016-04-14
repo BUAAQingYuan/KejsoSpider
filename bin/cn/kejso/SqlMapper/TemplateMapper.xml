@@ -40,6 +40,11 @@
 	
 	<!-- 获取新增的url字段 -->
 	
+	<!-- 获取id大于特定值的url字段 -->
+	<select id="getPartUrl" resultType="String">
+	     select distinct ${url}
+	     from  ${tablename} where id &gt; ${id}
+	</select>
 	
 	<!-- 获取最后一条记录的ID -->
 	<select id="getLastId" resultType="Integer">

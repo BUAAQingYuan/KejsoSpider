@@ -40,6 +40,25 @@ public class SqlUtil {
 			List<String> urls=session.selectList(statement, map);
 			return urls;
 		}
+		
+		//获得targeturl
+		public static List<String> getPartTargetUrls(SpiderConf template, int id)
+		{
+			SqlSession session=SpiderUtil.getSession();
+			BaseConfig config=template.getConfig();
+			String table=config.getTablename();
+			String statement=Config.PartUrl_statement;
+			Map<String,Object> map=new HashMap<String,Object>();
+			
+			map.put("tablename",table);
+			map.put("id", id);
+			
+			//标记url为unique
+			map.put("url", config.getUnique());
+			
+			List<String> urls=session.selectList(statement, map);
+			return urls;
+		}
 
 		//MysqlCache
 		//获取一个数据表当前的位置

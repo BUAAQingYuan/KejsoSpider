@@ -36,7 +36,7 @@ public class ContentPageProcess implements PageProcessor {
                 
 		//site = Site.me().setSleepTime(2000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000).setUserAgent(Config.Spider_userAgent).setHttpProxy(new HttpHost(" 171.38.169.56", 8123));
 		site = Site.me().setSleepTime(2000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000).setUserAgent(Config.Spider_userAgent);
-		site.setHttpProxyPool(proxys);
+//		site.setHttpProxyPool(proxys);
 		site.setCharset("utf8");
 		return site;
 	}

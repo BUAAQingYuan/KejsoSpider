@@ -25,6 +25,9 @@ public class Config {
 	
 	//获得target url语句
 	public static final  String   AllUrl_statement="SqlMapper.TemplateMapper.getAllUrl";
+	
+	//获得target url语句
+	public static final  String   PartUrl_statement="SqlMapper.TemplateMapper.getPartUrl";
 		
 	//pipeline
 	//实体标识
