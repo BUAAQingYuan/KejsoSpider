@@ -14682,3 +14682,255 @@ name:wlan15 (Microsoft Wi-Fi Direct Virtual Adapter-WFP 802.3 MAC Layer LightWei
 2016-04-14 15:48:46,304-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000190578
 2016-04-14 15:48:46,550-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000192334
 2016-04-14 15:48:48,439-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193778
+2016-04-14 21:13:59,179-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-14 21:13:59,313-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-14 21:13:59,319-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain 万方法律爬虫链 .
+2016-04-14 21:13:59,319-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文Url爬虫 start ...
+2016-04-14 21:14:00,416-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-14 21:14:00,419-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-14 21:14:00,419-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-14 21:14:01,828-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-14 21:14:01,828-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-14 21:14:02,904-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-14 21:14:02,904-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-14 21:14:04,379-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-14 21:14:05,831-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-14 21:14:05,832-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文Url爬虫 end . Cost time:6.512秒
+2016-04-14 21:14:05,832-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-14 21:14:05,832-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-14 21:14:05,832-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文内容爬虫 start ...
+2016-04-14 21:14:05,862-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-14 21:14:05,863-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000168474
+2016-04-14 21:14:05,863-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183262
+2016-04-14 21:14:06,131-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 0 units.
+2016-04-14 21:14:08,156-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183802
+2016-04-14 21:14:08,254-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000186025
+2016-04-14 21:14:10,504-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000188715
+2016-04-14 21:14:11,971-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000189588
+2016-04-14 21:14:13,213-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000190578
+2016-04-14 21:14:14,088-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000192334
+2016-04-14 21:14:15,501-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193778
+2016-04-14 21:14:16,557-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193782
+2016-04-14 21:14:17,638-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200002
+2016-04-14 21:14:17,699-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 10 units.
+2016-04-14 21:14:18,663-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200021
+2016-04-14 21:14:19,722-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200022
+2016-04-14 21:14:20,822-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200023
+2016-04-14 21:14:22,005-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200047
+2016-04-14 21:14:24,339-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200053
+2016-04-14 21:14:25,531-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200159
+2016-04-14 21:14:26,738-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000207028
+2016-04-14 21:14:27,805-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000220377
+2016-04-14 21:14:29,055-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270103
+2016-04-14 21:14:30,022-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270109
+2016-04-14 21:14:31,137-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 20 units.
+2016-04-14 21:14:31,756-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270199
+2016-04-14 21:14:33,155-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270200
+2016-04-14 21:14:34,065-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270240
+2016-04-14 21:14:35,268-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000330011
+2016-04-14 21:14:36,182-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360019
+2016-04-14 21:14:38,098-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360144
+2016-04-14 21:14:38,347-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360178
+2016-04-14 21:14:40,181-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000400120
+2016-04-14 21:14:40,457-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430018
+2016-04-14 21:14:42,265-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430030
+2016-04-14 21:14:42,295-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 30 units.
+2016-04-14 21:14:42,591-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430031
+2016-04-14 21:14:44,323-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430033
+2016-04-14 21:14:44,649-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490037
+2016-04-14 21:14:46,557-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490045
+2016-04-14 21:14:46,710-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490056
+2016-04-14 21:14:48,707-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000500030
+2016-04-14 21:14:49,040-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000530012
+2016-04-14 21:14:50,869-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000540003
+2016-04-14 21:14:51,194-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000751604
+2016-04-14 21:14:53,174-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000752085
+2016-04-14 21:14:53,299-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840178
+2016-04-14 21:14:53,321-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 40 units.
+2016-04-14 21:14:55,349-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840181
+2016-04-14 21:14:55,557-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000841621
+2016-04-14 21:14:57,516-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850004
+2016-04-14 21:14:57,943-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850046
+2016-04-14 21:15:00,050-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850048
+2016-04-14 21:15:01,332-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000863856
+2016-04-14 21:15:02,141-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000930006
+2016-04-14 21:15:03,666-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000940087
+2016-04-14 21:15:05,960-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-14 21:15:05,961-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文内容爬虫 end . Cost time:60.129秒
+2016-04-14 21:15:05,961-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 50 .
+2016-04-14 21:15:05,961-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-14 21:15:05,961-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律爬虫链 end .Total Cost time:66.642秒
+2016-04-14 21:16:16,599-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-14 21:16:16,830-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-14 21:16:16,831-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain 万方法律爬虫链 .
+2016-04-14 21:16:16,831-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文Url爬虫 start ...
+2016-04-14 21:16:17,291-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-14 21:16:17,293-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-14 21:16:17,293-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-14 21:16:18,341-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-14 21:16:19,413-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-14 21:16:19,930-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-14 21:16:20,713-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-14 21:16:22,284-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-14 21:16:22,284-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文Url爬虫 end . Cost time:5.453秒
+2016-04-14 21:16:22,284-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-14 21:16:22,284-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-14 21:16:22,284-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文内容爬虫 start ...
+2016-04-14 21:16:22,311-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-14 21:16:22,312-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000168474
+2016-04-14 21:16:22,312-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183262
+2016-04-14 21:16:22,672-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 0 units.
+2016-04-14 21:16:24,719-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183802
+2016-04-14 21:16:25,106-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000186025
+2016-04-14 21:16:27,089-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000188715
+2016-04-14 21:16:27,239-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000189588
+2016-04-14 21:16:29,264-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000190578
+2016-04-14 21:16:29,940-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000192334
+2016-04-14 21:16:31,423-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193778
+2016-04-14 21:16:32,140-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193782
+2016-04-14 21:16:33,498-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200002
+2016-04-14 21:16:33,687-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 10 units.
+2016-04-14 21:16:34,631-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200021
+2016-04-14 21:16:35,739-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200022
+2016-04-14 21:16:36,740-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200023
+2016-04-14 21:16:37,890-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200047
+2016-04-14 21:16:39,026-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200053
+2016-04-14 21:16:40,750-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200159
+2016-04-14 21:16:41,249-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000207028
+2016-04-14 21:16:43,749-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000220377
+2016-04-14 21:16:44,882-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270103
+2016-04-14 21:16:45,832-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270109
+2016-04-14 21:16:45,859-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 20 units.
+2016-04-14 21:16:47,050-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270199
+2016-04-14 21:16:47,883-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270200
+2016-04-14 21:16:49,499-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270240
+2016-04-14 21:16:49,999-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000330011
+2016-04-14 21:16:51,824-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360019
+2016-04-14 21:16:52,641-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360144
+2016-04-14 21:16:54,067-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360178
+2016-04-14 21:16:55,091-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000400120
+2016-04-14 21:16:56,125-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430018
+2016-04-14 21:16:57,366-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430030
+2016-04-14 21:16:57,437-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 30 units.
+2016-04-14 21:16:58,591-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430031
+2016-04-14 21:16:59,466-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430033
+2016-04-14 21:17:00,634-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490037
+2016-04-14 21:17:01,625-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490045
+2016-04-14 21:17:03,355-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490056
+2016-04-14 21:17:03,734-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000500030
+2016-04-14 21:17:05,592-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000530012
+2016-04-14 21:17:05,784-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000540003
+2016-04-14 21:17:07,834-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000751604
+2016-04-14 21:17:08,159-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000752085
+2016-04-14 21:17:10,293-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840178
+2016-04-14 21:17:10,294-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840181
+2016-04-14 21:17:12,392-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000841621
+2016-04-14 21:17:12,418-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850004
+2016-04-14 21:17:14,629-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850046
+2016-04-14 21:17:15,318-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850048
+2016-04-14 21:17:16,935-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000863856
+2016-04-14 21:17:17,698-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000930006
+2016-04-14 21:17:19,359-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000940087
+2016-04-14 21:17:21,679-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-14 21:17:21,679-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文内容爬虫 end . Cost time:59.395秒
+2016-04-14 21:17:21,680-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 50 .
+2016-04-14 21:17:21,680-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-14 21:17:21,680-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律爬虫链 end .Total Cost time:64.849秒
+2016-04-15 17:03:13,529-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-15 17:03:13,664-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-15 17:03:13,665-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-15 17:03:13,665-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-15 17:03:14,240-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-15 17:03:14,242-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-15 17:03:14,242-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-15 17:03:15,593-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-15 17:03:16,714-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-15 17:03:17,374-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-15 17:03:18,480-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-15 17:03:21,150-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-15 17:03:21,151-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:7.486秒
+2016-04-15 17:03:21,151-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-15 17:03:21,151-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-15 17:03:21,151-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-15 17:03:21,208-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-15 17:03:21,209-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000168474
+2016-04-15 17:03:21,209-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183262
+2016-04-15 17:03:21,649-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 0 units.
+2016-04-15 17:03:23,688-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183802
+2016-04-15 17:03:25,799-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000186025
+2016-04-15 17:03:28,074-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000188715
+2016-04-15 17:03:31,200-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000189588
+2016-04-15 17:03:33,346-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000190578
+2016-04-15 17:03:35,730-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000192334
+2016-04-15 17:03:38,509-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193778
+2016-04-15 17:03:40,614-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193782
+2016-04-15 17:03:42,407-[HL] WARN pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - download page http://d.wanfangdata.com.cn/Claw/G000168474 error
+org.apache.http.conn.HttpHostConnectException: Connect to d.wanfangdata.com.cn:80 [d.wanfangdata.com.cn/121.194.12.123] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:408)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-04-15 17:03:43,025-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200002
+2016-04-15 17:03:44,428-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200021
+2016-04-15 17:03:44,688-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 10 units.
+2016-04-15 17:03:45,231-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200022
+2016-04-15 17:03:46,726-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200023
+2016-04-15 17:03:47,476-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200047
+2016-04-15 17:03:48,851-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200053
+2016-04-15 17:03:49,618-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200159
+2016-04-15 17:03:51,235-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000207028
+2016-04-15 17:03:51,976-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000220377
+2016-04-15 17:03:53,407-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270103
+2016-04-15 17:03:54,259-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270109
+2016-04-15 17:03:55,800-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270199
+2016-04-15 17:03:56,042-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 20 units.
+2016-04-15 17:03:56,309-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270200
+2016-04-15 17:03:58,084-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270240
+2016-04-15 17:03:58,735-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000330011
+2016-04-15 17:04:00,535-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360019
+2016-04-15 17:04:01,044-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360144
+2016-04-15 17:04:02,819-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360178
+2016-04-15 17:04:03,360-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000400120
+2016-04-15 17:04:04,927-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430018
+2016-04-15 17:04:05,451-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430030
+2016-04-15 17:04:07,378-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430031
+2016-04-15 17:04:07,602-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 30 units.
+2016-04-15 17:04:07,836-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430033
+2016-04-15 17:04:09,635-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490037
+2016-04-15 17:04:09,896-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490045
+2016-04-15 17:04:11,800-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490056
+2016-04-15 17:04:11,986-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000500030
+2016-04-15 17:04:14,086-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000530012
+2016-04-15 17:04:14,336-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000540003
+2016-04-15 17:04:16,436-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000751604
+2016-04-15 17:04:16,438-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000752085
+2016-04-15 17:04:18,570-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840178
+2016-04-15 17:04:18,662-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 40 units.
+2016-04-15 17:04:18,803-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840181
+2016-04-15 17:04:20,785-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000841621
+2016-04-15 17:04:20,861-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850004
