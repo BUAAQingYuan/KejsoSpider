@@ -84,6 +84,7 @@
 		<Spider name="contentspider">
 			<depend ref="listspider" field="url" />
 			<conf-def class="ContentConfig" name="contentconfig" />
+			<recover enable="true" ref="ftitle" field="title"/>
 		</Spider>
 	</Spiders>
 </Configuration>

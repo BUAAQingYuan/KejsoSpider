@@ -106,4 +106,35 @@ public class SqlUtil {
 			else
 				return "";
 		}
+		
+		public static int getBreakPoint(SpiderConf pre, SpiderConf current) {
+			
+			int  breakpoint = 0;
+			
+			SqlSession session=SpiderUtil.getSession();
+			
+			String preTable = pre.getConfig().getTablename();
+			String currentTable = current.getConfig().getTablename();
+			
+			//得到内容页中最后一条数据
+			String lastFieldState=Config.TheLastRecordField_statement;
+			Map<String,Object> map=new HashMap<String,Object>();
+			map.put("tablename", currentTable);
+			map.put("field", current.getRecoverConfig().getField());
+			String  lastField = (String) session.selectOne(lastFieldState, map);
+			
+			//如果这是张新表
+			if (lastField == null)
+				return breakpoint;
+			
+			//得到这条数据所对应的URL列表中的记录的ID
+			String certainIdState=Config.TheCertainId_statement;
+			map.clear();
+			map.put("tablename", preTable);
+			map.put("field", current.getRecoverConfig().getRef());
+			map.put("fieldvalue", lastField);
+			breakpoint = (int) session.selectOne(certainIdState, map);
+			
+			return breakpoint;
+		}
 }

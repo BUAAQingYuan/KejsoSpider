@@ -2,7 +2,7 @@ package cn.kejso.Template.ToolEntity;
 
 import java.util.List;
 
-public class ListConfig  extends BaseConfig {
+public class ListConfig  extends BaseConfig implements ContainStartUrls {
 	//列表url
 	private  List<String>  starturls;
 	
@@ -95,5 +95,11 @@ public class ListConfig  extends BaseConfig {
 
 	public void setConsttags(List<Tag> consttags) {
 		this.consttags = consttags;
+	}
+
+	@Override
+	public List<String> getStartUrls() {
+
+		return getStarturls();
 	}
 }

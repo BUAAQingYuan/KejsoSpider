@@ -17,6 +17,7 @@ import cn.kejso.Template.ToolEntity.ContentConfig;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
 import cn.kejso.Template.ToolEntity.ListConfig;
 import cn.kejso.Template.ToolEntity.PreConfig;
+import cn.kejso.Template.ToolEntity.ContainStartUrls;
 import cn.kejso.Tool.SpiderUtil;
 import cn.kejso.Tool.SqlUtil;
 import cn.kejso.Tool.TemplateConstructor;
@@ -95,19 +96,20 @@ public class BuildSpiderChain {
 	private Function<Spider, SpiderConf> readUrlFromConf = new Function<Spider, SpiderConf>() {
 		@Override
 		public List<String> apply(Spider t, SpiderConf e) {
-			ListConfig config = (ListConfig) e.getConfig();
-			return config.getStarturls();
+			ContainStartUrls config = (ContainStartUrls) e.getConfig();
+			return config.getStartUrls();
 		}
 	};
 	
-	//在适当的某处考虑利用SQL断点恢复的问题
-	
-	//TODO 在这一块考虑去重的问题
+	//考虑利用SQL断点恢复
 	private Function<Spider, SpiderConf> readUrlFromSql = new Function<Spider, SpiderConf>() {
 		@Override
 		public List<String> apply(Spider t, SpiderConf e) {
-			SpiderConf config=SpiderUtil.getSpiderConfByName(e.getDependname(), getConfs());
-			return SqlUtil.getTargetUrls(config);
+			SpiderConf pre=SpiderUtil.getSpiderConfByName(e.getDependname(), getConfs());
+			
+			int currentPos = SqlUtil.getBreakPoint(pre, e);
+			
+			return SqlUtil.getPartTargetUrls(pre, currentPos);
 		}
 	};
 	

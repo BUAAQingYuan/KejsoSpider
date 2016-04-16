@@ -20,6 +20,12 @@ public class Config {
 	//Mybatis 获得最后一条记录的id
 	public static final  String   TheLastId_statement="SqlMapper.TemplateMapper.getLastId";
 	
+	//Mybatis 获得最后一条记录的某一属性
+	public static final  String   TheLastRecordField_statement="SqlMapper.TemplateMapper.getLastRecordField";
+
+	//Mybatis 获得具有特定属性记录的ID
+	public static final  String   TheCertainId_statement="SqlMapper.TemplateMapper.getCertainId";
+	
 	//新建表
 	public static final  String   CreateTable_statement="SqlMapper.TemplateMapper.createNewTable";
 	

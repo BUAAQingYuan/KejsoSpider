@@ -15,7 +15,9 @@ public class SpiderConf {
 		
 		//依赖的爬虫名称
 		private String dependname;
-
+		
+		//断点恢复的配置
+		private RecoverConfig rconfig;
 		
 		public String getName() {
 			return name;
@@ -49,4 +51,13 @@ public class SpiderConf {
 			
 			return urls;
 		}
+		
+		public RecoverConfig getRecoverConfig() {
+			return rconfig;
+		}
+		
+		public void setRecoverConfig(RecoverConfig value) {
+			rconfig = value;
+		}
+
 }

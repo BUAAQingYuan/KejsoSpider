@@ -12,6 +12,7 @@ import org.apache.commons.configuration.tree.ConfigurationNode;
 
 import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ListAndContentTemplate;
+import cn.kejso.Template.RecoverConfig;
 import cn.kejso.Template.ToolEntity.BaseConfig;
 import cn.kejso.Template.ToolEntity.ContentConfig;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
@@ -125,7 +126,20 @@ public class TemplateConstructor {
 		return  base;
 	}
 	
-	
+	public static RecoverConfig getRecoverConfig(HierarchicalConfiguration sub) {
+
+		RecoverConfig config = new RecoverConfig();
+		
+		boolean enable = sub.getBoolean("recover[@enable]", false);
+		config.setEnable(enable);
+		
+		if (enable) {
+			config.setRef(sub.getString("recover[@ref]"));
+			config.setField(sub.getString("recover[@field]"));
+		}
+		
+		return config;
+	}
 	
 	//读取配置的通用接口
 	public static List<SpiderConf>  getSpiderConf(String configfile)
@@ -154,7 +168,11 @@ public class TemplateConstructor {
 			String confname=sub.getString("conf-def[@name]");
 			spider.setConfig(getDetailConfig(xml,confclass,confname));
 			
+			spider.setRecoverConfig(getRecoverConfig(sub));
+			
 			spider.setDependname(sub.getString("depend[@ref]"));
+			
+			
 			
 			spiders.add(spider);
 		}
@@ -162,6 +180,8 @@ public class TemplateConstructor {
 		return spiders;
 		
 	}
+	
+	
 	
 	
 	//获得全局配置
@@ -203,7 +223,7 @@ public class TemplateConstructor {
 	{
 		//TemplateConstructor.getListAndContentTemplate("configs\\wanfangpaper.xml");
 		
-		//TemplateConstructor.getSpiderConf("configs\\wanfangpaper.xml");
+//		TemplateConstructor.getSpiderConf("configs\\wanfangpaper.xml");
 		
 		
 		

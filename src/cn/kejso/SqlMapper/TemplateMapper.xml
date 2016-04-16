@@ -35,6 +35,7 @@
 	<select id="getAllUrl" resultType="String">
 	     select distinct ${url}
 	     from  ${tablename} 
+	     order by id ASC
 	</select>
 	
 	
@@ -43,7 +44,8 @@
 	<!-- 获取id大于特定值的url字段 -->
 	<select id="getPartUrl" resultType="String">
 	     select distinct ${url}
-	     from  ${tablename} where id &gt; ${id}
+	     from  ${tablename} where id &gt; ${id} 
+	     order by id ASC
 	</select>
 	
 	<!-- 获取最后一条记录的ID -->
@@ -52,6 +54,16 @@
 	     from  ${tablename} order by id desc limit 1;
 	</select>
 	
+	<!-- 获取最后一条记录的某一属性 -->
+	<select id="getLastRecordField" resultType="String">
+	     select ${field}
+	     from  ${tablename} order by id desc limit 1;
+	</select>
 	
+	<!-- 获取具有特定属性记录的ID -->
+	<select id="getCertainId" resultType="Integer">
+	     select id
+	     from  ${tablename} where ${field} = #{fieldvalue} LIMIT 1;
+	</select>
 	
 </mapper>
