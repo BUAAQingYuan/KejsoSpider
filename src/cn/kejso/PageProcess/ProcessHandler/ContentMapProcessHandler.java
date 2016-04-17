@@ -39,6 +39,10 @@ public class ContentMapProcessHandler {
 		List<String> markfield=config.getMarkfield();
 		
 		Map<String,String> result=new HashMap<String,String>();
+		
+		if (config.getPageUrlField() != null) {
+			result.put(config.getPageUrlField(), page.getUrl().toString());
+		}
 			
 		//页面项
 		for(int i=0;i<items.size();i++ )

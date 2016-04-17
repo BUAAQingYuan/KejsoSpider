@@ -26,6 +26,9 @@ public class Config {
 	//Mybatis 获得具有特定属性记录的ID
 	public static final  String   TheCertainId_statement="SqlMapper.TemplateMapper.getCertainId";
 	
+	//Mybatis 获得两个数据域的差集
+	public static final  String   TheDeltaField_statement="SqlMapper.TemplateMapper.getDeltaField";
+	
 	//新建表
 	public static final  String   CreateTable_statement="SqlMapper.TemplateMapper.createNewTable";
 	

@@ -16725,3 +16725,658 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 2016-04-17 00:42:11,465-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 0 .
 2016-04-17 00:42:11,465-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
 2016-04-17 00:42:11,465-[HL] INFO main cn.kejso.Spider.SpiderChain - AnonymousSpiderChain end .Total Cost time:6.739秒
+2016-04-17 17:06:13,084-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-17 17:06:13,137-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-17 17:06:13,139-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-17 17:06:13,140-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:06:13,643-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-17 17:06:13,645-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-17 17:06:13,645-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-17 17:06:15,630-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-17 17:06:16,755-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-17 17:06:17,450-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-17 17:06:18,200-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-17 17:06:20,023-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-17 17:06:20,023-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:6.884秒
+2016-04-17 17:06:20,023-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-17 17:06:20,023-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-17 17:06:20,024-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:08:25,355-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:08:25,356-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:08:25,356-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:08:25,356-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:08:25,806-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 230835489.
+2016-04-17 17:08:25,808-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:08:25,938-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: create table if not exists urltest ( id int(11) NOT NULL AUTO_INCREMENT, ftitle varchar(255) DEFAULT NULL, paperurl varchar(255) DEFAULT NULL, fenlei varchar(255) DEFAULT NULL, PRIMARY KEY (id), UNIQUE KEY paperurl (paperurl) USING HASH ) 
+2016-04-17 17:08:25,938-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:08:25,943-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-17 17:08:25,982-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 601008104.
+2016-04-17 17:08:25,982-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:08:25,987-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: create table if not exists falvpaper ( id int(11) NOT NULL AUTO_INCREMENT, title varchar(255) DEFAULT NULL, brief varchar(255) DEFAULT NULL, library varchar(255) DEFAULT NULL, titlenumber varchar(255) DEFAULT NULL, department varchar(255) DEFAULT NULL, level varchar(255) DEFAULT NULL, timeline varchar(255) DEFAULT NULL, promulgation varchar(255) DEFAULT NULL, material varchar(255) DEFAULT NULL, contentclass varchar(255) DEFAULT NULL, PRIMARY KEY (id), UNIQUE KEY title (title) USING HASH ) 
+2016-04-17 17:08:25,987-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:08:25,988-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-17 17:08:25,990-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-17 17:08:25,990-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:08:26,356-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-17 17:08:26,367-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-17 17:08:26,371-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-17 17:08:27,726-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-17 17:08:27,751-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-17 17:08:27,753-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所股票上市规则（2014年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270240" , "上证发[2014]第65号-上海证券交易所-政策法规-2014" ) 
+2016-04-17 17:08:27,755-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银行业监督管理委员会关于建信养老金管理有限责任公司开业的批复" , "http://d.wanfangdata.com.cn/Claw/G000841621" , "银监复[2015]第620号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:08:27,763-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院关于“先照后证”改革后加强事中事后监管的意见" , "http://d.wanfangdata.com.cn/Claw/G000200047" , "国发[2015]第62号-国务院-政策法规-2015" ) 
+2016-04-17 17:08:27,764-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于适用《中华人民共和国民事诉讼法》的解释" , "http://d.wanfangdata.com.cn/Claw/G000430018" , "法释[2015]第5号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:08:27,769-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会关于修改《中华人民共和国立法法》的决定" , "http://d.wanfangdata.com.cn/Claw/G000200023" , "中华人民共和国主席令[2015]第20号-全国人民代表大会-政策法规-2015" ) 
+2016-04-17 17:08:27,772-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会常务委员会关于修改《中华人民共和国地方各级人民代表大会和地方各级人民政府组织法》、《中华人民共和国全国人民代表大会和地方各级人民代表大会选举法》、《中华人民共和国全国人民代表大会和地方各级人民代表大会代表法》的决定" , "http://d.wanfangdata.com.cn/Claw/G000200002" , "中华人民共和国主席令[2015]第33号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:08:27,775-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "深圳证券交易所关于《深圳证券交易所公司债券上市规则（征求意见稿）》等配套规则公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000752085" , "-深圳证券交易所-政策法规-2015" ) 
+2016-04-17 17:08:27,778-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院关于实行市场准入负面清单制度的意见" , "http://d.wanfangdata.com.cn/Claw/G000200053" , "国发[2015]第55号-国务院-政策法规-2015" ) 
+2016-04-17 17:08:27,782-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国保险监督管理委员会关于全面推进保险法治建设的指导意见" , "http://d.wanfangdata.com.cn/Claw/G000863856" , "保监发[2016]第7号-中国保险监督管理委员会-政策法规-2016" ) 
+2016-04-17 17:08:27,785-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于就《上海证券交易所公司债券上市规则》等业务规则公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000270103" , "上证公告[2015]第7号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:08:27,786-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于在人民法院工作中培育和践行社会主义核心价值观的若干意见" , "http://d.wanfangdata.com.cn/Claw/G000430030" , "法发[2015]第14号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:08:27,789-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院印发《关于建立研修学者制度的规定》的通知" , "http://d.wanfangdata.com.cn/Claw/G000430033" , "法[2015]第231号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:08:27,790-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国食品安全法" , "http://d.wanfangdata.com.cn/Claw/G000200022" , "中华人民共和国主席令[2015]第21号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:08:27,792-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中共国家海洋局党组关于全面推进依法行政加快建设法治海洋的决定" , "http://d.wanfangdata.com.cn/Claw/G000930006" , "国海党发[2015]第30号-国家海洋局-政策法规-2015" ) 
+2016-04-17 17:08:27,793-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院办公厅关于印发国务院2015年立法工作计划的通知" , "http://d.wanfangdata.com.cn/Claw/G000200159" , "国办发[2015]第28号-国务院办公厅-政策法规-2015" ) 
+2016-04-17 17:08:27,797-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上市公司章程指引（2014年修订）" , "http://d.wanfangdata.com.cn/Claw/G000850048" , "中国证券监督管理委员会公告[2014]第47号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:08:27,797-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会令关于修改〈证券市场禁入规定〉的决定" , "http://d.wanfangdata.com.cn/Claw/G000850004" , "中国证券监督管理委员会令[2015]第115号-中国证券监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:08:27,830-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "计量违法行为处罚细则（2015修订）" , "http://d.wanfangdata.com.cn/Claw/G000540003" , "国家质量监督检验检疫总局令[2015]第166号-国家质量监督检验检疫总局-政策法规-2015" ) 
+2016-04-17 17:08:27,833-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上市公司章程指引（2014年修订）" , "http://d.wanfangdata.com.cn/Claw/G000190578" , "中国证券监督管理委员会公告[2014]第19号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:08:27,835-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国土资源部办公厅关于依法履职严格规范公正执法的通知" , "http://d.wanfangdata.com.cn/Claw/G000330011" , "国土资厅发[2015]第34号-国土资源部办公厅-政策法规-2015" ) 
+2016-04-17 17:08:28,829-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-17 17:08:28,851-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-17 17:08:29,171-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国证券法（2014修正）" , "http://d.wanfangdata.com.cn/Claw/G000193782" , "主席令[2014]第14号-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:08:29,174-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院国有资产监督管理委员会、全国普及常识办公室关于转发《中央宣传部、司法部、全国普法办<关于开展“学习宪法 尊法守法”主题活动的通知>》的通知" , "http://d.wanfangdata.com.cn/Claw/G000500030" , "-国务院国有资产监督管理委员会、全国普及法律常识办公室-政策法规-2015" ) 
+2016-04-17 17:08:29,176-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银监会非银行金融机构行政许可事项实施办法(修订)" , "http://d.wanfangdata.com.cn/Claw/G000840181" , "中国银行业监督管理委员会令[2015]第6号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:08:29,181-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券业协会关于发布《公司债券受托管理人执业行为准则》的通知" , "http://d.wanfangdata.com.cn/Claw/G000360144" , "中证协发[2015]第121号-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:08:29,186-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "公司债券受托管理人执业行为准则" , "http://d.wanfangdata.com.cn/Claw/G000360019" , "-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:08:29,188-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所公司债券上市规则（2015年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270200" , "上证发[2015]第49号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:08:29,190-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院国有资产监督管理委员会办公厅关于开展中央企业落实法制工作第三个三年目标检查验收工作的通知" , "http://d.wanfangdata.com.cn/Claw/G000188715" , "国资厅法规[2014]第279号-国务院国有资产监督管理委员会办公厅-政策法规-2014" ) 
+2016-04-17 17:08:29,193-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券业协会关于发布《证券公司合规管理人员胜任能力测试大纲（2015）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000360178" , "中证协发[2015]第67号-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:08:29,196-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家工商行政管理总局关于修订外商投资企业登记书式的通知（2014）" , "http://d.wanfangdata.com.cn/Claw/G000183802" , "工商外企字[2014]第31号-国家工商行政管理总局-政策法规-2014" ) 
+2016-04-17 17:08:29,198-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "铁路危险货物运输安全监督管理规定" , "http://d.wanfangdata.com.cn/Claw/G000490056" , "交通运输部令[2015]第1号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:08:29,255-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银监会外资银行行政许可事项实施办法（修订）" , "http://d.wanfangdata.com.cn/Claw/G000840178" , "中国银行业监督管理委员会令[2015]第4号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:08:29,258-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于完善人民法院司法责任制的若干意见" , "http://d.wanfangdata.com.cn/Claw/G000430031" , "法发[2015]第13号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:08:29,261-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国海上海事行政处罚规定（交通运输部令[2015]第8号）" , "http://d.wanfangdata.com.cn/Claw/G000490045" , "交通运输部令[2015]第8号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:08:29,264-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家发展和改革委员会关于开展政府和社会资本合作的指导意见" , "http://d.wanfangdata.com.cn/Claw/G000220377" , "发改投资[2014]第2724号-国家发展和改革委员会-政策法规-2014" ) 
+2016-04-17 17:08:29,266-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "企业经营范围登记管理规定（2015）" , "http://d.wanfangdata.com.cn/Claw/G000530012" , "国家工商行政管理总局令[2015]第76号-国家工商行政管理总局-政策法规-2015" ) 
+2016-04-17 17:08:29,270-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会环境与资源保护委员会关于第十二届全国人民代表大会第一次会议主席团交付审议的代表提出的议案审议结果的报告" , "http://d.wanfangdata.com.cn/Claw/G000189588" , "-全国人民代表大会-政策法规-2013" ) 
+2016-04-17 17:08:29,275-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会常务委员会2014年立法工作计划" , "http://d.wanfangdata.com.cn/Claw/G000186025" , "-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:08:29,285-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所股票上市规则（2013修订）" , "http://d.wanfangdata.com.cn/Claw/G000168474" , "-上海证券交易所-政策法规-2013" ) 
+2016-04-17 17:08:29,294-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国广告法" , "http://d.wanfangdata.com.cn/Claw/G000200021" , "中华人民共和国主席令[2015]第22号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:08:29,296-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会关于就修订《上市公司重大资产重组管理办法》、《上市公司收购管理办法》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000192334" , "-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:08:30,218-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-17 17:08:30,450-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国安全生产法（2014修正）" , "http://d.wanfangdata.com.cn/Claw/G000193778" , "主席令[2014]第13号-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:08:30,453-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家税务总局关于《特别纳税调整实施办法》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000400120" , "-国家税务总局-政策法规-2015" ) 
+2016-04-17 17:08:30,457-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "深圳证券交易所关于发布《深圳证券交易所公司债券上市规则（2015年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000751604" , "-深圳证券交易所-政策法规-2015" ) 
+2016-04-17 17:08:30,460-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所非公开发行公司债券业务管理暂行办法》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270199" , "上证发[2015]第50号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:08:30,462-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国海事局关于印发《常见海事违法行为行政处罚裁量基准》的通知" , "http://d.wanfangdata.com.cn/Claw/G000183262" , "海政法[2014]第138号-中华人民共和国海事局-政策法规-2014" ) 
+2016-04-17 17:08:30,465-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于就《上海证券交易所证券投资基金上市规则（2015年征求意见稿）》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000270109" , "上证公告[2015]第6号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:08:30,467-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会公告2014年第49号" , "http://d.wanfangdata.com.cn/Claw/G000850046" , "中国证券监督管理委员会公告[2014]第49号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:08:30,470-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国教育部高等学校章程核准书第55号（合肥工业大学）" , "http://d.wanfangdata.com.cn/Claw/G000207028" , "-教育部-政策法规-2015" ) 
+2016-04-17 17:08:30,475-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "交通运输部关于修改《公路建设市场管理办法》的决定（2015修订）" , "http://d.wanfangdata.com.cn/Claw/G000490037" , "交通运输部令[2015]第11号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:08:30,477-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知" , "http://d.wanfangdata.com.cn/Claw/G000940087" , "国测党发[2015]第15号-国家测绘地理信息局-政策法规-2015" ) 
+2016-04-17 17:08:31,511-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1783047508.
+2016-04-17 17:08:31,512-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:08:31,513-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select id from urltest order by id desc limit 1; 
+2016-04-17 17:08:31,513-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:08:31,530-[HL] DEBUG main java.sql.ResultSet - <==    Columns: id
+2016-04-17 17:08:31,530-[HL] DEBUG main java.sql.ResultSet - <==        Row: 50
+2016-04-17 17:08:31,538-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-17 17:08:31,538-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:5.548秒
+2016-04-17 17:08:31,538-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-17 17:08:31,538-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-17 17:08:31,538-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:08:31,555-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 2145970759.
+2016-04-17 17:08:31,555-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:08:31,556-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select title from falvpaper order by id desc limit 1; 
+2016-04-17 17:08:31,556-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:08:31,558-[HL] DEBUG main java.sql.ResultSet - <==    Columns: title
+2016-04-17 17:08:31,558-[HL] DEBUG main java.sql.ResultSet - <==        Row: 中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知
+2016-04-17 17:08:31,567-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select id from urltest where ftitle = ? LIMIT 1; 
+2016-04-17 17:08:31,568-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知(String)
+2016-04-17 17:08:31,569-[HL] DEBUG main java.sql.ResultSet - <==    Columns: id
+2016-04-17 17:08:31,570-[HL] DEBUG main java.sql.ResultSet - <==        Row: 50
+2016-04-17 17:08:31,584-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1107730949.
+2016-04-17 17:08:31,584-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:08:31,586-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select distinct paperurl from null where ftitle NOT IN (select $(sourceField) from falvpaper) 
+2016-04-17 17:08:31,586-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:09:25,799-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:09:25,800-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:09:25,800-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:09:25,800-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:09:26,264-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 230835489.
+2016-04-17 17:09:26,266-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:09:26,395-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: create table if not exists urltest ( id int(11) NOT NULL AUTO_INCREMENT, ftitle varchar(255) DEFAULT NULL, paperurl varchar(255) DEFAULT NULL, fenlei varchar(255) DEFAULT NULL, PRIMARY KEY (id), UNIQUE KEY paperurl (paperurl) USING HASH ) 
+2016-04-17 17:09:26,397-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:09:26,401-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-17 17:09:26,430-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 601008104.
+2016-04-17 17:09:26,430-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:09:26,436-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: create table if not exists falvpaper ( id int(11) NOT NULL AUTO_INCREMENT, title varchar(255) DEFAULT NULL, brief varchar(255) DEFAULT NULL, library varchar(255) DEFAULT NULL, titlenumber varchar(255) DEFAULT NULL, department varchar(255) DEFAULT NULL, level varchar(255) DEFAULT NULL, timeline varchar(255) DEFAULT NULL, promulgation varchar(255) DEFAULT NULL, material varchar(255) DEFAULT NULL, contentclass varchar(255) DEFAULT NULL, PRIMARY KEY (id), UNIQUE KEY title (title) USING HASH ) 
+2016-04-17 17:09:26,436-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:09:26,437-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-17 17:09:26,439-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-17 17:09:26,439-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:09:26,802-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-17 17:09:26,815-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-17 17:09:26,815-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-17 17:09:28,369-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-17 17:09:28,382-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-17 17:09:28,389-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所股票上市规则（2014年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270240" , "上证发[2014]第65号-上海证券交易所-政策法规-2014" ) 
+2016-04-17 17:09:28,390-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银行业监督管理委员会关于建信养老金管理有限责任公司开业的批复" , "http://d.wanfangdata.com.cn/Claw/G000841621" , "银监复[2015]第620号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:09:28,401-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于适用《中华人民共和国民事诉讼法》的解释" , "http://d.wanfangdata.com.cn/Claw/G000430018" , "法释[2015]第5号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:09:28,405-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "深圳证券交易所关于《深圳证券交易所公司债券上市规则（征求意见稿）》等配套规则公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000752085" , "-深圳证券交易所-政策法规-2015" ) 
+2016-04-17 17:09:28,408-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于就《上海证券交易所公司债券上市规则》等业务规则公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000270103" , "上证公告[2015]第7号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:09:28,417-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国食品安全法" , "http://d.wanfangdata.com.cn/Claw/G000200022" , "中华人民共和国主席令[2015]第21号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:09:28,420-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院关于“先照后证”改革后加强事中事后监管的意见" , "http://d.wanfangdata.com.cn/Claw/G000200047" , "国发[2015]第62号-国务院-政策法规-2015" ) 
+2016-04-17 17:09:28,423-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会关于修改《中华人民共和国立法法》的决定" , "http://d.wanfangdata.com.cn/Claw/G000200023" , "中华人民共和国主席令[2015]第20号-全国人民代表大会-政策法规-2015" ) 
+2016-04-17 17:09:28,426-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会常务委员会关于修改《中华人民共和国地方各级人民代表大会和地方各级人民政府组织法》、《中华人民共和国全国人民代表大会和地方各级人民代表大会选举法》、《中华人民共和国全国人民代表大会和地方各级人民代表大会代表法》的决定" , "http://d.wanfangdata.com.cn/Claw/G000200002" , "中华人民共和国主席令[2015]第33号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:09:28,430-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院关于实行市场准入负面清单制度的意见" , "http://d.wanfangdata.com.cn/Claw/G000200053" , "国发[2015]第55号-国务院-政策法规-2015" ) 
+2016-04-17 17:09:28,432-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国保险监督管理委员会关于全面推进保险法治建设的指导意见" , "http://d.wanfangdata.com.cn/Claw/G000863856" , "保监发[2016]第7号-中国保险监督管理委员会-政策法规-2016" ) 
+2016-04-17 17:09:28,434-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院办公厅关于印发国务院2015年立法工作计划的通知" , "http://d.wanfangdata.com.cn/Claw/G000200159" , "国办发[2015]第28号-国务院办公厅-政策法规-2015" ) 
+2016-04-17 17:09:28,435-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于在人民法院工作中培育和践行社会主义核心价值观的若干意见" , "http://d.wanfangdata.com.cn/Claw/G000430030" , "法发[2015]第14号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:09:28,438-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院印发《关于建立研修学者制度的规定》的通知" , "http://d.wanfangdata.com.cn/Claw/G000430033" , "法[2015]第231号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:09:28,444-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中共国家海洋局党组关于全面推进依法行政加快建设法治海洋的决定" , "http://d.wanfangdata.com.cn/Claw/G000930006" , "国海党发[2015]第30号-国家海洋局-政策法规-2015" ) 
+2016-04-17 17:09:28,449-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会令关于修改〈证券市场禁入规定〉的决定" , "http://d.wanfangdata.com.cn/Claw/G000850004" , "中国证券监督管理委员会令[2015]第115号-中国证券监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:09:28,454-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "计量违法行为处罚细则（2015修订）" , "http://d.wanfangdata.com.cn/Claw/G000540003" , "国家质量监督检验检疫总局令[2015]第166号-国家质量监督检验检疫总局-政策法规-2015" ) 
+2016-04-17 17:09:28,456-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上市公司章程指引（2014年修订）" , "http://d.wanfangdata.com.cn/Claw/G000850048" , "中国证券监督管理委员会公告[2014]第47号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:09:28,488-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上市公司章程指引（2014年修订）" , "http://d.wanfangdata.com.cn/Claw/G000190578" , "中国证券监督管理委员会公告[2014]第19号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:09:28,491-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国土资源部办公厅关于依法履职严格规范公正执法的通知" , "http://d.wanfangdata.com.cn/Claw/G000330011" , "国土资厅发[2015]第34号-国土资源部办公厅-政策法规-2015" ) 
+2016-04-17 17:09:29,489-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-17 17:09:29,510-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-17 17:09:29,916-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国证券法（2014修正）" , "http://d.wanfangdata.com.cn/Claw/G000193782" , "主席令[2014]第14号-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:09:29,922-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院国有资产监督管理委员会、全国普及常识办公室关于转发《中央宣传部、司法部、全国普法办<关于开展“学习宪法 尊法守法”主题活动的通知>》的通知" , "http://d.wanfangdata.com.cn/Claw/G000500030" , "-国务院国有资产监督管理委员会、全国普及法律常识办公室-政策法规-2015" ) 
+2016-04-17 17:09:29,924-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银监会非银行金融机构行政许可事项实施办法(修订)" , "http://d.wanfangdata.com.cn/Claw/G000840181" , "中国银行业监督管理委员会令[2015]第6号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:09:29,927-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券业协会关于发布《公司债券受托管理人执业行为准则》的通知" , "http://d.wanfangdata.com.cn/Claw/G000360144" , "中证协发[2015]第121号-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:09:29,944-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "公司债券受托管理人执业行为准则" , "http://d.wanfangdata.com.cn/Claw/G000360019" , "-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:09:29,947-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所公司债券上市规则（2015年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270200" , "上证发[2015]第49号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:09:29,950-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院国有资产监督管理委员会办公厅关于开展中央企业落实法制工作第三个三年目标检查验收工作的通知" , "http://d.wanfangdata.com.cn/Claw/G000188715" , "国资厅法规[2014]第279号-国务院国有资产监督管理委员会办公厅-政策法规-2014" ) 
+2016-04-17 17:09:29,952-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券业协会关于发布《证券公司合规管理人员胜任能力测试大纲（2015）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000360178" , "中证协发[2015]第67号-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:09:29,955-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家工商行政管理总局关于修订外商投资企业登记书式的通知（2014）" , "http://d.wanfangdata.com.cn/Claw/G000183802" , "工商外企字[2014]第31号-国家工商行政管理总局-政策法规-2014" ) 
+2016-04-17 17:09:29,957-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "铁路危险货物运输安全监督管理规定" , "http://d.wanfangdata.com.cn/Claw/G000490056" , "交通运输部令[2015]第1号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:09:30,777-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银监会外资银行行政许可事项实施办法（修订）" , "http://d.wanfangdata.com.cn/Claw/G000840178" , "中国银行业监督管理委员会令[2015]第4号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:09:30,779-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于完善人民法院司法责任制的若干意见" , "http://d.wanfangdata.com.cn/Claw/G000430031" , "法发[2015]第13号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:09:30,782-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国海上海事行政处罚规定（交通运输部令[2015]第8号）" , "http://d.wanfangdata.com.cn/Claw/G000490045" , "交通运输部令[2015]第8号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:09:30,785-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家发展和改革委员会关于开展政府和社会资本合作的指导意见" , "http://d.wanfangdata.com.cn/Claw/G000220377" , "发改投资[2014]第2724号-国家发展和改革委员会-政策法规-2014" ) 
+2016-04-17 17:09:30,787-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "企业经营范围登记管理规定（2015）" , "http://d.wanfangdata.com.cn/Claw/G000530012" , "国家工商行政管理总局令[2015]第76号-国家工商行政管理总局-政策法规-2015" ) 
+2016-04-17 17:09:30,790-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会环境与资源保护委员会关于第十二届全国人民代表大会第一次会议主席团交付审议的代表提出的议案审议结果的报告" , "http://d.wanfangdata.com.cn/Claw/G000189588" , "-全国人民代表大会-政策法规-2013" ) 
+2016-04-17 17:09:30,792-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会常务委员会2014年立法工作计划" , "http://d.wanfangdata.com.cn/Claw/G000186025" , "-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:09:30,795-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所股票上市规则（2013修订）" , "http://d.wanfangdata.com.cn/Claw/G000168474" , "-上海证券交易所-政策法规-2013" ) 
+2016-04-17 17:09:30,798-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国广告法" , "http://d.wanfangdata.com.cn/Claw/G000200021" , "中华人民共和国主席令[2015]第22号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:09:30,800-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会关于就修订《上市公司重大资产重组管理办法》、《上市公司收购管理办法》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000192334" , "-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:09:31,006-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-17 17:09:31,312-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国安全生产法（2014修正）" , "http://d.wanfangdata.com.cn/Claw/G000193778" , "主席令[2014]第13号-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:09:31,319-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家税务总局关于《特别纳税调整实施办法》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000400120" , "-国家税务总局-政策法规-2015" ) 
+2016-04-17 17:09:31,323-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "深圳证券交易所关于发布《深圳证券交易所公司债券上市规则（2015年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000751604" , "-深圳证券交易所-政策法规-2015" ) 
+2016-04-17 17:09:31,325-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所非公开发行公司债券业务管理暂行办法》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270199" , "上证发[2015]第50号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:09:31,328-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国海事局关于印发《常见海事违法行为行政处罚裁量基准》的通知" , "http://d.wanfangdata.com.cn/Claw/G000183262" , "海政法[2014]第138号-中华人民共和国海事局-政策法规-2014" ) 
+2016-04-17 17:09:31,330-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于就《上海证券交易所证券投资基金上市规则（2015年征求意见稿）》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000270109" , "上证公告[2015]第6号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:09:31,332-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会公告2014年第49号" , "http://d.wanfangdata.com.cn/Claw/G000850046" , "中国证券监督管理委员会公告[2014]第49号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:09:31,334-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国教育部高等学校章程核准书第55号（合肥工业大学）" , "http://d.wanfangdata.com.cn/Claw/G000207028" , "-教育部-政策法规-2015" ) 
+2016-04-17 17:09:31,337-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "交通运输部关于修改《公路建设市场管理办法》的决定（2015修订）" , "http://d.wanfangdata.com.cn/Claw/G000490037" , "交通运输部令[2015]第11号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:09:31,339-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知" , "http://d.wanfangdata.com.cn/Claw/G000940087" , "国测党发[2015]第15号-国家测绘地理信息局-政策法规-2015" ) 
+2016-04-17 17:09:32,373-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1783047508.
+2016-04-17 17:09:32,373-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:09:32,375-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select id from urltest order by id desc limit 1; 
+2016-04-17 17:09:32,375-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:09:32,395-[HL] DEBUG main java.sql.ResultSet - <==    Columns: id
+2016-04-17 17:09:32,396-[HL] DEBUG main java.sql.ResultSet - <==        Row: 50
+2016-04-17 17:09:32,403-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-17 17:09:32,403-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:5.964秒
+2016-04-17 17:09:32,404-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-17 17:09:32,404-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-17 17:09:32,404-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:09:32,422-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 2145970759.
+2016-04-17 17:09:32,422-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:09:32,423-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select title from falvpaper order by id desc limit 1; 
+2016-04-17 17:09:32,423-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:09:32,425-[HL] DEBUG main java.sql.ResultSet - <==    Columns: title
+2016-04-17 17:09:32,425-[HL] DEBUG main java.sql.ResultSet - <==        Row: 中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知
+2016-04-17 17:09:32,433-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select id from urltest where ftitle = ? LIMIT 1; 
+2016-04-17 17:09:32,433-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知(String)
+2016-04-17 17:09:32,434-[HL] DEBUG main java.sql.ResultSet - <==    Columns: id
+2016-04-17 17:09:32,434-[HL] DEBUG main java.sql.ResultSet - <==        Row: 50
+2016-04-17 17:09:32,447-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1107730949.
+2016-04-17 17:09:32,447-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:09:32,449-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select distinct paperurl from null where ftitle NOT IN (select title from falvpaper) 
+2016-04-17 17:09:32,449-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:10:26,210-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:10:26,211-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:10:26,211-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:10:26,211-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:10:26,776-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 230835489.
+2016-04-17 17:10:26,779-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:10:26,942-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: create table if not exists urltest ( id int(11) NOT NULL AUTO_INCREMENT, ftitle varchar(255) DEFAULT NULL, paperurl varchar(255) DEFAULT NULL, fenlei varchar(255) DEFAULT NULL, PRIMARY KEY (id), UNIQUE KEY paperurl (paperurl) USING HASH ) 
+2016-04-17 17:10:26,942-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:10:26,947-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-17 17:10:26,983-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 601008104.
+2016-04-17 17:10:26,983-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:10:26,989-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: create table if not exists falvpaper ( id int(11) NOT NULL AUTO_INCREMENT, title varchar(255) DEFAULT NULL, brief varchar(255) DEFAULT NULL, library varchar(255) DEFAULT NULL, titlenumber varchar(255) DEFAULT NULL, department varchar(255) DEFAULT NULL, level varchar(255) DEFAULT NULL, timeline varchar(255) DEFAULT NULL, promulgation varchar(255) DEFAULT NULL, material varchar(255) DEFAULT NULL, contentclass varchar(255) DEFAULT NULL, PRIMARY KEY (id), UNIQUE KEY title (title) USING HASH ) 
+2016-04-17 17:10:26,989-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:10:26,990-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-17 17:10:26,991-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-17 17:10:26,992-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:10:27,427-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-17 17:10:27,441-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-17 17:10:27,442-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-17 17:10:28,570-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-17 17:10:28,581-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银行业监督管理委员会关于建信养老金管理有限责任公司开业的批复" , "http://d.wanfangdata.com.cn/Claw/G000841621" , "银监复[2015]第620号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:10:28,589-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院关于“先照后证”改革后加强事中事后监管的意见" , "http://d.wanfangdata.com.cn/Claw/G000200047" , "国发[2015]第62号-国务院-政策法规-2015" ) 
+2016-04-17 17:10:28,602-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会关于修改《中华人民共和国立法法》的决定" , "http://d.wanfangdata.com.cn/Claw/G000200023" , "中华人民共和国主席令[2015]第20号-全国人民代表大会-政策法规-2015" ) 
+2016-04-17 17:10:28,605-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会常务委员会关于修改《中华人民共和国地方各级人民代表大会和地方各级人民政府组织法》、《中华人民共和国全国人民代表大会和地方各级人民代表大会选举法》、《中华人民共和国全国人民代表大会和地方各级人民代表大会代表法》的决定" , "http://d.wanfangdata.com.cn/Claw/G000200002" , "中华人民共和国主席令[2015]第33号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:10:28,610-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院关于实行市场准入负面清单制度的意见" , "http://d.wanfangdata.com.cn/Claw/G000200053" , "国发[2015]第55号-国务院-政策法规-2015" ) 
+2016-04-17 17:10:28,613-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国保险监督管理委员会关于全面推进保险法治建设的指导意见" , "http://d.wanfangdata.com.cn/Claw/G000863856" , "保监发[2016]第7号-中国保险监督管理委员会-政策法规-2016" ) 
+2016-04-17 17:10:28,616-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于在人民法院工作中培育和践行社会主义核心价值观的若干意见" , "http://d.wanfangdata.com.cn/Claw/G000430030" , "法发[2015]第14号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:10:28,619-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院印发《关于建立研修学者制度的规定》的通知" , "http://d.wanfangdata.com.cn/Claw/G000430033" , "法[2015]第231号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:10:28,622-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中共国家海洋局党组关于全面推进依法行政加快建设法治海洋的决定" , "http://d.wanfangdata.com.cn/Claw/G000930006" , "国海党发[2015]第30号-国家海洋局-政策法规-2015" ) 
+2016-04-17 17:10:28,625-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上市公司章程指引（2014年修订）" , "http://d.wanfangdata.com.cn/Claw/G000850048" , "中国证券监督管理委员会公告[2014]第47号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:10:28,753-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所股票上市规则（2014年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270240" , "上证发[2014]第65号-上海证券交易所-政策法规-2014" ) 
+2016-04-17 17:10:28,759-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于适用《中华人民共和国民事诉讼法》的解释" , "http://d.wanfangdata.com.cn/Claw/G000430018" , "法释[2015]第5号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:10:28,763-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "深圳证券交易所关于《深圳证券交易所公司债券上市规则（征求意见稿）》等配套规则公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000752085" , "-深圳证券交易所-政策法规-2015" ) 
+2016-04-17 17:10:28,766-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于就《上海证券交易所公司债券上市规则》等业务规则公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000270103" , "上证公告[2015]第7号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:10:28,773-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国食品安全法" , "http://d.wanfangdata.com.cn/Claw/G000200022" , "中华人民共和国主席令[2015]第21号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:10:28,776-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院办公厅关于印发国务院2015年立法工作计划的通知" , "http://d.wanfangdata.com.cn/Claw/G000200159" , "国办发[2015]第28号-国务院办公厅-政策法规-2015" ) 
+2016-04-17 17:10:28,781-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会令关于修改〈证券市场禁入规定〉的决定" , "http://d.wanfangdata.com.cn/Claw/G000850004" , "中国证券监督管理委员会令[2015]第115号-中国证券监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:10:28,783-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "计量违法行为处罚细则（2015修订）" , "http://d.wanfangdata.com.cn/Claw/G000540003" , "国家质量监督检验检疫总局令[2015]第166号-国家质量监督检验检疫总局-政策法规-2015" ) 
+2016-04-17 17:10:28,786-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上市公司章程指引（2014年修订）" , "http://d.wanfangdata.com.cn/Claw/G000190578" , "中国证券监督管理委员会公告[2014]第19号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:10:28,788-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国土资源部办公厅关于依法履职严格规范公正执法的通知" , "http://d.wanfangdata.com.cn/Claw/G000330011" , "国土资厅发[2015]第34号-国土资源部办公厅-政策法规-2015" ) 
+2016-04-17 17:10:29,697-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-17 17:10:29,802-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-17 17:10:30,160-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银监会外资银行行政许可事项实施办法（修订）" , "http://d.wanfangdata.com.cn/Claw/G000840178" , "中国银行业监督管理委员会令[2015]第4号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:10:30,164-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于完善人民法院司法责任制的若干意见" , "http://d.wanfangdata.com.cn/Claw/G000430031" , "法发[2015]第13号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:10:30,167-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国海上海事行政处罚规定（交通运输部令[2015]第8号）" , "http://d.wanfangdata.com.cn/Claw/G000490045" , "交通运输部令[2015]第8号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:10:30,170-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家发展和改革委员会关于开展政府和社会资本合作的指导意见" , "http://d.wanfangdata.com.cn/Claw/G000220377" , "发改投资[2014]第2724号-国家发展和改革委员会-政策法规-2014" ) 
+2016-04-17 17:10:30,173-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "企业经营范围登记管理规定（2015）" , "http://d.wanfangdata.com.cn/Claw/G000530012" , "国家工商行政管理总局令[2015]第76号-国家工商行政管理总局-政策法规-2015" ) 
+2016-04-17 17:10:30,177-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会环境与资源保护委员会关于第十二届全国人民代表大会第一次会议主席团交付审议的代表提出的议案审议结果的报告" , "http://d.wanfangdata.com.cn/Claw/G000189588" , "-全国人民代表大会-政策法规-2013" ) 
+2016-04-17 17:10:30,180-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会常务委员会2014年立法工作计划" , "http://d.wanfangdata.com.cn/Claw/G000186025" , "-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:10:30,183-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所股票上市规则（2013修订）" , "http://d.wanfangdata.com.cn/Claw/G000168474" , "-上海证券交易所-政策法规-2013" ) 
+2016-04-17 17:10:30,185-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国广告法" , "http://d.wanfangdata.com.cn/Claw/G000200021" , "中华人民共和国主席令[2015]第22号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:10:30,187-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会关于就修订《上市公司重大资产重组管理办法》、《上市公司收购管理办法》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000192334" , "-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:10:30,257-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国证券法（2014修正）" , "http://d.wanfangdata.com.cn/Claw/G000193782" , "主席令[2014]第14号-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:10:30,260-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院国有资产监督管理委员会、全国普及常识办公室关于转发《中央宣传部、司法部、全国普法办<关于开展“学习宪法 尊法守法”主题活动的通知>》的通知" , "http://d.wanfangdata.com.cn/Claw/G000500030" , "-国务院国有资产监督管理委员会、全国普及法律常识办公室-政策法规-2015" ) 
+2016-04-17 17:10:30,274-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银监会非银行金融机构行政许可事项实施办法(修订)" , "http://d.wanfangdata.com.cn/Claw/G000840181" , "中国银行业监督管理委员会令[2015]第6号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:10:30,278-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券业协会关于发布《公司债券受托管理人执业行为准则》的通知" , "http://d.wanfangdata.com.cn/Claw/G000360144" , "中证协发[2015]第121号-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:10:30,280-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "公司债券受托管理人执业行为准则" , "http://d.wanfangdata.com.cn/Claw/G000360019" , "-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:10:30,283-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所公司债券上市规则（2015年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270200" , "上证发[2015]第49号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:10:30,285-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院国有资产监督管理委员会办公厅关于开展中央企业落实法制工作第三个三年目标检查验收工作的通知" , "http://d.wanfangdata.com.cn/Claw/G000188715" , "国资厅法规[2014]第279号-国务院国有资产监督管理委员会办公厅-政策法规-2014" ) 
+2016-04-17 17:10:30,289-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券业协会关于发布《证券公司合规管理人员胜任能力测试大纲（2015）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000360178" , "中证协发[2015]第67号-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:10:30,291-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家工商行政管理总局关于修订外商投资企业登记书式的通知（2014）" , "http://d.wanfangdata.com.cn/Claw/G000183802" , "工商外企字[2014]第31号-国家工商行政管理总局-政策法规-2014" ) 
+2016-04-17 17:10:30,302-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "铁路危险货物运输安全监督管理规定" , "http://d.wanfangdata.com.cn/Claw/G000490056" , "交通运输部令[2015]第1号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:10:31,202-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-17 17:10:31,566-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国安全生产法（2014修正）" , "http://d.wanfangdata.com.cn/Claw/G000193778" , "主席令[2014]第13号-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:10:31,569-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家税务总局关于《特别纳税调整实施办法》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000400120" , "-国家税务总局-政策法规-2015" ) 
+2016-04-17 17:10:31,571-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "深圳证券交易所关于发布《深圳证券交易所公司债券上市规则（2015年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000751604" , "-深圳证券交易所-政策法规-2015" ) 
+2016-04-17 17:10:31,573-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所非公开发行公司债券业务管理暂行办法》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270199" , "上证发[2015]第50号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:10:31,576-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国海事局关于印发《常见海事违法行为行政处罚裁量基准》的通知" , "http://d.wanfangdata.com.cn/Claw/G000183262" , "海政法[2014]第138号-中华人民共和国海事局-政策法规-2014" ) 
+2016-04-17 17:10:31,578-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于就《上海证券交易所证券投资基金上市规则（2015年征求意见稿）》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000270109" , "上证公告[2015]第6号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:10:31,586-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会公告2014年第49号" , "http://d.wanfangdata.com.cn/Claw/G000850046" , "中国证券监督管理委员会公告[2014]第49号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:10:31,588-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国教育部高等学校章程核准书第55号（合肥工业大学）" , "http://d.wanfangdata.com.cn/Claw/G000207028" , "-教育部-政策法规-2015" ) 
+2016-04-17 17:10:31,590-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "交通运输部关于修改《公路建设市场管理办法》的决定（2015修订）" , "http://d.wanfangdata.com.cn/Claw/G000490037" , "交通运输部令[2015]第11号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:10:31,592-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知" , "http://d.wanfangdata.com.cn/Claw/G000940087" , "国测党发[2015]第15号-国家测绘地理信息局-政策法规-2015" ) 
+2016-04-17 17:10:32,664-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1783047508.
+2016-04-17 17:10:32,664-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:10:32,666-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select id from urltest order by id desc limit 1; 
+2016-04-17 17:10:32,666-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:10:32,688-[HL] DEBUG main java.sql.ResultSet - <==    Columns: id
+2016-04-17 17:10:32,688-[HL] DEBUG main java.sql.ResultSet - <==        Row: 50
+2016-04-17 17:10:32,695-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-17 17:10:32,695-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:5.703秒
+2016-04-17 17:10:32,695-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-17 17:10:32,695-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-17 17:10:32,695-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:10:32,710-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 2145970759.
+2016-04-17 17:10:32,710-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:10:32,711-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select title from falvpaper order by id desc limit 1; 
+2016-04-17 17:10:32,711-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:10:32,712-[HL] DEBUG main java.sql.ResultSet - <==    Columns: title
+2016-04-17 17:10:32,712-[HL] DEBUG main java.sql.ResultSet - <==        Row: 中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知
+2016-04-17 17:10:32,723-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select id from urltest where ftitle = ? LIMIT 1; 
+2016-04-17 17:10:32,723-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知(String)
+2016-04-17 17:10:32,724-[HL] DEBUG main java.sql.ResultSet - <==    Columns: id
+2016-04-17 17:10:32,724-[HL] DEBUG main java.sql.ResultSet - <==        Row: 50
+2016-04-17 17:10:32,735-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1107730949.
+2016-04-17 17:10:32,735-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:10:32,739-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select distinct paperurl from null where ftitle NOT IN (select title from falvpaper) 
+2016-04-17 17:10:32,739-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:11:05,822-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:11:05,823-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:11:05,823-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:11:05,823-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - PooledDataSource forcefully closed/removed all connections.
+2016-04-17 17:11:06,403-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 230835489.
+2016-04-17 17:11:06,406-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:11:06,555-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: create table if not exists urltest ( id int(11) NOT NULL AUTO_INCREMENT, ftitle varchar(255) DEFAULT NULL, paperurl varchar(255) DEFAULT NULL, fenlei varchar(255) DEFAULT NULL, PRIMARY KEY (id), UNIQUE KEY paperurl (paperurl) USING HASH ) 
+2016-04-17 17:11:06,556-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:11:06,560-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-17 17:11:06,595-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 601008104.
+2016-04-17 17:11:06,595-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:11:06,601-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: create table if not exists falvpaper ( id int(11) NOT NULL AUTO_INCREMENT, title varchar(255) DEFAULT NULL, brief varchar(255) DEFAULT NULL, library varchar(255) DEFAULT NULL, titlenumber varchar(255) DEFAULT NULL, department varchar(255) DEFAULT NULL, level varchar(255) DEFAULT NULL, timeline varchar(255) DEFAULT NULL, promulgation varchar(255) DEFAULT NULL, material varchar(255) DEFAULT NULL, contentclass varchar(255) DEFAULT NULL, PRIMARY KEY (id), UNIQUE KEY title (title) USING HASH ) 
+2016-04-17 17:11:06,601-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:11:06,602-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-17 17:11:06,604-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-17 17:11:06,604-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:11:07,057-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-17 17:11:07,072-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-17 17:11:07,072-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-17 17:11:08,227-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-17 17:11:08,237-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银行业监督管理委员会关于建信养老金管理有限责任公司开业的批复" , "http://d.wanfangdata.com.cn/Claw/G000841621" , "银监复[2015]第620号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:11:08,250-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-17 17:11:08,257-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院关于“先照后证”改革后加强事中事后监管的意见" , "http://d.wanfangdata.com.cn/Claw/G000200047" , "国发[2015]第62号-国务院-政策法规-2015" ) 
+2016-04-17 17:11:08,258-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所股票上市规则（2014年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270240" , "上证发[2014]第65号-上海证券交易所-政策法规-2014" ) 
+2016-04-17 17:11:08,261-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于适用《中华人民共和国民事诉讼法》的解释" , "http://d.wanfangdata.com.cn/Claw/G000430018" , "法释[2015]第5号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:11:08,264-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "深圳证券交易所关于《深圳证券交易所公司债券上市规则（征求意见稿）》等配套规则公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000752085" , "-深圳证券交易所-政策法规-2015" ) 
+2016-04-17 17:11:08,267-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会关于修改《中华人民共和国立法法》的决定" , "http://d.wanfangdata.com.cn/Claw/G000200023" , "中华人民共和国主席令[2015]第20号-全国人民代表大会-政策法规-2015" ) 
+2016-04-17 17:11:08,272-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会常务委员会关于修改《中华人民共和国地方各级人民代表大会和地方各级人民政府组织法》、《中华人民共和国全国人民代表大会和地方各级人民代表大会选举法》、《中华人民共和国全国人民代表大会和地方各级人民代表大会代表法》的决定" , "http://d.wanfangdata.com.cn/Claw/G000200002" , "中华人民共和国主席令[2015]第33号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:11:08,274-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于就《上海证券交易所公司债券上市规则》等业务规则公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000270103" , "上证公告[2015]第7号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:11:08,277-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国食品安全法" , "http://d.wanfangdata.com.cn/Claw/G000200022" , "中华人民共和国主席令[2015]第21号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:11:08,280-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院办公厅关于印发国务院2015年立法工作计划的通知" , "http://d.wanfangdata.com.cn/Claw/G000200159" , "国办发[2015]第28号-国务院办公厅-政策法规-2015" ) 
+2016-04-17 17:11:08,282-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院关于实行市场准入负面清单制度的意见" , "http://d.wanfangdata.com.cn/Claw/G000200053" , "国发[2015]第55号-国务院-政策法规-2015" ) 
+2016-04-17 17:11:08,283-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会令关于修改〈证券市场禁入规定〉的决定" , "http://d.wanfangdata.com.cn/Claw/G000850004" , "中国证券监督管理委员会令[2015]第115号-中国证券监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:11:08,287-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国保险监督管理委员会关于全面推进保险法治建设的指导意见" , "http://d.wanfangdata.com.cn/Claw/G000863856" , "保监发[2016]第7号-中国保险监督管理委员会-政策法规-2016" ) 
+2016-04-17 17:11:08,289-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "计量违法行为处罚细则（2015修订）" , "http://d.wanfangdata.com.cn/Claw/G000540003" , "国家质量监督检验检疫总局令[2015]第166号-国家质量监督检验检疫总局-政策法规-2015" ) 
+2016-04-17 17:11:08,291-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于在人民法院工作中培育和践行社会主义核心价值观的若干意见" , "http://d.wanfangdata.com.cn/Claw/G000430030" , "法发[2015]第14号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:11:08,296-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院印发《关于建立研修学者制度的规定》的通知" , "http://d.wanfangdata.com.cn/Claw/G000430033" , "法[2015]第231号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:11:08,300-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中共国家海洋局党组关于全面推进依法行政加快建设法治海洋的决定" , "http://d.wanfangdata.com.cn/Claw/G000930006" , "国海党发[2015]第30号-国家海洋局-政策法规-2015" ) 
+2016-04-17 17:11:08,302-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上市公司章程指引（2014年修订）" , "http://d.wanfangdata.com.cn/Claw/G000850048" , "中国证券监督管理委员会公告[2014]第47号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:11:08,303-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上市公司章程指引（2014年修订）" , "http://d.wanfangdata.com.cn/Claw/G000190578" , "中国证券监督管理委员会公告[2014]第19号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:11:08,350-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国土资源部办公厅关于依法履职严格规范公正执法的通知" , "http://d.wanfangdata.com.cn/Claw/G000330011" , "国土资厅发[2015]第34号-国土资源部办公厅-政策法规-2015" ) 
+2016-04-17 17:11:09,351-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-17 17:11:09,352-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-17 17:11:10,143-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银监会外资银行行政许可事项实施办法（修订）" , "http://d.wanfangdata.com.cn/Claw/G000840178" , "中国银行业监督管理委员会令[2015]第4号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:11:10,146-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "最高人民法院关于完善人民法院司法责任制的若干意见" , "http://d.wanfangdata.com.cn/Claw/G000430031" , "法发[2015]第13号-最高人民法院-政策法规-2015" ) 
+2016-04-17 17:11:10,148-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国海上海事行政处罚规定（交通运输部令[2015]第8号）" , "http://d.wanfangdata.com.cn/Claw/G000490045" , "交通运输部令[2015]第8号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:11:10,151-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家发展和改革委员会关于开展政府和社会资本合作的指导意见" , "http://d.wanfangdata.com.cn/Claw/G000220377" , "发改投资[2014]第2724号-国家发展和改革委员会-政策法规-2014" ) 
+2016-04-17 17:11:10,176-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国证券法（2014修正）" , "http://d.wanfangdata.com.cn/Claw/G000193782" , "主席令[2014]第14号-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:11:10,178-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院国有资产监督管理委员会、全国普及常识办公室关于转发《中央宣传部、司法部、全国普法办<关于开展“学习宪法 尊法守法”主题活动的通知>》的通知" , "http://d.wanfangdata.com.cn/Claw/G000500030" , "-国务院国有资产监督管理委员会、全国普及法律常识办公室-政策法规-2015" ) 
+2016-04-17 17:11:10,181-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国银监会非银行金融机构行政许可事项实施办法(修订)" , "http://d.wanfangdata.com.cn/Claw/G000840181" , "中国银行业监督管理委员会令[2015]第6号-中国银行业监督管理委员会-政策法规-2015" ) 
+2016-04-17 17:11:10,184-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券业协会关于发布《公司债券受托管理人执业行为准则》的通知" , "http://d.wanfangdata.com.cn/Claw/G000360144" , "中证协发[2015]第121号-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:11:10,187-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "公司债券受托管理人执业行为准则" , "http://d.wanfangdata.com.cn/Claw/G000360019" , "-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:11:10,189-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所公司债券上市规则（2015年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270200" , "上证发[2015]第49号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:11:10,191-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国务院国有资产监督管理委员会办公厅关于开展中央企业落实法制工作第三个三年目标检查验收工作的通知" , "http://d.wanfangdata.com.cn/Claw/G000188715" , "国资厅法规[2014]第279号-国务院国有资产监督管理委员会办公厅-政策法规-2014" ) 
+2016-04-17 17:11:10,194-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券业协会关于发布《证券公司合规管理人员胜任能力测试大纲（2015）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000360178" , "中证协发[2015]第67号-中国证券业协会-政策法规-2015" ) 
+2016-04-17 17:11:10,196-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家工商行政管理总局关于修订外商投资企业登记书式的通知（2014）" , "http://d.wanfangdata.com.cn/Claw/G000183802" , "工商外企字[2014]第31号-国家工商行政管理总局-政策法规-2014" ) 
+2016-04-17 17:11:10,198-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "铁路危险货物运输安全监督管理规定" , "http://d.wanfangdata.com.cn/Claw/G000490056" , "交通运输部令[2015]第1号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:11:10,262-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "企业经营范围登记管理规定（2015）" , "http://d.wanfangdata.com.cn/Claw/G000530012" , "国家工商行政管理总局令[2015]第76号-国家工商行政管理总局-政策法规-2015" ) 
+2016-04-17 17:11:10,264-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会环境与资源保护委员会关于第十二届全国人民代表大会第一次会议主席团交付审议的代表提出的议案审议结果的报告" , "http://d.wanfangdata.com.cn/Claw/G000189588" , "-全国人民代表大会-政策法规-2013" ) 
+2016-04-17 17:11:10,267-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "全国人民代表大会常务委员会2014年立法工作计划" , "http://d.wanfangdata.com.cn/Claw/G000186025" , "-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:11:10,271-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所股票上市规则（2013修订）" , "http://d.wanfangdata.com.cn/Claw/G000168474" , "-上海证券交易所-政策法规-2013" ) 
+2016-04-17 17:11:10,274-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国广告法" , "http://d.wanfangdata.com.cn/Claw/G000200021" , "中华人民共和国主席令[2015]第22号-全国人民代表大会常务委员会-政策法规-2015" ) 
+2016-04-17 17:11:10,277-[HL] DEBUG pool-1-thread-2 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会关于就修订《上市公司重大资产重组管理办法》、《上市公司收购管理办法》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000192334" , "-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:11:11,263-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-17 17:11:11,569-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国安全生产法（2014修正）" , "http://d.wanfangdata.com.cn/Claw/G000193778" , "主席令[2014]第13号-全国人民代表大会常务委员会-政策法规-2014" ) 
+2016-04-17 17:11:11,572-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "国家税务总局关于《特别纳税调整实施办法》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000400120" , "-国家税务总局-政策法规-2015" ) 
+2016-04-17 17:11:11,576-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "深圳证券交易所关于发布《深圳证券交易所公司债券上市规则（2015年修订）》的通知" , "http://d.wanfangdata.com.cn/Claw/G000751604" , "-深圳证券交易所-政策法规-2015" ) 
+2016-04-17 17:11:11,578-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于发布《上海证券交易所非公开发行公司债券业务管理暂行办法》的通知" , "http://d.wanfangdata.com.cn/Claw/G000270199" , "上证发[2015]第50号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:11:11,580-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国海事局关于印发《常见海事违法行为行政处罚裁量基准》的通知" , "http://d.wanfangdata.com.cn/Claw/G000183262" , "海政法[2014]第138号-中华人民共和国海事局-政策法规-2014" ) 
+2016-04-17 17:11:11,583-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "上海证券交易所关于就《上海证券交易所证券投资基金上市规则（2015年征求意见稿）》公开征求意见的通知" , "http://d.wanfangdata.com.cn/Claw/G000270109" , "上证公告[2015]第6号-上海证券交易所-政策法规-2015" ) 
+2016-04-17 17:11:11,586-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中国证券监督管理委员会公告2014年第49号" , "http://d.wanfangdata.com.cn/Claw/G000850046" , "中国证券监督管理委员会公告[2014]第49号-中国证券监督管理委员会-政策法规-2014" ) 
+2016-04-17 17:11:11,588-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中华人民共和国教育部高等学校章程核准书第55号（合肥工业大学）" , "http://d.wanfangdata.com.cn/Claw/G000207028" , "-教育部-政策法规-2015" ) 
+2016-04-17 17:11:11,591-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "交通运输部关于修改《公路建设市场管理办法》的决定（2015修订）" , "http://d.wanfangdata.com.cn/Claw/G000490037" , "交通运输部令[2015]第11号-交通运输部-政策法规-2015" ) 
+2016-04-17 17:11:11,594-[HL] DEBUG pool-1-thread-1 java.sql.Statement - ==>  Executing: insert ignore into urltest ( ftitle , paperurl , fenlei ) values( "中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知" , "http://d.wanfangdata.com.cn/Claw/G000940087" , "国测党发[2015]第15号-国家测绘地理信息局-政策法规-2015" ) 
+2016-04-17 17:11:12,629-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1783047508.
+2016-04-17 17:11:12,629-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:11:12,630-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select id from urltest order by id desc limit 1; 
+2016-04-17 17:11:12,631-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:11:12,648-[HL] DEBUG main java.sql.ResultSet - <==    Columns: id
+2016-04-17 17:11:12,648-[HL] DEBUG main java.sql.ResultSet - <==        Row: 50
+2016-04-17 17:11:12,655-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-17 17:11:12,655-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:6.051秒
+2016-04-17 17:11:12,655-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-17 17:11:12,655-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-17 17:11:12,655-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:11:12,670-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 905735620.
+2016-04-17 17:11:12,671-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:11:12,672-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select title from falvpaper order by id desc limit 1; 
+2016-04-17 17:11:12,673-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:11:12,674-[HL] DEBUG main java.sql.ResultSet - <==    Columns: title
+2016-04-17 17:11:12,674-[HL] DEBUG main java.sql.ResultSet - <==        Row: 中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知
+2016-04-17 17:11:12,685-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select id from urltest where ftitle = ? LIMIT 1; 
+2016-04-17 17:11:12,686-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 中共国家测绘地理信息局党组关于印发《中共国家测绘地理信息局党组贯彻落实〈中共中央关于全面推进依法治国若干重大问题的决定〉实施意见》的通知(String)
+2016-04-17 17:11:12,687-[HL] DEBUG main java.sql.ResultSet - <==    Columns: id
+2016-04-17 17:11:12,687-[HL] DEBUG main java.sql.ResultSet - <==        Row: 50
+2016-04-17 17:11:12,700-[HL] DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource - Created connection 1107730949.
+2016-04-17 17:11:12,700-[HL] DEBUG main java.sql.Connection - ooo Connection Opened
+2016-04-17 17:11:12,703-[HL] DEBUG main java.sql.PreparedStatement - ==>  Executing: select distinct paperurl from urltest where ftitle NOT IN (select title from falvpaper) 
+2016-04-17 17:11:12,703-[HL] DEBUG main java.sql.PreparedStatement - ==> Parameters: 
+2016-04-17 17:11:12,705-[HL] DEBUG main java.sql.ResultSet - <==    Columns: paperurl
+2016-04-17 17:11:12,705-[HL] DEBUG main java.sql.ResultSet - <==        Row: http://d.wanfangdata.com.cn/Claw/G000430033
+2016-04-17 17:11:29,154-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-17 17:11:29,191-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-17 17:11:29,193-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-17 17:11:29,193-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:11:29,629-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-17 17:11:29,631-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-17 17:11:29,631-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-17 17:11:30,849-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-17 17:11:30,903-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-17 17:11:31,957-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-17 17:11:31,998-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-17 17:11:33,407-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-17 17:11:35,029-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-17 17:11:35,029-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:5.836秒
+2016-04-17 17:11:35,030-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-17 17:11:35,030-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-17 17:11:35,030-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-17 17:11:35,110-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-17 17:11:35,144-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-17 17:11:35,144-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:0.114秒
+2016-04-17 17:11:35,144-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 0 .
+2016-04-17 17:11:35,144-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-17 17:11:35,144-[HL] INFO main cn.kejso.Spider.SpiderChain - AnonymousSpiderChain end .Total Cost time:5.951秒
+2016-04-18 00:51:41,401-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-18 00:51:41,466-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-18 00:51:41,467-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-18 00:51:41,468-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-18 00:51:42,035-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-18 00:51:42,036-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-18 00:51:42,036-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-18 00:51:43,571-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-18 00:51:43,583-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-18 00:51:44,651-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-18 00:51:44,652-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-18 00:51:45,947-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-18 00:51:47,421-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-18 00:51:47,422-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:5.954秒
+2016-04-18 00:51:47,422-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-18 00:51:47,422-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-18 00:51:47,422-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-18 00:52:03,468-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-18 00:52:03,723-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-18 00:52:03,725-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-18 00:52:03,726-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-18 00:52:04,156-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-18 00:52:04,158-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-18 00:52:04,158-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-18 00:52:05,223-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-18 00:52:05,231-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-18 00:52:06,290-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-18 00:52:06,315-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-18 00:52:07,782-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-18 00:52:09,355-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-18 00:52:09,355-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:5.63秒
+2016-04-18 00:52:09,355-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-18 00:52:09,355-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-18 00:52:09,355-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-18 00:52:09,409-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-18 00:52:09,409-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270240
+2016-04-18 00:52:09,410-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000841621
+2016-04-18 00:52:09,882-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 0 units.
+2016-04-18 00:52:09,932-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 0 units.
+2016-04-18 00:52:11,933-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200047
+2016-04-18 00:52:11,937-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200023
+2016-04-18 00:52:14,049-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200002
+2016-04-18 00:52:14,090-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200053
+2016-04-18 00:52:16,649-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430018
+2016-04-18 00:52:16,674-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000752085
+2016-04-18 00:52:18,965-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000863856
+2016-04-18 00:52:19,023-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270103
+2016-04-18 00:52:21,092-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430030
+2016-04-18 00:52:21,249-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430033
+2016-04-18 00:52:21,318-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 10 units.
+2016-04-18 00:52:21,321-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 10 units.
+2016-04-18 00:52:23,358-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200022
+2016-04-18 00:52:23,358-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000930006
+2016-04-18 00:52:25,509-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200159
+2016-04-18 00:52:25,647-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850048
+2016-04-18 00:52:27,579-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850004
+2016-04-18 00:52:27,716-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000540003
+2016-04-18 00:52:29,784-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000190578
+2016-04-18 00:52:29,797-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000330011
+2016-04-18 00:52:31,917-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193782
+2016-04-18 00:52:31,958-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000500030
+2016-04-18 00:52:31,967-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 20 units.
+2016-04-18 00:52:33,992-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840181
+2016-04-18 00:52:34,041-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360144
+2016-04-18 00:52:36,117-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360019
+2016-04-18 00:52:36,243-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270200
+2016-04-18 00:52:38,317-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000188715
+2016-04-18 00:52:38,342-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360178
+2016-04-18 00:52:40,418-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183802
+2016-04-18 00:52:40,493-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490056
+2016-04-18 00:52:42,534-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840178
+2016-04-18 00:52:42,567-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430031
+2016-04-18 00:52:42,594-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 30 units.
+2016-04-18 00:52:42,616-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 30 units.
+2016-04-18 00:52:44,630-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490045
+2016-04-18 00:52:44,631-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000220377
+2016-04-18 00:52:46,693-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000530012
+2016-04-18 00:52:46,718-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000189588
+2016-04-18 00:52:48,834-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000186025
+2016-04-18 00:52:48,859-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000168474
+2016-04-18 00:52:51,104-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200021
+2016-04-18 00:52:51,105-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000192334
+2016-04-18 00:52:53,193-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193778
+2016-04-18 00:52:53,279-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 40 units.
+2016-04-18 00:52:53,318-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000400120
+2016-04-18 00:52:55,335-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000751604
+2016-04-18 00:52:55,393-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270199
+2016-04-18 00:52:57,485-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183262
+2016-04-18 00:52:57,593-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270109
+2016-04-18 00:52:59,577-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850046
+2016-04-18 00:52:59,860-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000207028
+2016-04-18 00:53:01,669-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490037
+2016-04-18 00:53:02,044-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000940087
+2016-04-18 00:53:04,140-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-18 00:53:04,140-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:54.785秒
+2016-04-18 00:53:04,141-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 50 .
+2016-04-18 00:53:04,141-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-18 00:53:04,141-[HL] INFO main cn.kejso.Spider.SpiderChain - AnonymousSpiderChain end .Total Cost time:60.416秒
+2016-04-18 00:54:25,440-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-18 00:54:25,468-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-18 00:54:25,469-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-18 00:54:25,469-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-18 00:54:25,748-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-18 00:54:25,750-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-18 00:54:25,750-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-18 00:54:26,768-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-18 00:54:26,884-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-18 00:54:27,934-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-18 00:54:27,959-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-18 00:54:29,367-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-18 00:54:30,726-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-18 00:54:30,727-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:5.258秒
+2016-04-18 00:54:30,727-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-18 00:54:30,727-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-18 00:54:30,727-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-18 00:54:30,786-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-18 00:54:30,791-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270240
+2016-04-18 00:54:30,792-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000841621
+2016-04-18 00:54:31,151-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 0 units.
+2016-04-18 00:54:33,175-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200047
+2016-04-18 00:54:33,300-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200023
+2016-04-18 00:54:35,376-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200002
+2016-04-18 00:54:35,467-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200053
+2016-04-18 00:54:37,434-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430018
+2016-04-18 00:54:37,617-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000752085
+2016-04-18 00:54:39,759-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000863856
+2016-04-18 00:54:39,760-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270103
+2016-04-18 00:54:41,871-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430030
+2016-04-18 00:54:41,915-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 10 units.
+2016-04-18 00:54:42,116-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430033
+2016-04-18 00:54:43,942-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200022
+2016-04-18 00:54:44,193-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000930006
+2016-04-18 00:54:46,010-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200159
+2016-04-18 00:54:47,477-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850048
+2016-04-18 00:54:48,059-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850004
+2016-04-18 00:54:49,560-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000540003
+2016-04-18 00:54:50,169-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000190578
+2016-04-18 00:54:51,685-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000330011
+2016-04-18 00:54:52,243-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193782
+2016-04-18 00:54:52,493-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 20 units.
+2016-04-18 00:54:53,960-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000500030
+2016-04-18 00:54:54,510-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840181
+2016-04-18 00:54:56,035-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360144
+2016-04-18 00:54:56,685-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360019
+2016-04-18 00:54:58,086-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270200
+2016-04-18 00:54:58,769-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000188715
+2016-04-18 00:55:00,211-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360178
+2016-04-18 00:55:02,078-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183802
+2016-04-18 00:55:02,310-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490056
+2016-04-18 00:55:04,386-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840178
+2016-04-18 00:55:04,387-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430031
+2016-04-18 00:55:04,410-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 30 units.
+2016-04-18 00:55:04,433-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 30 units.
+2016-04-18 00:55:06,477-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490045
+2016-04-18 00:55:06,477-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000220377
+2016-04-18 00:55:08,562-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000530012
+2016-04-18 00:55:08,771-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000189588
+2016-04-18 00:55:10,646-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000186025
+2016-04-18 00:55:11,062-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000168474
+2016-04-18 00:55:12,711-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200021
+2016-04-18 00:55:13,411-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000192334
+2016-04-18 00:55:14,787-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193778
+2016-04-18 00:55:15,050-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 40 units.
+2016-04-18 00:55:15,695-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000400120
+2016-04-18 00:55:17,079-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000751604
+2016-04-18 00:55:18,030-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270199
+2016-04-18 00:55:19,162-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183262
+2016-04-18 00:55:20,312-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270109
+2016-04-18 00:55:21,470-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850046
+2016-04-18 00:55:22,595-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000207028
+2016-04-18 00:55:23,571-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490037
+2016-04-18 00:55:24,687-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000940087
+2016-04-18 00:55:26,808-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-18 00:55:26,808-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:56.081秒
+2016-04-18 00:55:26,808-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 50 .
+2016-04-18 00:55:26,808-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-18 00:55:26,808-[HL] INFO main cn.kejso.Spider.SpiderChain - AnonymousSpiderChain end .Total Cost time:61.339秒
+2016-04-18 00:55:57,232-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-18 00:55:57,260-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-18 00:55:57,261-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-04-18 00:55:57,261-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-18 00:55:57,536-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-18 00:55:57,538-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-18 00:55:57,538-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-18 00:55:58,897-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-18 00:55:58,903-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-18 00:55:59,957-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-18 00:55:59,998-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-18 00:56:01,307-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-18 00:56:02,732-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-18 00:56:02,732-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:5.471秒
+2016-04-18 00:56:02,733-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-18 00:56:02,733-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-18 00:56:02,733-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-04-18 00:56:02,810-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-18 00:56:02,811-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000530012
+2016-04-18 00:56:02,811-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000220377
+2016-04-18 00:56:03,172-[HL] INFO pool-2-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 0 units.
+2016-04-18 00:56:05,206-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000189588
+2016-04-18 00:56:05,306-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000186025
+2016-04-18 00:56:07,457-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000168474
+2016-04-18 00:56:08,206-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200021
+2016-04-18 00:56:09,748-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000192334
+2016-04-18 00:56:10,299-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193778
+2016-04-18 00:56:11,949-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000400120
+2016-04-18 00:56:12,401-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000751604
+2016-04-18 00:56:14,224-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270199
+2016-04-18 00:56:14,267-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 10 units.
+2016-04-18 00:56:14,656-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183262
+2016-04-18 00:56:16,299-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270109
+2016-04-18 00:56:17,016-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850046
+2016-04-18 00:56:18,483-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000207028
+2016-04-18 00:56:19,241-[HL] INFO pool-2-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490037
+2016-04-18 00:56:20,567-[HL] INFO pool-2-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000940087
+2016-04-18 00:56:22,685-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-18 00:56:22,685-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:19.952秒
+2016-04-18 00:56:22,685-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 17 .
+2016-04-18 00:56:22,685-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-18 00:56:22,685-[HL] INFO main cn.kejso.Spider.SpiderChain - AnonymousSpiderChain end .Total Cost time:25.424秒

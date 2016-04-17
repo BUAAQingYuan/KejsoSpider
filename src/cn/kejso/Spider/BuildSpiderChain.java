@@ -31,8 +31,6 @@ public class BuildSpiderChain {
 	private GlobalConfig global;
 	private SpiderChain chain;
 
-
-
 	public BuildSpiderChain(String configPath) {
 
 		chain = new SpiderChain();
@@ -53,11 +51,10 @@ public class BuildSpiderChain {
 	private Function<Spider, SpiderConf> getStartUrlHandler(SpiderConf conf) {
 
 		Function<Spider, SpiderConf> result = null;
-		
+
 		if (conf.getDependname() == null) {
 			result = readUrlFromConf;
-		}
-		else if (conf.getDependname() != null) {
+		} else if (conf.getDependname() != null) {
 			result = readUrlFromSql;
 		}
 
@@ -92,7 +89,7 @@ public class BuildSpiderChain {
 	public void startSpiders() {
 		chain.startSpiders(true);
 	}
-	
+
 	private Function<Spider, SpiderConf> readUrlFromConf = new Function<Spider, SpiderConf>() {
 		@Override
 		public List<String> apply(Spider t, SpiderConf e) {
@@ -100,19 +97,23 @@ public class BuildSpiderChain {
 			return config.getStartUrls();
 		}
 	};
-	
-	//考虑利用SQL断点恢复
+
+	// 考虑利用SQL断点恢复
 	private Function<Spider, SpiderConf> readUrlFromSql = new Function<Spider, SpiderConf>() {
 		@Override
 		public List<String> apply(Spider t, SpiderConf e) {
-			SpiderConf pre=SpiderUtil.getSpiderConfByName(e.getDependname(), getConfs());
-			
-			int currentPos = SqlUtil.getBreakPoint(pre, e);
-			
-			return SqlUtil.getPartTargetUrls(pre, currentPos);
+			SpiderConf pre = SpiderUtil.getSpiderConfByName(e.getDependname(), getConfs());
+
+			if (e.getRecoverConfig().getEnable()) {
+				int currentPos = SqlUtil.getBreakPoint(pre, e);
+				SqlUtil.getDeltaUrls(pre, e);
+				return SqlUtil.getPartTargetUrls(pre, currentPos);
+			}
+			else
+				return SqlUtil.getTargetUrls(pre);
 		}
 	};
-	
+
 	private List<SpiderConf> getConfs() {
 		return confs;
 	}

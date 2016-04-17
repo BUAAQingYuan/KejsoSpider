@@ -88,8 +88,9 @@ public class TemplateConstructor {
 		String code=sub.getString("ContentList.Code");
 		String field=sub.getString("ContentList.Field");
 		String markfield=sub.getString("ContentList.MarkField");
+		String pageUrlField=sub.getString("PageUrlField");
 		
-		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),unique);
+		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),unique,pageUrlField);
 	}
 	
 	/*

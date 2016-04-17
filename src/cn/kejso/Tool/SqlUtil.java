@@ -59,6 +59,23 @@ public class SqlUtil {
 			List<String> urls=session.selectList(statement, map);
 			return urls;
 		}
+		
+		//获取两个表之间条目的差
+		public static List<String> getDeltaUrls(SpiderConf pre, SpiderConf current) {
+			
+			SqlSession session=SpiderUtil.getSession();
+			String statement=Config.TheDeltaField_statement;
+			
+			Map<String,Object> map=new HashMap<String,Object>();
+			map.put("targetField", pre.getConfig().getUnique());
+			map.put("targetTable", pre.getConfig().getTablename());
+			map.put("field", current.getRecoverConfig().getRef());
+			map.put("sourceField", current.getRecoverConfig().getField());
+			map.put("sourceTable", current.getConfig().getTablename());
+			
+			List<String> urls=session.selectList(statement, map);
+			return urls;
+		}
 
 		//MysqlCache
 		//获取一个数据表当前的位置
