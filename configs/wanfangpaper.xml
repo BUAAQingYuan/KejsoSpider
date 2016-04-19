@@ -10,15 +10,13 @@
 
 	<!-- 列表页配置 -->
 	<ListConfig name="listconfig">
-		<ListUrl>http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&amp;f=top&amp;p=#
-		</ListUrl>
+		<ListUrl>http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&amp;f=top&amp;p=#</ListUrl>
 		<PageEnable>true</PageEnable>
 		<PageStart>1</PageStart>
 		<PageEnd>5</PageEnd>
 
 		<!-- 列表页中列表对应的value -->
-		<ListValue>//div[@class='record-item-list']/div[@class='record-item']
-		</ListValue>
+		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
 
 		<!-- url存储的表名 -->
 		<SqlTable>urltest</SqlTable>
@@ -51,9 +49,9 @@
 		<ContentTable>falvpaper</ContentTable>
 
 		<!-- 表字段 -->
-		<TableFields>url#title#brief#library#titlenumber#department#level#timeline#promulgation#material#contentclass
-		</TableFields>
+		<TableFields>url#title#brief#library#titlenumber#department#level#timeline#promulgation#material#contentclass</TableFields>
 		<UniqueField>url</UniqueField>
+		<NotNullField>title</NotNullField>
 
 		<!-- 用于存放所抓取页面的url的数据库字段 -->
 		<PageUrlField>url</PageUrlField>
@@ -74,14 +72,11 @@
 		<!-- list -->
 		<ContentList>
 			<!-- 映射的字段 -->
-			<Field>library#titlenumber#department#level#timeline#promulgation#material#contentclass
-			</Field>
+			<Field>library#titlenumber#department#level#timeline#promulgation#material#contentclass</Field>
 			<MarkField>库别名称：#发文文号：#颁布部门：#效力级别：#时效性：#颁布日期：#实施日期：#内容分类：</MarkField>
 
-			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()
-			</Mark>
-			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()
-			</Code>
+			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
+			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
 		</ContentList>
 	</ContentConfig>
 
@@ -94,7 +89,8 @@
 		<Spider name="contentspider">
 			<depend ref="listspider" field="url" />
 			<conf-def class="ContentConfig" name="contentconfig" />
-			<recover enable="true" ref="paperurl" field="url" />
+			<!-- mode分simple和delta，其中simple比现有id大的url，delta获取两表相差的url -->
+			<recover enable="true" mode="simple" ref="paperurl" field="url" />
 		</Spider>
 	</Spiders>
 </Configuration>

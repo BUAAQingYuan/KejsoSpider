@@ -36,6 +36,9 @@ public class UrlListProcessHandler {
 		//常量字段
 		List<Tag> consts=config.getConsttags();
 		
+		//非列表字段
+		List<Tag> others=config.getOthertags();
+		
 		for(Selectable one:nodes)
 		{
 			List<String> contents=new ArrayList<String>();
@@ -57,6 +60,12 @@ public class UrlListProcessHandler {
 			{
 				entity.put(consts.get(i).getTagname(), consts.get(i).getTagValue());
 			}
+			
+			//非列表字段
+			for(int i=0;i<others.size();i++)
+			{
+				entity.put(others.get(i).getTagname(), page.getHtml().xpath(others.get(i).getTagValue()).toString());
+			}			
 				
 			entitys.add(entity);
 	

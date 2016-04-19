@@ -105,11 +105,14 @@ public class BuildSpiderChain {
 			SpiderConf pre = SpiderUtil.getSpiderConfByName(e.getDependname(), getConfs());
 
 			if (e.getRecoverConfig().getEnable()) {
-				int currentPos = SqlUtil.getBreakPoint(pre, e);
-				SqlUtil.getDeltaUrls(pre, e);
-				return SqlUtil.getPartTargetUrls(pre, currentPos);
-			}
-			else
+				if (e.getRecoverConfig().isSimpleRecover()) {
+					int currentPos = SqlUtil.getBreakPoint(pre, e);
+					return SqlUtil.getPartTargetUrls(pre, currentPos);
+				} else {
+					return SqlUtil.getDeltaUrls(pre, e);
+				}
+
+			} else
 				return SqlUtil.getTargetUrls(pre);
 		}
 	};
@@ -119,7 +122,7 @@ public class BuildSpiderChain {
 	}
 
 	public static void main(String[] args) {
-		String path = "configs\\wanfangpaper.xml";
+		String path = "configs\\test.xml";
 
 		BuildSpiderChain bsc = new BuildSpiderChain(path);
 		bsc.startSpiders();

@@ -19,7 +19,10 @@ public class ListConfig  extends BaseConfig implements ContainStartUrls {
 	//常量字段
 	private  List<Tag>  consttags;
 	
-	public ListConfig(List<String> starturls,String listvalue,String tablename,List<Tag> tags,List<String> fields,String unique,List<Tag> consttags)
+	//其它非列表字段
+	private  List<Tag>  othertags;
+	
+	public ListConfig(List<String> starturls,String listvalue,String tablename,List<Tag> tags,List<String> fields,String unique,List<Tag> consttags,List<Tag> othertags)
 	{
 		this.starturls=starturls;
 		this.listvalue=listvalue;
@@ -29,6 +32,7 @@ public class ListConfig  extends BaseConfig implements ContainStartUrls {
 		this.fields=fields;
 		this.unique=unique;
 		this.consttags=consttags;
+		this.othertags=othertags;
 	}
 	
 	public List<Tag> getTags() {
@@ -97,6 +101,14 @@ public class ListConfig  extends BaseConfig implements ContainStartUrls {
 		this.consttags = consttags;
 	}
 
+	public List<Tag> getOthertags() {
+		return othertags;
+	}
+
+	public void setOthertags(List<Tag> othertags) {
+		this.othertags = othertags;
+	}
+	
 	@Override
 	public List<String> getStartUrls() {
 

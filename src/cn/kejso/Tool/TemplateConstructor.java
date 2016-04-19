@@ -13,6 +13,7 @@ import org.apache.commons.configuration.tree.ConfigurationNode;
 import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ListAndContentTemplate;
 import cn.kejso.Template.RecoverConfig;
+import cn.kejso.Template.RecoverConfig.RecoverMode;
 import cn.kejso.Template.ToolEntity.BaseConfig;
 import cn.kejso.Template.ToolEntity.ContentConfig;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
@@ -63,7 +64,15 @@ public class TemplateConstructor {
 			listtags2.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
 		}
 		
-		return new ListConfig(starturls,listvalue,tablename,listtags,SpiderUtil.getMapFields(fields),unique,listtags2);
+		List othertags=sub.configurationsAt("OtherTag");
+		List<Tag>  listtags3=new ArrayList<Tag>();
+		for(Iterator it = othertags.iterator(); it.hasNext();)
+		{
+			HierarchicalConfiguration one = (HierarchicalConfiguration) it.next();
+			listtags3.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
+		}
+		
+		return new ListConfig(starturls,listvalue,tablename,listtags,SpiderUtil.getMapFields(fields),unique,listtags2,listtags3);
 		
 	}
 	
@@ -88,9 +97,11 @@ public class TemplateConstructor {
 		String code=sub.getString("ContentList.Code");
 		String field=sub.getString("ContentList.Field");
 		String markfield=sub.getString("ContentList.MarkField");
-		String pageUrlField=sub.getString("PageUrlField");
 		
-		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),unique,pageUrlField);
+		String pageUrlField=sub.getString("PageUrlField");
+		String notNullField=sub.getString("NotNullField");
+		
+		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),unique,pageUrlField,notNullField);
 	}
 	
 	/*
@@ -135,6 +146,7 @@ public class TemplateConstructor {
 		config.setEnable(enable);
 		
 		if (enable) {
+			config.setMode(RecoverMode.valueOf(sub.getString("mode", RecoverMode.simple.toString())));
 			config.setRef(sub.getString("recover[@ref]"));
 			config.setField(sub.getString("recover[@field]"));
 		}

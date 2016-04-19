@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Configuration name="WanfangMagazine">
 	<!-- 任务名称 -->
 	<TaskName>WanfangMagazina</TaskName>
@@ -7,10 +7,51 @@
 	<!-- 是否开启代理 -->
 	<ProxyEnable>False</ProxyEnable>
 	
+		<!-- 列表页配置 -->
+	<ListConfig  name="journallistconfig">
+		<ListUrl>http://c.wanfangdata.com.cn/PeriodicalSubject.aspx?NodeId=B.BD9&amp;PageNo=#</ListUrl>
+		<PageEnable>true</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>3</PageEnd>
+		
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//span[@class='link-wraper col-3']/a[2]</ListValue>
+		
+		<!-- url存储的表名 -->
+		<SqlTable>journallist</SqlTable>
+		
+		<!--指定表的字段，表默认包含id为主键。用户必须指定一个unique索引，指向url -->
+		<TableFields>url#journalname#mainclass#subclass</TableFields>
+		<UniqueField>url</UniqueField>
+		
+		<!--列表页的抓取字段  -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>/a/@href</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>journalname</TagName>
+			<TagValue>/a/text()</TagValue>
+		</ListTag>
+		<!--常量字段-->
+		<ConstTag>
+ 			<TagName>mainclass</TagName> 
+ 			<TagValue>哲学政法</TagValue>
+		</ConstTag>
+		<ConstTag>
+ 			<TagName>subclass</TagName> 
+ 			<TagValue>哲学政法</TagValue>
+		</ConstTag>
+		<!--非列表字段-->
+		
+	</ListConfig>
+	
 	<!-- 获得列表页的预处理配置 -->
 	<PreConfig name="preconfig">
 		<!-- 获得列表页url的前导页面 -->
-		<PreUrl>http://c.wanfangdata.com.cn/Periodical-bjfyj.aspx</PreUrl>
+		<PreUrl></PreUrl>
 		
 		<!--获得列表页Url,get-all -->
 		<PreValue>//div[@class='new_ul']/ul/li/p/a/@href</PreValue>
@@ -58,10 +99,10 @@
 			<TagValue>//a[2]/@href</TagValue>
 		</ListTag>
 		<!--常量字段-->
-		<ConstTag>
+<!-- 		<ConstTag> -->
 <!-- 			<TagName>journalname</TagName> -->
 <!-- 			<TagValue>比较法研究</TagValue> -->
-		</ConstTag>
+<!-- 		</ConstTag> -->
 		<!--非列表字段-->
 		<OtherTag>
 			<TagName>journalname</TagName>
@@ -112,8 +153,13 @@
 	<!--配置对应的爬虫 -->
 	<!-- sequence 顺序启动 -->
 	<Spiders  mode="sequence">
+		<Spider name="journalspider">
+			<conf-def class="ListConfig" name="journallistconfig" />
+		</Spider>
 		<Spider name="prespider">
+			<depend ref="journalspider" field="url" />
 			<conf-def class="PreConfig" name="preconfig" />
+			<recover enable="false" />
 		</Spider>
 		<Spider name="listspider">
 			<depend ref="prespider" field="url" />

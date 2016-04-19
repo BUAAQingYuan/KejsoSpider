@@ -13,7 +13,7 @@ public class SpiderConf {
 		//配置
 		private BaseConfig config;
 		
-		//依赖的爬虫名称
+		//依赖的爬虫名称或数据库 
 		private String dependname;
 		
 		//断点恢复的配置
