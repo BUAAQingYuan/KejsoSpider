@@ -9,10 +9,10 @@
 	
 		<!-- 列表页配置 -->
 	<ListConfig  name="journallistconfig">
-		<ListUrl>http://c.wanfangdata.com.cn/PeriodicalSubject.aspx?NodeId=B.BD9&amp;PageNo=#</ListUrl>
+		<ListUrl>http://c.wanfangdata.com.cn/PeriodicalSubject.aspx?NodeId=B.B80&amp;PageNo=#</ListUrl>
 		<PageEnable>true</PageEnable>
 		<PageStart>1</PageStart>
-		<PageEnd>3</PageEnd>
+		<PageEnd>1</PageEnd>
 		
 		<!-- 列表页中列表对应的value -->
 		<ListValue>//span[@class='link-wraper col-3']/a[2]</ListValue>
@@ -42,7 +42,7 @@
 		</ConstTag>
 		<ConstTag>
  			<TagName>subclass</TagName> 
- 			<TagValue>哲学政法</TagValue>
+ 			<TagValue>逻辑伦理</TagValue>
 		</ConstTag>
 		<!--非列表字段-->
 		
@@ -70,7 +70,7 @@
 		<ListUrl></ListUrl>
 		<PageEnable>false</PageEnable>
 		<PageStart>1</PageStart>
-		<PageEnd>5</PageEnd>
+		<PageEnd>1</PageEnd>
 		
 		<!-- 列表页中列表对应的value -->
 		<ListValue>//div[@class='Content_div_detail']/ul[@class='qkcontent_ul']/li</ListValue>
@@ -119,6 +119,8 @@
 		<TableFields>url#title#brief#downloadurl#doi#author#enauthor#unit#journalname#journal#time#classnumber#machinelabel#onlinepublish#fund</TableFields>
 		<UniqueField>url</UniqueField>
 		
+		<NotNullField>title</NotNullField>
+		
 		<!-- 用于存放所抓取页面的url的数据库字段 -->
 		<PageUrlField>url</PageUrlField>
 		
@@ -153,20 +155,20 @@
 	<!--配置对应的爬虫 -->
 	<!-- sequence 顺序启动 -->
 	<Spiders  mode="sequence">
-		<Spider name="journalspider">
+		<Spider name="journalspider" cname="分类爬虫">
 			<conf-def class="ListConfig" name="journallistconfig" />
 		</Spider>
-		<Spider name="prespider">
+		<Spider name="prespider" cname="期刊目录爬虫">
 			<depend ref="journalspider" field="url" />
 			<conf-def class="PreConfig" name="preconfig" />
-			<recover enable="false" />
+			<recover enable="false"/>
 		</Spider>
-		<Spider name="listspider">
+		<Spider name="listspider" cname="期刊列表爬虫">
 			<depend ref="prespider" field="url" />
 			<conf-def class="ListConfig" name="listconfig" />
 			<recover enable="false" />
 		</Spider>
-		<Spider name="contentspider">
+		<Spider name="contentspider" cname="文章内容爬虫">
 			<depend ref="listspider" field="url" />
 			<conf-def class="ContentConfig" name="contentconfig" />
 			<recover enable="true" mode="delta" ref="url" field="url" />

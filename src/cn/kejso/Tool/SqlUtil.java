@@ -76,6 +76,20 @@ public class SqlUtil {
 			List<String> urls=session.selectList(statement, map);
 			return urls;
 		}
+		
+		public static List<String>	getListDeltaUrls(SpiderConf conf) {
+			SqlSession session=SpiderUtil.getSession();
+			
+			String statement=Config.PartUrl_statement;
+			
+			Map<String,Object> map=new HashMap<String,Object>();
+			map.put("tablename", conf.getConfig().getTablename());
+			map.put("url", conf.getConfig().getUnique());
+			map.put("id", conf.getStartpoint());
+			
+			List<String> urls=session.selectList(statement, map);
+			return urls;
+		}
 
 		//MysqlCache
 		//获取一个数据表当前的位置
@@ -90,8 +104,11 @@ public class SqlUtil {
 			Map<String,Object> map=new HashMap<String,Object>();
 			map.put("tablename",tablename);
 
-			int  position=(int) session.selectOne(state, map);
-			return position;
+			Object position = session.selectOne(state, map);
+			if (position == null)
+				return 0;
+			
+			return (int)position;
 		}
 		
 		//将当前位置写入cache

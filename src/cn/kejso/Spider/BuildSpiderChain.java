@@ -41,11 +41,19 @@ public class BuildSpiderChain {
 			Spider spider = Spider.create(getPageProcessor(conf)).thread(global.getThreadnum())
 					.addPipeline(new MysqlPipeline(conf));
 			spider.setSpiderListeners(getSpiderListeners(conf));
+			spider.setUUID(conf.getCname());
+			conf.setStartpoint(getStartpoint(conf));
 			SpiderContainer container = new SpiderContainer(spider, conf);
 			container.AddgetStartUrlHandler(getStartUrlHandler(conf));
+			container.AddName(conf.getCname());
 			chain.AddSpiderNode(container);
 		}
 
+	}
+	
+	private int getStartpoint(SpiderConf conf) {
+		
+		return SqlUtil.getCurrentPosition(conf);
 	}
 
 	private Function<Spider, SpiderConf> getStartUrlHandler(SpiderConf conf) {
@@ -108,9 +116,12 @@ public class BuildSpiderChain {
 				if (e.getRecoverConfig().isSimpleRecover()) {
 					int currentPos = SqlUtil.getBreakPoint(pre, e);
 					return SqlUtil.getPartTargetUrls(pre, currentPos);
-				} else {
+				} else if (e.getRecoverConfig().isDeltaRecover()){
 					return SqlUtil.getDeltaUrls(pre, e);
-				}
+				} else if (e.getRecoverConfig().isListDeltaRecover()){
+					return SqlUtil.getListDeltaUrls(pre);
+				} else
+					return null;
 
 			} else
 				return SqlUtil.getTargetUrls(pre);

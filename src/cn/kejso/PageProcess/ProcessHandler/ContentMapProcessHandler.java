@@ -58,8 +58,9 @@ public class ContentMapProcessHandler {
 			}
 		}
 
-		//如果该页面存在异常，或是抓取失败
-		if (result.get(config.getNotNullField()) == null) {
+		// 如果该页面存在异常，或是抓取失败
+		String notNullField = config.getNotNullField();
+		if (notNullField != null && result.get(notNullField) == null) {
 			page.setSkip(true);
 		}
 

@@ -146,7 +146,7 @@ public class TemplateConstructor {
 		config.setEnable(enable);
 		
 		if (enable) {
-			config.setMode(RecoverMode.valueOf(sub.getString("mode", RecoverMode.simple.toString())));
+			config.setMode(RecoverMode.valueOf(sub.getString("recover[@mode]")));
 			config.setRef(sub.getString("recover[@ref]"));
 			config.setField(sub.getString("recover[@field]"));
 		}
@@ -176,6 +176,7 @@ public class TemplateConstructor {
 			
 			SpiderConf spider=new SpiderConf();
 			spider.setName(sub.getString("[@name]"));
+			spider.setCname(sub.getString("[@cname]"));
 			
 			String confclass=sub.getString("conf-def[@class]");
 			String confname=sub.getString("conf-def[@name]");

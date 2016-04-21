@@ -5,7 +5,7 @@ public class RecoverConfig {
 	// 是否开启断点恢复功能
 	private boolean enable;
 
-	public static enum RecoverMode {simple, delta};
+	public static enum RecoverMode {simple, delta, listdelta};
 	private RecoverMode mode;
 	
 	private String ref;
@@ -49,5 +49,9 @@ public class RecoverConfig {
 	
 	public boolean isDeltaRecover() {
 		return mode.equals(RecoverMode.delta);
+	}
+	
+	public boolean isListDeltaRecover() {
+		return mode.equals(RecoverMode.listdelta);
 	}
 }

@@ -7,8 +7,11 @@ import cn.kejso.Template.ToolEntity.BaseConfig;
 
 public class SpiderConf {
 	
-		//爬虫名称
+		//爬虫名称-用于唯一标识爬虫
 		private String  name;
+		
+		//爬虫名称-用于提示
+		private String	cname;
 		
 		//配置
 		private BaseConfig config;
@@ -18,6 +21,9 @@ public class SpiderConf {
 		
 		//断点恢复的配置
 		private RecoverConfig rconfig;
+		
+		//爬虫运行前数据库条目数量
+		private int startpoint;
 		
 		public String getName() {
 			return name;
@@ -58,6 +64,22 @@ public class SpiderConf {
 		
 		public void setRecoverConfig(RecoverConfig value) {
 			rconfig = value;
+		}
+		
+		public void setStartpoint(int startpoint) {
+			this.startpoint = startpoint;
+		}
+		
+		public int getStartpoint() {
+			return startpoint;
+		}
+		
+		public void setCname(String cname) {
+			this.cname = cname;
+		}
+		
+		public String getCname() {
+			return cname;
 		}
 
 }
