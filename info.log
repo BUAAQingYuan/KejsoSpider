@@ -13410,3 +13410,315 @@ host: 202.100.167.137 >>  2780ms >> success: 100.00% >> borrow: 71
 2016-04-03 22:19:06,021-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - journaldetail have insert 600 units.
 2016-04-03 22:19:06,606-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Periodical_bjfyj200803015.aspx
 2016-04-03 22:19:08,064-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Periodical_bjfyj200804001.aspx
+2016-04-14 21:15:35,815-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-14 21:15:36,122-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-14 21:15:36,122-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain 万方法律爬虫链 .
+2016-04-14 21:15:36,122-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文Url爬虫 start ...
+2016-04-14 21:15:36,349-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-14 21:15:36,350-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-14 21:15:36,350-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-14 21:15:37,239-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-14 21:15:37,239-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-14 21:15:38,315-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-14 21:15:38,348-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-14 21:15:39,886-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-14 21:15:41,660-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-14 21:15:41,660-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文Url爬虫 end . Cost time:5.538秒
+2016-04-14 21:15:41,660-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-14 21:15:41,660-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-14 21:15:41,660-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文内容爬虫 start ...
+2016-04-14 21:15:41,685-[HL] INFO main us.codecraft.webmagic.scheduler.FileCacheQueueScheduler - init cache scheduler success
+2016-04-14 21:15:41,685-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-14 21:16:33,898-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-14 21:16:33,922-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-14 21:16:33,922-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain 万方法律爬虫链 .
+2016-04-14 21:16:33,923-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文Url爬虫 start ...
+2016-04-14 21:16:34,155-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-14 21:16:34,157-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-14 21:16:34,157-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-14 21:16:34,893-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-14 21:16:34,895-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-14 21:16:35,960-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-14 21:16:35,961-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-14 21:16:37,578-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-14 21:16:39,078-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-14 21:16:39,078-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文Url爬虫 end . Cost time:5.155秒
+2016-04-14 21:16:39,078-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-14 21:16:39,078-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-14 21:16:39,078-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文内容爬虫 start ...
+2016-04-14 21:16:39,116-[HL] INFO main us.codecraft.webmagic.scheduler.FileCacheQueueScheduler - init cache scheduler success
+2016-04-14 21:16:39,116-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-14 21:16:39,129-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-14 21:16:39,129-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文内容爬虫 end . Cost time:0.051秒
+2016-04-14 21:16:39,129-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 0 .
+2016-04-14 21:16:39,129-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-14 21:16:39,129-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律爬虫链 end .Total Cost time:5.206秒
+2016-04-14 21:26:55,079-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table urltest not exists.
+2016-04-14 21:26:55,081-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文Url爬虫 start ...
+2016-04-14 21:26:55,319-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-14 21:26:55,321-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=1
+2016-04-14 21:26:55,321-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=2
+2016-04-14 21:26:56,126-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-14 21:26:56,126-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - urltest have insert 0 units.
+2016-04-14 21:26:57,218-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=3
+2016-04-14 21:26:57,218-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=4
+2016-04-14 21:26:58,843-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top&p=5
+2016-04-14 21:27:00,454-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-14 21:27:00,454-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文Url爬虫 end . Cost time:5.373秒
+2016-04-14 21:27:00,454-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 5 .
+2016-04-14 21:27:00,454-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-04-14 21:27:48,800-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table falvpaper not exists.
+2016-04-14 21:27:48,801-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文内容爬虫 start ...
+2016-04-14 21:27:49,065-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-04-14 21:27:49,066-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000168474
+2016-04-14 21:27:49,066-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183262
+2016-04-14 21:28:13,225-[HL] WARN pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - download page http://d.wanfangdata.com.cn/Claw/G000183262 error
+org.apache.http.conn.HttpHostConnectException: Connect to gw.buaa.edu.cn:80 [gw.buaa.edu.cn/202.112.136.131] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-04-14 21:28:13,227-[HL] WARN pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - download page http://d.wanfangdata.com.cn/Claw/G000168474 error
+org.apache.http.conn.HttpHostConnectException: Connect to gw.buaa.edu.cn:80 [gw.buaa.edu.cn/202.112.136.131] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-04-14 21:28:14,233-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183802
+2016-04-14 21:28:14,233-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000186025
+2016-04-14 21:28:17,459-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 0 units.
+2016-04-14 21:28:17,459-[HL] INFO pool-1-thread-2 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 0 units.
+2016-04-14 21:28:19,500-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000188715
+2016-04-14 21:28:19,500-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000189588
+2016-04-14 21:28:40,504-[HL] WARN pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - download page http://d.wanfangdata.com.cn/Claw/G000188715 error
+org.apache.http.conn.HttpHostConnectException: Connect to gw.buaa.edu.cn:80 [gw.buaa.edu.cn/202.112.136.131] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-04-14 21:28:40,505-[HL] WARN pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - download page http://d.wanfangdata.com.cn/Claw/G000189588 error
+org.apache.http.conn.HttpHostConnectException: Connect to gw.buaa.edu.cn:80 [gw.buaa.edu.cn/202.112.136.131] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-04-14 21:28:41,504-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000190578
+2016-04-14 21:28:41,505-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000192334
+2016-04-14 21:28:44,127-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193778
+2016-04-14 21:28:52,691-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193782
+2016-04-14 21:28:57,070-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200002
+2016-04-14 21:29:05,144-[HL] WARN pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - download page http://d.wanfangdata.com.cn/Claw/G000193778 error
+org.apache.http.conn.HttpHostConnectException: Connect to gw.buaa.edu.cn:80 [gw.buaa.edu.cn/202.112.136.131] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-04-14 21:29:06,144-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200021
+2016-04-14 21:29:17,413-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200022
+2016-04-14 21:29:18,088-[HL] WARN pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - download page http://d.wanfangdata.com.cn/Claw/G000200002 error
+org.apache.http.conn.HttpHostConnectException: Connect to gw.buaa.edu.cn:80 [gw.buaa.edu.cn/202.112.136.131] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-04-14 21:29:19,090-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200023
+2016-04-14 21:29:19,605-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200047
+2016-04-14 21:29:21,162-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200053
+2016-04-14 21:29:21,653-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200159
+2016-04-14 21:29:21,669-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 10 units.
+2016-04-14 21:29:23,213-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000207028
+2016-04-14 21:29:23,696-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000220377
+2016-04-14 21:29:25,311-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270103
+2016-04-14 21:29:25,746-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270109
+2016-04-14 21:29:27,347-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270199
+2016-04-14 21:29:27,796-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270200
+2016-04-14 21:29:29,397-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000270240
+2016-04-14 21:29:29,870-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000330011
+2016-04-14 21:29:31,436-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360019
+2016-04-14 21:29:31,905-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360144
+2016-04-14 21:29:31,918-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 20 units.
+2016-04-14 21:29:33,486-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000360178
+2016-04-14 21:29:33,939-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000400120
+2016-04-14 21:29:35,572-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430018
+2016-04-14 21:29:36,023-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430030
+2016-04-14 21:29:37,614-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430031
+2016-04-14 21:29:38,088-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000430033
+2016-04-14 21:29:39,671-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490037
+2016-04-14 21:29:40,148-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490045
+2016-04-14 21:29:41,723-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000490056
+2016-04-14 21:29:42,181-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000500030
+2016-04-14 21:29:42,219-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 30 units.
+2016-04-14 21:29:43,782-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000530012
+2016-04-14 21:29:44,248-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000540003
+2016-04-14 21:29:45,952-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000751604
+2016-04-14 21:29:46,304-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000752085
+2016-04-14 21:29:47,987-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840178
+2016-04-14 21:29:48,348-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000840181
+2016-04-14 21:29:50,032-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000841621
+2016-04-14 21:29:50,382-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850004
+2016-04-14 21:29:52,491-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850046
+2016-04-14 21:30:02,111-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000850048
+2016-04-14 21:30:02,132-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - falvpaper have insert 40 units.
+2016-04-14 21:30:03,720-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000863856
+2016-04-14 21:30:04,686-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000930006
+2016-04-14 21:30:06,413-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000940087
+2016-04-14 21:30:07,552-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000168474
+2016-04-14 21:30:08,786-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000183262
+2016-04-14 21:30:09,670-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000188715
+2016-04-14 21:30:10,851-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000189588
+2016-04-14 21:30:11,751-[HL] INFO pool-1-thread-1 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000193778
+2016-04-14 21:30:12,900-[HL] INFO pool-1-thread-2 us.codecraft.webmagic.downloader.HttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Claw/G000200002
+2016-04-14 21:30:15,020-[HL] INFO main cn.kejso.Spider.SpiderChain - 爬虫状态: Stopped .
+2016-04-14 21:30:15,020-[HL] INFO main cn.kejso.Spider.SpiderChain - 万方法律论文内容爬虫 end . Cost time:146.219秒
+2016-04-14 21:30:15,020-[HL] INFO main cn.kejso.Spider.SpiderChain - 下载页面数 : 56 .
+2016-04-14 21:30:15,026-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################

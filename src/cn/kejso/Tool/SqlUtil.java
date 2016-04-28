@@ -53,7 +53,6 @@ public class SqlUtil {
 			
 			Map<String,Object> map=new HashMap<String,Object>();
 			map.put("tablename",tablename);
-
 			int  position=(int) session.selectOne(state, map);
 			return position;
 		}

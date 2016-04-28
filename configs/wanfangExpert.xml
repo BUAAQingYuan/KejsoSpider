@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="ListAndContentTemplate">
+	<!-- 任务名称 -->
+	<TaskName>WanfangExpert</TaskName>
+	<!-- 任务线程 -->
+	<Thread>2</Thread>
+	<!-- 是否开启代理 -->
+	<ProxyEnable>False</ProxyEnable>
+	
+	
+	<!-- 列表页配置 -->
+	<ListConfig  name="listconfig">
+		<ListUrl>http://s.wanfangdata.com.cn/Expert.aspx?q=%E8%AE%A1%E7%AE%97%E6%9C%BA+%E5%AD%A6%E7%A7%91%3a%2252060*%22&f=MajorCodeShort&p=#</ListUrl>
+		<PageEnable>true</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>15</PageEnd>
+		
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
+		
+		<!-- url存储的表名 -->
+		<SqlTable>expert</SqlTable>
+		
+		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
+		<TableFields>name#url#classify</TableFields>
+		<UniqueField>url</UniqueField>
+		
+		<!--列表页的抓取字段  -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>name</TagName>
+			<TagValue>//a[@class='title']/text()</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//a[@class='title']/@href</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>//div[@class='record-subtitle']/text()</TagValue>
+		</ListTag>
+	</ListConfig>
+	
+	<!-- 内容页的抓取字段 -->
+	<ContentConfig name="contentconfig">
+		<!-- 内容存储表 -->
+		<ContentTable>falvpaper</ContentTable>
+		
+		<!-- 表字段 -->
+		<TableFields>title#brief#library#titlenumber#department#level#timeline#promulgation#material#contentclass</TableFields>
+		<UniqueField>title</UniqueField>
+		
+		<!-- title -->
+		<ContentTag>
+			<TagName>title</TagName>
+			<TagValue>//div[@class='section-baseinfo']/h1/text()</TagValue>
+		</ContentTag>
+		
+		<!-- brief -->
+		<ContentTag>
+			<TagName>brief</TagName>
+			<TagValue>//div[@class='section-baseinfo']//div[@class='text']/text()</TagValue>
+		</ContentTag>
+		
+		<!-- list -->
+		<ContentList>
+			<!-- 映射的字段 -->
+			<Field>library#titlenumber#department#level#timeline#promulgation#material#contentclass</Field>
+			<MarkField>库别名称：#发文文号：#颁布部门：#效力级别：#时效性：#颁布日期：#实施日期：#内容分类：</MarkField>
+			
+			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
+			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
+		</ContentList>
+	</ContentConfig>
+	
+	<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序-->
+	<Spiders>
+		<Spider name="listspider">
+			<conf-def class="ListConfig" name="listconfig" />
+		</Spider>
+			
+		<Spider name="contentspider">
+			<depend ref="listspider" field="url" />
+			<conf-def class="ContentConfig" name="contentconfig" />
+		</Spider>
+	</Spiders>
+</Configuration>

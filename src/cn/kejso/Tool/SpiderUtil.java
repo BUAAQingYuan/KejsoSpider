@@ -121,15 +121,6 @@ public class SpiderUtil {
         return currentIP;
     }
 	
-    //获得代理IP
-    /*
-    public static List<ProxyHost> getProxyIP()
-    {
-    	List<ProxyHost> proxyhosts=new ArrayList<ProxyHost>();
-    	
-    	return proxyhosts;
-    }
-    */
     
 	public static void main(String[] args) throws IOException {
 		//ListAndContentTemplate template=TemplateConstructor.getListAndContentTemplate("configs\\wanfangpaper.xml");

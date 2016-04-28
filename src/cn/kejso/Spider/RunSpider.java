@@ -47,6 +47,7 @@ public class RunSpider {
 		
 	   //listener
 	   
+		
 	   List<SpiderListener> listeners=new ArrayList<SpiderListener>();
 	   listeners.add(new FileCacheOnErrorListener(Config.Spider_ErrorDir+"wanfang"));
 	   
