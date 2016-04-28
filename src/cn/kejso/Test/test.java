@@ -24,7 +24,7 @@ public class test implements PageProcessor {
 	
 	private int   max=31351;
 	
-	final private  String  url="http://s.wanfangdata.com.cn/Claw.aspx?q=%E6%B3%95%E5%BE%8B&f=top";
+	final private  String  url="http://c.wanfangdata.com.cn/PeriodicalSubject.aspx?NodeId=B.BD9";
 	
 	
 	
@@ -47,20 +47,12 @@ public class test implements PageProcessor {
 	@Override
 	public void process(Page page) {
 		
-		List<Selectable> nodes=page.getHtml().xpath("//div[@class='record-item-list']/div[@class='record-item']").nodes();
+		List<Selectable> nodes=page.getHtml().xpath("//span[@class='link-wraper col-3']/a[2]").nodes();
 		
 
 		for(Selectable one:nodes)
 		{
-			String title=one.xpath("//a[@class='title']/text()").toString();
-			String link=one.xpath("//a[@class='title']/@href").toString();
-			
-			String classname=one.xpath("//div[@class='record-subtitle']/text()").toString();
-			
-			System.out.println(title+"----"+link+"----"+classname);
-			
-			
-			
+			System.out.println(one.xpath("/a/@href").toString());
 		}
 		
 		

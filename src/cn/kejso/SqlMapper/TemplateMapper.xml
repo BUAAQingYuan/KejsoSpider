@@ -3,50 +3,80 @@
 
 <mapper namespace="SqlMapper.TemplateMapper">
 
-	
+
 	<!-- 插入实体 -->
-	<insert id="insertEntity"  useGeneratedKeys="true" keyProperty="id" statementType="STATEMENT">
-    	 insert ignore into ${tablename} (
-    	 					<foreach collection="fields" item="field" open="" close="" separator=",">  
-   								${field}
-  							</foreach> )
-    	 				values(
-    	 					<foreach collection="entitys" item="entity" open="" close="" separator=",">  
-   								"${entity}"
-  							</foreach>)
-    </insert>
-        
-    <!-- 新建一张表   parameterType="ClassifyUrl"-->
-    <update id="createNewTable" parameterType="String">
-        create table if not exists ${tableName} (
-                            id int(11) NOT NULL AUTO_INCREMENT,
-                            <foreach collection="fields" item="field" open="" close="" separator="">  
-   								${field} varchar(255) DEFAULT NULL, 
-  							</foreach> 
-  							PRIMARY KEY (id),
-  							UNIQUE KEY ${uniqueField} (${uniqueField}) USING HASH
-                            )
-    </update>
-    
-    <!-- 获得所有ClassifyUrl-->
-    
-	
-	<!-- 获得所有url字段-->
+	<insert id="insertEntity" useGeneratedKeys="true" keyProperty="id"
+		statementType="STATEMENT">
+		insert ignore into ${tablename} (
+		<foreach collection="fields" item="field" open="" close=""
+			separator=",">
+			${field}
+		</foreach>
+		)
+		values(
+		<foreach collection="entitys" item="entity" open="" close=""
+			separator=",">
+			"${entity}"
+		</foreach>
+		)
+	</insert>
+
+	<!-- 新建一张表 parameterType="ClassifyUrl" -->
+	<update id="createNewTable" parameterType="String">
+		create table if not exists ${tableName} (
+		id int(11) NOT NULL AUTO_INCREMENT,
+		<foreach collection="fields" item="field" open="" close=""
+			separator="">
+			${field} varchar(255) DEFAULT NULL,
+		</foreach>
+		PRIMARY KEY (id),
+		UNIQUE KEY ${uniqueField} (${uniqueField}) USING HASH
+		)
+	</update>
+
+	<!-- 获得所有ClassifyUrl -->
+
+
+	<!-- 获得所有url字段 -->
 	<select id="getAllUrl" resultType="String">
-	     select distinct ${url}
-	     from  ${tablename} 
+		select distinct ${url}
+		from ${tablename}
+		order by id ASC
 	</select>
-	
-	
+
+
 	<!-- 获取新增的url字段 -->
-	
-	
+
+	<!-- 获取id大于特定值的url字段 -->
+	<select id="getPartUrl" resultType="String">
+		select distinct ${url}
+		from ${tablename} where id &gt; ${id}
+		order by id ASC
+	</select>
+
 	<!-- 获取最后一条记录的ID -->
 	<select id="getLastId" resultType="Integer">
-	     select id
-	     from  ${tablename} order by id desc limit 1;
+		select id
+		from ${tablename} order by id desc limit 1;
 	</select>
-	
-	
+
+	<!-- 获取最后一条记录的某一属性 -->
+	<select id="getLastRecordField" resultType="String">
+		select ${field}
+		from ${tablename} order by id desc limit 1;
+	</select>
+
+	<!-- 获取具有特定属性记录的ID -->
+	<select id="getCertainId" resultType="Integer">
+		select id
+		from ${tablename} where ${field} = #{fieldvalue} LIMIT 1;
+	</select>
+
+	<!-- 求记录的差集 -->
+	<select id="getDeltaField" resultType="String">
+		select distinct ${targetField}
+		from ${targetTable} where ${field} NOT IN
+		(select ${sourceField} from ${sourceTable})
+	</select>
 	
 </mapper>

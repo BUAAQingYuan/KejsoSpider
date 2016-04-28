@@ -18,8 +18,11 @@ public class ContentConfig extends BaseConfig{
 	private  String  unique;
 	
 	private  String  tablename;
+	
+	private String	pageUrlField;
+	private String	notNullField;
 
-	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,List<String> field,List<String> markfield,List<String> fields,String unique)
+	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,List<String> field,List<String> markfield,List<String> fields,String unique, String pageUrlField, String notNullField)
 	{
 		this.tags=tags;
 		this.tablename=tablename;
@@ -30,6 +33,9 @@ public class ContentConfig extends BaseConfig{
 		
 		this.fields=fields;
 		this.unique=unique;
+		
+		this.pageUrlField=pageUrlField;
+		this.notNullField=notNullField;
 	}
 	
 	public List<Tag> getTags() {
@@ -94,5 +100,21 @@ public class ContentConfig extends BaseConfig{
 
 	public void setMarkfield(List<String> markfield) {
 		this.markfield = markfield;
+	}
+	
+	public void setPageUrlField(String pageUrlField) {
+		this.pageUrlField = pageUrlField;
+	}
+	
+	public String getPageUrlField() {
+		return pageUrlField;
+	}
+	
+	public void setNotNullField(String notNullField) {
+		this.notNullField = notNullField;
+	}
+	
+	public String getNotNullField() {
+		return notNullField;
 	}
 }

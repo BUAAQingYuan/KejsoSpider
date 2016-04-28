@@ -59,9 +59,14 @@
 		</ListTag>
 		<!--常量字段-->
 		<ConstTag>
-			<TagName>journalname</TagName>
-			<TagValue>比较法研究</TagValue>
+<!-- 			<TagName>journalname</TagName> -->
+<!-- 			<TagValue>比较法研究</TagValue> -->
 		</ConstTag>
+		<!--非列表字段-->
+		<OtherTag>
+			<TagName>journalname</TagName>
+			<TagValue>//div[@class='qkhead_list_qk']/h1/text()</TagValue>
+		</OtherTag>
 	</ListConfig>
 	
 	<!-- 内容页的抓取字段 -->
@@ -70,8 +75,11 @@
 		<ContentTable>journaldetail</ContentTable>
 		
 		<!-- 表字段 -->
-		<TableFields>title#brief#downloadurl#doi#author#enauthor#unit#journalname#journal#time#classnumber#machinelabel#onlinepublish#fund</TableFields>
-		<UniqueField>title</UniqueField>
+		<TableFields>url#title#brief#downloadurl#doi#author#enauthor#unit#journalname#journal#time#classnumber#machinelabel#onlinepublish#fund</TableFields>
+		<UniqueField>url</UniqueField>
+		
+		<!-- 用于存放所抓取页面的url的数据库字段 -->
+		<PageUrlField>url</PageUrlField>
 		
 		<!-- title -->
 		<ContentTag>
@@ -110,10 +118,12 @@
 		<Spider name="listspider">
 			<depend ref="prespider" field="url" />
 			<conf-def class="ListConfig" name="listconfig" />
+			<recover enable="false" />
 		</Spider>
 		<Spider name="contentspider">
 			<depend ref="listspider" field="url" />
 			<conf-def class="ContentConfig" name="contentconfig" />
+			<recover enable="true" mode="delta" ref="url" field="url" />
 		</Spider>
 	</Spiders>
 </Configuration>

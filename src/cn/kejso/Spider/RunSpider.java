@@ -53,7 +53,7 @@ public class RunSpider {
 	   
 	   ContentConfig config2=(ContentConfig)confs.get(1).getConfig();
 	   Spider contentspider=Spider.create(new ContentPageProcess(confs.get(1)))
-	                                                  //.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+global.getTaskname()))
+	                                                  .scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+global.getTaskname()))
 	   												  .thread(global.getThreadnum())
 	   												  .addPipeline(new MysqlPipeline(confs.get(1)));
 	   

@@ -20,11 +20,23 @@ public class Config {
 	//Mybatis 获得最后一条记录的id
 	public static final  String   TheLastId_statement="SqlMapper.TemplateMapper.getLastId";
 	
+	//Mybatis 获得最后一条记录的某一属性
+	public static final  String   TheLastRecordField_statement="SqlMapper.TemplateMapper.getLastRecordField";
+
+	//Mybatis 获得具有特定属性记录的ID
+	public static final  String   TheCertainId_statement="SqlMapper.TemplateMapper.getCertainId";
+	
+	//Mybatis 获得两个数据域的差集
+	public static final  String   TheDeltaField_statement="SqlMapper.TemplateMapper.getDeltaField";
+	
 	//新建表
 	public static final  String   CreateTable_statement="SqlMapper.TemplateMapper.createNewTable";
 	
 	//获得target url语句
 	public static final  String   AllUrl_statement="SqlMapper.TemplateMapper.getAllUrl";
+	
+	//获得target url语句
+	public static final  String   PartUrl_statement="SqlMapper.TemplateMapper.getPartUrl";
 		
 	//pipeline
 	//实体标识

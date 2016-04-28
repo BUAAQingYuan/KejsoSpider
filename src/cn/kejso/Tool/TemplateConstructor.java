@@ -12,6 +12,8 @@ import org.apache.commons.configuration.tree.ConfigurationNode;
 
 import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ListAndContentTemplate;
+import cn.kejso.Template.RecoverConfig;
+import cn.kejso.Template.RecoverConfig.RecoverMode;
 import cn.kejso.Template.ToolEntity.BaseConfig;
 import cn.kejso.Template.ToolEntity.ContentConfig;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
@@ -62,7 +64,15 @@ public class TemplateConstructor {
 			listtags2.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
 		}
 		
-		return new ListConfig(starturls,listvalue,tablename,listtags,SpiderUtil.getMapFields(fields),unique,listtags2);
+		List othertags=sub.configurationsAt("OtherTag");
+		List<Tag>  listtags3=new ArrayList<Tag>();
+		for(Iterator it = othertags.iterator(); it.hasNext();)
+		{
+			HierarchicalConfiguration one = (HierarchicalConfiguration) it.next();
+			listtags3.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
+		}
+		
+		return new ListConfig(starturls,listvalue,tablename,listtags,SpiderUtil.getMapFields(fields),unique,listtags2,listtags3);
 		
 	}
 	
@@ -88,7 +98,10 @@ public class TemplateConstructor {
 		String field=sub.getString("ContentList.Field");
 		String markfield=sub.getString("ContentList.MarkField");
 		
-		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),unique);
+		String pageUrlField=sub.getString("PageUrlField");
+		String notNullField=sub.getString("NotNullField");
+		
+		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),unique,pageUrlField,notNullField);
 	}
 	
 	/*
@@ -125,7 +138,21 @@ public class TemplateConstructor {
 		return  base;
 	}
 	
-	
+	public static RecoverConfig getRecoverConfig(HierarchicalConfiguration sub) {
+
+		RecoverConfig config = new RecoverConfig();
+		
+		boolean enable = sub.getBoolean("recover[@enable]", false);
+		config.setEnable(enable);
+		
+		if (enable) {
+			config.setMode(RecoverMode.valueOf(sub.getString("recover[@mode]")));
+			config.setRef(sub.getString("recover[@ref]"));
+			config.setField(sub.getString("recover[@field]"));
+		}
+		
+		return config;
+	}
 	
 	//读取配置的通用接口
 	public static List<SpiderConf>  getSpiderConf(String configfile)
@@ -149,12 +176,17 @@ public class TemplateConstructor {
 			
 			SpiderConf spider=new SpiderConf();
 			spider.setName(sub.getString("[@name]"));
+			spider.setCname(sub.getString("[@cname]"));
 			
 			String confclass=sub.getString("conf-def[@class]");
 			String confname=sub.getString("conf-def[@name]");
 			spider.setConfig(getDetailConfig(xml,confclass,confname));
 			
+			spider.setRecoverConfig(getRecoverConfig(sub));
+			
 			spider.setDependname(sub.getString("depend[@ref]"));
+			
+			
 			
 			spiders.add(spider);
 		}
@@ -162,6 +194,8 @@ public class TemplateConstructor {
 		return spiders;
 		
 	}
+	
+	
 	
 	
 	//获得全局配置
@@ -203,7 +237,7 @@ public class TemplateConstructor {
 	{
 		//TemplateConstructor.getListAndContentTemplate("configs\\wanfangpaper.xml");
 		
-		//TemplateConstructor.getSpiderConf("configs\\wanfangpaper.xml");
+//		TemplateConstructor.getSpiderConf("configs\\wanfangpaper.xml");
 		
 		
 		

@@ -1,9 +1,10 @@
 package cn.kejso.Template.ToolEntity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //获得列表页url
-public class PreConfig extends BaseConfig{
+public class PreConfig extends BaseConfig implements ContainStartUrls{
 	
 	//数据表
 	private  String tablename;
@@ -55,6 +56,15 @@ public class PreConfig extends BaseConfig{
 	}
 	public void setPrevalue(String prevalue) {
 		this.prevalue = prevalue;
+	}
+
+	@Override
+	public List<String> getStartUrls() {
+		
+		List<String> list = new ArrayList<String>();
+		list.add(getPreurl());
+		
+		return list;
 	}
 	
 }
