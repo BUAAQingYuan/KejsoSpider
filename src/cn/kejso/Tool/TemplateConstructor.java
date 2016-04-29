@@ -77,6 +77,9 @@ public class TemplateConstructor {
 	}
 	
 	//解析ContentConfig
+	/*
+	 * Tag种类:ContentTag(页面项)、ContentList.Field(Map项)
+	 */
 	public static  ContentConfig  getContentConfig(HierarchicalConfiguration sub)
 	{
 		String contenttable=sub.getString("ContentTable");
@@ -101,7 +104,16 @@ public class TemplateConstructor {
 		String pageUrlField=sub.getString("PageUrlField");
 		String notNullField=sub.getString("NotNullField");
 		
-		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),unique,pageUrlField,notNullField);
+		//consttag
+		List consttags=sub.configurationsAt("ConstTag");
+		List<Tag>  listtags2=new ArrayList<Tag>();
+		for(Iterator it = consttags.iterator(); it.hasNext();)
+		{
+			HierarchicalConfiguration one = (HierarchicalConfiguration) it.next();
+			listtags2.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
+		}
+		
+		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),unique,pageUrlField,notNullField,listtags2);
 	}
 	
 	/*

@@ -150,7 +150,16 @@
 			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
 			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
 		</ContentList>
+		
+		<!--常量字段
+ 		<ConstTag> 
+ 			<TagName>journalname</TagName> 
+ 			<TagValue>比较法研究</TagValue> 
+ 		</ConstTag> 
+		-->
+		
 	</ContentConfig>
+	
 	
 	<!--配置对应的爬虫 -->
 	<!-- sequence 顺序启动 -->

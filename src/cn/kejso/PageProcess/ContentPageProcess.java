@@ -13,6 +13,8 @@ import cn.kejso.Config.Config;
 import cn.kejso.PageProcess.ProcessHandler.ContentMapProcessHandler;
 import cn.kejso.Template.ListAndContentTemplate;
 import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.ContentConfig;
+import cn.kejso.Tool.FileUtil;
 import cn.kejso.Tool.SpiderUtil;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
@@ -47,8 +49,20 @@ public class ContentPageProcess implements PageProcessor {
 		ContentMapProcessHandler  handler=new ContentMapProcessHandler();
 		Map<String,String> result=handler.processContentPage(page, template);
 		
+
+		//入库
 		page.putField(Config.PipeLine_Entity, result);
 		page.putField(Config.PipeLine_Type, Config.PipeLine_TypeOne);
+
+		/*
+		for(String key:result.keySet())
+		{
+			System.out.print(result.get(key)+"  ");
+		}
+		
+		System.out.println();
+		*/
+		
 	}
 
 }

@@ -10,16 +10,17 @@
 	
 	<!-- 列表页配置 -->
 	<ListConfig  name="listconfig">
-		<ListUrl>http://s.wanfangdata.com.cn/Expert.aspx?q=%E8%AE%A1%E7%AE%97%E6%9C%BA+%E5%AD%A6%E7%A7%91%3a%2252060*%22&f=MajorCodeShort&p=#</ListUrl>
+		<!-- &=&amp;，URL特殊字符需要转义 -->
+		<ListUrl>http://s.wanfangdata.com.cn/Expert.aspx?q=计算机软件&amp;p=#</ListUrl>
 		<PageEnable>true</PageEnable>
 		<PageStart>1</PageStart>
-		<PageEnd>15</PageEnd>
+		<PageEnd>19</PageEnd>
 		
 		<!-- 列表页中列表对应的value -->
 		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
 		
 		<!-- url存储的表名 -->
-		<SqlTable>expert</SqlTable>
+		<SqlTable>experturl2</SqlTable>
 		
 		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
 		<TableFields>name#url#classify</TableFields>
@@ -36,42 +37,44 @@
 			<TagName>url</TagName>
 			<TagValue>//a[@class='title']/@href</TagValue>
 		</ListTag>
-		<ListTag>
+		<ConstTag>
 			<!-- 和数据表字段对应 -->
 			<TagName>classify</TagName>
-			<TagValue>//div[@class='record-subtitle']/text()</TagValue>
-		</ListTag>
+			<TagValue>计算机软件</TagValue>
+		</ConstTag>
 	</ListConfig>
 	
 	<!-- 内容页的抓取字段 -->
 	<ContentConfig name="contentconfig">
 		<!-- 内容存储表 -->
-		<ContentTable>falvpaper</ContentTable>
+		<ContentTable>expertcontent2</ContentTable>
 		
 		<!-- 表字段 -->
-		<TableFields>title#brief#library#titlenumber#department#level#timeline#promulgation#material#contentclass</TableFields>
-		<UniqueField>title</UniqueField>
+		<TableFields>name#zhiwei#place#address#zipcode#workplace#zhiwu#classify#fields</TableFields>
+		<UniqueField>address</UniqueField>
 		
-		<!-- title -->
+		<!-- name -->
 		<ContentTag>
-			<TagName>title</TagName>
+			<TagName>name</TagName>
 			<TagValue>//div[@class='section-baseinfo']/h1/text()</TagValue>
 		</ContentTag>
 		
-		<!-- brief -->
+		<!-- zhiwei -->
 		<ContentTag>
-			<TagName>brief</TagName>
-			<TagValue>//div[@class='section-baseinfo']//div[@class='text']/text()</TagValue>
+			<TagName>zhiwei</TagName>
+			<TagValue>//div[@class='section-baseinfo']/span[@class='expert-title']/text()</TagValue>
 		</ContentTag>
 		
 		<!-- list -->
 		<ContentList>
 			<!-- 映射的字段 -->
-			<Field>library#titlenumber#department#level#timeline#promulgation#material#contentclass</Field>
-			<MarkField>库别名称：#发文文号：#颁布部门：#效力级别：#时效性：#颁布日期：#实施日期：#内容分类：</MarkField>
+			<Field>place#address#zipcode#workplace#zhiwu#classify#fields</Field>
+			<MarkField>地区：#通讯地址：#邮政编码：#工作单位：#工作职务：#学科分类：#专业领域：</MarkField>
 			
-			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
-			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
+			<!-- 属性名 -->
+			<Mark>//div[@class='fixed-width baseinfo-feild expert-baseinfo-feild']/table//td[@class="pre"]/text()</Mark>
+			<!-- 属性值 -->
+			<Code>//div[@class='fixed-width baseinfo-feild expert-baseinfo-feild']/table//td[@class="text"]/allText()</Code>
 		</ContentList>
 	</ContentConfig>
 	

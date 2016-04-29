@@ -21,8 +21,11 @@ public class ContentConfig extends BaseConfig{
 	
 	private String	pageUrlField;
 	private String	notNullField;
+	
+	//常量字段
+	private  List<Tag>  consttags;
 
-	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,List<String> field,List<String> markfield,List<String> fields,String unique, String pageUrlField, String notNullField)
+	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,List<String> field,List<String> markfield,List<String> fields,String unique, String pageUrlField, String notNullField,List<Tag> consttags)
 	{
 		this.tags=tags;
 		this.tablename=tablename;
@@ -36,6 +39,8 @@ public class ContentConfig extends BaseConfig{
 		
 		this.pageUrlField=pageUrlField;
 		this.notNullField=notNullField;
+		
+		this.consttags=consttags;
 	}
 	
 	public List<Tag> getTags() {
@@ -116,5 +121,13 @@ public class ContentConfig extends BaseConfig{
 	
 	public String getNotNullField() {
 		return notNullField;
+	}
+
+	public List<Tag> getConsttags() {
+		return consttags;
+	}
+
+	public void setConsttags(List<Tag> consttags) {
+		this.consttags = consttags;
 	}
 }

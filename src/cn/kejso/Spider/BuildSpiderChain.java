@@ -42,6 +42,7 @@ public class BuildSpiderChain {
 					.addPipeline(new MysqlPipeline(conf));
 			spider.setSpiderListeners(getSpiderListeners(conf));
 			spider.setUUID(conf.getCname());
+			//设置当前conf对应数据表的当前记录的id
 			conf.setStartpoint(getStartpoint(conf));
 			SpiderContainer container = new SpiderContainer(spider, conf);
 			container.AddgetStartUrlHandler(getStartUrlHandler(conf));
@@ -72,8 +73,10 @@ public class BuildSpiderChain {
 	private List<SpiderListener> getSpiderListeners(SpiderConf conf) {
 		List<SpiderListener> list = new ArrayList<SpiderListener>();
 
+		//只有内容页才处理error url 吗？
 		if (conf.getConfig() instanceof ContentConfig) {
-			list.add(new FileCacheOnErrorListener(Config.Spider_ErrorDir + global.getTaskname()));
+			//每个spider的error url存放到对应的数据表同名的cache文件中
+			list.add(new FileCacheOnErrorListener(Config.Spider_ErrorDir + conf.getConfig().getTablename()));
 		}
 
 		return list;
@@ -133,7 +136,7 @@ public class BuildSpiderChain {
 	}
 
 	public static void main(String[] args) {
-		String path = "configs\\test.xml";
+		String path = "configs\\wanfangExpert.xml";
 
 		BuildSpiderChain bsc = new BuildSpiderChain(path);
 		bsc.startSpiders();

@@ -77,6 +77,8 @@ public class SqlUtil {
 			return urls;
 		}
 		
+		
+		//获取前一个所依赖的表新增的url
 		public static List<String>	getListDeltaUrls(SpiderConf conf) {
 			SqlSession session=SpiderUtil.getSession();
 			
@@ -90,6 +92,7 @@ public class SqlUtil {
 			List<String> urls=session.selectList(statement, map);
 			return urls;
 		}
+		
 
 		//MysqlCache
 		//获取一个数据表当前的位置
@@ -141,6 +144,9 @@ public class SqlUtil {
 				return "";
 		}
 		
+		
+		
+		//得到url表中的更新点
 		public static int getBreakPoint(SpiderConf pre, SpiderConf current) {
 			
 			int  breakpoint = 0;

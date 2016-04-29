@@ -4,11 +4,19 @@ public class RecoverConfig {
 	
 	// 是否开启断点恢复功能
 	private boolean enable;
-
+	
+	
+	/*
+	 * simple，获得url表中后续的url,更新内容表到最新的位置。
+	 * delta,获取url表比content表多出的url
+	 * listdelta,感觉和simple效果一样
+	 */
 	public static enum RecoverMode {simple, delta, listdelta};
 	private RecoverMode mode;
 	
+	//列表页中和内容页一致的字段
 	private String ref;
+	//内容页中与列表页中一致的字段
 	private String field;
 
 	public void setEnable(boolean value) {

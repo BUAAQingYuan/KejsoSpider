@@ -17,6 +17,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.http.HttpHost;
 import org.apache.ibatis.io.Resources;
@@ -97,6 +98,27 @@ public class SpiderUtil {
 		return target;
 	}
 	
+	
+	//判断一个Map<String,String>实例是否内容(动态字段)为空,excludeFields为排除字段
+	//全部内容为空或者null时，返回true
+	public static  boolean  ResultIsNull(Map<String,String> result,List<String> excludeFields)
+	{
+		boolean  isnull=true;
+		
+		for(String key:result.keySet())
+		{
+			//空格、制表符
+			if(!excludeFields.contains(key)&&result.get(key)!=null&&!result.get(key).replaceAll(" ", "").replaceAll("	", "").equals(""))
+			{
+				isnull=false;
+				break;
+			}
+		}
+		
+		return isnull;
+	}
+	
+	
 	//查看当前IP
     public static String getCurrentIP(){  
     	String currentIP=null;
@@ -123,17 +145,31 @@ public class SpiderUtil {
 	
     
 	public static void main(String[] args) throws IOException {
+		
 		//ListAndContentTemplate template=TemplateConstructor.getListAndContentTemplate("configs\\wanfangpaper.xml");
 		//SpiderUtil.getTargetUrls(template);
 		
 		//String field="library#titlenumber##department#level##timeline#promulgation#materail#contentclass";
 		//SpiderUtil.getMapFields(field);
-		
+		/*
 		HttpHost host=new HttpHost("222.176.112.10",80);
 		System.getProperties().setProperty("proxySet", "true");
         System.getProperties().setProperty("http.proxyHost", host.getHostName());
         System.getProperties().setProperty("http.proxyPort", String.valueOf(host.getPort()));
         
 		System.out.println(SpiderUtil.getCurrentIP());
+		*/
+		
+		Map<String,String>  map=new HashMap<String,String>();
+		
+		map.put("key1", null);
+		map.put("key2","");
+		map.put("key3", " ");
+		//map.put("key4","	a");
+		map.put("url", "http://www.xxx");
+		List<String>  exclude=new ArrayList<String>();
+		exclude.add("url");
+		
+		System.out.println(SpiderUtil.ResultIsNull(map,exclude));
 	}
 }
