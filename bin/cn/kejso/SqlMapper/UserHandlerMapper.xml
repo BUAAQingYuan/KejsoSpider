@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="SqlMapper.UserHandlerMapper">
+	
+	<!-- 更新一个字段 -->
+	<insert id="updateEntity" statementType="STATEMENT">
+		update ${tablename} set ${field}="${fieldvalue}"  where id=${id}
+	</insert>
+	
+	<!-- 获得所有的id、一个字段 -->
+	<select id="getAllTargetField" resultType="java.util.HashMap">
+		select  id,${field}
+		from ${tablename}
+		order by id ASC
+	</select>
+	
+</mapper>
