@@ -76,18 +76,16 @@
 
 	<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序 -->
 	<Spiders>
-		 
+	
+		<!--  
 		<Spider name="listspider">
-			<!-- 爬虫运行前的table处理 -->
-			<!-- <before-table-handler func=""  />-->
 			<conf-def class="ListConfig" name="listconfig" />
-			<!-- 第一步的urls(数据表)需要处理后才能在下一步使用，爬虫结束后的table处理 -->
-			<!-- <after-table-handler func=""  />-->
 		</Spider>
+		-->
 		
 		<Spider name="contentspider">
 			<!-- depend指定依赖的爬虫或者指定依赖的数据表 -->
-			<depend ref="listspider" field="url" />
+			<depend ref="techcenterurl" field="url" />
 			<conf-def class="ContentConfig" name="contentconfig" />
 		</Spider>
 	</Spiders>

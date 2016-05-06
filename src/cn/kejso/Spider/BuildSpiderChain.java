@@ -160,7 +160,7 @@ public class BuildSpiderChain {
 	}
 
 	public static void main(String[] args) {
-		String path = "configs\\wanfangOrg.xml";
+		String path = "configs\\wanfangkjreport.xml";
 
 		BuildSpiderChain bsc = new BuildSpiderChain(path);
 		bsc.startSpiders();
