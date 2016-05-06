@@ -18,6 +18,7 @@ public class SpiderContainer {
 	
 	private  int cycleTimes;
 	
+	//是否已经启动过，默认为false
 	private  boolean start;
 	
 	
@@ -59,6 +60,7 @@ public class SpiderContainer {
 	{
 		this.spider=spider;
 		this.template=conf;
+		this.start=false;
 	}
 	
 	public  SpiderContainer(Spider spider,SpiderConf conf,Function<Spider,SpiderConf> handler)

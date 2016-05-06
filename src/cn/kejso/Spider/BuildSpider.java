@@ -41,10 +41,10 @@ public class BuildSpider {
 				.addPipeline(new MysqlPipeline(conf));
 		spider.setSpiderListeners(getSpiderListeners(conf));
 		spider.setUUID(conf.getCname());
-
 		return spider;
 	}
 
+	//retry标志是否为爬虫重试error链接
 	public static Function<Spider, SpiderConf> getStartUrlHandler(SpiderConf conf, boolean retry) {
 
 		Function<Spider, SpiderConf> result = null;

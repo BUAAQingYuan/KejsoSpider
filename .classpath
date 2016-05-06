@@ -5,7 +5,6 @@
 	<classpathentry kind="lib" path="lib/mybatis/CasperWebMagic.jar"/>
 	<classpathentry kind="lib" path="lib/mybatis/commons-beanutils-1.9.2.jar"/>
 	<classpathentry kind="lib" path="lib/mybatis/commons-configuration-1.10.jar"/>
-	<classpathentry kind="lib" path="lib/mybatis/FreeProxy.jar"/>
 	<classpathentry kind="lib" path="lib/mybatis/mybatis-3.0.3.jar"/>
 	<classpathentry kind="lib" path="lib/mybatis/mysql-connector-java-5.1.22-bin.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>

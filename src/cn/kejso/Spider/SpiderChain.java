@@ -67,34 +67,44 @@ public class SpiderChain {
 		if (chain) {
 
 			for (SpiderContainer container : spiderqueue) {
-				while (true) {
-					long start = System.currentTimeMillis();
-					logger.info(container.getName() + " start ...");
-
-					SpiderConf currentconf = container.getTemplate();
-
-					// before-table-handler
-					
-					if (currentconf.getBeforehandler() != null && !currentconf.getBeforehandler().equals("")) {
-						logger.info("数据表前置处理...");
-						try {
-							Class handlerclass = Class.forName(currentconf.getBeforehandler());
-							BasicTableHandler handler = (BasicTableHandler) handlerclass.newInstance();
-							handler.handler(currentconf.getConfig().getTablename());
-						} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
-							logger.error("数据表前置处理失败。");
-							e.printStackTrace();
-						}
-
+				
+				//retry的时间算在内
+				long start = System.currentTimeMillis();
+				logger.info(container.getName() + " start ...");
+				
+				SpiderConf currentconf = container.getTemplate();
+				
+				// before-table-handler  爬虫运行之前处理数据表
+				if (currentconf.getBeforehandler() != null && !currentconf.getBeforehandler().equals("")) {
+					logger.info("数据表前置处理...");
+					try {
+						Class handlerclass = Class.forName(currentconf.getBeforehandler());
+						BasicTableHandler handler = (BasicTableHandler) handlerclass.newInstance();
+						handler.handler(currentconf.getConfig().getTablename());
+					} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+						logger.error("数据表前置处理失败。");
+						e.printStackTrace();
 					}
+
+				}
+				
+				//爬虫运行，包含retry
+				while (true) {
 					
 					Spider current = null;
+					
+					if(!container.isStart())
+						logger.info("爬虫启动...");
+					else
+						logger.info("爬虫Retry...");
+					
 					if (!container.isStart()) {
 						// 如果是首次启动
 						container.setStart();
 						current = container.getSpider();
 						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), false));
-					} else if (container.continueCycle() && SqlUtil.hasRetryItem(container.getTemplate())) {
+					} else if (container.isStart()&&container.continueCycle() && SqlUtil.hasRetryItem(container.getTemplate())) {
+						//retry
 						// 创建一个新的实例，因为之前的实例无法导入抓取失败的URL
 						container.minusCycleTimes();
 						current = BuildSpider.getSpider(container.getTemplate());
@@ -109,29 +119,29 @@ public class SpiderChain {
 					SqlUtil.cleanTempTable(container.getTemplate());
 					current.run();
 
-					// after-table-handler
-					
-					if (currentconf.getAfterhandler() != null && !currentconf.getAfterhandler().equals("")) {
-						logger.info("数据表后置处理...");
-						try {
-							Class handlerclass = Class.forName(currentconf.getAfterhandler());
-							BasicTableHandler handler = (BasicTableHandler) handlerclass.newInstance();
-							handler.handler(currentconf.getConfig().getTablename());
-						} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
-							logger.error("数据表后置处理失败。");
-							e.printStackTrace();
-						}
-
-					}
-
 					// 如果爬虫没有停止
 					logger.info("爬虫状态: " + current.getStatus().toString() + " .");
-
-					logger.info(container.getName() + " end . Cost time:{}秒",
-							(System.currentTimeMillis() - start) / 1000.0);
 					logger.info("下载页面数 : {} .", current.getPageCount());
-					logger.info(Config.Spider_Info_line);
+					
 				}
+				
+				// after-table-handler 爬虫运行结束后，处理数据表
+				if (currentconf.getAfterhandler() != null && !currentconf.getAfterhandler().equals("")) {
+					logger.info("数据表后置处理...");
+					try {
+						Class handlerclass = Class.forName(currentconf.getAfterhandler());
+						BasicTableHandler handler = (BasicTableHandler) handlerclass.newInstance();
+						handler.handler(currentconf.getConfig().getTablename());
+					} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+						logger.error("数据表后置处理失败。");
+						e.printStackTrace();
+					}
+
+				}
+				
+				logger.info(container.getName() + " end . Cost time:{}秒",(System.currentTimeMillis() - start) / 1000.0);
+				logger.info(Config.Spider_Info_line);
+				
 				// 因为Waiting for table metadata lock而暂时禁用drop table
 				// SqlUtil.deleteTempTable(container.getTemplate());
 			}
