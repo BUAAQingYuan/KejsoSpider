@@ -54,7 +54,7 @@ public class WanfangExpertSpiderChain {
 			@Override
 			public List<String> apply(Spider t, SpiderConf e) {
 				SpiderConf config=SpiderUtil.getSpiderConfByName(confs.get(1).getDependname(), confs);
-				return SqlUtil.getTargetUrls(config);
+				return SqlUtil.getTargetUrls(config, e);
 			}});
         
         chain.AddSpiderNode(container1);

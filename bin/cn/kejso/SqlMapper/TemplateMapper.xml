@@ -79,4 +79,19 @@
 		(select ${sourceField} from ${sourceTable})
 	</select>
 	
+	<!-- 获取记录条数 -->
+	<select id="getRecordNum" resultType="Integer">
+		select count(*)
+		from ${tablename};
+	</select>
+
+	<!-- 清空表 -->
+	<delete id="truncateTable" parameterType="String">
+		truncate table ${tablename};
+	</delete>
+	
+	<delete id="dropTable" parameterType="String">
+		drop table ${tablename};
+	</delete>
+	
 </mapper>

@@ -6,12 +6,8 @@ import java.util.List;
 
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.HierarchicalConfiguration;
-import org.apache.commons.configuration.SubnodeConfiguration;
 import org.apache.commons.configuration.XMLConfiguration;
-import org.apache.commons.configuration.tree.ConfigurationNode;
-
 import cn.kejso.Template.SpiderConf;
-import cn.kejso.Template.ListAndContentTemplate;
 import cn.kejso.Template.RecoverConfig;
 import cn.kejso.Template.RecoverConfig.RecoverMode;
 import cn.kejso.Template.ToolEntity.BaseConfig;
@@ -96,6 +92,15 @@ public class TemplateConstructor {
 			contenttags.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
 		}
 		
+		String multicontentseparator=sub.getString("MultiContentSeparator");
+		List multicontentitem=sub.configurationsAt("MultiContentTag");
+		List<Tag>  multicontenttags=new ArrayList<Tag>();
+		for(Iterator it = multicontentitem.iterator(); it.hasNext();)
+		{
+			HierarchicalConfiguration one = (HierarchicalConfiguration) it.next();
+			multicontenttags.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
+		}
+		
 		String mark=sub.getString("ContentList.Mark");
 		String code=sub.getString("ContentList.Code");
 		String field=sub.getString("ContentList.Field");
@@ -107,13 +112,12 @@ public class TemplateConstructor {
 		//consttag
 		List consttags=sub.configurationsAt("ConstTag");
 		List<Tag>  listtags2=new ArrayList<Tag>();
-		for(Iterator it = consttags.iterator(); it.hasNext();)
-		{
-			HierarchicalConfiguration one = (HierarchicalConfiguration) it.next();
-			listtags2.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
-		}
+
 		
-		return new ContentConfig(contenttags,contenttable,mark,code,SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),unique,pageUrlField,notNullField,listtags2);
+		return new ContentConfig(contenttags,contenttable,mark,code,
+				SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),
+				unique,pageUrlField,notNullField,listtags2
+				,multicontentseparator,multicontenttags);
 	}
 	
 	/*
@@ -199,7 +203,7 @@ public class TemplateConstructor {
 			spider.setRecoverConfig(getRecoverConfig(sub));
 			
 			spider.setDependname(sub.getString("depend[@ref]"));
-			spider.setField(sub.getString("depend[@field]"));
+			spider.setDependField(sub.getString("depend[@field]"));
 			
 			spider.setBeforehandler(sub.getString("before-table-handler[@func]"));
 			spider.setAfterhandler(sub.getString("after-table-handler[@func]"));
@@ -229,6 +233,7 @@ public class TemplateConstructor {
 		global.setTaskname(xml.getString("TaskName"));
 		global.setThreadnum(xml.getInt("Thread"));
 		global.setEnableproxy(xml.getBoolean("ProxyEnable"));
+		global.setCycleTimes(xml.getInt("CycleTimes"));
 		global.setCasperjsPath(xml.getString("CasperJsPath"));
 		
 		return global;

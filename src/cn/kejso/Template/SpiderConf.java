@@ -26,7 +26,7 @@ public class SpiderConf {
 		private String dependname;
 		
 		//当依赖的为数据表时的url字段
-		private String field;
+		private String dependField;
 		
 		//断点恢复的配置
 		private RecoverConfig rconfig;
@@ -38,6 +38,9 @@ public class SpiderConf {
 		//数据表handler
 		private String beforehandler;
 		private String afterhandler;
+		
+		//临时表的配置
+		private BaseConfig tmpConfig;
 		
 		public String getName() {
 			return name;
@@ -96,12 +99,12 @@ public class SpiderConf {
 			return cname;
 		}
 
-		public String getField() {
-			return field;
+		public void setDependField(String dependField) {
+			this.dependField = dependField;
 		}
-
-		public void setField(String field) {
-			this.field = field;
+		
+		public String getDependField() {
+			return dependField;
 		}
 
 		public boolean isDynamic() {
@@ -136,4 +139,19 @@ public class SpiderConf {
 			this.afterhandler = afterhandler;
 		}
 
+		
+		public BaseConfig getTempTableConfig() {
+			if (tmpConfig == null) {
+				tmpConfig = new BaseConfig();
+
+				// unique域只是个代号，故这里设置为本爬虫的unique域，而非依赖爬虫的对应域
+				tmpConfig.setTablename(config.getTablename() + "_tmp");
+				tmpConfig.setUnique(config.getUnique());
+				List<String> fields = new ArrayList<String>();
+				fields.add(config.getUnique());
+				tmpConfig.setFields(fields);
+			}
+			
+			return tmpConfig;
+		}
 }

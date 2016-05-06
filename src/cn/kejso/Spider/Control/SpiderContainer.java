@@ -16,6 +16,10 @@ public class SpiderContainer {
 	
 	private  SpiderConf template;
 	
+	private  int cycleTimes;
+	
+	private  boolean start;
+	
 	
 	@FunctionalInterface  
 	public interface Function<T,E> {  
@@ -82,6 +86,33 @@ public class SpiderContainer {
 		return this.getstarturlshandler.apply(this.spider, this.template);
 	}
 
+
+	public boolean isStart() {
+		return start;
+	}
 	
+	public void setStart() {
+		start = true;
+	}
+	
+	public void setStart(boolean start) {
+		this.start = start;
+	}
+	
+	public void setCycleTimes(int value) {
+		cycleTimes = value;
+	}
+	
+	public int getCycleTimes() {
+		return cycleTimes;
+	}
+	
+	public void minusCycleTimes() {
+		cycleTimes--;
+	}
+	
+	public boolean continueCycle() {
+		return (cycleTimes>0);
+	}
 	
 }

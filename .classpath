@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/WebMagic"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/mybatis/CasperWebMagic.jar"/>
+	<classpathentry kind="lib" path="lib/mybatis/commons-beanutils-1.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/mybatis/commons-configuration-1.10.jar"/>
+	<classpathentry kind="lib" path="lib/mybatis/FreeProxy.jar"/>
 	<classpathentry kind="lib" path="lib/mybatis/mybatis-3.0.3.jar"/>
 	<classpathentry kind="lib" path="lib/mybatis/mysql-connector-java-5.1.22-bin.jar"/>
-	<classpathentry kind="lib" path="lib/mybatis/commons-configuration-1.10.jar"/>
-	<classpathentry kind="lib" path="lib/mybatis/commons-beanutils-1.9.2.jar"/>
-	<classpathentry kind="lib" path="lib/mybatis/CasperWebMagic.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/FreeProxy"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

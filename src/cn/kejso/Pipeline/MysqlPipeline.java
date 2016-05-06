@@ -48,6 +48,8 @@ public class MysqlPipeline implements Pipeline {
 		createtable.put("fields", config.getFields());
 		session.selectOne(exist, createtable);
 		logger.info("create table if table {} not exists.",config.getTablename());
+		
+		session.close();
 	}
 
 	
@@ -71,6 +73,8 @@ public class MysqlPipeline implements Pipeline {
 	//list类
 	private void  InsertTypeList(ResultItems resultItems, Task task)
 	{
+		SqlSession session=SpiderUtil.getSession();
+		
 		BaseConfig config=template.getConfig();
 		
 		List<Map<String,String>> urls=resultItems.get(Config.PipeLine_Entity);
@@ -92,11 +96,15 @@ public class MysqlPipeline implements Pipeline {
 		
 		
 		session.commit();
+		
+		session.close();
 	}
 	
 	//存储单个实体
 	private void  InsertTypeOne(ResultItems resultItems, Task task) 
 	{
+		SqlSession session=SpiderUtil.getSession();
+		
 		BaseConfig config= template.getConfig();
 		
 		Map<String,String> result=resultItems.get(Config.PipeLine_Entity);
@@ -113,6 +121,8 @@ public class MysqlPipeline implements Pipeline {
 		map.put("entitys",SqlUtil.MapToListByFields(result,config.getFields()));
 		session.insert(statent, map);
 		session.commit();
+		
+		session.close();
 	}
 	
 }
