@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="WanfangMagazine">
+	<!-- 任务名称 -->
+	<TaskName>WanfangMagazina</TaskName>
+	<!-- 任务线程 -->
+	<Thread>2</Thread>
+	<!-- 是否开启代理 -->
+	<ProxyEnable>False</ProxyEnable>
+	
+		<!-- 列表页配置 -->
+	<ListConfig  name="journallistconfig">
+		<ListUrl>http://c.wanfangdata.com.cn/PeriodicalSubject.aspx?NodeId=B.B80&amp;PageNo=#</ListUrl>
+		<PageEnable>true</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>1</PageEnd>
+		
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//span[@class='link-wraper col-3']/a[2]</ListValue>
+		
+		<!-- url存储的表名 -->
+		<SqlTable>journallist</SqlTable>
+		
+		<!--指定表的字段，表默认包含id为主键。用户必须指定一个unique索引，指向url -->
+		<TableFields>url#journalname#mainclass#subclass</TableFields>
+		<UniqueField>url</UniqueField>
+		
+		<!--列表页的抓取字段  -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>/a/@href</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>journalname</TagName>
+			<TagValue>/a/text()</TagValue>
+		</ListTag>
+		<!--常量字段-->
+		<ConstTag>
+ 			<TagName>mainclass</TagName> 
+ 			<TagValue>哲学政法</TagValue>
+		</ConstTag>
+		<ConstTag>
+ 			<TagName>subclass</TagName> 
+ 			<TagValue>逻辑伦理</TagValue>
+		</ConstTag>
+		<!--非列表字段-->
+		
+	</ListConfig>
+	
+	<!-- 获得列表页的预处理配置 -->
+	<PreConfig name="preconfig">
+		<!-- 获得列表页url的前导页面 -->
+		<PreUrl></PreUrl>
+		
+		<!--获得列表页Url,get-all -->
+		<PreValue>//div[@class='new_ul']/ul/li/p/a/@href</PreValue>
+		
+		<!-- url存储的表名 -->
+		<SqlTable>listurl</SqlTable>
+		
+		<!--指定表的字段，表默认包含id为主键。用户必须指定一个unique索引,指向url -->
+		<TableFields>url</TableFields>
+		<UniqueField>url</UniqueField>
+		
+	</PreConfig>
+	
+	<!-- 列表页配置 -->
+	<ListConfig  name="listconfig">
+		<ListUrl></ListUrl>
+		<PageEnable>false</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>1</PageEnd>
+		
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//div[@class='Content_div_detail']/ul[@class='qkcontent_ul']/li</ListValue>
+		
+		<!-- url存储的表名 -->
+		<SqlTable>journalurl</SqlTable>
+		
+		<!--指定表的字段，表默认包含id为主键。用户必须指定一个unique索引，指向url -->
+		<TableFields>title#downloadurl#url#journalname</TableFields>
+		<UniqueField>url</UniqueField>
+		
+		<!--列表页的抓取字段  -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>title</TagName>
+			<TagValue>//a[2]/text()</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>downloadurl</TagName>
+			<TagValue>//a[1]/@href</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//a[2]/@href</TagValue>
+		</ListTag>
+		<!--常量字段-->
+<!-- 		<ConstTag> -->
+<!-- 			<TagName>journalname</TagName> -->
+<!-- 			<TagValue>比较法研究</TagValue> -->
+<!-- 		</ConstTag> -->
+		<!--非列表字段-->
+		<OtherTag>
+			<TagName>journalname</TagName>
+			<TagValue>//div[@class='qkhead_list_qk']/h1/text()</TagValue>
+		</OtherTag>
+	</ListConfig>
+	
+	<!-- 内容页的抓取字段 -->
+	<ContentConfig name="contentconfig">
+		<!-- 内容存储表 -->
+		<ContentTable>journaldetail</ContentTable>
+		
+		<!-- 表字段 -->
+		<TableFields>url#title#brief#downloadurl#doi#author#enauthor#unit#journalname#journal#time#classnumber#machinelabel#onlinepublish#fund</TableFields>
+		<UniqueField>url</UniqueField>
+		
+		<NotNullField>title</NotNullField>
+		
+		<!-- 用于存放所抓取页面的url的数据库字段 -->
+		<PageUrlField>url</PageUrlField>
+		
+		<!-- title -->
+		<ContentTag>
+			<TagName>title</TagName>
+			<TagValue>//div[@class='section-baseinfo']/h1/text()</TagValue>
+		</ContentTag>
+		
+		<!-- brief -->
+		<ContentTag>
+			<TagName>brief</TagName>
+			<TagValue>//div[@class='section-baseinfo']//div[@class='text']/text()</TagValue>
+		</ContentTag>
+		
+		<ContentTag>
+			<TagName>downloadurl</TagName>
+			<TagValue>//div[@class='section-baseinfo']//a[@class='download']/@href</TagValue>
+		</ContentTag>
+		
+		<!-- list -->
+		<ContentList>
+			<!-- 映射的字段 -->
+			<Field>doi#author#enauthor#unit#journalname#journal#time#classnumber#machinelabel#onlinepublish#fund</Field>
+			<MarkField>doi：#作者：#Author：#作者单位：#刊 名：#Journal：#年，卷(期)：#分类号：#机标分类号：#在线出版日期：#基金项目：</MarkField>
+			
+			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
+			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
+		</ContentList>
+		
+		<!--常量字段
+ 		<ConstTag> 
+ 			<TagName>journalname</TagName> 
+ 			<TagValue>比较法研究</TagValue> 
+ 		</ConstTag> 
+		-->
+		
+	</ContentConfig>
+	
+	
+	<!--配置对应的爬虫 -->
+	<!-- sequence 顺序启动 -->
+	<Spiders  mode="sequence">
+		<Spider name="journalspider" cname="分类爬虫">
+			<conf-def class="ListConfig" name="journallistconfig" />
+		</Spider>
+		<Spider name="prespider" cname="期刊目录爬虫">
+			<depend ref="journalspider" field="url" />
+			<conf-def class="PreConfig" name="preconfig" />
+			<recover enable="false"/>
+		</Spider>
+		<Spider name="listspider" cname="期刊列表爬虫">
+			<depend ref="prespider" field="url" />
+			<conf-def class="ListConfig" name="listconfig" />
+			<recover enable="false" />
+		</Spider>
+		<Spider name="contentspider" cname="文章内容爬虫">
+			<depend ref="listspider" field="url" />
+			<conf-def class="ContentConfig" name="contentconfig" />
+			<recover enable="true" mode="delta" ref="url" field="url" />
+		</Spider>
+	</Spiders>
+</Configuration>

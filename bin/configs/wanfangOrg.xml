@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="ListAndContentTemplate">
+	<!-- 任务名称 -->
+	<!-- 万方机构  科研机构 分类  -->
+	<TaskName>WanfangOrg</TaskName>
+	<!-- 任务线程 -->
+	<Thread>1</Thread>
+	<!-- 是否开启代理 -->
+	<ProxyEnable>False</ProxyEnable>
+
+
+	<!-- 列表页配置 -->
+	<ListConfig name="listconfig">
+		<ListUrl>http://s.wanfangdata.com.cn/Cecdb.aspx?q=%E5%AD%A6%E7%A7%91%E4%BB%A3%E7%A0%81%3a%22%E6%90%90*%22+DBID%3acsi&amp;p=#</ListUrl>
+		<PageEnable>true</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>5</PageEnd>
+
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
+
+		<!-- url存储的表名 -->
+		<SqlTable>wanfangorgurl</SqlTable>
+
+		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
+		<TableFields>name#url#type#header#province#year#scope#brief#classify</TableFields>
+		<UniqueField>url</UniqueField>
+
+		<!--列表页的抓取字段 -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>name</TagName>
+			<TagValue>//div[@class='record-title']/a/text()</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//div[@class='record-title']/a/@href</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>type</TagName>
+			<TagValue>//div[@class='record-title']/span[@class='type-span']/text()</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>header</TagName>
+			<TagValue>//div[@class='record-subtitle']/span[1]/text()</TagValue>
+		</ListTag>
+		
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>province</TagName>
+			<TagValue>//div[@class='record-subtitle']/span[2]/text()</TagValue>
+		</ListTag>
+		
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>year</TagName>
+			<TagValue>//div[@class='record-subtitle']/span[3]/text()</TagValue>
+		</ListTag>
+		
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>scope</TagName>
+			<TagValue>//div[@class='left-record']/div[4]/text()</TagValue>
+		</ListTag>
+		
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>brief</TagName>
+			<TagValue>//div[@class='record-desc']/text()</TagValue>
+		</ListTag>
+		
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>心理学</TagValue>
+		</ConstTag>
+		
+	</ListConfig>
+
+	<!-- 内容页的抓取字段 -->
+	<ContentConfig name="contentconfig">
+		<!-- 内容存储表 -->
+		<ContentTable>falvpaper</ContentTable>
+
+		<!-- 表字段 -->
+		<TableFields>url#title#brief#library#titlenumber#department#level#timeline#promulgation#material#contentclass</TableFields>
+		<UniqueField>url</UniqueField>
+		<NotNullField>title</NotNullField>
+
+		<!-- 用于存放所抓取页面的url的数据库字段 -->
+		<PageUrlField>url</PageUrlField>
+
+		<!-- title -->
+		<ContentTag>
+			<TagName>title</TagName>
+			<TagValue>//div[@class='section-baseinfo']/h1/text()</TagValue>
+		</ContentTag>
+
+		<!-- brief -->
+		<ContentTag>
+			<TagName>brief</TagName>
+			<TagValue>//div[@class='section-baseinfo']//div[@class='text']/text()
+			</TagValue>
+		</ContentTag>
+
+		<!-- list -->
+		<ContentList>
+			<!-- 映射的字段 -->
+			<Field>library#titlenumber#department#level#timeline#promulgation#material#contentclass</Field>
+			<MarkField>库别名称：#发文文号：#颁布部门：#效力级别：#时效性：#颁布日期：#实施日期：#内容分类：</MarkField>
+
+			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
+			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
+		</ContentList>
+	</ContentConfig>
+
+	<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序 -->
+	<Spiders>
+		<Spider name="listspider">
+			<conf-def class="ListConfig" name="listconfig" />
+		</Spider>
+	</Spiders>
+	
+</Configuration>

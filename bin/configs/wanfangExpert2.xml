@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="ListAndContentTemplate">
+	<!-- 任务名称 -->
+	<!-- 万方人物  专家库 分类-->
+	<TaskName>WanfangExpert2</TaskName>
+	<!-- 任务线程 -->
+	<Thread>1</Thread>
+	<!-- 是否开启代理 -->
+	<ProxyEnable>False</ProxyEnable>
+	
+	
+	<!-- 列表页配置 -->
+	<ListConfig  name="listconfig">
+		<!-- &=&amp;，URL特殊字符需要转义 -->
+		<ListUrl>http://s.wanfangdata.com.cn/Expert.aspx?q=地质+专业领域%3a%22地质%22&amp;p=#</ListUrl>
+		<PageEnable>true</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>13</PageEnd>
+		
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
+		
+		<!-- url存储的表名 -->
+		<SqlTable>experturl2</SqlTable>
+		
+		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
+		<TableFields>name#url#info#classify</TableFields>
+		<UniqueField>url</UniqueField>
+		
+		<!--列表页的抓取字段  -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>name</TagName>
+			<TagValue>//a[@class='title']/text()</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//a[@class='title']/@href</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>info</TagName>
+			<TagValue>//div[@class='record-subtitle']/tidyText()</TagValue>
+		</ListTag>
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>地质学</TagValue>
+		</ConstTag>
+
+	</ListConfig>
+	
+	<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序-->
+	<Spiders>
+		<Spider name="listspider">
+			<conf-def class="ListConfig" name="listconfig" />
+		</Spider>
+	</Spiders>
+</Configuration>
