@@ -17,5 +17,6 @@
      </environments>
 	<mappers>
 		<mapper resource="cn/kejso/SqlMapper/TemplateMapper.xml" />
+		<mapper resource="cn/kejso/SqlMapper/UserHandlerMapper.xml" />
 	</mappers>
 </configuration>

@@ -3,6 +3,9 @@ package cn.kejso.Spider;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import cn.kejso.Config.Config;
 import cn.kejso.PageProcess.ContentPageProcess;
 import cn.kejso.PageProcess.ListPageProcess;
@@ -27,6 +30,8 @@ import us.codecraft.webmagic.processor.PageProcessor;
 
 public class BuildSpiderChain {
 
+	private static Logger logger = LoggerFactory.getLogger(BuildSpiderChain.class);
+	
 	private List<SpiderConf> confs;
 	private GlobalConfig global;
 	private SpiderChain chain;
@@ -113,8 +118,25 @@ public class BuildSpiderChain {
 	private Function<Spider, SpiderConf> readUrlFromSql = new Function<Spider, SpiderConf>() {
 		@Override
 		public List<String> apply(Spider t, SpiderConf e) {
+			
+			//e为当前spiderconf配置，depend可以为前面的爬虫，也可以为一个数据表
 			SpiderConf pre = SpiderUtil.getSpiderConfByName(e.getDependname(), getConfs());
-
+			
+			/*
+			 * depend依赖的是数据表,构造一个spiderconf，将数据表信息传入
+			 * 因为数据表没有指定从什么地方获取url，默认获取所有url字段的内容。将当前spiderconf 的recoverconfig禁用，使控制流从SqlUtil.getTargetUrls(pre)获取url。
+			 */
+			if(pre==null)
+			{
+				pre=new SpiderConf();
+				BaseConfig base=new BaseConfig();
+				base.setTablename(e.getDependname());
+				base.setUnique(e.getField());
+				pre.setConfig(base);
+				
+				e.getRecoverConfig().setEnable(false);
+			}
+	
 			if (e.getRecoverConfig().getEnable()) {
 				if (e.getRecoverConfig().isSimpleRecover()) {
 					int currentPos = SqlUtil.getBreakPoint(pre, e);
@@ -128,6 +150,8 @@ public class BuildSpiderChain {
 
 			} else
 				return SqlUtil.getTargetUrls(pre);
+				
+			
 		}
 	};
 
@@ -136,7 +160,7 @@ public class BuildSpiderChain {
 	}
 
 	public static void main(String[] args) {
-		String path = "configs\\wanfangExpert.xml";
+		String path = "configs\\wanfangprovinciallabs.xml";
 
 		BuildSpiderChain bsc = new BuildSpiderChain(path);
 		bsc.startSpiders();

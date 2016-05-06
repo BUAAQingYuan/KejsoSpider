@@ -55,4 +55,9 @@ public class Config {
 	
 	//useragent
 	public static final  String   Spider_userAgent="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; GTB5; .NET CLR 2.0.50727; CIBA";
+	
+	public static final  String   Spider_Baidu_userAgent="Baiduspider+(+http://www.baidu.com/search/spider.htm)";
+	
+	public static final  String   Spider_Google_userAgent1="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
+	public static final  String   Spider_Google_userAgent2="Googlebot/2.1 (+http://www.googlebot.com/bot.html)";
 }

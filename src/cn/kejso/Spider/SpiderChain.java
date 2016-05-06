@@ -9,6 +9,8 @@ import org.slf4j.LoggerFactory;
 import cn.kejso.Config.Config;
 import cn.kejso.Pipeline.MysqlPipeline;
 import cn.kejso.Spider.Control.SpiderContainer;
+import cn.kejso.Spider.SpiderHandler.BasicTableHandler;
+import cn.kejso.Template.SpiderConf;
 import cn.kejso.Tool.SqlUtil;
 import us.codecraft.webmagic.Spider;
 
@@ -77,12 +79,49 @@ public class SpiderChain {
 			{
 				long start = System.currentTimeMillis();
 				logger.info(container.getName()+" start ...");
+				
+				SpiderConf currentconf=container.getTemplate();
+				
+				
+				//before-table-handler
+				logger.info("数据表前置处理...");
+				if(currentconf.getBeforehandler()!=null&&!currentconf.getBeforehandler().equals(""))
+				{
+					
+					try {
+						Class handlerclass = Class.forName(currentconf.getBeforehandler());
+						BasicTableHandler handler=(BasicTableHandler)handlerclass.newInstance();
+						handler.handler(currentconf.getConfig().getTablename());
+					} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+						logger.error("数据表前置处理失败。");
+						e.printStackTrace();
+					}
+					
+				}
+				
 				//添加url
 				Spider current=container.getSpider();
 				current.startUrls(container.getStartUrls()).run();
 				
 				//将本次更新记录记录到cache中
 				SqlUtil.PrintPositionToCache(container.getTemplate());
+				
+				//after-table-handler
+				logger.info("数据表后置处理...");
+				if(currentconf.getAfterhandler()!=null&&!currentconf.getAfterhandler().equals(""))
+				{
+					
+					try {
+						Class handlerclass = Class.forName(currentconf.getAfterhandler());
+						BasicTableHandler handler=(BasicTableHandler)handlerclass.newInstance();
+						handler.handler(currentconf.getConfig().getTablename());
+					} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+						logger.error("数据表后置处理失败。");
+						e.printStackTrace();
+					}
+					
+				}
+				
 				//如果爬虫没有停止
 				logger.info("爬虫状态: "+current.getStatus().toString()+" .");
 				

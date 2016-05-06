@@ -11,6 +11,9 @@ public class GlobalConfig {
 	//开启代理
 	private  boolean  enableproxy;
 	
+	//casperjs路径
+	private  String  casperjsPath;
+	
 	public String getTaskname() {
 		return taskname;
 	}
@@ -29,5 +32,12 @@ public class GlobalConfig {
 	public void setEnableproxy(boolean enableproxy) {
 		this.enableproxy = enableproxy;
 	}
+	public String getCasperjsPath() {
+		return casperjsPath;
+	}
+	public void setCasperjsPath(String casperjsPath) {
+		this.casperjsPath = casperjsPath;
+	}
+
 	
 }

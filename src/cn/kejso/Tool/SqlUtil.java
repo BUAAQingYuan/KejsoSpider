@@ -177,4 +177,24 @@ public class SqlUtil {
 			
 			return breakpoint;
 		}
+		
+		
+		
+		public static void main(String[] args){
+			
+			SqlSession session=SpiderUtil.getSession();
+			String state="SqlMapper.UserHandlerMapper.getAllTargetField";
+			
+			Map<String,Object> map=new HashMap<String,Object>();
+			map.put("tablename", "keylabs");
+			map.put("field", "url");
+			
+			List<Map> result = session.selectList(state,map);
+			for(Map one:result)
+			{
+				System.out.println(one.get("id"));
+			}
+			System.out.println(result.size());
+			
+		}
 }

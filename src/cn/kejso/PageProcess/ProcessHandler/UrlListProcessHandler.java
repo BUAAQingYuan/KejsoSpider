@@ -14,6 +14,8 @@ import cn.kejso.Template.ListAndContentTemplate;
 import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ToolEntity.ListConfig;
 import cn.kejso.Template.ToolEntity.Tag;
+import cn.kejso.Tool.FileUtil;
+import cn.kejso.Tool.SpiderUtil;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.selector.Selectable;
 
@@ -71,6 +73,35 @@ public class UrlListProcessHandler {
 	
 			
 		}
+		
+		
+		String cacheFile=Config.Spider_ErrorDir+config.getTablename();
+		
+		/*
+		 * 判断抓取的动态字段是否为空，如果有常量字段要排除静态字段。如果没有抓取到内容，将其按照error url处理
+		 */
+		
+		//排除字段
+		List<String>  excludeFields=new ArrayList<String>();
+		
+		if(config.getConsttags().size()>0)
+		{
+			for(Tag one:config.getConsttags())
+			{
+				excludeFields.add(one.getTagname());
+			}
+		}
+		
+		for(Map<String,String> one:entitys)
+		{
+			if(SpiderUtil.ResultIsNull(one, excludeFields))
+			{
+				FileUtil.PrintURL(cacheFile, page.getUrl().toString());
+				page.setSkip(true);
+				break;
+			}
+		}
+		
 
 		return entitys;
 	}

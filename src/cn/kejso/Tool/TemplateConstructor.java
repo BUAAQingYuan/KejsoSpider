@@ -189,6 +189,8 @@ public class TemplateConstructor {
 			SpiderConf spider=new SpiderConf();
 			spider.setName(sub.getString("[@name]"));
 			spider.setCname(sub.getString("[@cname]"));
+			//spider.setDynamic(sub.getBoolean("[@dynamic]"));
+			//spider.setCasperjs(sub.getString("[@casperjs]"));
 			
 			String confclass=sub.getString("conf-def[@class]");
 			String confname=sub.getString("conf-def[@name]");
@@ -197,8 +199,10 @@ public class TemplateConstructor {
 			spider.setRecoverConfig(getRecoverConfig(sub));
 			
 			spider.setDependname(sub.getString("depend[@ref]"));
+			spider.setField(sub.getString("depend[@field]"));
 			
-			
+			spider.setBeforehandler(sub.getString("before-table-handler[@func]"));
+			spider.setAfterhandler(sub.getString("after-table-handler[@func]"));
 			
 			spiders.add(spider);
 		}
@@ -225,6 +229,7 @@ public class TemplateConstructor {
 		global.setTaskname(xml.getString("TaskName"));
 		global.setThreadnum(xml.getInt("Thread"));
 		global.setEnableproxy(xml.getBoolean("ProxyEnable"));
+		global.setCasperjsPath(xml.getString("CasperJsPath"));
 		
 		return global;
 	}

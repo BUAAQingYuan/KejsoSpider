@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration name="ListAndContentTemplate">
 	<!-- 任务名称 -->
+	<!-- 万方论文  -->
 	<TaskName>WanfangPaper</TaskName>
 	<!-- 任务线程 -->
 	<Thread>2</Thread>

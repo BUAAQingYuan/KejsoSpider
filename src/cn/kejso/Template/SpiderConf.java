@@ -13,17 +13,31 @@ public class SpiderConf {
 		//爬虫名称-用于提示
 		private String	cname;
 		
+		//是否动态网页爬虫
+		private boolean  dynamic;
+		
+		//动态网页对应的js文件
+		private String   casperjs;
+		
 		//配置
 		private BaseConfig config;
 		
 		//依赖的爬虫名称或数据库 
 		private String dependname;
 		
+		//当依赖的为数据表时的url字段
+		private String field;
+		
 		//断点恢复的配置
 		private RecoverConfig rconfig;
 		
 		//爬虫运行前数据库条目数量
 		private int startpoint;
+		
+		
+		//数据表handler
+		private String beforehandler;
+		private String afterhandler;
 		
 		public String getName() {
 			return name;
@@ -80,6 +94,46 @@ public class SpiderConf {
 		
 		public String getCname() {
 			return cname;
+		}
+
+		public String getField() {
+			return field;
+		}
+
+		public void setField(String field) {
+			this.field = field;
+		}
+
+		public boolean isDynamic() {
+			return dynamic;
+		}
+
+		public void setDynamic(boolean dynamic) {
+			this.dynamic = dynamic;
+		}
+
+		public String getCasperjs() {
+			return casperjs;
+		}
+
+		public void setCasperjs(String casperjs) {
+			this.casperjs = casperjs;
+		}
+
+		public String getBeforehandler() {
+			return beforehandler;
+		}
+
+		public void setBeforehandler(String beforehandler) {
+			this.beforehandler = beforehandler;
+		}
+
+		public String getAfterhandler() {
+			return afterhandler;
+		}
+
+		public void setAfterhandler(String afterhandler) {
+			this.afterhandler = afterhandler;
 		}
 
 }

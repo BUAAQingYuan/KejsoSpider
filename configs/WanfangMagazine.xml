@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration name="WanfangMagazine">
 	<!-- 任务名称 -->
+	<!-- 万方期刊-->
 	<TaskName>WanfangMagazina</TaskName>
 	<!-- 任务线程 -->
 	<Thread>2</Thread>

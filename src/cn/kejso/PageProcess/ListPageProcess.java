@@ -24,8 +24,9 @@ public class ListPageProcess  implements PageProcessor {
 	
 	@Override
 	public Site getSite() {
-		site = Site.me().setSleepTime(1000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000);
-		site.setCharset("utf8");
+		site = Site.me().setSleepTime(10000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000);
+		site.setCharset("utf8").setUserAgent(Config.Spider_userAgent);
+		
 		return site;
 	}
 
