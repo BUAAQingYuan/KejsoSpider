@@ -37,7 +37,7 @@ public class ContentPageProcess implements PageProcessor {
 												  new String[]{"222.176.112.10","80"},new String[]{"61.159.143.8","80"},new String[]{"218.75.0.83","3128"});
                 
 		//site = Site.me().setSleepTime(2000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000).setUserAgent(Config.Spider_userAgent).setHttpProxy(new HttpHost(" 171.38.169.56", 8123));
-		site = Site.me().setSleepTime(10000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000).setUserAgent(Config.Spider_Google_userAgent1);
+		site = Site.me().setSleepTime(1000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000).setUserAgent(Config.Spider_Google_userAgent1);
 		//site.setHttpProxyPool(proxys);
 		site.setCharset("utf8");
 		return site;
@@ -54,13 +54,13 @@ public class ContentPageProcess implements PageProcessor {
 		page.putField(Config.PipeLine_Entity, result);
 		page.putField(Config.PipeLine_Type, Config.PipeLine_TypeOne);
 
-		
-		for(String key:result.keySet())
-		{
-			System.out.print(result.get(key)+"  ");
-		}
-		
-		System.out.println();
+//		
+//		for(String key:result.keySet())
+//		{
+//			System.out.print(result.get(key)+"  ");
+//		}
+//		
+//		System.out.println();
 		
 		
 	}

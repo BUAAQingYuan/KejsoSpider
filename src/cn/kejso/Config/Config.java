@@ -16,6 +16,9 @@ public class Config {
 	
 	//Mybatis插入语句
 	public static final  String   Insert_statement="SqlMapper.TemplateMapper.insertEntity";
+	
+	// 查记录条数语句
+	public static final String TheRecordNumber_statement = "SqlMapper.TemplateMapper.getRecordNum";
 		
 	//Mybatis 获得最后一条记录的id
 	public static final  String   TheLastId_statement="SqlMapper.TemplateMapper.getLastId";
@@ -37,7 +40,13 @@ public class Config {
 	
 	//获得target url语句
 	public static final  String   PartUrl_statement="SqlMapper.TemplateMapper.getPartUrl";
-		
+	
+	// 清空表语句
+	public static final String TruncateTable_statement = "SqlMapper.TemplateMapper.truncateTable";
+
+	// 删除表语句
+	public static final String DropTable_statement = "SqlMapper.TemplateMapper.dropTable";
+	
 	//pipeline
 	//实体标识
 	public static final  String   PipeLine_Entity="storedEntity";

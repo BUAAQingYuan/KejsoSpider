@@ -14,33 +14,45 @@ public class ContentConfig extends BaseConfig{
 	private  String  code;
 	
 	//sql
-	private  List<String> fields;
-	private  String  unique;
+//	private  List<String> fields;
+//	private  String  unique;
 	
-	private  String  tablename;
+//	private  String  tablename;
 	
 	private String	pageUrlField;
 	private String	notNullField;
 	
 	//常量字段
 	private  List<Tag>  consttags;
+	
+	private String 	multicontentseparator;
+	private List<Tag>	multicontenttags;
 
-	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,List<String> field,List<String> markfield,List<String> fields,String unique, String pageUrlField, String notNullField,List<Tag> consttags)
+	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,
+			List<String> field,List<String> markfield,List<String> fields,
+			String unique, String pageUrlField, String notNullField,List<Tag> consttags,
+			String multicontentseparator, List<Tag> multicontenttags)
 	{
 		this.tags=tags;
-		this.tablename=tablename;
+//		this.tablename=tablename;
+		setTablename(tablename);
 		this.mark=mark;
 		this.code=code;
 		this.field=field;
 		this.markfield=markfield;
 		
-		this.fields=fields;
-		this.unique=unique;
+//		this.fields=fields;
+		setFields(fields);
+//		this.unique=unique;
+		setUnique(unique);
 		
 		this.pageUrlField=pageUrlField;
 		this.notNullField=notNullField;
 		
 		this.consttags=consttags;
+		
+		this.multicontentseparator = multicontentseparator;
+		this.multicontenttags = multicontenttags;
 	}
 	
 	public List<Tag> getTags() {
@@ -67,13 +79,13 @@ public class ContentConfig extends BaseConfig{
 		this.code = code;
 	}
 
-	public String getTablename() {
-		return tablename;
-	}
-
-	public void setTablename(String tablename) {
-		this.tablename = tablename;
-	}
+//	public String getTablename() {
+//		return tablename;
+//	}
+//
+//	public void setTablename(String tablename) {
+//		this.tablename = tablename;
+//	}
 
 	public List<String> getField() {
 		return field;
@@ -83,21 +95,21 @@ public class ContentConfig extends BaseConfig{
 		this.field = field;
 	}
 
-	public List<String> getFields() {
-		return fields;
-	}
-
-	public void setFields(List<String> fields) {
-		this.fields = fields;
-	}
-
-	public String getUnique() {
-		return unique;
-	}
-
-	public void setUnique(String unique) {
-		this.unique = unique;
-	}
+//	public List<String> getFields() {
+//		return fields;
+//	}
+//
+//	public void setFields(List<String> fields) {
+//		this.fields = fields;
+//	}
+//
+//	public String getUnique() {
+//		return unique;
+//	}
+//
+//	public void setUnique(String unique) {
+//		this.unique = unique;
+//	}
 
 	public List<String> getMarkfield() {
 		return markfield;
@@ -129,5 +141,21 @@ public class ContentConfig extends BaseConfig{
 
 	public void setConsttags(List<Tag> consttags) {
 		this.consttags = consttags;
+	}
+	
+	public String getMultiContentSeparator() {
+		return multicontentseparator;
+	}
+	
+	public void setMultiContentSeparator(String multicontentseparator) {
+		this.multicontentseparator = multicontentseparator;
+	}
+	
+	public List<Tag> getMultiContentTag() {
+		return multicontenttags;
+	}
+	
+	public void setMultiContentTag(List<Tag> multicontenttags) {
+		this.multicontenttags = multicontenttags;
 	}
 }

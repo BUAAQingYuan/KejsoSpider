@@ -14,6 +14,9 @@ public class GlobalConfig {
 	//casperjs路径
 	private  String  casperjsPath;
 	
+	//循环重试次数
+	private  int      cycleTimes;
+	
 	public String getTaskname() {
 		return taskname;
 	}
@@ -37,6 +40,14 @@ public class GlobalConfig {
 	}
 	public void setCasperjsPath(String casperjsPath) {
 		this.casperjsPath = casperjsPath;
+	}
+	
+	public int getCycleTimes() {
+		return cycleTimes;
+	}
+	
+	public void setCycleTimes(int cycleTimes) {
+		this.cycleTimes = cycleTimes;
 	}
 
 	
