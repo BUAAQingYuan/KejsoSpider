@@ -11,10 +11,10 @@
 
 	<!-- 列表页配置 -->
 	<ListConfig name="listconfig">
-		<ListUrl>http://s.wanfangdata.com.cn/Cecdb.aspx?q=%E5%AD%A6%E7%A7%91%E4%BB%A3%E7%A0%81%3a%22%E9%85%AC*%22+DBID%3acsi&amp;p=#</ListUrl>
+		<ListUrl>http://s.wanfangdata.com.cn/Cecdb.aspx?q=%E5%AD%A6%E7%A7%91%E4%BB%A3%E7%A0%81%3a%22%E6%90%90*%22+DBID%3acsi&amp;p=#</ListUrl>
 		<PageEnable>true</PageEnable>
 		<PageStart>1</PageStart>
-		<PageEnd>61</PageEnd>
+		<PageEnd>5</PageEnd>
 
 		<!-- 列表页中列表对应的value -->
 		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
@@ -75,7 +75,7 @@
 		<ConstTag>
 			<!-- 和数据表字段对应 -->
 			<TagName>classify</TagName>
-			<TagValue>生物学</TagValue>
+			<TagValue>心理学</TagValue>
 		</ConstTag>
 		
 	</ListConfig>

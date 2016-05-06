@@ -84,10 +84,9 @@ public class SpiderChain {
 				
 				
 				//before-table-handler
-				logger.info("数据表前置处理...");
 				if(currentconf.getBeforehandler()!=null&&!currentconf.getBeforehandler().equals(""))
 				{
-					
+					logger.info("数据表前置处理...");
 					try {
 						Class handlerclass = Class.forName(currentconf.getBeforehandler());
 						BasicTableHandler handler=(BasicTableHandler)handlerclass.newInstance();
@@ -107,10 +106,10 @@ public class SpiderChain {
 				SqlUtil.PrintPositionToCache(container.getTemplate());
 				
 				//after-table-handler
-				logger.info("数据表后置处理...");
+				
 				if(currentconf.getAfterhandler()!=null&&!currentconf.getAfterhandler().equals(""))
 				{
-					
+					logger.info("数据表后置处理...");
 					try {
 						Class handlerclass = Class.forName(currentconf.getAfterhandler());
 						BasicTableHandler handler=(BasicTableHandler)handlerclass.newInstance();
