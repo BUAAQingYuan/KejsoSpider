@@ -1,5 +1,6 @@
 package cn.kejso.PageProcess.ProcessHandler;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,7 +18,9 @@ import cn.kejso.Config.Config;
 import cn.kejso.Template.ListAndContentTemplate;
 import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ToolEntity.ContentConfig;
+import cn.kejso.Template.ToolEntity.FileContentTag;
 import cn.kejso.Template.ToolEntity.Tag;
+import cn.kejso.Tool.FileDownloadUtil;
 import cn.kejso.Tool.FileUtil;
 import cn.kejso.Tool.SpiderUtil;
 import cn.kejso.Tool.SqlUtil;
@@ -91,6 +94,20 @@ public class ContentMapProcessHandler {
 			if (pos != -1) {
 				result.put(attrs.get(i), code.get(pos));
 			}
+		}
+		
+		List<FileContentTag> filecontenttags = config.getFilecontenttags();
+		for (int i=0; i<filecontenttags.size(); i++) {
+			FileContentTag tag = filecontenttags.get(i);
+			String file = new String();
+			try {
+				file = FileDownloadUtil.download(page.getUrl().toString(), result.get(tag.getSourceField()), tag.getSavePath(), tag.getForceExt());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				logger.warn("fail to download file {}", result.get(tag.getSourceField()));
+				e.printStackTrace();
+			}
+			result.put(tag.getTargetField(), file);
 		}
 
 		String cacheFile = Config.Spider_ErrorDir + config.getTablename();

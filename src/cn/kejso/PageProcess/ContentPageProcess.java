@@ -1,21 +1,13 @@
 package cn.kejso.PageProcess;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Map;
-
-import org.apache.commons.beanutils.BeanUtils;
-import org.apache.http.HttpHost;
 
 import com.google.common.collect.Lists;
 
 import cn.kejso.Config.Config;
 import cn.kejso.PageProcess.ProcessHandler.ContentMapProcessHandler;
-import cn.kejso.Template.ListAndContentTemplate;
 import cn.kejso.Template.SpiderConf;
-import cn.kejso.Template.ToolEntity.ContentConfig;
-import cn.kejso.Tool.FileUtil;
-import cn.kejso.Tool.SpiderUtil;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.processor.PageProcessor;

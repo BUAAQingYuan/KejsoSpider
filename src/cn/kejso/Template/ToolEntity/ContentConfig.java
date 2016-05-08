@@ -27,11 +27,13 @@ public class ContentConfig extends BaseConfig{
 	
 	private String 	multicontentseparator;
 	private List<Tag>	multicontenttags;
+	
+	private List<FileContentTag> filecontenttags;
 
 	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,
 			List<String> field,List<String> markfield,List<String> fields,
 			String unique, String pageUrlField, String notNullField,List<Tag> consttags,
-			String multicontentseparator, List<Tag> multicontenttags)
+			String multicontentseparator, List<Tag> multicontenttags, List<FileContentTag> filecontenttags)
 	{
 		this.tags=tags;
 //		this.tablename=tablename;
@@ -53,6 +55,8 @@ public class ContentConfig extends BaseConfig{
 		
 		this.multicontentseparator = multicontentseparator;
 		this.multicontenttags = multicontenttags;
+		
+		this.filecontenttags = filecontenttags;
 	}
 	
 	public List<Tag> getTags() {
@@ -157,5 +161,13 @@ public class ContentConfig extends BaseConfig{
 	
 	public void setMultiContentTag(List<Tag> multicontenttags) {
 		this.multicontenttags = multicontenttags;
+	}
+
+	public List<FileContentTag> getFilecontenttags() {
+		return filecontenttags;
+	}
+
+	public void setFilecontenttags(List<FileContentTag> filecontenttags) {
+		this.filecontenttags = filecontenttags;
 	}
 }

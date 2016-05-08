@@ -12,6 +12,7 @@ import cn.kejso.Template.RecoverConfig;
 import cn.kejso.Template.RecoverConfig.RecoverMode;
 import cn.kejso.Template.ToolEntity.BaseConfig;
 import cn.kejso.Template.ToolEntity.ContentConfig;
+import cn.kejso.Template.ToolEntity.FileContentTag;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
 import cn.kejso.Template.ToolEntity.ListConfig;
 import cn.kejso.Template.ToolEntity.PreConfig;
@@ -101,6 +102,14 @@ public class TemplateConstructor {
 			multicontenttags.add(new Tag(one.getString("TagName"),one.getString("TagValue")));
 		}
 		
+		List filecontentitem = sub.configurationsAt("FileContent");
+		List<FileContentTag> filecontenttags = new ArrayList<FileContentTag>();
+		for (Iterator it = filecontentitem.iterator(); it.hasNext();) {
+			HierarchicalConfiguration one = (HierarchicalConfiguration) it.next();
+			filecontenttags.add(new FileContentTag(one.getString("SourceField"), one.getString("TargetField"), 
+													one.getString("SavePath"), one.getString("ForceExt")));
+		}
+		
 		String mark=sub.getString("ContentList.Mark");
 		String code=sub.getString("ContentList.Code");
 		String field=sub.getString("ContentList.Field");
@@ -117,7 +126,7 @@ public class TemplateConstructor {
 		return new ContentConfig(contenttags,contenttable,mark,code,
 				SpiderUtil.getMapFields(field),SpiderUtil.getMapFields(markfield),SpiderUtil.getMapFields(fields),
 				unique,pageUrlField,notNullField,listtags2
-				,multicontentseparator,multicontenttags);
+				,multicontentseparator,multicontenttags,filecontenttags);
 	}
 	
 	/*
@@ -214,9 +223,6 @@ public class TemplateConstructor {
 		return spiders;
 		
 	}
-	
-	
-	
 	
 	//获得全局配置
 	public static GlobalConfig  getGlobalConf(String configfile)
