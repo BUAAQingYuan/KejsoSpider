@@ -6,8 +6,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import cn.kejso.Template.ToolEntity.ProxyAccountConfig;
+
 public class MimvpProxy {
 
+	public static List<String[]> getProxy(ProxyAccountConfig config) {
+		return MimvpProxy.getProxy(config.getAccounts());
+	}
+	
 	// 说明：在某一段时间内返回的数据是固定的，不管登录什么帐号。故只返回得到结果的一项
 	public static List<String[]> getProxy(List<String[]> user_info) {
 
@@ -112,14 +118,16 @@ public class MimvpProxy {
 	public static void main(String[] args) {
 
 		//valid only for a short period
-		String user_rcode = "p7kp2";
-		String cookie = "PHPSESSID=8fomh6n9pdnfdvgo6ef8f0sem4";
+		//批量注册会被删号
+		//已经失效
+		String user_rcode= "5w4by";
+		String cookie = "PHPSESSID=bo35tjflevs4c4b907t2urphf4";
 		String pwd = "aaa__1";
 		
 		List<String[]> user_info = new ArrayList<String[]> ();
 		
-		for (int i = 51; i <= 51; i++) {
-			user_info.add(new String[] {String.format("%06d@1.cn", i), pwd} );
+		for (int i = 260013553; i <= 260013557; i++) {
+			user_info.add(new String[] {String.format("%d@qq.com", i), pwd} );
 		}
 		
 		MimvpProxy.register(user_info, user_rcode, cookie);

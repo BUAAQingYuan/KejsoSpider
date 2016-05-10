@@ -23,6 +23,9 @@ public class PreListPageProcess implements PageProcessor{
 	
 	@Override
 	public Site getSite() {
+		
+		
+		
 		site = Site.me().setSleepTime(1000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000);
 		site.setCharset("utf8");
 		return site;

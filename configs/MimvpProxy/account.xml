@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="MimvpProxy">
+	<ProxyAccount>
+		<Account>260013550@qq.com</Account>
+		<Password>aaa__1</Password>
+	</ProxyAccount>
+	<ProxyAccount>
+		<Account>260013551@qq.com</Account>
+		<Password>aaa__1</Password>
+	</ProxyAccount>
+	<ProxyAccount>
+		<Account>260013552@qq.com</Account>
+		<Password>aaa__1</Password>
+	</ProxyAccount>
+	<ProxyAccount>
+		<Account>260013553@qq.com</Account>
+		<Password>aaa__1</Password>
+	</ProxyAccount>
+	<ProxyAccount>
+		<Account>260013554@qq.com</Account>
+		<Password>aaa__1</Password>
+	</ProxyAccount>
+	<ProxyAccount>
+		<Account>260013555@qq.com</Account>
+		<Password>aaa__1</Password>
+	</ProxyAccount>
+</Configuration>

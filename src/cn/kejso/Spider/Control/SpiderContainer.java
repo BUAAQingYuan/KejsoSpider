@@ -4,6 +4,7 @@ import java.util.List;
 
 import cn.kejso.Template.AbstractTemplate;
 import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.GlobalConfig;
 import us.codecraft.webmagic.Spider;
 
 

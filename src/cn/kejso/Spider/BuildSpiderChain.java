@@ -53,7 +53,7 @@ public class BuildSpiderChain {
 	
 	public static void main(String[] args) {
 
-		String path = "configs\\scholarTest.xml";
+		String path = "configs\\scholarTest2.xml";
 
 		BuildSpiderChain bsc = new BuildSpiderChain(path);
 		bsc.startSpiders();

@@ -69,4 +69,8 @@ public class Config {
 	
 	public static final  String   Spider_Google_userAgent1="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
 	public static final  String   Spider_Google_userAgent2="Googlebot/2.1 (+http://www.googlebot.com/bot.html)";
+	
+	//MimvpProxy
+	public static final  String   mimvpProxyDir="configs/MimvpProxy/";
+	public static final  String   mimvpProxyAccount="account.xml";
 }

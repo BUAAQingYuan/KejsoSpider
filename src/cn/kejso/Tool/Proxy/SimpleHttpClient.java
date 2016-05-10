@@ -109,6 +109,7 @@ public class SimpleHttpClient {
 			if (cookie != null && !cookie.isEmpty()) {
 				httpget.setHeader("Cookie", cookie);
 			}
+			httpget.setHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko");
 
 			CloseableHttpResponse response = httpclient.execute(httpget);
 
