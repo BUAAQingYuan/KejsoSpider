@@ -7,6 +7,7 @@ import cn.kejso.Config.Config;
 import cn.kejso.PageProcess.ProcessHandler.UrlListProcessHandler;
 import cn.kejso.Template.ListAndContentTemplate;
 import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.GlobalConfig;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.processor.PageProcessor;
@@ -15,11 +16,12 @@ public class ListPageProcess  implements PageProcessor {
 	
 	private Site site;
 	private SpiderConf  template;
+	private int retryTimes;
 	
-	
-	public  ListPageProcess(SpiderConf template)
+	public  ListPageProcess(SpiderConf template, int retryTimes)
 	{	
 		this.template=template;
+		this.retryTimes = retryTimes;
 	}
 	
 	@Override
@@ -29,6 +31,10 @@ public class ListPageProcess  implements PageProcessor {
 		
 		site = Site.me().setSleepTime(10000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000);
 		site.setCharset("utf8").setUserAgent(Config.Spider_userAgent);
+		
+		if (GlobalConfig.isMoresleeptime()) {
+			site.setSleepTime((int) (GlobalConfig.getSleeptime()*Math.pow(2, retryTimes)));
+		}
 		
 		return site;
 	}

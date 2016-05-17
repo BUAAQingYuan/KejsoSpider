@@ -8,6 +8,10 @@
 	<ProxyEnable>False</ProxyEnable>
 	<!-- 爬虫循环重试次数 -->
 	<CycleTimes>3</CycleTimes>
+	<!-- 初始sleeptime -->
+	<SleepTime>1000</SleepTime>
+	<!-- 是否在循环重试时指数级增加间隔 -->
+	<MoreSleepTime>false</MoreSleepTime>
 	
 		<!-- 列表页配置 -->
 	<ListConfig  name="scholarlistconfig">

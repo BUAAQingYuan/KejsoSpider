@@ -17,6 +17,11 @@ public class GlobalConfig {
 	//循环重试次数
 	private  static int      cycleTimes;
 	
+	//初始sleeptime
+	private  static int			sleeptime;
+	//是否在失败重试时增加重试时间
+	private  static boolean		moresleeptime;
+	
 	public static String getTaskname() {
 		return taskname;
 	}
@@ -46,8 +51,20 @@ public class GlobalConfig {
 		return cycleTimes;
 	}
 	
-	public void setCycleTimes(int cycleTimes) {
-		this.cycleTimes = cycleTimes;
+	public static void setCycleTimes(int cycleTimes) {
+		GlobalConfig.cycleTimes = cycleTimes;
+	}
+	public static int getSleeptime() {
+		return sleeptime;
+	}
+	public static void setSleeptime(int sleeptime) {
+		GlobalConfig.sleeptime = sleeptime;
+	}
+	public static boolean isMoresleeptime() {
+		return moresleeptime;
+	}
+	public static void setMoresleeptime(boolean moresleeptime) {
+		GlobalConfig.moresleeptime = moresleeptime;
 	}
 
 	

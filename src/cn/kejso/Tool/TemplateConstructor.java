@@ -217,11 +217,14 @@ public class TemplateConstructor {
 		}
 
 		GlobalConfig global = new GlobalConfig();
-		global.setTaskname(xml.getString("TaskName"));
-		global.setThreadnum(xml.getInt("Thread"));
-		global.setEnableproxy(xml.getBoolean("ProxyEnable"));
-		global.setCycleTimes(xml.getInt("CycleTimes"));
-		global.setCasperjsPath(xml.getString("CasperJsPath"));
+		
+		GlobalConfig.setTaskname(xml.getString("TaskName"));
+		GlobalConfig.setThreadnum(xml.getInt("Thread"));
+		GlobalConfig.setEnableproxy(xml.getBoolean("ProxyEnable"));
+		GlobalConfig.setCycleTimes(xml.getInt("CycleTimes"));
+		GlobalConfig.setCasperjsPath(xml.getString("CasperJsPath"));
+		GlobalConfig.setSleeptime(xml.getInt("SleepTime", 1000));
+		GlobalConfig.setMoresleeptime(xml.getBoolean("MoreSleepTime", false));
 
 		return global;
 	}

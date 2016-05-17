@@ -29,7 +29,7 @@ public class BuildSpiderChain {
 		BuildSpider.setParameter(confs, global);
 		
 		for (SpiderConf conf : confs) {
-			Spider spider = BuildSpider.getSpider(conf);
+			Spider spider = BuildSpider.getSpider(conf, 0);
 			
 			conf.setStartpoint(getStartpoint(conf));
 			

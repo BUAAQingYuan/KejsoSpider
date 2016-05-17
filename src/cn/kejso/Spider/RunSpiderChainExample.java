@@ -29,7 +29,7 @@ public class RunSpiderChainExample {
 		List<SpiderConf> confs=TemplateConstructor.getSpiderConf("configs\\wanfangpaper.xml");
 		GlobalConfig global=TemplateConstructor.getGlobalConf("configs\\wanfangpaper.xml");
 		
-        Spider spiderurllist=Spider.create(new ListPageProcess(confs.get(0)))
+        Spider spiderurllist=Spider.create(new ListPageProcess(confs.get(0),0))
         						   .thread(global.getThreadnum())
         						   .addPipeline(new MysqlPipeline(confs.get(0)));
         
@@ -43,7 +43,7 @@ public class RunSpiderChainExample {
         
         //后面的spider依赖于前面的spider，则后一个spider的初始化的urls添加操作要等到前面的spider执行完生成相应的数据。
         
-        Spider spidercontent=Spider.create(new ContentPageProcess(confs.get(1)))
+        Spider spidercontent=Spider.create(new ContentPageProcess(confs.get(1),0))
 //        						   .scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+global.getTaskname()))
         						   .thread(global.getThreadnum())
         						   .addPipeline(new MysqlPipeline(confs.get(1)))

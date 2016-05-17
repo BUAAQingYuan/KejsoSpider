@@ -11,6 +11,7 @@ import cn.kejso.Pipeline.MysqlPipeline;
 import cn.kejso.Spider.Control.SpiderContainer;
 import cn.kejso.Spider.SpiderHandler.BasicTableHandler;
 import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.GlobalConfig;
 import cn.kejso.Tool.SqlUtil;
 import us.codecraft.webmagic.Spider;
 
@@ -107,7 +108,7 @@ public class SpiderChain {
 						//retry
 						// 创建一个新的实例，因为之前的实例无法导入抓取失败的URL
 						container.minusCycleTimes();
-						current = BuildSpider.getSpider(container.getTemplate());
+						current = BuildSpider.getSpider(container.getTemplate(), GlobalConfig.getCycleTimes() - container.getCycleTimes());
 						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), true));
 					} else {
 						//离开循环

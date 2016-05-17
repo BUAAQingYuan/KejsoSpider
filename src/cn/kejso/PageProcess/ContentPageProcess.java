@@ -17,9 +17,11 @@ import us.codecraft.webmagic.processor.PageProcessor;
 public class ContentPageProcess implements PageProcessor {
 	private Site site;
 	private SpiderConf template;
-
-	public ContentPageProcess(SpiderConf template) {
+	private int retryTimes;
+	
+	public ContentPageProcess(SpiderConf template, int retryTimes) {
 		this.template = template;
+		this.retryTimes = retryTimes;
 	}
 
 	@Override
@@ -28,8 +30,12 @@ public class ContentPageProcess implements PageProcessor {
 		// site =
 		// Site.me().setSleepTime(2000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000).setUserAgent(Config.Spider_userAgent).setHttpProxy(new
 		// HttpHost(" 171.38.169.56", 8123));
-		site = Site.me().setSleepTime(1000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000)
+		site = Site.me().setSleepTime(GlobalConfig.getSleeptime()).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000)
 				.setUserAgent(Config.Spider_Google_userAgent1);
+		
+		if (GlobalConfig.isMoresleeptime()) {
+			site.setSleepTime((int) (GlobalConfig.getSleeptime()*Math.pow(2, retryTimes)));
+		}
 
 		if (GlobalConfig.isEnableproxy()) {
 			List<String[]> proxys = ProxyUtil.getMimvpProxyList();
