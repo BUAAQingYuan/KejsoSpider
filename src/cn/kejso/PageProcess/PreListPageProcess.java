@@ -10,6 +10,7 @@ import cn.kejso.Config.Config;
 import cn.kejso.PageProcess.ProcessHandler.PreListProcessHandler;
 import cn.kejso.PageProcess.ProcessHandler.UrlListProcessHandler;
 import cn.kejso.Template.SpiderConf;
+import cn.kejso.Tool.SpiderUtil;
 
 public class PreListPageProcess implements PageProcessor{
 	
@@ -35,6 +36,11 @@ public class PreListPageProcess implements PageProcessor{
 		
 		page.putField(Config.PipeLine_Entity, preurls);
 		page.putField(Config.PipeLine_Type, Config.PipeLine_TypeList);
-
+		
+		//随机设置UA
+		if(Math.random()<Config.ChangeUA_probability)
+		{
+			site.setUserAgent(SpiderUtil.RandomUserAgent());
+		}
 	}
 }

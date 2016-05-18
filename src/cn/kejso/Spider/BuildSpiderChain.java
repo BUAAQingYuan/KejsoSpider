@@ -22,9 +22,10 @@ public class BuildSpiderChain {
 
 	public BuildSpiderChain(String configPath) {
 
-		chain = new SpiderChain();
+		
 		confs = TemplateConstructor.getSpiderConf(configPath);
 		global = TemplateConstructor.getGlobalConf(configPath);
+		chain = new SpiderChain(global);
 		
 		BuildSpider.setParameter(confs, global);
 		
@@ -53,8 +54,16 @@ public class BuildSpiderChain {
 	
 	public static void main(String[] args) {
 
-		String path = "configs\\wanfangkjreport.xml";
-
+		
+		String path = "configs\\wanfangLaw.xml";
+		/*
+		String path=args[0];
+		if(path==null)
+		{
+			System.out.println("未输入配置文件!");
+			return ;
+		}
+		*/
 		BuildSpiderChain bsc = new BuildSpiderChain(path);
 		bsc.startSpiders();
 	}

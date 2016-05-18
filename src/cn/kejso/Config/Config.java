@@ -63,10 +63,54 @@ public class Config {
 	public static final  String   Spider_SQLCacheDir="MysqlCache/";
 	
 	//useragent
-	public static final  String   Spider_userAgent="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; GTB5; .NET CLR 2.0.50727; CIBA";
+	//chrome
+	public static final  String   Spider_Default_userAgent="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; GTB5; .NET CLR 2.0.50727; CIBA";
 	
+	//IE
+	public static final  String   Spider_IE_userAgent1="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;";
+	public static final  String   Spider_IE_userAgent2="Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0)";
+	
+	//Firefox
+	public static final  String   Spider_Firefox_userAgent="Mozilla/5.0 (Windows NT 6.1; rv:2.0.1) Gecko/20100101 Firefox/4.0.1";
+	
+	//opera
+	public static final  String   Spider_Opera_userAgent="Opera/9.80 (Windows NT 6.1; U; zh-cn) Presto/2.9.168 Version/11.50";
+	
+	//360
+	public static final String  Spider_360_userAgent="Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; 360SE)";
+	
+	//腾讯
+	public static final String Spider_Tecent_userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41 Safari/535.1 QQBrowser/6.9.11079.201";
+	
+	//baidu
 	public static final  String   Spider_Baidu_userAgent="Baiduspider+(+http://www.baidu.com/search/spider.htm)";
 	
+	//google
 	public static final  String   Spider_Google_userAgent1="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)";
 	public static final  String   Spider_Google_userAgent2="Googlebot/2.1 (+http://www.googlebot.com/bot.html)";
+	public static final  String   Spider_Google_userAgent3="Googlebot/2.1 (+http://www.google.com/bot.html)";
+	
+	//雅虎
+	public static final  String   Spider_Yahoo_userAgent1="Mozilla/5.0 (compatible; Yahoo! Slurp China; http://misc.yahoo.com.cn/help.html)";
+	public static final  String   Spider_Yahoo_userAgent2="Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)";
+	
+	//新浪爱问
+	public static final  String   Spider_Sina_userAgent1="iaskspider/2.0(+http://iask.com/help/help_index.html)";
+	public static final  String   Spider_Sina_userAgent2="Mozilla/5.0 (compatible; iaskspider/1.0; MSIE 6.0)";
+	
+	//搜狗
+	public static final  String   Spider_Sogou_userAgent1="Sogou web spider/3.0(+http://www.sogou.com/docs/help/webmasters.htm#07)";
+	public static final  String   Spider_Sogou_userAgent2="Sogou Push Spider/3.0(+http://www.sogou.com/docs/help/webmasters.htm#07)";
+	
+	//网易
+	public static final  String   Spider_Easynet_userAgent1="Mozilla/5.0 (compatible; YodaoBot/1.0; http://www.yodao.com/help/webmaster/spider/;)";
+	
+	public static final  String[] Spider_All_userAgent=new String[]{Config.Spider_360_userAgent,Config.Spider_Baidu_userAgent,Config.Spider_Google_userAgent2,
+		 															Config.Spider_Default_userAgent,Config.Spider_Easynet_userAgent1,Config.Spider_Google_userAgent3,
+		 															Config.Spider_Firefox_userAgent,Config.Spider_Google_userAgent1,Config.Spider_IE_userAgent1,
+		 															Config.Spider_IE_userAgent2,Config.Spider_Opera_userAgent,Config.Spider_Sina_userAgent1,
+		 															Config.Spider_Sina_userAgent2,Config.Spider_Sogou_userAgent1,Config.Spider_Sogou_userAgent2,
+		 															Config.Spider_Tecent_userAgent,Config.Spider_Yahoo_userAgent1,Config.Spider_Yahoo_userAgent2};
+	//更换UA的概率
+	public static final double  ChangeUA_probability=0.3;
 }

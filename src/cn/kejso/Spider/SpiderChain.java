@@ -11,6 +11,7 @@ import cn.kejso.Pipeline.MysqlPipeline;
 import cn.kejso.Spider.Control.SpiderContainer;
 import cn.kejso.Spider.SpiderHandler.BasicTableHandler;
 import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.GlobalConfig;
 import cn.kejso.Tool.SqlUtil;
 import us.codecraft.webmagic.Spider;
 
@@ -27,6 +28,8 @@ public class SpiderChain {
 	private List<SpiderContainer> spiderqueue = new ArrayList<SpiderContainer>();
 
 	private String chainname = "AnonymousSpiderChain";
+	
+	private GlobalConfig global;
 
 	public String getChainname() {
 		return chainname;
@@ -35,10 +38,18 @@ public class SpiderChain {
 	public void setChainname(String chainname) {
 		this.chainname = chainname;
 	}
+	
+	public GlobalConfig getGlobal() {
+		return global;
+	}
+
+	public void setGlobal(GlobalConfig global) {
+		this.global = global;
+	}
 
 	// constructor
-	public SpiderChain() {
-
+	public SpiderChain(GlobalConfig config) {
+		this.global=config;
 	}
 
 	public SpiderChain(String name) {
@@ -96,7 +107,7 @@ public class SpiderChain {
 					if(!container.isStart())
 						logger.info("爬虫启动...");
 					else
-						logger.info("爬虫Retry...");
+						logger.info("爬虫Retry {} ...",global.getCycleTimes()-container.getCycleTimes()+1);
 					
 					if (!container.isStart()) {
 						// 如果是首次启动
@@ -106,6 +117,7 @@ public class SpiderChain {
 					} else if (container.isStart()&&container.continueCycle() && SqlUtil.hasRetryItem(container.getTemplate())) {
 						//retry
 						// 创建一个新的实例，因为之前的实例无法导入抓取失败的URL
+						//retry时 做出一些参数的调整?爬取间隔等...
 						container.minusCycleTimes();
 						current = BuildSpider.getSpider(container.getTemplate());
 						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), true));
@@ -176,5 +188,7 @@ public class SpiderChain {
 		logger.info("下载页面数 : {} .", current.getPageCount());
 		logger.info(Config.Spider_Info_line);
 	}
+
+	
 
 }

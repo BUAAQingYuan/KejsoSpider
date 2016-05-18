@@ -77,6 +77,14 @@ public class ContentMapProcessHandler {
 			result.put(items.get(i).getTagname(), itemcontents.get(i));
 		}
 		
+		//常量字段
+		List<Tag> consts=config.getConsttags();
+		for(int i=0;i<consts.size();i++)
+		{
+			result.put(consts.get(i).getTagname(), consts.get(i).getTagValue());
+		}
+		
+		
 		// multicontent项
 		for (int i=0; i<multicontent.size(); i++) {
 			result.put(multicontent.get(i).getTagname(), multicontentitems.get(i));

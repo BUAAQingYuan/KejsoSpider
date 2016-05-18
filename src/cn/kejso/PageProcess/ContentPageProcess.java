@@ -52,6 +52,12 @@ public class ContentPageProcess implements PageProcessor {
 		//入库
 		page.putField(Config.PipeLine_Entity, result);
 		page.putField(Config.PipeLine_Type, Config.PipeLine_TypeOne);
+		
+		//随机设置UA
+		if(Math.random()<Config.ChangeUA_probability)
+		{
+			site.setUserAgent(SpiderUtil.RandomUserAgent());
+		}
 
 //		
 //		for(String key:result.keySet())

@@ -8,6 +8,7 @@ import java.io.Reader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -103,6 +104,17 @@ public class SpiderUtil {
 		return isnull;
 	}
 
+	
+	//随机获取一个ua
+	public static  String   RandomUserAgent()
+	{
+		List<String> useragents=new ArrayList<String>(Arrays.asList(Config.Spider_All_userAgent));
+		int  index=(int)(Math.random()*useragents.size());
+		//System.out.println(index+" "+useragents.get(index));
+		return useragents.get(index);
+	}
+	
+	
 
 	// 查看当前IP
 	public static String getCurrentIP() {
@@ -137,19 +149,21 @@ public class SpiderUtil {
 	 */
 
 	public static void main(String[] args) throws IOException {
-		// ListAndContentTemplate
-		// template=TemplateConstructor.getListAndContentTemplate("configs\\wanfangpaper.xml");
-		// SpiderUtil.getTargetUrls(template);
 
-		// String
-		// field="library#titlenumber##department#level##timeline#promulgation#materail#contentclass";
-		// SpiderUtil.getMapFields(field);
-
-		HttpHost host = new HttpHost("222.176.112.10", 80);
-		System.getProperties().setProperty("proxySet", "true");
-		System.getProperties().setProperty("http.proxyHost", host.getHostName());
-		System.getProperties().setProperty("http.proxyPort", String.valueOf(host.getPort()));
-
-		System.out.println(SpiderUtil.getCurrentIP());
+		int number=0;
+		int total=10000;
+		//随机设置UA
+		for(int i=0;i<total;i++)
+		{
+			if(Math.random()<Config.ChangeUA_probability)
+			{
+				System.out.println(SpiderUtil.RandomUserAgent());
+				number++;
+			}	
+		}
+		
+		System.out.println("probability : "+(double)number/total);
 	}
+	
+	
 }

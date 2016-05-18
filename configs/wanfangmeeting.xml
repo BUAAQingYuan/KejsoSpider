@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="ListAndContentTemplate">
+	<!-- 任务名称 -->
+	<!-- 万方科技报告-->
+	<TaskName>WanfangMeeting</TaskName>
+	<!-- 任务线程 -->
+	<Thread>2</Thread>
+	<!-- 是否开启代理 -->
+	<ProxyEnable>False</ProxyEnable>
+	<!-- 爬虫循环重试次数 -->
+	<CycleTimes>3</CycleTimes>
+
+	<!-- 列表页配置 -->
+	<ListConfig name="listconfig">
+		<ListUrl>http://s.wanfangdata.com.cn/Paper.aspx?q=%E8%AE%A1%E7%AE%97%E6%9C%BA+DBID%3aWF_HY&amp;f=top&amp;p=#</ListUrl>
+		<PageEnable>true</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>15268</PageEnd>
+
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
+
+		<!-- url存储的表名 -->
+		<SqlTable>meetingurl</SqlTable>
+
+		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
+		<TableFields>title#url#classify</TableFields>
+		<UniqueField>url</UniqueField>
+
+		<!--列表页的抓取字段 -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>title</TagName>
+			<TagValue>//div[@class='record-title']/a/text()</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//div[@class='record-title']/a/@href</TagValue>
+		</ListTag>
+			
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>计算机科学技术</TagValue>
+		</ConstTag>
+	</ListConfig>
+
+	<!-- 内容页配置-->
+	<ContentConfig name="contentconfig">
+		<!-- 内容存储表 -->
+		<ContentTable>meetingcontent</ContentTable>
+
+		<!-- 表字段 -->
+		<TableFields>url#title#brief#authors#unit#refer#meeting#year#address#host#language#keywords#pubulish#classify</TableFields>
+		<UniqueField>url</UniqueField>
+		<NotNullField>title</NotNullField>
+
+		<!-- 用于存放所抓取页面的url的数据库字段 -->
+		<PageUrlField>url</PageUrlField>
+
+		<!-- title -->
+		<ContentTag>
+			<TagName>title</TagName>
+			<TagValue>//div[@class='section-baseinfo']/h1/text()</TagValue>
+		</ContentTag>
+
+		<!-- brief -->
+		<ContentTag>
+			<TagName>brief</TagName>
+			<TagValue>//div[@class='section-baseinfo']//div[@class='text']/text()</TagValue>
+		</ContentTag>
+
+		<!-- list -->
+		<ContentList>
+			<!-- 映射的字段 -->
+			<Field>authors#unit#refer#meeting#year#address#host#language#keywords#pubulish</Field>
+			<MarkField>作者：#作者单位：#母体文献：#会议名称：#会议时间：#会议地点：#主办单位：#语种：#关键词：#在线出版日期：</MarkField>
+
+			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
+			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
+		</ContentList>
+	</ContentConfig>
+
+	<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序 -->
+	<Spiders>
+		<Spider name="listspider" cname="会议论文列表爬虫">
+			<conf-def class="ListConfig" name="listconfig" />
+		</Spider>
+		
+		<Spider name="contentspider" cname="会议论文内容爬虫">
+			<depend ref="listspider" field="url" />
+			<conf-def class="ContentConfig" name="contentconfig" />
+			<!-- mode分simple和delta，其中simple比现有id大的url，delta获取两表相差的url -->
+			<recover enable="true" mode="simple" ref="url" field="url" />
+		</Spider>
+	</Spiders>
+</Configuration>
