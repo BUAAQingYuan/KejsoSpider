@@ -119,7 +119,7 @@ public class SpiderChain {
 						// 创建一个新的实例，因为之前的实例无法导入抓取失败的URL
 						//retry时 做出一些参数的调整?爬取间隔等...
 						container.minusCycleTimes();
-						current = BuildSpider.getSpider(container.getTemplate());
+						current = BuildSpider.getSpider(container.getTemplate(), GlobalConfig.getCycleTimes() - container.getCycleTimes());
 						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), true));
 					} else {
 						//离开循环

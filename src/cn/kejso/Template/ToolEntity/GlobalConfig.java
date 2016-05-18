@@ -3,51 +3,68 @@ package cn.kejso.Template.ToolEntity;
 //配置文件中的全局配置
 public class GlobalConfig {
 	
-	private  String   taskname;
+	private  static String   taskname;
 	
 	//线程数
-	private  int      threadnum;
+	private  static int      threadnum;
 	
 	//开启代理
-	private  boolean  enableproxy;
+	private  static boolean  enableproxy;
 	
 	//casperjs路径
-	private  String  casperjsPath;
+	private  static String  casperjsPath;
 	
 	//循环重试次数
-	private  int      cycleTimes;
+	private  static int      cycleTimes;
 	
-	public String getTaskname() {
+	//初始sleeptime
+	private  static int			sleeptime;
+	//是否在失败重试时增加重试时间
+	private  static boolean		moresleeptime;
+	
+	public static String getTaskname() {
 		return taskname;
 	}
-	public void setTaskname(String taskname) {
-		this.taskname = taskname;
+	public static void setTaskname(String taskname) {
+		GlobalConfig.taskname = taskname;
 	}
-	public int getThreadnum() {
+	public static int getThreadnum() {
 		return threadnum;
 	}
-	public void setThreadnum(int threadnum) {
-		this.threadnum = threadnum;
+	public static void setThreadnum(int threadnum) {
+		GlobalConfig.threadnum = threadnum;
 	}
-	public boolean isEnableproxy() {
+	public static boolean isEnableproxy() {
 		return enableproxy;
 	}
-	public void setEnableproxy(boolean enableproxy) {
-		this.enableproxy = enableproxy;
+	public static void setEnableproxy(boolean enableproxy) {
+		GlobalConfig.enableproxy = enableproxy;
 	}
-	public String getCasperjsPath() {
+	public static String getCasperjsPath() {
 		return casperjsPath;
 	}
-	public void setCasperjsPath(String casperjsPath) {
-		this.casperjsPath = casperjsPath;
+	public static void setCasperjsPath(String casperjsPath) {
+		GlobalConfig.casperjsPath = casperjsPath;
 	}
 	
-	public int getCycleTimes() {
+	public static int getCycleTimes() {
 		return cycleTimes;
 	}
 	
-	public void setCycleTimes(int cycleTimes) {
-		this.cycleTimes = cycleTimes;
+	public static void setCycleTimes(int cycleTimes) {
+		GlobalConfig.cycleTimes = cycleTimes;
+	}
+	public static int getSleeptime() {
+		return sleeptime;
+	}
+	public static void setSleeptime(int sleeptime) {
+		GlobalConfig.sleeptime = sleeptime;
+	}
+	public static boolean isMoresleeptime() {
+		return moresleeptime;
+	}
+	public static void setMoresleeptime(boolean moresleeptime) {
+		GlobalConfig.moresleeptime = moresleeptime;
 	}
 
 	

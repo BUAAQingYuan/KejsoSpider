@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="MimvpProxy">
+	<ProxyAccount>
+		<Account>395062341@qq.com</Account>
+		<Password>abc_123</Password>
+	</ProxyAccount>
+	<ProxyAccount>
+		<Account>mylovelydog@163.com</Account>
+		<Password>ch93__</Password>
+	</ProxyAccount>
+</Configuration>

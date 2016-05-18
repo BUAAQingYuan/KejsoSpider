@@ -36,8 +36,8 @@ public class BuildSpider {
 		BuildSpider.global = global;
 	}
 
-	public static Spider getSpider(SpiderConf conf) {
-		Spider spider = Spider.create(getPageProcessor(conf)).thread(global.getThreadnum())
+	public static Spider getSpider(SpiderConf conf, int retryTimes) {
+		Spider spider = Spider.create(getPageProcessor(conf, retryTimes)).thread(global.getThreadnum())
 				.addPipeline(new MysqlPipeline(conf));
 		spider.setSpiderListeners(getSpiderListeners(conf));
 		spider.setUUID(conf.getCname());
@@ -72,16 +72,16 @@ public class BuildSpider {
 		return list;
 	}
 
-	private static PageProcessor getPageProcessor(SpiderConf conf) {
+	private static PageProcessor getPageProcessor(SpiderConf conf, int retryTimes) {
 		PageProcessor pp = null;
 
 		BaseConfig pageProConf = conf.getConfig();
 		if (pageProConf instanceof PreConfig) {
-			pp = new PreListPageProcess(conf);
+			pp = new PreListPageProcess(conf, retryTimes);
 		} else if (pageProConf instanceof ListConfig) {
-			pp = new ListPageProcess(conf);
+			pp = new ListPageProcess(conf, retryTimes);
 		} else if (pageProConf instanceof ContentConfig) {
-			pp = new ContentPageProcess(conf);
+			pp = new ContentPageProcess(conf, retryTimes);
 		}
 
 		return pp;

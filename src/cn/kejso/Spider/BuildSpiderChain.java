@@ -30,7 +30,7 @@ public class BuildSpiderChain {
 		BuildSpider.setParameter(confs, global);
 		
 		for (SpiderConf conf : confs) {
-			Spider spider = BuildSpider.getSpider(conf);
+			Spider spider = BuildSpider.getSpider(conf, 0);
 			
 			conf.setStartpoint(getStartpoint(conf));
 			
@@ -53,17 +53,9 @@ public class BuildSpiderChain {
 	}
 	
 	public static void main(String[] args) {
-
 		
-		String path = "configs\\wanfangLaw.xml";
-		/*
-		String path=args[0];
-		if(path==null)
-		{
-			System.out.println("未输入配置文件!");
-			return ;
-		}
-		*/
+		String path = "configs\\scholarTest2.xml";
+
 		BuildSpiderChain bsc = new BuildSpiderChain(path);
 		bsc.startSpiders();
 	}

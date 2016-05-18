@@ -113,4 +113,8 @@ public class Config {
 		 															Config.Spider_Tecent_userAgent,Config.Spider_Yahoo_userAgent1,Config.Spider_Yahoo_userAgent2};
 	//更换UA的概率
 	public static final double  ChangeUA_probability=0.3;
+
+	//MimvpProxy
+	public static final  String   mimvpProxyDir="configs/MimvpProxy/";
+	public static final  String   mimvpProxyAccount="account.xml";
 }
