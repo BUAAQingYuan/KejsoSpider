@@ -28,8 +28,6 @@ public class ListPageProcess  implements PageProcessor {
 	@Override
 	public Site getSite() {
 		
-		
-		
 		site = Site.me().setSleepTime(10000).setRetryTimes(5).setCycleRetryTimes(3).setTimeOut(60000);
 		site.setCharset("utf8").setUserAgent(Config.Spider_Default_userAgent);
 		
@@ -47,13 +45,7 @@ public class ListPageProcess  implements PageProcessor {
 		List<Map<String,String>> paperurls= handler.processUrlPage(page,template);
 		page.putField(Config.PipeLine_Entity, paperurls);
 		page.putField(Config.PipeLine_Type, Config.PipeLine_TypeList);
-		
-		//随机设置UA
-		if(Math.random()<Config.ChangeUA_probability)
-		{
-			site.setUserAgent(SpiderUtil.RandomUserAgent());
-		}		
-
+				
 	}
 	
 }

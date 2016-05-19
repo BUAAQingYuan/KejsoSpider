@@ -47,10 +47,5 @@ public class PreListPageProcess implements PageProcessor{
 		page.putField(Config.PipeLine_Entity, preurls);
 		page.putField(Config.PipeLine_Type, Config.PipeLine_TypeList);
 		
-		//随机设置UA
-		if(Math.random()<Config.ChangeUA_probability)
-		{
-			site.setUserAgent(SpiderUtil.RandomUserAgent());
-		}
 	}
 }

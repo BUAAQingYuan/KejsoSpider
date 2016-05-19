@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import cn.kejso.Config.Config;
 import cn.kejso.Pipeline.MysqlPipeline;
+import cn.kejso.Spider.Control.CustomHttpClientDownloader;
 import cn.kejso.Spider.Control.SpiderContainer;
 import cn.kejso.Spider.SpiderHandler.BasicTableHandler;
 import cn.kejso.Template.SpiderConf;
@@ -127,7 +128,8 @@ public class SpiderChain {
 					}
 					
 					// 添加初始序列、清空临时表并启动爬虫 
-					current.startUrls(container.getStartUrls());
+					// 设置下载器
+					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader());
 					SqlUtil.cleanTempTable(container.getTemplate());
 					current.run();
 

@@ -60,6 +60,8 @@ public class BuildSpider {
 		return result;
 	}
 
+	
+	
 	private static List<SpiderListener> getSpiderListeners(SpiderConf conf) {
 		List<SpiderListener> list = new ArrayList<SpiderListener>();
 
