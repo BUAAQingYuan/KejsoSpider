@@ -2,6 +2,10 @@
 
 抽取常见的网页结构数据。
 
+###设计说明
+
+Pipeline 以mysql为基本的pipeline(MysqlPipeline)，pipeline队列中可以添加FilePipeline、SolrPipeline。
+
 
 
 ###常见网页结构和爬取模式
