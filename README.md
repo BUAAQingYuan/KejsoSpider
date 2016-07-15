@@ -78,3 +78,12 @@ ProxyEnable 是否开启代理
           
           Spider  爬虫配置
     
+
+
+
+###使用说明
+
+Usage: java -jar BuildSpiderChain.jar  configfile  jdbc-config 
+
+Usage: java -jar RunSpiderChainForMagazineFromFile.jar sourceurl  configfile  jdbc-config 
+
