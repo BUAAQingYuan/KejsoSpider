@@ -28,6 +28,9 @@ public class SpiderConf {
 		//当依赖的为数据表时的url字段
 		private String dependField;
 		
+		//url filter
+		private String urlfilter;
+		
 		//断点恢复的配置
 		private RecoverConfig rconfig;
 		
@@ -153,5 +156,13 @@ public class SpiderConf {
 			}
 			
 			return tmpConfig;
+		}
+
+		public String getUrlfilter() {
+			return urlfilter;
+		}
+
+		public void setUrlfilter(String urlfilter) {
+			this.urlfilter = urlfilter;
 		}
 }

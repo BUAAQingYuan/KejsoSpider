@@ -1,10 +1,12 @@
 package cn.kejso.Spider;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import cn.kejso.Config.Config;
 import cn.kejso.Spider.Control.SpiderContainer;
 import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
@@ -52,12 +54,22 @@ public class BuildSpiderChain {
 		chain.startSpiders(true);
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
-		String path = "configs\\scholarTest2.xml";
-
-		BuildSpiderChain bsc = new BuildSpiderChain(path);
+		if(args.length!=2)
+		{
+			System.out.println("BuildSpiderChain read KejsoSpider's config and crawl data,then write to the corrsponding database which jdbc-config representation .");
+			System.out.println("Usage: java -jar BuildSpiderChain.jar  configfile  jdbc-config .");
+		}
+		
+		String config=args[0];
+		String jdbcconfig=args[1];
+		
+		Config.setJdbc_config(jdbcconfig);
+		
+		BuildSpiderChain bsc = new BuildSpiderChain(config);
 		bsc.startSpiders();
+		
 	}
 
 }

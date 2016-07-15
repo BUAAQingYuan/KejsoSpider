@@ -8,6 +8,7 @@ public class ListConfig  extends BaseConfig implements ContainStartUrls {
 	
 	//url表名
 	private  String   tablename;
+	
 	//表的字段
 	private  List<String> fields;
 	//unique字段
@@ -22,11 +23,12 @@ public class ListConfig  extends BaseConfig implements ContainStartUrls {
 	//其它非列表字段
 	private  List<Tag>  othertags;
 	
-	public ListConfig(List<String> starturls,String listvalue,String tablename,List<Tag> tags,List<String> fields,String unique,List<Tag> consttags,List<Tag> othertags)
+	public ListConfig(List<String> starturls,String listvalue,String tablename,String storefile,List<Tag> tags,List<String> fields,String unique,List<Tag> consttags,List<Tag> othertags)
 	{
 		this.starturls=starturls;
 		this.listvalue=listvalue;
 		this.tablename=tablename;
+		setStorefile(storefile);
 		this.tags=tags;
 		
 		this.fields=fields;

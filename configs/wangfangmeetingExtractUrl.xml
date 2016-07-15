@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="ListAndContentTemplate">
+	<!-- 任务名称 -->
+	<!-- 万方会议 rooturl -->
+	<TaskName>Wanfangurl</TaskName>
+	<!-- 任务线程 -->
+	<Thread>1</Thread>
+	<!-- 是否开启代理 -->
+	<ProxyEnable>False</ProxyEnable>
+	<!-- 爬虫循环重试次数 -->
+	<CycleTimes>1</CycleTimes>
+
+	<!-- 列表页配置 -->
+	<ListConfig name="listconfig">
+		<ListUrl>http://c.wanfangdata.com.cn/ConferenceMeeting.aspx?Class=X&amp;Year=2015</ListUrl>
+		<PageEnable>false</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>382</PageEnd>
+
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//div[@class='list']/div[@class='item item-conf']</ListValue>
+
+		<!-- url存储的表名或文件名 -->
+		<SqlTable>papertest</SqlTable>
+		
+		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
+		<TableFields>url#classify</TableFields>
+		<UniqueField>url</UniqueField>
+
+		<!--列表页的抓取字段 -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//a[@class='link']/@href</TagValue>
+		</ListTag>
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>环境安全</TagValue>
+		</ConstTag>
+		
+	</ListConfig>
+	
+	<!-- 内容页的抓取字段 -->
+	<ContentConfig name="contentconfig">
+		<!-- 内容存储表 -->
+		<ContentTable>papertest2</ContentTable>
+		<StoreFile>paper_1.txt</StoreFile>
+		<!-- 表字段 -->
+		<TableFields>url#classify#pagenum</TableFields>
+		<UniqueField>url</UniqueField>
+
+		<!-- 用于存放所抓取页面的url的数据库字段 -->
+		<PageUrlField>url</PageUrlField>
+
+		<!-- title -->
+		<ContentTag>
+			<TagName>pagenum</TagName>
+			<TagValue>//p[@class='pager']/span[@class='page_link']/text()</TagValue>
+		</ContentTag>
+				
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>环境安全</TagValue>
+		</ConstTag>
+	</ContentConfig>
+
+	<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序 -->
+	<Spiders name="万方会议爬虫链">
+		<Spider name="listspider" cname="会议列表爬虫">
+			<conf-def class="ListConfig" name="listconfig" />
+		</Spider>
+		<Spider name="contentspider" cname="法规内容爬虫">
+			<depend ref="listspider" field="url" />
+			<conf-def class="ContentConfig" name="contentconfig" />
+			<!-- mode分simple和delta，其中simple比现有id大的url，delta获取两表相差的url -->
+			<recover enable="true" mode="simple" ref="url" field="url" />
+		</Spider>
+	</Spiders>
+	
+</Configuration>

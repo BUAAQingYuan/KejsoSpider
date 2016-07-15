@@ -27,8 +27,14 @@ public class UrlListProcessHandler {
 		
 		ListConfig config=(ListConfig)template.getConfig();
 		
+		List<Selectable> nodes=new ArrayList<Selectable>();
+		
 		//列表节点
-		List<Selectable> nodes=page.getHtml().xpath(config.getListvalue()).nodes();
+		if(config.getListvalue()!=null)
+		{
+			nodes=page.getHtml().xpath(config.getListvalue()).nodes();
+		}
+		
 		
 		List<Map<String,String>> entitys=new ArrayList<Map<String,String>>();
 		

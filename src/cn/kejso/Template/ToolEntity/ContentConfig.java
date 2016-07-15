@@ -30,7 +30,7 @@ public class ContentConfig extends BaseConfig{
 	
 	private List<FileContentTag> filecontenttags;
 
-	public ContentConfig(List<Tag> tags,String tablename,String mark,String code,
+	public ContentConfig(List<Tag> tags,String tablename,String storefile,String mark,String code,
 			List<String> field,List<String> markfield,List<String> fields,
 			String unique, String pageUrlField, String notNullField,List<Tag> consttags,
 			String multicontentseparator, List<Tag> multicontenttags, List<FileContentTag> filecontenttags)
@@ -38,6 +38,7 @@ public class ContentConfig extends BaseConfig{
 		this.tags=tags;
 //		this.tablename=tablename;
 		setTablename(tablename);
+		setStorefile(storefile);
 		this.mark=mark;
 		this.code=code;
 		this.field=field;

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="ListAndContentTemplate">
+	<!-- 任务名称 -->
+	<!-- 万方期刊  rooturl -->
+	<TaskName>WanfangMagazineExtractUrl</TaskName>
+	<!-- 任务线程 -->
+	<Thread>1</Thread>
+	<!-- 是否开启代理 -->
+	<ProxyEnable>False</ProxyEnable>
+	<!-- 爬虫循环重试次数 -->
+	<CycleTimes>1</CycleTimes>
+	
+	<SleepTime>5000</SleepTime>
+	
+	<MoreSleepTime>true</MoreSleepTime>
+	
+	<!-- 列表页配置 -->
+	<ListConfig name="listconfig">
+		<ListUrl>http://c.wanfangdata.com.cn/PeriodicalSubject.aspx?NodeId=B</ListUrl>
+		<PageEnable>false</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>382</PageEnd>
+
+		
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//div[@class='nav-top']/a</ListValue>
+		
+		<!-- url存储的表名或文件名 -->
+		<SqlTable>magazinetest</SqlTable>
+		
+		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
+		<TableFields>url#subclass#classify</TableFields>
+		<UniqueField>url</UniqueField>
+
+		<!--列表页的抓取字段 -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//a/@href</TagValue>
+		</ListTag>
+		
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>subclass</TagName>
+			<TagValue>//a/text()</TagValue>
+		</ListTag>
+		
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>哲学政法</TagValue>
+		</ConstTag>
+		
+	</ListConfig>
+	
+	<!-- 内容页的抓取字段 -->
+	<ContentConfig name="contentconfig">
+		<!-- 内容存储表 -->
+		<ContentTable>magazinetest2</ContentTable>
+		<StoreFile>magazine_哲学政法.txt</StoreFile>
+		<!-- 表字段 -->
+		<TableFields>url#subclass#classify#pagenum</TableFields>
+		<UniqueField>url</UniqueField>
+ 
+		<!-- 用于存放所抓取页面的url的数据库字段 -->
+		<PageUrlField>url</PageUrlField>
+
+		<!-- title -->
+		<ContentTag>
+			<TagName>pagenum</TagName>
+			<TagValue>//span[@class='page_link']/text()</TagValue>
+		</ContentTag>
+		
+		<ContentTag>
+			<TagName>subclass</TagName>
+			<TagValue>//div[@class='nav-top']/a[@class='link active']/text()</TagValue>
+		</ContentTag>
+				
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>哲学政法</TagValue>
+		</ConstTag>
+	</ContentConfig>
+
+	<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序 -->
+	<Spiders name="万方期刊爬虫链">
+		<Spider name="listspider" cname="期刊列表爬虫">
+			<conf-def class="ListConfig" name="listconfig" />
+		</Spider>
+		<Spider name="contentspider" cname="期刊内容爬虫">
+			<depend ref="listspider" field="url" />
+			<conf-def class="ContentConfig" name="contentconfig" />
+			<!-- mode分simple和delta，其中simple比现有id大的url，delta获取两表相差的url -->
+			<recover enable="true" mode="listdelta" ref="url" field="url" />
+		</Spider>
+	</Spiders>
+	
+</Configuration>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Configuration name="ListAndContentTemplate">
+<!-- 任务名称 -->
+<!-- 万方期刊  rooturl -->
+<TaskName>WanfangMagazineUrl</TaskName>
+<!-- 任务线程 -->
+<Thread>1</Thread>
+<!-- 是否开启代理 -->
+<ProxyEnable>False</ProxyEnable>
+<!-- 爬虫循环重试次数 -->
+<CycleTimes>1</CycleTimes>
+<SleepTime>10000</SleepTime>
+<MoreSleepTime>true</MoreSleepTime>
+<!-- 列表页配置 -->
+<ListConfig name="listconfig">
+		<ListUrl>http://c.wanfangdata.com.cn/PeriodicalSubject.aspx?NodeId=B.BD9&amp;PageNo=#</ListUrl>
+		<PageEnable>true</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>3</PageEnd>
+
+		
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//div[@class='list']/span</ListValue>
+		
+		<!-- url存储的表名或文件名 -->
+		<SqlTable>magazineurls</SqlTable>
+		<StoreFile>magazineurls_哲学政法.txt</StoreFile>
+		
+		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
+		<TableFields>url#subclass#classify</TableFields>
+		<UniqueField>url</UniqueField>
+
+		<!--列表页的抓取字段 -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//a[2]/@href</TagValue>
+		</ListTag>
+		
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>subclass</TagName>
+			<TagValue>法律</TagValue>
+		</ConstTag>
+		
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>哲学政法</TagValue>
+		</ConstTag>
+		
+	</ListConfig>
+<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序 -->
+<Spiders name="万方期刊爬虫链">
+		<Spider cname="期刊列表爬虫" name="listspider">
+			<conf-def class="ListConfig" name="listconfig"/>
+		</Spider>
+	</Spiders>
+</Configuration>

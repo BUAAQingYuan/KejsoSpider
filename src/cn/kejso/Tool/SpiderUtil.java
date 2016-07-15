@@ -1,6 +1,7 @@
 package cn.kejso.Tool;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -11,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import org.apache.http.HttpHost;
 import org.apache.ibatis.io.Resources;
@@ -31,13 +33,18 @@ public class SpiderUtil {
 	// 读取mybatis配置文件
 	static {
 		Reader reader = null;
+		Properties prop = null;
 		try {
 			reader = Resources.getResourceAsReader(Config.Mybatis_config);
+			prop= new Properties();
+			FileInputStream in = new FileInputStream(Config.getJdbc_config());
+			prop.load(in);
 		} catch (IOException e) {
-			logger.error("读取mybatis配置文件出错!");
+			logger.error("读取数据库配置文件出错!");
 			e.printStackTrace();
 		}
-		sessionFactory = new SqlSessionFactoryBuilder().build(reader);
+		//sessionFactory = new SqlSessionFactoryBuilder().build(reader);
+		sessionFactory = new SqlSessionFactoryBuilder().build(reader, prop);
 	}
 
 	public static SqlSession getSession() {

@@ -4,8 +4,10 @@ import java.util.List;
 
 public class BaseConfig {
 	
-	
+	//数据表名
 	private  String  tablename;
+	//文件名
+	private  String  storefile;
 	
 	private  List<String> fields;
 	
@@ -34,5 +36,13 @@ public class BaseConfig {
 
 	public void setUnique(String unique) {
 		this.unique = unique;
+	}
+
+	public String getStorefile() {
+		return storefile;
+	}
+
+	public void setStorefile(String storefile) {
+		this.storefile = storefile;
 	}
 }

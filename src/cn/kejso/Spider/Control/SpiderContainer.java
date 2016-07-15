@@ -1,7 +1,14 @@
 package cn.kejso.Spider.Control;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import cn.kejso.Spider.SpiderChain;
+import cn.kejso.Spider.SpiderHandler.BasicTableHandler;
+import cn.kejso.Spider.SpiderHandler.BasicUrlFilter;
 import cn.kejso.Template.AbstractTemplate;
 import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
@@ -86,7 +93,29 @@ public class SpiderContainer {
 	
 	public List<String> getStartUrls()
 	{
-		return this.getstarturlshandler.apply(this.spider, this.template);
+		 List<String> urls=this.getstarturlshandler.apply(this.spider, this.template);
+		 //url过滤
+		 Logger logger = LoggerFactory.getLogger(SpiderContainer.class);
+		 
+		 List<String> results=new ArrayList<String>();
+		 
+		 if (template.getUrlfilter() != null && !template.getUrlfilter().equals("")) {
+			 	logger.info("初始化URL过滤...");
+				try {
+					Class handlerclass = Class.forName(template.getUrlfilter());
+					BasicUrlFilter handler = (BasicUrlFilter) handlerclass.newInstance();
+					results=handler.filter(urls);
+				} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+					logger.error("初始化URL过滤失败。");
+					e.printStackTrace();
+				}
+
+		 }else{
+			 return urls;
+		 }
+		 
+		 
+		 return results;
 	}
 
 

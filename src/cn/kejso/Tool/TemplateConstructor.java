@@ -39,7 +39,9 @@ public class TemplateConstructor {
 		String listvalue = sub.getString("ListValue");
 
 		String tablename = sub.getString("SqlTable");
-
+		
+		String storefile = sub.getString("StoreFile");
+		
 		String fields = sub.getString("TableFields");
 
 		String unique = sub.getString("UniqueField");
@@ -65,7 +67,7 @@ public class TemplateConstructor {
 			listtags3.add(new Tag(one.getString("TagName"), one.getString("TagValue")));
 		}
 
-		return new ListConfig(starturls, listvalue, tablename, listtags, SpiderUtil.getMapFields(fields), unique,
+		return new ListConfig(starturls, listvalue, tablename,storefile, listtags, SpiderUtil.getMapFields(fields), unique,
 				listtags2, listtags3);
 
 	}
@@ -76,7 +78,9 @@ public class TemplateConstructor {
 	 */
 	public static ContentConfig getContentConfig(HierarchicalConfiguration sub) {
 		String contenttable = sub.getString("ContentTable");
-
+		
+		String storefile = sub.getString("StoreFile");
+		
 		String fields = sub.getString("TableFields");
 		String unique = sub.getString("UniqueField");
 
@@ -115,8 +119,12 @@ public class TemplateConstructor {
 		// consttag
 		List consttags = sub.configurationsAt("ConstTag");
 		List<Tag> listtags2 = new ArrayList<Tag>();
-
-		return new ContentConfig(contenttags, contenttable, mark, code, SpiderUtil.getMapFields(field),
+		for (Iterator it = consttags.iterator(); it.hasNext();) {
+			HierarchicalConfiguration one = (HierarchicalConfiguration) it.next();
+			listtags2.add(new Tag(one.getString("TagName"), one.getString("TagValue")));
+		}
+		
+		return new ContentConfig(contenttags, contenttable,storefile, mark, code, SpiderUtil.getMapFields(field),
 				SpiderUtil.getMapFields(markfield), SpiderUtil.getMapFields(fields), unique, pageUrlField, notNullField,
 				listtags2, multicontentseparator, multicontenttags, filecontenttags);
 	}
@@ -195,7 +203,8 @@ public class TemplateConstructor {
 
 			spider.setDependname(sub.getString("depend[@ref]"));
 			spider.setDependField(sub.getString("depend[@field]"));
-
+			spider.setUrlfilter(sub.getString("depend[@filter]"));
+			
 			spider.setBeforehandler(sub.getString("before-table-handler[@func]"));
 			spider.setAfterhandler(sub.getString("after-table-handler[@func]"));
 

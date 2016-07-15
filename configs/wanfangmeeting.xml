@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Configuration name="ListAndContentTemplate">
-	<!-- 任务名称 -->
-	<!-- 万方科技报告-->
-	<TaskName>WanfangMeeting</TaskName>
-	<!-- 任务线程 -->
-	<Thread>2</Thread>
-	<!-- 是否开启代理 -->
-	<ProxyEnable>False</ProxyEnable>
-	<!-- 爬虫循环重试次数 -->
-	<CycleTimes>3</CycleTimes>
-
-	<!-- 列表页配置 -->
-	<ListConfig name="listconfig">
-		<ListUrl>http://s.wanfangdata.com.cn/Paper.aspx?q=%E8%AE%A1%E7%AE%97%E6%9C%BA+DBID%3aWF_HY&amp;f=top&amp;p=#</ListUrl>
+<!-- 任务名称 -->
+<!-- 万方会议论文-->
+<TaskName>WanfangMeeting</TaskName>
+<!-- 任务线程 -->
+<Thread>1</Thread>
+<!-- 是否开启代理 -->
+<ProxyEnable>False</ProxyEnable>
+<!-- 爬虫循环重试次数 -->
+<CycleTimes>3</CycleTimes>
+<!-- 列表页配置 -->
+<ListConfig name="listconfig">
+		<ListUrl>http://s.wanfangdata.com.cn/Paper.aspx?q=%E4%BC%9A%E8%AE%AE%E6%A0%87%E8%AF%86%3ah073277+DBID%3aWF_HY&amp;f=C.Conference&amp;p=#</ListUrl>
 		<PageEnable>true</PageEnable>
 		<PageStart>1</PageStart>
-		<PageEnd>15268</PageEnd>
+		<PageEnd>2</PageEnd>
 
 		<!-- 列表页中列表对应的value -->
 		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
@@ -42,17 +41,16 @@
 		<ConstTag>
 			<!-- 和数据表字段对应 -->
 			<TagName>classify</TagName>
-			<TagValue>计算机科学技术</TagValue>
+			<TagValue>政治法律</TagValue>
 		</ConstTag>
 	</ListConfig>
-
-	<!-- 内容页配置-->
-	<ContentConfig name="contentconfig">
+<!-- 内容页配置-->
+<ContentConfig name="contentconfig">
 		<!-- 内容存储表 -->
 		<ContentTable>meetingcontent</ContentTable>
 
 		<!-- 表字段 -->
-		<TableFields>url#title#brief#authors#unit#refer#meeting#year#address#host#language#keywords#pubulish#classify</TableFields>
+		<TableFields>url#title#brief#classify#authors#unit#refer#meeting#year#address#host#language#keywords#pubulish</TableFields>
 		<UniqueField>url</UniqueField>
 		<NotNullField>title</NotNullField>
 
@@ -71,6 +69,12 @@
 			<TagValue>//div[@class='section-baseinfo']//div[@class='text']/text()</TagValue>
 		</ContentTag>
 
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>政治法律</TagValue>
+		</ConstTag>
+		
 		<!-- list -->
 		<ContentList>
 			<!-- 映射的字段 -->
@@ -81,18 +85,17 @@
 			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
 		</ContentList>
 	</ContentConfig>
-
-	<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序 -->
-	<Spiders>
-		<Spider name="listspider" cname="会议论文列表爬虫">
-			<conf-def class="ListConfig" name="listconfig" />
+<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序 -->
+<Spiders>
+		<Spider cname="会议论文列表爬虫" name="listspider">
+			<conf-def class="ListConfig" name="listconfig"/>
 		</Spider>
 		
-		<Spider name="contentspider" cname="会议论文内容爬虫">
-			<depend ref="listspider" field="url" />
-			<conf-def class="ContentConfig" name="contentconfig" />
+		<Spider cname="会议论文内容爬虫" name="contentspider">
+			<depend field="url" ref="listspider"/>
+			<conf-def class="ContentConfig" name="contentconfig"/>
 			<!-- mode分simple和delta，其中simple比现有id大的url，delta获取两表相差的url -->
-			<recover enable="true" mode="simple" ref="url" field="url" />
+			<recover enable="true" field="url" mode="simple" ref="url"/>
 		</Spider>
 	</Spiders>
 </Configuration>

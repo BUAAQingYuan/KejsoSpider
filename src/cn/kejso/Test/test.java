@@ -24,7 +24,7 @@ public class test implements PageProcessor {
 	
 	private int   max=31351;
 	
-	final private  String  url="http://c.wanfangdata.com.cn/PeriodicalSubject.aspx?NodeId=B.BD9";
+	final private  String  url="http://dl.acm.org/citation.cfm?doid=1273496.1273564";
 	
 	
 	
@@ -33,7 +33,7 @@ public class test implements PageProcessor {
 		List<String> url = new ArrayList<String>();
 		url.clear();
 		url.add(s);
-		Spider.create(this).startUrls(url).thread(10).run(); 
+		Spider.create(this).startUrls(url).run(); 
 	}
 
 	@Override
@@ -47,13 +47,10 @@ public class test implements PageProcessor {
 	@Override
 	public void process(Page page) {
 		
-		List<Selectable> nodes=page.getHtml().xpath("//span[@class='link-wraper col-3']/a[2]").nodes();
+		System.out.println(page.getHtml().toString());
 		
-
-		for(Selectable one:nodes)
-		{
-			System.out.println(one.xpath("/a/@href").toString());
-		}
+		String abstracts=page.getHtml().xpath("//div[@id='tab-body9']/div[@id='abstract']/div/div/p/text()").toString();
+		System.out.println(abstracts);
 		
 		
 		

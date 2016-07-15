@@ -165,7 +165,6 @@ public class SpiderChain {
 			for (SpiderContainer container : spiderqueue) {
 				Spider current = container.getSpider();
 				current.startUrls(container.getStartUrls()).runAsync();
-				;
 			}
 		}
 
@@ -173,6 +172,7 @@ public class SpiderChain {
 
 	}
 
+	
 	// 启动单个spider
 	public static void startSpider(SpiderContainer container) {
 		long start = System.currentTimeMillis();
@@ -182,7 +182,7 @@ public class SpiderChain {
 		current.startUrls(container.getStartUrls()).run();
 
 		// 将本次更新记录记录到cache中
-		SqlUtil.PrintPositionToCache(container.getTemplate());
+		//SqlUtil.PrintPositionToCache(container.getTemplate());
 		// 如果爬虫没有停止
 		logger.info("爬虫状态: " + current.getStatus().toString() + " .");
 

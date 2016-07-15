@@ -11,6 +11,8 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.kejso.Config.Config;
+
 public class FileUtil {
 
 	// 打印error url到文本文件
@@ -41,7 +43,7 @@ public class FileUtil {
 		String line = "";
 		while ((line = br.readLine()) != null) {
 			temp.add(line);
-			System.out.println(line);
+			//System.out.println(line);
 		}
 		br.close();
 		fr.close();
@@ -153,4 +155,14 @@ public class FileUtil {
 		
 		return temp;
 	}
+	
+	
+	//获取文件插入提示
+	public static String  getFileinsertInfo(String filename)
+	{
+		String info=filename+Config.Insert_info;
+		
+		return info;
+	}		
+	
 }

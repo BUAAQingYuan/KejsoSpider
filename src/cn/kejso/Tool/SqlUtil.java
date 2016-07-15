@@ -23,6 +23,7 @@ public class SqlUtil {
 			return info;
 		}
 		
+		
 		//获得targeturl
 		public static List<String> getTargetUrls(SpiderConf template, SpiderConf current)
 		{

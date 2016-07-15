@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="ListAndContentTemplate">
+	<!-- 任务名称 -->
+	<TaskName>dblp</TaskName>
+	<!-- 任务线程 -->
+	<Thread>1</Thread>
+	<!-- 是否开启代理 -->
+	<ProxyEnable>False</ProxyEnable>
+	<!-- 爬虫循环重试次数 -->
+	<CycleTimes>1</CycleTimes>
+
+	<!-- 列表页配置 -->
+	<ListConfig name="listconfig">
+		<ListUrl>http://dblp.uni-trier.de/search?q=NMF%20year%3A2016%3A</ListUrl>
+		<PageEnable>false</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>1</PageEnd>
+
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//ul[@class='publ-list']/li</ListValue>
+
+		<!-- url存储的表名 -->
+		<SqlTable>dblp</SqlTable>
+
+		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
+		<TableFields>title#url#authors#venue#year</TableFields>
+		<UniqueField>url</UniqueField>
+
+		<!--列表页的抓取字段 -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>title</TagName>
+			<TagValue>//span[@class='title']/text()</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//a[@itemprop='url']/@href</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>authors</TagName>
+			<TagValue>//a[@itemprop='url']/@href</TagValue>
+		</ListTag>
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>国际条约</TagValue>
+		</ConstTag>
+		
+	</ListConfig>
+
+	<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序 -->
+	<Spiders name="万方法规爬虫链">
+	
+		<Spider name="listspider" cname="法规列表爬虫">
+			<conf-def class="ListConfig" name="listconfig" />
+		</Spider>
+			
+		<Spider name="contentspider" cname="法规内容爬虫">
+			<depend ref="wanfanglawurl" field="url" />
+			<conf-def class="ContentConfig" name="contentconfig" />
+			<!-- mode分simple和delta，其中simple比现有id大的url，delta获取两表相差的url -->
+			<recover enable="true" mode="simple" ref="url" field="url" />
+		</Spider>
+	</Spiders>
+	
+</Configuration>

@@ -6,6 +6,7 @@ import java.util.List;
 import cn.kejso.PageProcess.ContentPageProcess;
 import cn.kejso.PageProcess.ListPageProcess;
 import cn.kejso.PageProcess.PreListPageProcess;
+import cn.kejso.Pipeline.FilePipeline;
 import cn.kejso.Pipeline.MysqlPipeline;
 import cn.kejso.Spider.Control.SpiderContainer.Function;
 import cn.kejso.Spider.Control.SqlCacheOnErrorListener;
@@ -39,6 +40,13 @@ public class BuildSpider {
 	public static Spider getSpider(SpiderConf conf, int retryTimes) {
 		Spider spider = Spider.create(getPageProcessor(conf, retryTimes)).thread(global.getThreadnum())
 				.addPipeline(new MysqlPipeline(conf));
+		
+		//添加额外的pipeline
+		if(conf.getConfig().getStorefile()!=null)
+		{
+			spider.addPipeline(new FilePipeline(conf));
+		}
+		
 		spider.setSpiderListeners(getSpiderListeners(conf));
 		spider.setUUID(conf.getCname());
 		return spider;
@@ -74,7 +82,7 @@ public class BuildSpider {
 		return list;
 	}
 
-	private static PageProcessor getPageProcessor(SpiderConf conf, int retryTimes) {
+	public static PageProcessor getPageProcessor(SpiderConf conf, int retryTimes) {
 		PageProcessor pp = null;
 
 		BaseConfig pageProConf = conf.getConfig();

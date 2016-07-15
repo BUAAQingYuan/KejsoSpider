@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Configuration name="WanfangMagazine">
-	<!-- 任务名称 -->
-	<!-- 万方期刊-->
-	<TaskName>WanfangMagazina</TaskName>
-	<!-- 任务线程 -->
-	<Thread>2</Thread>
-	<!-- 是否开启代理 -->
-	<ProxyEnable>False</ProxyEnable>
-	
-	<!-- 获得列表页的预处理配置 -->
-	<PreConfig name="preconfig">
+<!-- 任务名称 -->
+<!-- 万方期刊-->
+<TaskName>WanfangMagazina</TaskName>
+<!-- 任务线程 -->
+<Thread>1</Thread>
+<!-- 是否开启代理 -->
+<ProxyEnable>False</ProxyEnable>
+<!-- 爬虫循环重试次数 -->
+<CycleTimes>3</CycleTimes>
+<SleepTime>10000</SleepTime>
+<MoreSleepTime>true</MoreSleepTime>
+<!-- 获得列表页的预处理配置 -->
+<PreConfig name="preconfig">
 		<!-- 获得列表页url的前导页面 -->
-		<PreUrl>http://c.wanfangdata.com.cn/Periodical-bjfyj.aspx</PreUrl>
+		<PreUrl>http://c.wanfangdata.com.cn/Periodical-ahdlzgdxxb.aspx</PreUrl>
 		
 		<!--获得列表页Url,get-all -->
 		<PreValue>//div[@class='new_ul']/ul/li/p/a/@href</PreValue>
@@ -24,10 +27,9 @@
 		<UniqueField>url</UniqueField>
 		
 	</PreConfig>
-	
-	<!-- 列表页配置 -->
-	<ListConfig  name="listconfig">
-		<ListUrl></ListUrl>
+<!-- 列表页配置 -->
+<ListConfig name="listconfig">
+		<ListUrl/>
 		<PageEnable>false</PageEnable>
 		<PageStart>1</PageStart>
 		<PageEnd>5</PageEnd>
@@ -39,7 +41,7 @@
 		<SqlTable>journalurl</SqlTable>
 		
 		<!--指定表的字段，表默认包含id为主键。用户必须指定一个unique索引，指向url -->
-		<TableFields>title#downloadurl#url#journalname</TableFields>
+		<TableFields>title#downloadurl#url#journalname#subclass#classify</TableFields>
 		<UniqueField>url</UniqueField>
 		
 		<!--列表页的抓取字段  -->
@@ -58,25 +60,31 @@
 			<TagName>url</TagName>
 			<TagValue>//a[2]/@href</TagValue>
 		</ListTag>
-		<!--常量字段-->
-		<ConstTag>
-<!-- 			<TagName>journalname</TagName> -->
-<!-- 			<TagValue>比较法研究</TagValue> -->
-		</ConstTag>
+		
 		<!--非列表字段-->
 		<OtherTag>
 			<TagName>journalname</TagName>
 			<TagValue>//div[@class='qkhead_list_qk']/h1/text()</TagValue>
 		</OtherTag>
+		
+		<!--常量字段-->
+		<ConstTag>
+ 			<TagName>subclass</TagName> 
+ 			<TagValue>大学学报(工业技术)</TagValue> 
+		</ConstTag>
+		<!--常量字段-->
+		<ConstTag>
+ 			<TagName>classify</TagName> 
+ 			<TagValue>工业技术</TagValue> 
+		</ConstTag>
 	</ListConfig>
-	
-	<!-- 内容页的抓取字段 -->
-	<ContentConfig name="contentconfig">
+<!-- 内容页的抓取字段 -->
+<ContentConfig name="contentconfig">
 		<!-- 内容存储表 -->
 		<ContentTable>journaldetail</ContentTable>
 		
 		<!-- 表字段 -->
-		<TableFields>url#title#brief#downloadurl#doi#author#enauthor#unit#journalname#journal#time#classnumber#machinelabel#onlinepublish#fund</TableFields>
+		<TableFields>url#title#brief#downloadurl#doi#author#enauthor#unit#journalname#journal#time#classnumber#machinelabel#onlinepublish#fund#subclass#classify</TableFields>
 		<UniqueField>url</UniqueField>
 		
 		<!-- 用于存放所抓取页面的url的数据库字段 -->
@@ -99,6 +107,17 @@
 			<TagValue>//div[@class='section-baseinfo']//a[@class='download']/@href</TagValue>
 		</ContentTag>
 		
+		<!--常量字段-->
+		<ConstTag>
+ 			<TagName>subclass</TagName> 
+ 			<TagValue>大学学报(工业技术)</TagValue> 
+		</ConstTag>
+		<!--常量字段-->
+		<ConstTag>
+ 			<TagName>classify</TagName> 
+ 			<TagValue>工业技术</TagValue> 
+		</ConstTag>
+		
 		<!-- list -->
 		<ContentList>
 			<!-- 映射的字段 -->
@@ -109,22 +128,21 @@
 			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
 		</ContentList>
 	</ContentConfig>
-	
-	<!--配置对应的爬虫 -->
-	<!-- sequence 顺序启动 -->
-	<Spiders  mode="sequence">
-		<Spider name="prespider">
-			<conf-def class="PreConfig" name="preconfig" />
+<!--配置对应的爬虫 -->
+<!-- sequence 顺序启动 -->
+<Spiders mode="sequence">
+		<Spider cname="期刊预处理爬虫" name="prespider">
+			<conf-def class="PreConfig" name="preconfig"/>
 		</Spider>
-		<Spider name="listspider">
-			<depend ref="prespider" field="url" />
-			<conf-def class="ListConfig" name="listconfig" />
-			<recover enable="false" />
+		<Spider cname="期刊列表爬虫" name="listspider">
+			<depend field="url" filter="cn.kejso.Spider.SpiderHandler.MagazineUrlTimeFilter" ref="prespider"/>
+			<conf-def class="ListConfig" name="listconfig"/>
+			<recover enable="true" field="url" mode="listdelta" ref="url"/>
 		</Spider>
-		<Spider name="contentspider">
-			<depend ref="listspider" field="url" />
-			<conf-def class="ContentConfig" name="contentconfig" />
-			<recover enable="true" mode="delta" ref="url" field="url" />
+		<Spider cname="期刊内容爬虫" name="contentspider">
+			<depend field="url" ref="listspider"/>
+			<conf-def class="ContentConfig" name="contentconfig"/>
+			<recover enable="true" field="url" mode="listdelta" ref="url"/>
 		</Spider>
 	</Spiders>
 </Configuration>
