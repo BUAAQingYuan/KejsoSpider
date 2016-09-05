@@ -11,6 +11,9 @@ Pipeline 以mysql为基本的pipeline(MysqlPipeline)，pipeline队列中可以�
 ###常见网页结构和爬取模式
 
 
+###增量策略
+
+
 
 ###配置文件说明
 
@@ -21,6 +24,13 @@ TaskName  任务名称
 Thread    默认线程数
 
 ProxyEnable 是否开启代理
+
+CycleTimes 爬虫循环重试次数
+
+SleepTime  抓取间隔
+
+MoreSleepTime  [True | False]  重试时是否增加抓取间隔
+ 
 
 ##### 组件配置
 
@@ -72,11 +82,26 @@ ProxyEnable 是否开启代理
                 ——TagValue 字段定位               
   
           ContentList  map字段映射
+                
+                ——Field  对应字段列表
+                
+                ——MarkField 对应页面标记
+
+                ——Mark 页面标记定位
+    
+                ——Code 页面内容定位
 
 
 **Spiders 爬虫链配置**
           
-          Spider  爬虫配置
+          Spider  爬虫配置 , name 属性定义Spider名称，供其他的Spider引用。
+    
+                —— conf-def  爬虫依赖的配置，class 属性指定类别，name属性指定特定名称
+
+                —— depend  当前爬虫所依赖的爬虫链中的上一个爬虫，ref属性引用所依赖爬虫的name，field 属性通常指定 依赖爬虫提供的url字段。
+
+                —— recover 爬虫的增量策略。enable="true"开启 ; mode属性指定选择的策略，有三种策略可供选择。field和url是前后爬虫对应的字段。
+
     
 
 
