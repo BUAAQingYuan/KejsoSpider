@@ -65,46 +65,49 @@ MoreSleepTime  [True | False]  重试时是否增加抓取间隔
 
 **ContentConfig 内容面配置**
 
-          ContentTable  表名
+  ContentTable  表名
    
-          TableFields  数据表字段
+  TableFields  数据表字段
 
-          UniqueField  唯一索引字段
+  UniqueField  唯一索引字段
 
-          NotNullField 非空字段(允许多个)
+  NotNullField 非空字段(允许多个)
 
-          PageUrlField 内容页url字段
+  PageUrlField 内容页url字段
 
-          ContentTag   网页动态字段定位
+  ContentTag   网页动态字段定位
 
-                ——TagName  对应的字段
+      ——TagName  对应的字段
 
-                ——TagValue 字段定位               
+      ——TagValue 字段定位               
   
-          ContentList  map字段映射
+  ContentList  map字段映射
                 
-                ——Field  对应字段列表
+      ——Field  对应字段列表
                 
-                ——MarkField 对应页面标记
+      ——MarkField 对应页面标记
 
-                ——Mark 页面标记定位
+      ——Mark 页面标记定位
     
-                ——Code 页面内容定位
+      ——Code 页面内容定位
 
 
 **Spiders 爬虫链配置**
           
 Spider  爬虫配置 , name 属性定义Spider名称，供其他的Spider引用。cname , 爬虫别称。
     
-—— conf-def  爬虫依赖的配置，class 属性指定类别，name属性指定特定名称
+conf-def  爬虫依赖的配置，class 属性指定类别，name属性指定特定名称
 
-—— depend  当前爬虫所依赖的爬虫链中的上一个爬虫，ref属性引用所依赖爬虫的name，field 属性通常指定 依赖爬虫提供的url字段。filter属性指定对field过滤的方式。
+depend  当前爬虫所依赖的爬虫链中的上一个爬虫。
+        @ref属性引用所依赖爬虫的name，也可以是数据表名。
+        @field 属性通常指定依赖爬虫提供的url字段。
+        @filter属性指定对field过滤的方式。
 
-—— recover 爬虫的增量策略。enable="true"开启 ; mode属性指定选择的策略，有三种策略可供选择。field和url是前后爬虫对应的字段。
+recover 爬虫的增量策略。enable="true"开启 ; mode属性指定选择的策略，有三种策略可供选择。field和url是前后爬虫对应的字段。
                 
-—— before-table-handler  读取表之前使用func处理数据表。
+before-table-handler  读取表之前使用func处理数据表。
                 
-—— after-table-handler   写入表之前使用func处理数据表。
+after-table-handler   写入表之前使用func处理数据表。
 
 
 
