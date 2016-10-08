@@ -36,26 +36,16 @@ MoreSleepTime  [True | False]  重试时是否增加抓取间隔
 
 **ListConfig 列表页面配置**
 
-          <ListUrl />     列表页url模板
+          ListUrl      列表页url模板
 
-          <PageEnable />  开启多页
+          PageEnable   开启多页。如果开启多页，则列表页会包含一个url队列。
 
-          <PageStart />   初始页码
+          PageStart    初始页码
 
-          <PageEnd />     结束页码
+          PageEnd      结束页码
           
-          <StoreFile />    
+          StoreFile     
           
-          <SqlTable />     存储表名
-          
-          <TableFields />  表字段， 默认主键为id
-          
-          <UniqueField />   去重字段
-          
-          
-
-如果开启多页，则列表页会包含一个url队列。
-
           ListValue  列表项定位，目前只支持XPATH。(CSS选择器扩展)
 
           SqlTable   存储到数据库的表名。(索引库扩展)
@@ -111,10 +101,10 @@ MoreSleepTime  [True | False]  重试时是否增加抓取间隔
                 —— depend  当前爬虫所依赖的爬虫链中的上一个爬虫，ref属性引用所依赖爬虫的name，field 属性通常指定 依赖爬虫提供的url字段。
 
                 —— recover 爬虫的增量策略。enable="true"开启 ; mode属性指定选择的策略，有三种策略可供选择。field和url是前后爬虫对应的字段。
-
-                —— before-table-handler[@func] 读取表之前使用func处理数据表。
                 
-                —— after-table-handler[@func]  写入表之前使用func处理数据表。
+                —— before-table-handler  读取表之前使用func处理数据表。
+                
+                —— after-table-handler   写入表之前使用func处理数据表。
 
 
 
