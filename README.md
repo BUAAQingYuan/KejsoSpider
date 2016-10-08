@@ -38,7 +38,7 @@ MoreSleepTime  [True | False]  重试时是否增加抓取间隔
 
   ListUrl      列表页url模板
           
-  PageEnable   开启多页.如果开启多页,则列表页会包含一个url队列
+ PageEnable   开启多页.如果开启多页,则列表页会包含一个url队列
           
   PageStart    初始页码
           
@@ -94,20 +94,31 @@ MoreSleepTime  [True | False]  重试时是否增加抓取间隔
 
 **Spiders 爬虫链配置**
           
-Spider  爬虫配置 , name 属性定义Spider名称，供其他的Spider引用。cname , 爬虫别称。
+Spider  爬虫配置 。
+
+        @name 属性定义Spider名称，供其他的Spider引用。
+        
+        @cname , 爬虫别称。
     
-conf-def  爬虫依赖的配置，class 属性指定类别，name属性指定特定名称
+conf-def  爬虫依赖的配置。
+
+        @class 属性指定类别
+        
+        @name 属性指定特定名称
 
 depend  当前爬虫所依赖的爬虫链中的上一个爬虫。
+
         @ref属性引用所依赖爬虫的name，也可以是数据表名。
+        
         @field 属性通常指定依赖爬虫提供的url字段。
+        
         @filter属性指定对field过滤的方式。
 
 recover 爬虫的增量策略。enable="true"开启 ; mode属性指定选择的策略，有三种策略可供选择。field和url是前后爬虫对应的字段。
                 
-before-table-handler  读取表之前使用func处理数据表。
+before-table-handler  启动当前爬虫之前使用func处理数据表(当前爬虫对应的数据表)。
                 
-after-table-handler   写入表之前使用func处理数据表。
+after-table-handler   启动当前爬虫之前使用func处理数据表(当前爬虫对应的数据表)。
 
 
 
