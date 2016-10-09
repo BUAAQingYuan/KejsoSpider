@@ -1,7 +1,9 @@
 package cn.kejso.Spider.Control;
 
 import cn.kejso.Config.Config;
+import cn.kejso.Template.SpiderConf;
 import cn.kejso.Tool.SpiderUtil;
+import cn.kejso.Tool.SqlUtil;
 
 import com.google.common.collect.Sets;
 
@@ -29,7 +31,6 @@ import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Request;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Task;
-import us.codecraft.webmagic.downloader.AbstractDownloader;
 import us.codecraft.webmagic.downloader.HttpClientGenerator;
 import us.codecraft.webmagic.selector.PlainText;
 import us.codecraft.webmagic.utils.HttpConstant;
@@ -44,11 +45,19 @@ import java.util.Set;
 @ThreadSafe
 public class CustomHttpClientDownloader extends AbstractDownloader{
 	
+	private SpiderConf  conf;
+	
 	private Logger logger = LoggerFactory.getLogger(getClass());
 
     private final Map<String, CloseableHttpClient> httpClients = new HashMap<String, CloseableHttpClient>();
 
     private HttpClientGenerator httpClientGenerator = new HttpClientGenerator();
+    
+    public CustomHttpClientDownloader(SpiderConf conf)
+    {
+    	this.conf=conf;
+    }
+    
 
     private CloseableHttpClient getHttpClient(Site site) {
         if (site == null) {
@@ -102,13 +111,15 @@ public class CustomHttpClientDownloader extends AbstractDownloader{
                 onSuccess(request);
                 return page;
             } else {
+            	//error code时不retry
                 logger.warn("code error " + statusCode + "\t" + request.getUrl());
+                SqlUtil.insertWrongItem(conf, request.getUrl());
                 return null;
             }
         } catch (IOException e) {
             logger.warn("download page " + request.getUrl() + " error", e);
             if (site.getCycleRetryTimes() > 0) {
-                return addToCycleRetry(request, site);
+                return addToCycleRetry(request, site,conf);
             }
             onError(request);
             return null;

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Configuration name="ListAndContentTemplate">
+<!-- 任务名称 -->
+<!-- 万方学术论文-->
+<TaskName>WanfangAcademicPaper</TaskName>
+<!-- 任务线程 -->
+<Thread>1</Thread>
+<!-- 是否开启代理 -->
+<ProxyEnable>False</ProxyEnable>
+<!-- 爬虫循环重试次数 -->
+<CycleTimes>3</CycleTimes>
+<SleepTime>5000</SleepTime>
+<MoreSleepTime>true</MoreSleepTime>
+<!-- 列表页配置 -->
+<ListConfig name="listconfig">
+		<ListUrl>http://s.wanfangdata.com.cn/Paper.aspx?q=%E6%B0%94%E8%B1%A1&amp;p=#</ListUrl>
+		<PageEnable>true</PageEnable>
+		<PageStart>1</PageStart>
+		<PageEnd>2</PageEnd>
+
+		<!-- 列表页中列表对应的value -->
+		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
+
+		<!-- url存储的表名 -->
+		<SqlTable>paperurl</SqlTable>
+
+		<!--指定表的字段，表默认包含id为主键，用户必须指定一个unique索引 -->
+		<TableFields>title#url#classify</TableFields>
+		<UniqueField>url</UniqueField>
+
+		<!--列表页的抓取字段 -->
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>title</TagName>
+			<TagValue>//div[@class='record-title']/a[@class='title']/text()</TagValue>
+		</ListTag>
+		<ListTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>url</TagName>
+			<TagValue>//div[@class='record-title']/a[@class='title']/@href</TagValue>
+		</ListTag>
+
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>气象</TagValue>
+		</ConstTag>
+	</ListConfig>
+<!-- 内容页配置-->
+<ContentConfig name="contentconfig">
+		<!-- 内容存储表 -->
+		<ContentTable>papercontent</ContentTable>
+
+		<!-- 表字段 -->
+		<TableFields>url#title#brief#classify#doi#authors#pauthors#unit#journal#enjournal#year#classnum#keywords#enkeywords#pubulish#found</TableFields>
+		<UniqueField>url</UniqueField>
+		<NotNullField>title</NotNullField>
+
+		<!-- 用于存放所抓取页面的url的数据库字段 -->
+		<PageUrlField>url</PageUrlField>
+
+		<!-- title -->
+		<ContentTag>
+			<TagName>title</TagName>
+			<TagValue>//div[@class='section-baseinfo']/h1/text()</TagValue>
+		</ContentTag>
+
+		<!-- brief -->
+		<ContentTag>
+			<TagName>brief</TagName>
+			<TagValue>//div[@class='section-baseinfo']//div[@class='text']/text()</TagValue>
+		</ContentTag>
+
+		<ConstTag>
+			<!-- 和数据表字段对应 -->
+			<TagName>classify</TagName>
+			<TagValue>气象</TagValue>
+		</ConstTag>
+
+		<!-- list -->
+		<ContentList>
+			<!-- 映射的字段 -->
+			<Field>doi#authors#pauthors#unit#journal#enjournal#year#classnum#keywords#enkeywords#pubulish#found</Field>
+			<MarkField>doi：#作者：#Author：#作者单位：#刊 名：#Journal：#年，卷(期)：#分类号：#关键词：#Keywords：#在线出版日期：#基金项目：</MarkField>
+
+			<Mark>//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()</Mark>
+			<Code>//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()</Code>
+		</ContentList>
+	</ContentConfig>
+<!--配置对应的爬虫 ，爬虫启动顺序按照配置顺序 -->
+<Spiders>
+		<Spider cname="会议论文列表爬虫" name="listspider">
+			<conf-def class="ListConfig" name="listconfig"/>
+		</Spider>
+
+		<Spider cname="会议论文内容爬虫" name="contentspider">
+			<depend field="url" ref="listspider"/>
+			<conf-def class="ContentConfig" name="contentconfig"/>
+			<!-- mode分simple和delta，其中simple比现有id大的url，delta获取两表相差的url -->
+			<recover enable="true" field="url" mode="simple" ref="url"/>
+		</Spider>
+	</Spiders>
+</Configuration>

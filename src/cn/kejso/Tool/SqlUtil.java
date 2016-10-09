@@ -244,6 +244,8 @@ public class SqlUtil {
 
 			String retry = Config.TheRecordNumber_statement;
 			Map<String, Object> map = new HashMap<String, Object>();
+			
+		
 			map.put("tablename", conf.getTempTableConfig().getTablename());
 
 			Object num = session.selectOne(retry, map);

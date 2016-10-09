@@ -148,7 +148,7 @@ public class ContentMapProcessHandler {
 				excludeFields.add(one.getTagname());
 			}
 		}
-
+		System.out.println(result.toString());
 		if (SpiderUtil.ResultIsNull(result, excludeFields)) {
 //			FileUtil.PrintURL(cacheFile, page.getUrl().toString());
 			SqlUtil.insertWrongItem(template, page.getRequest().getUrl());

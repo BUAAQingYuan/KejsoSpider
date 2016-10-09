@@ -9,12 +9,14 @@
 <ProxyEnable>False</ProxyEnable>
 <!-- 爬虫循环重试次数 -->
 <CycleTimes>3</CycleTimes>
+<SleepTime>5000</SleepTime>
+<MoreSleepTime>true</MoreSleepTime>
 <!-- 列表页配置 -->
 <ListConfig name="listconfig">
-		<ListUrl>http://s.wanfangdata.com.cn/Paper.aspx?q=%E4%BC%9A%E8%AE%AE%E6%A0%87%E8%AF%86%3ah073277+DBID%3aWF_HY&amp;f=C.Conference&amp;p=#</ListUrl>
+		<ListUrl>http://s.wanfangdata.com.cn/Paper.aspx?q=%E5%85%B3%E9%94%AE%E8%AF%8D%3a%E6%B0%94%E8%B1%A1+DBID%3aWF_HY&amp;p=#</ListUrl>
 		<PageEnable>true</PageEnable>
 		<PageStart>1</PageStart>
-		<PageEnd>2</PageEnd>
+		<PageEnd>836</PageEnd>
 
 		<!-- 列表页中列表对应的value -->
 		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
@@ -37,11 +39,11 @@
 			<TagName>url</TagName>
 			<TagValue>//div[@class='record-title']/a/@href</TagValue>
 		</ListTag>
-			
+
 		<ConstTag>
 			<!-- 和数据表字段对应 -->
 			<TagName>classify</TagName>
-			<TagValue>政治法律</TagValue>
+			<TagValue>气象</TagValue>
 		</ConstTag>
 	</ListConfig>
 <!-- 内容页配置-->
@@ -72,9 +74,9 @@
 		<ConstTag>
 			<!-- 和数据表字段对应 -->
 			<TagName>classify</TagName>
-			<TagValue>政治法律</TagValue>
+			<TagValue>气象</TagValue>
 		</ConstTag>
-		
+
 		<!-- list -->
 		<ContentList>
 			<!-- 映射的字段 -->
@@ -90,7 +92,7 @@
 		<Spider cname="会议论文列表爬虫" name="listspider">
 			<conf-def class="ListConfig" name="listconfig"/>
 		</Spider>
-		
+
 		<Spider cname="会议论文内容爬虫" name="contentspider">
 			<depend field="url" ref="listspider"/>
 			<conf-def class="ContentConfig" name="contentconfig"/>

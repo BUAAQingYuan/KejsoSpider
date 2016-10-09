@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.beanutils.BeanUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import cn.kejso.Config.Config;
 import cn.kejso.Template.AbstractTemplate;
@@ -16,10 +18,13 @@ import cn.kejso.Template.ToolEntity.ListConfig;
 import cn.kejso.Template.ToolEntity.Tag;
 import cn.kejso.Tool.FileUtil;
 import cn.kejso.Tool.SpiderUtil;
+import cn.kejso.Tool.SqlUtil;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.selector.Selectable;
 
 public class UrlListProcessHandler {
+	
+	private static Logger logger = LoggerFactory.getLogger(UrlListProcessHandler.class);
 	
 	//处理url列表页面
 	public   List<Map<String,String>>  processUrlPage (Page page,SpiderConf template)  
@@ -102,7 +107,9 @@ public class UrlListProcessHandler {
 		{
 			if(SpiderUtil.ResultIsNull(one, excludeFields))
 			{
-				FileUtil.PrintURL(cacheFile, page.getUrl().toString());
+				//FileUtil.PrintURL(cacheFile, page.getUrl().toString());
+				SqlUtil.insertWrongItem(template, page.getRequest().getUrl());
+				logger.info("fail to process page {} .", page.getRequest().getUrl());
 				page.setSkip(true);
 				break;
 			}

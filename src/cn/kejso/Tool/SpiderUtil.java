@@ -89,6 +89,20 @@ public class SpiderUtil {
 		return target;
 	}
 	
+	//获得指定数据表的SpiderConf
+	public static SpiderConf getSpiderConfByTableName(String name, List<SpiderConf> spiders) {
+			SpiderConf target = null;
+			for (SpiderConf one : spiders) {
+				if (one.getConfig().getTablename().equals(name)) {
+					target = one;
+					break;
+				}
+			}
+
+			return target;
+	}
+	
+	
 	//判断一个Map<String,String>实例是否内容(动态字段)为空,excludeFields为排除字段
 
 	//全部内容为空或者null时，返回true

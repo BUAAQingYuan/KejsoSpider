@@ -91,6 +91,10 @@ public class SpiderContainer {
 	}
 	
 	
+	/*
+	 *  根据starturlhandler获取urls。如果设置了过滤器，则对url进行过滤。
+	 */
+	
 	public List<String> getStartUrls()
 	{
 		 List<String> urls=this.getstarturlshandler.apply(this.spider, this.template);

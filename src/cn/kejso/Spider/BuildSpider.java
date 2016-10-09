@@ -53,29 +53,43 @@ public class BuildSpider {
 	}
 
 	//retry标志是否为爬虫重试error链接
-	public static Function<Spider, SpiderConf> getStartUrlHandler(SpiderConf conf, boolean retry) {
+	public static Function<Spider, SpiderConf> getStartUrlHandler(SpiderConf conf, boolean retry,boolean merge) {
 
 		Function<Spider, SpiderConf> result = null;
-
-		if (retry) {
-			result = readRetryUrlFromSql;
-		} else if (conf.getDependname() == null) {
-			result = readUrlFromConf;
-		} else if (conf.getDependname() != null) {
-			result = readUrlFromSql;
+		if(!merge)
+		{
+			if (retry) {
+				result = readRetryUrlFromSql;
+			} else if (conf.getDependname() == null) {
+				result = readUrlFromConf;
+			} else if (conf.getDependname() != null) {
+				result = readUrlFromSql;
+			}
+		}else {
+			if(retry)
+			{
+				result= readRetryUrlFromSql;
+			}else{
+				result= readRetryUrlFromMerge;
+			}
+			
 		}
+		
 
 		return result;
 	}
 
 	
 	
+	
 	private static List<SpiderListener> getSpiderListeners(SpiderConf conf) {
 		List<SpiderListener> list = new ArrayList<SpiderListener>();
-
-//		if (conf.getConfig() instanceof ContentConfig) {
-//			list.add(new FileCacheOnErrorListener(Config.Spider_ErrorDir + global.getTaskname()));
-//		}
+		
+		/*
+		if (conf.getConfig() instanceof ContentConfig) {
+			list.add(new FileCacheOnErrorListener(Config.Spider_ErrorDir + global.getTaskname()));
+		}
+		*/
 
 		list.add(new SqlCacheOnErrorListener(conf));
 		
@@ -105,11 +119,47 @@ public class BuildSpider {
 			return config.getStartUrls();
 		}
 	};
-
+	
+	// 从_tmp表中读取retry urls
 	private static Function<Spider, SpiderConf> readRetryUrlFromSql = new Function<Spider, SpiderConf>() {
 		@Override
 		public List<String> apply(Spider t, SpiderConf e) {
 			return SqlUtil.getRetryUrls(e);
+		}
+	};
+	
+	// 新增加的url和_tmp表中url的集合
+	private static Function<Spider, SpiderConf> readRetryUrlFromMerge = new Function<Spider, SpiderConf>() {
+		@Override
+		public List<String> apply(Spider t, SpiderConf e) {
+			//e为爬虫链上的第一个爬虫
+			if(e.getDependname()== null)
+			{
+				//readRetryUrlFromSql
+				return SqlUtil.getRetryUrls(e);
+			}else{
+				SpiderConf pre = SpiderUtil.getSpiderConfByName(e.getDependname(), getConfs());
+				List<String> mergeurls=new ArrayList<String>();
+				// 区分依赖的是爬虫还是数据表
+				if (pre==null) {
+					//依赖的是数据表，应该获得该数据表新增的部分
+					pre = SpiderUtil.getSpiderConfByTableName(e.getDependname(),getConfs());
+					// 获得依赖数据表新增的部分
+					mergeurls.addAll(SqlUtil.getListDeltaUrls(pre, e));
+					// 获取_tmp表中的部分
+					mergeurls.addAll(SqlUtil.getRetryUrls(e));
+					return mergeurls;
+				}else {
+					// 依赖爬虫
+					// 获得依赖数据表新增的部分
+					mergeurls.addAll(SqlUtil.getListDeltaUrls(pre, e));
+					// 获取_tmp表中的部分
+					mergeurls.addAll(SqlUtil.getRetryUrls(e));
+					return mergeurls;
+				}
+				
+			}
+			
 		}
 	};
 

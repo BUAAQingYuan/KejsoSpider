@@ -50,25 +50,41 @@ public class BuildSpiderChain {
 		return SqlUtil.getCurrentPosition(conf);
 	}
 
+	// 启动爬虫链
 	public void startSpiders() {
 		chain.startSpiders(true);
 	}
 	
+	// 重试失败的url
+	public void startSpidersForErrorUrls() {
+		chain.startSpidersForErrorUrls(true);
+	}
+	
+	
 	public static void main(String[] args) throws IOException {
 		
-		if(args.length!=2)
+		if(args.length!=3)
 		{
 			System.out.println("BuildSpiderChain read KejsoSpider's config and crawl data,then write to the corrsponding database which jdbc-config representation .");
-			System.out.println("Usage: java -jar BuildSpiderChain.jar  configfile  jdbc-config .");
+			System.out.println("Usage: java -jar BuildSpiderChain.jar  configfile  jdbc-config [fetch | retry].");
 		}
 		
 		String config=args[0];
 		String jdbcconfig=args[1];
+		String command=args[2];
 		
 		Config.setJdbc_config(jdbcconfig);
 		
 		BuildSpiderChain bsc = new BuildSpiderChain(config);
-		bsc.startSpiders();
+		if(command.equals("fetch"))
+		{
+			bsc.startSpiders();
+		}else if(command.equals("retry"))
+		{
+			bsc.startSpidersForErrorUrls();
+		}
+		
+		
 		
 	}
 

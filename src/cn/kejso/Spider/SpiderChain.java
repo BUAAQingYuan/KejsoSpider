@@ -114,14 +114,14 @@ public class SpiderChain {
 						// 如果是首次启动
 						container.setStart();
 						current = container.getSpider();
-						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), false));
+						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), false,false));
 					} else if (container.isStart()&&container.continueCycle() && SqlUtil.hasRetryItem(container.getTemplate())) {
 						//retry
 						// 创建一个新的实例，因为之前的实例无法导入抓取失败的URL
 						//retry时 做出一些参数的调整?爬取间隔等...
 						container.minusCycleTimes();
 						current = BuildSpider.getSpider(container.getTemplate(), GlobalConfig.getCycleTimes() - container.getCycleTimes());
-						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), true));
+						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), true,false));
 					} else {
 						//离开循环
 						break;
@@ -129,7 +129,7 @@ public class SpiderChain {
 					
 					// 添加初始序列、清空临时表并启动爬虫 
 					// 设置下载器
-					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader());
+					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader(currentconf));
 					SqlUtil.cleanTempTable(container.getTemplate());
 					current.run();
 
@@ -191,6 +191,84 @@ public class SpiderChain {
 		logger.info(Config.Spider_Info_line);
 	}
 
+	
+	// 启动爬虫队列重试error urls
+	public void startSpidersForErrorUrls(boolean chain)
+	{
+		logger.info("SpiderChain {} retry error urls.", chainname);
+
+		long chainstart = System.currentTimeMillis();
+
+		// true,默认顺序启动
+		if (chain) {
+
+			for (SpiderContainer container : spiderqueue) {
+				
+				//retry的时间算在内
+				long start = System.currentTimeMillis();
+				logger.info(container.getName() + " start ...");
+				
+				SpiderConf currentconf = container.getTemplate();
+				
+				//爬虫运行，包含retry. 爬取数据部分和重试错误URL部分使用相同的retry次数。
+				while (true) {
+					
+					Spider current = null;
+					
+					if(!container.isStart())
+						logger.info("爬虫启动...");
+					else
+						logger.info("爬虫Retry {} ...",global.getCycleTimes()-container.getCycleTimes()+1);
+					
+					if (!container.isStart()) {
+						// 如果是首次启动
+						container.setStart();
+						current = container.getSpider();
+						//第一次就readRetryUrlFromSql
+						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(),false,true));
+					} else if (container.isStart()&&container.continueCycle() && SqlUtil.hasRetryItem(container.getTemplate())) {
+						//retry
+						// 创建一个新的实例，因为之前的实例无法导入抓取失败的URL
+						//retry时 做出一些参数的调整?爬取间隔等...
+						container.minusCycleTimes();
+						current = BuildSpider.getSpider(container.getTemplate(), GlobalConfig.getCycleTimes() - container.getCycleTimes());
+						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), true,true));
+					} else {
+						//离开循环
+						break;
+					}
+					
+					// 添加初始序列、清空临时表并启动爬虫 
+					// 设置下载器
+					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader(currentconf));
+					SqlUtil.cleanTempTable(container.getTemplate());
+					current.run();
+
+					// 如果爬虫没有停止
+					logger.info("爬虫状态: " + current.getStatus().toString() + " .");
+					logger.info("下载页面数 : {} .", current.getPageCount());
+					
+				}
+				
+				
+				logger.info(container.getName() + " end . Cost time:{}秒",(System.currentTimeMillis() - start) / 1000.0);
+				logger.info(Config.Spider_Info_line);
+				
+				// 因为Waiting for table metadata lock而暂时禁用drop table
+				// SqlUtil.deleteTempTable(container.getTemplate());
+			}
+			
+		} else {
+			// 异步启动
+			for (SpiderContainer container : spiderqueue) {
+				Spider current = container.getSpider();
+				current.startUrls(container.getStartUrls()).runAsync();
+			}
+		}
+
+		logger.info(chainname + " end .Total Cost time:{}秒", (System.currentTimeMillis() - chainstart) / 1000.0);
+		
+	}
 	
 
 }

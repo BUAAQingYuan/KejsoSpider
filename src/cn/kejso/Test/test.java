@@ -20,13 +20,10 @@ public class test implements PageProcessor {
 	
 	private Site site;
 	
-	private int   number=3053;
 	
-	private int   max=31351;
+	//final private  String  url="http://d.wanfangdata.com.cn/Periodical/jfjlgdxxb201303012";
 	
-	final private  String  url="http://dl.acm.org/citation.cfm?doid=1273496.1273564";
-	
-	
+	final private  String  url="http://d.abcde.com.cn/Periodical/jfjlgdxxb201303012";
 	
 	public void run() {
 		String  s=url;
@@ -47,11 +44,36 @@ public class test implements PageProcessor {
 	@Override
 	public void process(Page page) {
 		
-		System.out.println(page.getHtml().toString());
-		
-		String abstracts=page.getHtml().xpath("//div[@id='tab-body9']/div[@id='abstract']/div/div/p/text()").toString();
+		//System.out.println(page.getHtml().toString());
+		/*
+		String abstracts=page.getHtml().xpath("//div[@class='container']//p[@class='Organization_p']/text()").toString();
 		System.out.println(abstracts);
 		
+		String abs=page.getHtml().xpath("//div[@class='container']//p[@class='font_5']/tidyText()").toString();
+		System.out.println(abs);
+		
+		
+		String paper=page.getHtml().regex("<span class=\"publishpaper\">发文：</span>(.*)<span class=\"cited\">").toString();
+		String yinyong=page.getHtml().regex("<span class=\"cited\">被引：</span>(.*)<span class=\"hindex\">").toString();
+		String hindex=page.getHtml().regex("<span class=\"hindex\">H指数：</span>(.*)<input").toString();
+		System.out.println("######");
+		System.out.println(paper);
+		System.out.println(yinyong);
+		System.out.println(hindex);
+		System.out.println("#######");
+		*/
+		
+		List<String> marks = page.getHtml().xpath("//div[@class='fixed-width baseinfo-feild']/div/span[@class='pre']/text()").all();
+		for(String one:marks)
+		{
+			System.out.println(one);
+		}
+		
+		List<String> codes = page.getHtml().xpath("//div[@class='fixed-width baseinfo-feild']/div/span[@class='text']/allText()").all();
+		for(String one:codes)
+		{
+			System.out.println(one);
+		}
 		
 		
 	}

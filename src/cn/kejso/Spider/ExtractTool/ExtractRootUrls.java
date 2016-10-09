@@ -28,8 +28,8 @@ public class ExtractRootUrls {
         						   .addPipeline(new FilePipeline(conf));
         
         SpiderContainer container=new SpiderContainer(spider,conf).AddName(conf.getCname());
-        container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), false));
-        spider.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader());
+        container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), false,false));
+        spider.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader(conf));
         
         SpiderChain.startSpider(container);
 	}

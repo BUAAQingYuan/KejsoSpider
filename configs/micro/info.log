@@ -1,0 +1,1762 @@
+2016-09-06 21:13:21,345-[HL] INFO main cn.kejso.Config.Config - set jdbc config file [ jdbc.properties ] .
+2016-09-06 21:13:22,843-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexperturl not exists.
+2016-09-06 21:13:22,995-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexperturl_tmp not exists.
+2016-09-06 21:13:23,808-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexpertcontent not exists.
+2016-09-06 21:13:23,956-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexpertcontent_tmp not exists.
+2016-09-06 21:13:24,748-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-09-06 21:13:24,748-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-09-06 21:13:24,748-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê∆Ù∂Ø...
+2016-09-06 21:13:25,108-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-06 21:13:25,109-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%9C%9F%E8%8F%8C&p=1
+2016-09-06 21:13:25,758-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexperturl have insert 0 units.
+2016-09-06 21:13:36,443-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%9C%9F%E8%8F%8C&p=2
+2016-09-06 21:13:47,633-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%9C%9F%E8%8F%8C&p=3
+2016-09-06 21:13:58,477-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%9C%9F%E8%8F%8C&p=4
+2016-09-06 21:14:09,326-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%9C%9F%E8%8F%8C&p=5
+2016-09-06 21:14:19,939-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-06 21:14:19,940-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 5 .
+2016-09-06 21:14:19,940-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 1 ...
+2016-09-06 21:14:20,108-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:55.36√Î
+2016-09-06 21:14:20,108-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-09-06 21:14:20,109-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-09-06 21:14:20,109-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê∆Ù∂Ø...
+2016-09-06 21:14:20,457-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-06 21:14:20,458-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/15082
+2016-09-06 21:14:21,165-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 0 units.
+2016-09-06 21:14:31,340-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2435
+2016-09-06 21:14:42,195-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/901
+2016-09-06 21:14:52,882-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1879
+2016-09-06 21:15:03,757-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/17442
+2016-09-06 21:15:14,787-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3502
+2016-09-06 21:15:25,523-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3105
+2016-09-06 21:15:37,811-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2119
+2016-09-06 21:15:48,380-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1803
+2016-09-06 21:15:59,137-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24539
+2016-09-06 21:16:09,906-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24381
+2016-09-06 21:16:10,527-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 10 units.
+2016-09-06 21:16:20,707-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2447
+2016-09-06 21:16:31,336-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2441
+2016-09-06 21:16:41,920-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2298
+2016-09-06 21:16:52,423-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1783
+2016-09-06 21:17:04,813-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/309
+2016-09-06 21:17:15,322-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3245
+2016-09-06 21:17:25,830-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2688
+2016-09-06 21:17:45,628-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24572
+2016-09-06 21:18:06,819-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/24572 error
+org.apache.http.conn.HttpHostConnectException: Connect to d.wanfangdata.com.cn:80 [d.wanfangdata.com.cn/121.194.12.123] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-09-06 21:18:07,864-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24233
+2016-09-06 21:18:18,485-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/17324
+2016-09-06 21:18:31,696-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/16601
+2016-09-06 21:18:32,276-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 20 units.
+2016-09-06 21:18:42,453-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/16600
+2016-09-06 21:18:52,961-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/16072
+2016-09-06 21:19:03,543-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/14942
+2016-09-06 21:19:16,759-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10550
+2016-09-06 21:19:27,236-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9552
+2016-09-06 21:19:49,042-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/6615
+2016-09-06 21:19:59,668-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/5271
+2016-09-06 21:20:10,164-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3352
+2016-09-06 21:20:20,841-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2670
+2016-09-06 21:20:32,251-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2489
+2016-09-06 21:20:32,571-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 30 units.
+2016-09-06 21:20:42,744-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1583
+2016-09-06 21:20:53,249-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1734
+2016-09-06 21:21:03,817-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/895
+2016-09-06 21:21:14,599-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25787
+2016-09-06 21:21:25,065-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24574
+2016-09-06 21:21:35,573-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24260
+2016-09-06 21:21:46,623-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3432
+2016-09-06 21:22:06,290-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3127
+2016-09-06 21:22:16,880-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1285
+2016-09-06 21:22:27,367-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24572
+2016-09-06 21:22:27,711-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 40 units.
+2016-09-06 21:22:37,885-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-06 21:22:37,885-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 42 .
+2016-09-06 21:22:37,892-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 1 ...
+2016-09-06 21:22:38,062-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:497.953√Î
+2016-09-06 21:22:38,063-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-09-06 21:22:38,066-[HL] INFO main cn.kejso.Spider.SpiderChain - AnonymousSpiderChain end .Total Cost time:553.318√Î
+2016-09-06 21:30:06,455-[HL] INFO main cn.kejso.Config.Config - set jdbc config file [ jdbc.properties ] .
+2016-09-06 21:30:08,017-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexperturl not exists.
+2016-09-06 21:30:08,470-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexperturl_tmp not exists.
+2016-09-06 21:30:11,624-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexpertcontent not exists.
+2016-09-06 21:30:12,609-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexpertcontent_tmp not exists.
+2016-09-06 21:30:14,067-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-09-06 21:30:14,067-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-09-06 21:30:14,067-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê∆Ù∂Ø...
+2016-09-06 21:30:14,479-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-06 21:30:14,480-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E6%8A%97%E7%94%9F%E7%B4%A0&p=#
+2016-09-06 21:30:20,723-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexperturl have insert 0 units.
+2016-09-06 21:30:31,812-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-06 21:30:31,812-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 1 .
+2016-09-06 21:30:31,812-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 1 ...
+2016-09-06 21:30:32,007-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:17.94√Î
+2016-09-06 21:30:32,007-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-09-06 21:30:32,008-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-09-06 21:30:32,009-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê∆Ù∂Ø...
+2016-09-06 21:30:32,408-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-06 21:30:32,409-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/17449
+2016-09-06 21:30:42,497-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 0 units.
+2016-09-06 21:30:52,700-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/16567
+2016-09-06 21:31:03,438-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/15026
+2016-09-06 21:31:15,294-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/13750
+2016-09-06 21:31:29,766-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/11278
+2016-09-06 21:31:40,301-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/4257
+2016-09-06 21:31:50,846-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2667
+2016-09-06 21:32:01,570-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1962
+2016-09-06 21:32:12,312-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1628
+2016-09-06 21:32:22,878-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-06 21:32:22,879-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 9 .
+2016-09-06 21:32:22,879-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 1 ...
+2016-09-06 21:32:23,074-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:111.066√Î
+2016-09-06 21:32:23,074-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-09-06 21:32:23,075-[HL] INFO main cn.kejso.Spider.SpiderChain - AnonymousSpiderChain end .Total Cost time:129.008√Î
+2016-09-06 21:41:22,698-[HL] INFO main cn.kejso.Config.Config - set jdbc config file [ jdbc.properties ] .
+2016-09-06 21:41:23,996-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexperturl not exists.
+2016-09-06 21:41:24,173-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexperturl_tmp not exists.
+2016-09-06 21:41:25,195-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexpertcontent not exists.
+2016-09-06 21:41:25,379-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexpertcontent_tmp not exists.
+2016-09-06 21:41:26,247-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-09-06 21:41:26,248-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-09-06 21:41:26,263-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê∆Ù∂Ø...
+2016-09-06 21:41:26,649-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-06 21:41:26,650-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E5%8F%91%E9%85%B5&p=1
+2016-09-06 21:41:27,172-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexperturl have insert 0 units.
+2016-09-06 21:41:37,940-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E5%8F%91%E9%85%B5&p=2
+2016-09-06 21:41:49,014-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E5%8F%91%E9%85%B5&p=3
+2016-09-06 21:42:00,771-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E5%8F%91%E9%85%B5&p=4
+2016-09-06 21:42:11,688-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E5%8F%91%E9%85%B5&p=5
+2016-09-06 21:42:22,818-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E5%8F%91%E9%85%B5&p=6
+2016-09-06 21:42:33,759-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E5%8F%91%E9%85%B5&p=7
+2016-09-06 21:42:44,393-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-06 21:42:44,393-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 7 .
+2016-09-06 21:42:44,394-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 1 ...
+2016-09-06 21:42:44,577-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:78.329√Î
+2016-09-06 21:42:44,577-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-09-06 21:42:44,577-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-09-06 21:42:44,578-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê∆Ù∂Ø...
+2016-09-06 21:42:44,970-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-06 21:42:44,972-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/29483
+2016-09-06 21:42:45,533-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 0 units.
+2016-09-06 21:42:55,731-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24975
+2016-09-06 21:43:15,707-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/11135
+2016-09-06 21:43:26,367-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8504
+2016-09-06 21:43:36,920-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1333
+2016-09-06 21:43:47,950-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/26925
+2016-09-06 21:43:59,332-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/18195
+2016-09-06 21:44:09,849-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/29475
+2016-09-06 21:44:20,540-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25372
+2016-09-06 21:44:31,106-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25007
+2016-09-06 21:44:47,065-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25006
+2016-09-06 21:44:47,587-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 10 units.
+2016-09-06 21:44:57,780-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24987
+2016-09-06 21:45:08,363-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/16811
+2016-09-06 21:45:18,957-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/7301
+2016-09-06 21:45:29,466-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3846
+2016-09-06 21:45:40,196-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1623
+2016-09-06 21:45:50,815-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9755
+2016-09-06 21:46:01,389-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3784
+2016-09-06 21:46:22,589-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/3784 error
+org.apache.http.conn.HttpHostConnectException: Connect to d.wanfangdata.com.cn:80 [d.wanfangdata.com.cn/121.194.12.123] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-09-06 21:46:23,612-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/289
+2016-09-06 21:47:27,304-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/289 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 21:47:28,305-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10364
+2016-09-06 21:47:49,320-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/10364 error
+org.apache.http.conn.HttpHostConnectException: Connect to d.wanfangdata.com.cn:80 [d.wanfangdata.com.cn/121.194.12.123] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-09-06 21:47:50,322-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/29477
+2016-09-06 21:48:09,293-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:48:09,294-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:48:28,198-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:48:28,198-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:48:47,112-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:48:47,112-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:49:06,016-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:49:06,016-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:49:31,594-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/28582
+2016-09-06 21:49:50,513-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:49:50,515-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:50:09,429-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:50:09,430-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:51:38,357-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/28582 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.conn.EofSensorInputStream.read(EofSensorInputStream.java:137)
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.io.InputStreamReader.read(InputStreamReader.java:184)
+	at java.io.Reader.read(Reader.java:140)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1128)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1104)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1078)
+	at org.apache.commons.io.IOUtils.toString(IOUtils.java:382)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.getContent(CustomHttpClientDownloader.java:207)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.handleResponse(CustomHttpClientDownloader.java:187)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:101)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 21:51:39,372-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/26869
+2016-09-06 21:51:51,424-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25012
+2016-09-06 21:52:05,959-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25011
+2016-09-06 21:53:08,292-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/25011 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 21:53:09,306-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25010
+2016-09-06 21:53:12,363-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 20 units.
+2016-09-06 21:53:22,559-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25005
+2016-09-06 21:53:41,475-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:53:41,476-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:53:57,343-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25002
+2016-09-06 21:54:17,161-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:54:17,162-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:54:58,671-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24996
+2016-09-06 21:55:18,494-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:55:18,495-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:55:37,400-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:55:37,401-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:55:50,986-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24995
+2016-09-06 21:56:03,233-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24994
+2016-09-06 21:57:06,329-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/24994 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 21:57:07,352-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24991
+2016-09-06 21:58:19,333-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/24991 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 21:58:20,346-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24990
+2016-09-06 21:58:33,956-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/14376
+2016-09-06 21:58:52,873-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 21:58:52,874-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 21:59:56,344-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/14376 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 21:59:57,361-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/12460
+2016-09-06 22:01:00,374-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/12460 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:01:01,387-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/12181
+2016-09-06 22:02:03,370-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/12181 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:02:04,384-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10703
+2016-09-06 22:02:32,565-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:02:32,566-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:03:40,011-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/10703 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:03:41,025-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10118
+2016-09-06 22:05:03,078-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/10118 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.io.AbstractMessageParser.parseHeaders(AbstractMessageParser.java:192)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:267)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
+	at com.sun.proxy.$Proxy1.receiveResponseHeader(Unknown Source)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:05:04,095-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10048
+2016-09-06 22:05:23,028-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:05:23,029-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:05:41,937-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:05:41,938-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:06:00,920-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:06:00,921-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:07:20,634-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/10048 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:07:21,652-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9764
+2016-09-06 22:07:41,792-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:07:41,794-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:08:48,065-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/9764 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:08:49,077-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9472
+2016-09-06 22:08:57,683-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/9472 .
+2016-09-06 22:08:57,685-[HL] ERROR pool-2-thread-1 us.codecraft.webmagic.Spider - process request Request{url='http://d.wanfangdata.com.cn/Expert/9472', method='null', extras={statusCode=200}, priority=0} error
+org.apache.ibatis.transaction.TransactionException: Error configuring AutoCommit.  Your driver may not support getAutoCommit() or setAutoCommit(). Requested setting: false.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 632,858 milliseconds ago.  The last packet sent successfully to the server was 61 milliseconds ago.
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(JdbcTransaction.java:47)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.<init>(JdbcTransaction.java:15)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory.newTransaction(JdbcTransactionFactory.java:15)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSession(DefaultSqlSessionFactory.java:32)
+	at cn.kejso.Tool.SpiderUtil.getSession(SpiderUtil.java:51)
+	at cn.kejso.Pipeline.MysqlPipeline.InsertTypeOne(MysqlPipeline.java:106)
+	at cn.kejso.Pipeline.MysqlPipeline.process(MysqlPipeline.java:66)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:425)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 632,858 milliseconds ago.  The last packet sent successfully to the server was 61 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3589)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3478)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4019)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2728)
+	at com.mysql.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:5075)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:225)
+	at com.sun.proxy.$Proxy0.setAutoCommit(Unknown Source)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(JdbcTransaction.java:42)
+	... 13 more
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:188)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3036)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3489)
+	... 25 more
+2016-09-06 22:08:57,720-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9234
+2016-09-06 22:10:00,398-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/9234 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:10:01,415-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9013
+2016-09-06 22:10:20,645-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:10:20,646-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:10:31,798-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9720
+2016-09-06 22:10:50,742-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:10:50,745-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:11:01,515-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8405
+2016-09-06 22:12:12,585-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/8405 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:12:13,602-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8339
+2016-09-06 22:13:14,428-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/8339 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:152)
+	at org.apache.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:270)
+	at org.apache.http.impl.io.AbstractMessageParser.parseHeaders(AbstractMessageParser.java:192)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:267)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
+	at com.sun.proxy.$Proxy1.receiveResponseHeader(Unknown Source)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:13:15,448-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8209
+2016-09-06 22:13:26,259-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8040
+2016-09-06 22:13:45,181-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:13:45,182-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:14:04,087-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:14:04,088-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:14:22,999-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:14:23,000-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:14:41,902-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:14:41,903-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:15:43,421-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/8040 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:15:44,434-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/5994
+2016-09-06 22:16:58,451-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/5994 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:16:59,464-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3845
+2016-09-06 22:18:02,461-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/3845 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:18:03,475-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3619
+2016-09-06 22:18:14,487-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3618
+2016-09-06 22:18:15,589-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 30 units.
+2016-09-06 22:18:25,748-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3493
+2016-09-06 22:19:38,368-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/3493 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:19:39,394-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2802
+2016-09-06 22:19:53,260-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1968
+2016-09-06 22:20:12,181-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:20:12,182-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:21:13,511-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/1968 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:21:14,539-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1624
+2016-09-06 22:22:15,213-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/1624 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:22:16,226-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1216
+2016-09-06 22:22:35,157-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:22:35,159-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:22:54,065-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:22:54,066-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:23:12,973-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:23:12,974-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:23:24,452-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/174
+2016-09-06 22:23:40,455-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24983
+2016-09-06 22:23:59,371-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:23:59,372-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:24:18,280-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:24:18,281-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:24:37,184-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:24:37,185-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:25:59,354-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/24983 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:26:00,366-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3784
+2016-09-06 22:26:19,323-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:26:19,324-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:27:20,502-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/3784 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:27:21,516-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/289
+2016-09-06 22:27:43,864-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:27:43,865-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:28:02,772-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:28:02,773-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:29:04,515-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/289 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:29:05,528-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10364
+2016-09-06 22:29:24,831-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:29:24,832-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:29:29,265-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/10364 .
+2016-09-06 22:29:29,266-[HL] ERROR pool-2-thread-1 us.codecraft.webmagic.Spider - process request Request{url='http://d.wanfangdata.com.cn/Expert/10364', method='null', extras={_cycle_tried_times=1, statusCode=200}, priority=0} error
+org.apache.ibatis.transaction.TransactionException: Error configuring AutoCommit.  Your driver may not support getAutoCommit() or setAutoCommit(). Requested setting: false.  Cause: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 357,941 milliseconds ago.  The last packet sent successfully to the server was 51 milliseconds ago.
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(JdbcTransaction.java:47)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.<init>(JdbcTransaction.java:15)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory.newTransaction(JdbcTransactionFactory.java:15)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:77)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSession(DefaultSqlSessionFactory.java:32)
+	at cn.kejso.Tool.SpiderUtil.getSession(SpiderUtil.java:51)
+	at cn.kejso.Pipeline.MysqlPipeline.InsertTypeOne(MysqlPipeline.java:106)
+	at cn.kejso.Pipeline.MysqlPipeline.process(MysqlPipeline.java:66)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:425)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet successfully received from the server was 357,941 milliseconds ago.  The last packet sent successfully to the server was 51 milliseconds ago.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1117)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3589)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3478)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4019)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2728)
+	at com.mysql.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:5075)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.ibatis.datasource.pooled.PooledConnection.invoke(PooledConnection.java:225)
+	at com.sun.proxy.$Proxy0.setAutoCommit(Unknown Source)
+	at org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit(JdbcTransaction.java:42)
+	... 13 more
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:188)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at com.mysql.jdbc.util.ReadAheadInputStream.fill(ReadAheadInputStream.java:114)
+	at com.mysql.jdbc.util.ReadAheadInputStream.readFromUnderlyingStreamIfNecessary(ReadAheadInputStream.java:161)
+	at com.mysql.jdbc.util.ReadAheadInputStream.read(ReadAheadInputStream.java:189)
+	at com.mysql.jdbc.MysqlIO.readFully(MysqlIO.java:3036)
+	at com.mysql.jdbc.MysqlIO.reuseAndReadPacket(MysqlIO.java:3489)
+	... 25 more
+2016-09-06 22:29:29,305-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/28582
+2016-09-06 22:30:32,517-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/28582 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:30:33,531-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25011
+2016-09-06 22:30:51,898-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24994
+2016-09-06 22:31:10,820-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:31:10,821-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:32:12,527-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/24994 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:32:13,544-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24991
+2016-09-06 22:32:30,630-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/14376
+2016-09-06 22:32:49,573-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:32:49,574-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:33:08,484-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:33:08,486-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:33:30,187-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/12460
+2016-09-06 22:33:42,542-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/12181
+2016-09-06 22:33:59,485-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10703
+2016-09-06 22:34:18,403-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:34:18,404-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:34:37,317-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:34:37,318-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:34:56,223-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:34:56,224-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:35:15,134-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:35:15,135-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:35:47,011-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10118
+2016-09-06 22:36:02,145-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 40 units.
+2016-09-06 22:36:12,329-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10048
+2016-09-06 22:36:31,243-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:36:31,244-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:37:03,005-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9764
+2016-09-06 22:37:21,927-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:37:21,928-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:37:34,027-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9234
+2016-09-06 22:37:45,950-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8405
+2016-09-06 22:38:03,486-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8339
+2016-09-06 22:39:04,590-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/8339 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:39:05,620-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8040
+2016-09-06 22:39:24,655-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:39:24,656-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:39:43,560-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:39:43,561-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:40:44,576-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/8040 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:40:45,595-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/5994
+2016-09-06 22:41:04,524-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:41:04,525-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:41:23,434-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:41:23,435-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:41:55,429-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3845
+2016-09-06 22:42:14,374-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:42:14,376-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:43:15,033-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/3845 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:43:16,062-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3493
+2016-09-06 22:43:34,996-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:43:34,997-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:44:05,522-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1968
+2016-09-06 22:44:24,443-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:44:24,444-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:44:40,938-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1624
+2016-09-06 22:45:43,583-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/1624 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:45:44,607-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24983
+2016-09-06 22:46:03,587-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:46:03,588-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:46:14,921-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3784
+2016-09-06 22:47:16,618-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/3784 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:47:17,878-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/3784 .
+2016-09-06 22:47:17,879-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/289
+2016-09-06 22:48:21,605-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/289 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:48:22,854-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/289 .
+2016-09-06 22:48:22,856-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/28582
+2016-09-06 22:48:47,231-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24994
+2016-09-06 22:49:06,362-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:49:06,363-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:49:25,280-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:49:25,281-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:49:33,441-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 50 units.
+2016-09-06 22:49:43,619-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8339
+2016-09-06 22:50:44,593-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/8339 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:50:45,843-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/8339 .
+2016-09-06 22:50:45,844-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8040
+2016-09-06 22:51:46,624-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/8040 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:51:47,894-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/8040 .
+2016-09-06 22:51:47,895-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3845
+2016-09-06 22:52:51,627-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/3845 error
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:170)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at org.apache.http.impl.io.SessionInputBufferImpl.streamRead(SessionInputBufferImpl.java:136)
+	at org.apache.http.impl.io.SessionInputBufferImpl.read(SessionInputBufferImpl.java:195)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:178)
+	at org.apache.http.impl.io.ContentLengthInputStream.read(ContentLengthInputStream.java:200)
+	at org.apache.http.impl.io.ContentLengthInputStream.close(ContentLengthInputStream.java:103)
+	at org.apache.http.impl.execchain.ResponseEntityWrapper.streamClosed(ResponseEntityWrapper.java:120)
+	at org.apache.http.conn.EofSensorInputStream.checkClose(EofSensorInputStream.java:227)
+	at org.apache.http.conn.EofSensorInputStream.close(EofSensorInputStream.java:174)
+	at org.apache.http.util.EntityUtils.consume(EntityUtils.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:159)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-09-06 22:52:52,890-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/3845 .
+2016-09-06 22:52:52,891-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1624
+2016-09-06 22:53:11,822-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - I/O exception (java.net.SocketException) caught when processing request to {}->http://tran.wanfangdata.com.cn:80: Software caused connection abort: recv failed
+2016-09-06 22:53:11,823-[HL] INFO pool-2-thread-1 org.apache.http.impl.execchain.RetryExec - Retrying request to {}->http://tran.wanfangdata.com.cn:80
+2016-09-06 22:53:23,683-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-06 22:53:23,684-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 91 .
+2016-09-06 22:53:23,686-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 1 ...
+2016-09-06 22:53:24,008-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexpertcontent not exists.
+2016-09-06 22:53:24,179-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexpertcontent_tmp not exists.
+2016-09-06 22:53:25,369-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-06 22:53:25,372-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9472
+2016-09-06 22:53:26,104-[HL] INFO pool-3-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 0 units.
+2016-09-06 22:53:46,307-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10364
+2016-09-06 22:54:07,008-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3784
+2016-09-06 22:54:27,737-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/289
+2016-09-06 22:54:52,465-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8339
+2016-09-06 22:55:13,132-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/8040
+2016-09-06 22:55:34,086-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3845
+2016-09-06 22:55:54,895-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-06 22:55:54,903-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 7 .
+2016-09-06 22:55:54,904-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 2 ...
+2016-09-06 22:55:55,094-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:4390.517√Î
+2016-09-06 22:55:55,094-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-09-06 22:55:55,095-[HL] INFO main cn.kejso.Spider.SpiderChain - AnonymousSpiderChain end .Total Cost time:4468.847√Î
+2016-09-07 10:07:36,436-[HL] INFO main cn.kejso.Config.Config - set jdbc config file [ jdbc.properties ] .
+2016-09-07 10:07:37,804-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexperturl not exists.
+2016-09-07 10:07:37,998-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexperturl_tmp not exists.
+2016-09-07 10:07:39,015-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexpertcontent not exists.
+2016-09-07 10:07:39,202-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexpertcontent_tmp not exists.
+2016-09-07 10:07:40,113-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-09-07 10:07:40,115-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-09-07 10:07:40,124-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê∆Ù∂Ø...
+2016-09-07 10:07:40,537-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-07 10:07:40,547-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E6%B4%BB%E6%80%A7&p=1
+2016-09-07 10:07:41,515-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexperturl have insert 0 units.
+2016-09-07 10:07:52,333-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E6%B4%BB%E6%80%A7&p=2
+2016-09-07 10:08:03,338-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E6%B4%BB%E6%80%A7&p=3
+2016-09-07 10:08:14,322-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E6%B4%BB%E6%80%A7&p=4
+2016-09-07 10:08:25,792-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E6%B4%BB%E6%80%A7&p=5
+2016-09-07 10:08:36,427-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-07 10:08:36,428-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 5 .
+2016-09-07 10:08:36,438-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 1 ...
+2016-09-07 10:08:36,633-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:56.518√Î
+2016-09-07 10:08:36,634-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-09-07 10:08:36,644-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-09-07 10:08:36,645-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê∆Ù∂Ø...
+2016-09-07 10:08:37,044-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-07 10:08:37,051-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/29222
+2016-09-07 10:08:48,061-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 0 units.
+2016-09-07 10:08:58,274-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/29246
+2016-09-07 10:09:09,035-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/29180
+2016-09-07 10:09:20,804-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/28544
+2016-09-07 10:09:32,295-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/26636
+2016-09-07 10:09:53,492-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/26636 error
+org.apache.http.conn.HttpHostConnectException: Connect to d.wanfangdata.com.cn:80 [d.wanfangdata.com.cn/121.194.12.123] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-09-07 10:09:54,563-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/25633
+2016-09-07 10:10:14,681-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/21331
+2016-09-07 10:10:25,765-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/21298
+2016-09-07 10:10:36,443-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/21262
+2016-09-07 10:10:47,013-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/14756
+2016-09-07 10:10:57,818-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/13663
+2016-09-07 10:11:08,443-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/12386
+2016-09-07 10:11:09,223-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 10 units.
+2016-09-07 10:11:19,421-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10868
+2016-09-07 10:11:29,977-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10866
+2016-09-07 10:11:41,001-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9593
+2016-09-07 10:11:51,644-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/9592
+2016-09-07 10:12:11,546-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/7414
+2016-09-07 10:12:22,158-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/5421
+2016-09-07 10:12:22,178-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/5421
+2016-09-07 10:12:23,429-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/5421 .
+2016-09-07 10:12:23,430-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3565
+2016-09-07 10:12:34,900-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2776
+2016-09-07 10:12:34,916-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/2776
+2016-09-07 10:12:36,168-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/2776 .
+2016-09-07 10:12:36,170-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2487
+2016-09-07 10:12:36,193-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/2487
+2016-09-07 10:12:37,445-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/2487 .
+2016-09-07 10:12:37,446-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1055
+2016-09-07 10:12:37,464-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/1055
+2016-09-07 10:12:38,715-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/1055 .
+2016-09-07 10:12:38,717-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1601
+2016-09-07 10:12:38,740-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/1601
+2016-09-07 10:12:39,995-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/1601 .
+2016-09-07 10:12:39,997-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1526
+2016-09-07 10:12:40,024-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/1526
+2016-09-07 10:12:41,282-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/1526 .
+2016-09-07 10:12:41,283-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1366
+2016-09-07 10:12:41,309-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/1366
+2016-09-07 10:12:42,558-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/1366 .
+2016-09-07 10:12:42,560-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1361
+2016-09-07 10:12:42,584-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/1361
+2016-09-07 10:12:43,836-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/1361 .
+2016-09-07 10:12:43,837-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1109
+2016-09-07 10:12:43,861-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/1109
+2016-09-07 10:12:45,121-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/1109 .
+2016-09-07 10:12:45,123-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/6058
+2016-09-07 10:12:45,149-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/6058
+2016-09-07 10:12:46,399-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/6058 .
+2016-09-07 10:12:46,401-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/13924
+2016-09-07 10:12:47,525-[HL] WARN pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - code error 500	http://d.wanfangdata.com.cn/Expert/13924
+2016-09-07 10:12:48,780-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.SqlCacheOnErrorListener - fail to download page http://d.wanfangdata.com.cn/Expert/13924 .
+2016-09-07 10:12:48,781-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/6335
+2016-09-07 10:13:00,235-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/6040
+2016-09-07 10:13:10,890-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2748
+2016-09-07 10:13:21,646-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/15776
+2016-09-07 10:13:22,188-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 20 units.
+2016-09-07 10:13:32,378-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/11727
+2016-09-07 10:13:45,840-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10761
+2016-09-07 10:13:56,367-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/7922
+2016-09-07 10:14:07,157-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3129
+2016-09-07 10:14:27,038-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2244
+2016-09-07 10:14:37,534-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1797
+2016-09-07 10:14:57,298-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/26636
+2016-09-07 10:15:08,187-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-07 10:15:08,188-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 40 .
+2016-09-07 10:15:08,197-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 1 ...
+2016-09-07 10:15:08,509-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexpertcontent not exists.
+2016-09-07 10:15:08,692-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexpertcontent_tmp not exists.
+2016-09-07 10:15:09,763-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-07 10:15:09,774-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/5421
+2016-09-07 10:15:10,462-[HL] INFO pool-3-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 0 units.
+2016-09-07 10:15:30,658-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2776
+2016-09-07 10:15:51,566-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2487
+2016-09-07 10:16:12,285-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1055
+2016-09-07 10:16:33,077-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1601
+2016-09-07 10:16:54,103-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1526
+2016-09-07 10:17:14,606-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1366
+2016-09-07 10:17:35,255-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1361
+2016-09-07 10:17:56,008-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1109
+2016-09-07 10:18:16,896-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/6058
+2016-09-07 10:18:17,269-[HL] INFO pool-3-thread-1 cn.kejso.PageProcess.ProcessHandler.ContentMapProcessHandler - process a null page http://d.wanfangdata.com.cn/Expert/6058 .
+2016-09-07 10:18:37,271-[HL] INFO pool-3-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/13924
+2016-09-07 10:18:57,837-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-07 10:18:57,838-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 11 .
+2016-09-07 10:18:57,844-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 2 ...
+2016-09-07 10:18:58,159-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexpertcontent not exists.
+2016-09-07 10:18:58,347-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexpertcontent_tmp not exists.
+2016-09-07 10:18:59,404-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-07 10:18:59,414-[HL] INFO pool-4-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/6058
+2016-09-07 10:19:21,389-[HL] WARN pool-4-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - download page http://d.wanfangdata.com.cn/Expert/6058 error
+org.apache.http.conn.HttpHostConnectException: Connect to d.wanfangdata.com.cn:80 [d.wanfangdata.com.cn/121.194.12.123] failed: Connection timed out: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at cn.kejso.Spider.Control.CustomHttpClientDownloader.download(CustomHttpClientDownloader.java:97)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:409)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2016-09-07 10:19:22,416-[HL] INFO pool-4-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/6058
+2016-09-07 10:19:24,341-[HL] INFO pool-4-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 0 units.
+2016-09-07 10:20:04,536-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-07 10:20:04,538-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 2 .
+2016-09-07 10:20:04,547-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 3 ...
+2016-09-07 10:20:04,731-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:688.087√Î
+2016-09-07 10:20:04,732-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-09-07 10:20:04,742-[HL] INFO main cn.kejso.Spider.SpiderChain - AnonymousSpiderChain end .Total Cost time:744.627√Î
+2016-09-07 10:54:22,913-[HL] INFO main cn.kejso.Config.Config - set jdbc config file [ jdbc.properties ] .
+2016-09-07 10:54:24,096-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexperturl not exists.
+2016-09-07 10:54:24,249-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexperturl_tmp not exists.
+2016-09-07 10:54:25,110-[HL] INFO main cn.kejso.Pipeline.MysqlPipeline - create table if table microexpertcontent not exists.
+2016-09-07 10:54:25,269-[HL] INFO main cn.kejso.Spider.Control.SqlCacheOnErrorListener - create table if table microexpertcontent_tmp not exists.
+2016-09-07 10:54:26,092-[HL] INFO main cn.kejso.Spider.SpiderChain - Start SpiderChain AnonymousSpiderChain .
+2016-09-07 10:54:26,094-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-09-07 10:54:26,103-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê∆Ù∂Ø...
+2016-09-07 10:54:26,497-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-07 10:54:26,502-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF&p=1
+2016-09-07 10:54:28,344-[HL] INFO pool-1-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexperturl have insert 0 units.
+2016-09-07 10:54:39,064-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF&p=2
+2016-09-07 10:54:49,974-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF&p=3
+2016-09-07 10:55:00,899-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF&p=4
+2016-09-07 10:55:11,845-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF&p=5
+2016-09-07 10:55:22,841-[HL] INFO pool-1-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF&p=6
+2016-09-07 10:55:33,629-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-07 10:55:33,630-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 6 .
+2016-09-07 10:55:33,631-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 1 ...
+2016-09-07 10:55:34,069-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:67.975√Î
+2016-09-07 10:55:34,070-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-09-07 10:55:34,070-[HL] INFO main cn.kejso.Spider.SpiderChain - null start ...
+2016-09-07 10:55:34,071-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê∆Ù∂Ø...
+2016-09-07 10:55:34,433-[HL] INFO main us.codecraft.webmagic.Spider - Spider null started!
+2016-09-07 10:55:34,434-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3525
+2016-09-07 10:55:35,354-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 0 units.
+2016-09-07 10:55:45,536-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2752
+2016-09-07 10:55:56,263-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/21449
+2016-09-07 10:56:07,060-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3485
+2016-09-07 10:56:18,078-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2810
+2016-09-07 10:56:28,801-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2458
+2016-09-07 10:56:39,424-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2353
+2016-09-07 10:56:50,351-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/21455
+2016-09-07 10:57:00,897-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/16624
+2016-09-07 10:57:11,490-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/14954
+2016-09-07 10:57:25,515-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/14443
+2016-09-07 10:57:26,282-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 10 units.
+2016-09-07 10:57:36,477-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/7087
+2016-09-07 10:57:56,218-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2826
+2016-09-07 10:58:06,723-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2617
+2016-09-07 10:58:26,443-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2535
+2016-09-07 10:58:37,217-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3992
+2016-09-07 10:58:50,048-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2158
+2016-09-07 10:59:00,928-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/24532
+2016-09-07 10:59:11,812-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/21506
+2016-09-07 10:59:25,352-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/19786
+2016-09-07 10:59:36,688-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/18805
+2016-09-07 10:59:38,166-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 20 units.
+2016-09-07 10:59:48,354-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/17822
+2016-09-07 10:59:59,088-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/17520
+2016-09-07 11:00:09,677-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/17352
+2016-09-07 11:00:21,284-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/16583
+2016-09-07 11:00:34,462-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/16560
+2016-09-07 11:00:45,771-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/14728
+2016-09-07 11:00:57,082-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/12160
+2016-09-07 11:01:07,568-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/10184
+2016-09-07 11:01:18,181-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/7002
+2016-09-07 11:01:28,697-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/6454
+2016-09-07 11:01:29,166-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 30 units.
+2016-09-07 11:01:39,350-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/6176
+2016-09-07 11:01:50,138-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/3374
+2016-09-07 11:02:01,063-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2949
+2016-09-07 11:02:12,069-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2576
+2016-09-07 11:02:22,893-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2432
+2016-09-07 11:02:33,904-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2400
+2016-09-07 11:02:44,459-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2394
+2016-09-07 11:03:05,106-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2294
+2016-09-07 11:03:18,323-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2626
+2016-09-07 11:03:29,138-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/2152
+2016-09-07 11:03:38,877-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 40 units.
+2016-09-07 11:03:49,063-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1980
+2016-09-07 11:03:59,582-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1881
+2016-09-07 11:04:12,608-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1267
+2016-09-07 11:04:33,044-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1024
+2016-09-07 11:04:43,664-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/662
+2016-09-07 11:04:57,163-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1970
+2016-09-07 11:05:07,702-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1958
+2016-09-07 11:05:18,277-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/377
+2016-09-07 11:05:37,951-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/141
+2016-09-07 11:05:48,699-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/1499
+2016-09-07 11:05:49,008-[HL] INFO pool-2-thread-1 cn.kejso.Pipeline.MysqlPipeline - microexpertcontent have insert 50 units.
+2016-09-07 11:05:59,189-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/897
+2016-09-07 11:06:10,423-[HL] INFO pool-2-thread-1 cn.kejso.Spider.Control.CustomHttpClientDownloader - downloading page http://d.wanfangdata.com.cn/Expert/805
+2016-09-07 11:06:21,564-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥Ê◊¥Ã¨: Stopped .
+2016-09-07 11:06:21,565-[HL] INFO main cn.kejso.Spider.SpiderChain - œ¬‘ÿ“≥√Ê ˝ : 53 .
+2016-09-07 11:06:21,575-[HL] INFO main cn.kejso.Spider.SpiderChain - ≈¿≥ÊRetry 1 ...
+2016-09-07 11:06:21,751-[HL] INFO main cn.kejso.Spider.SpiderChain - null end . Cost time:647.681√Î
+2016-09-07 11:06:21,753-[HL] INFO main cn.kejso.Spider.SpiderChain - ################################
+2016-09-07 11:06:21,763-[HL] INFO main cn.kejso.Spider.SpiderChain - AnonymousSpiderChain end .Total Cost time:715.669√Î
