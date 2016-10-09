@@ -74,9 +74,9 @@ public class Config {
 	public static final  String   PipeLine_TypeOne="typeOne";
 	
 	//spider缓存
-	public static final  String   Spider_CacheDir="SpiderScheduler/cache/";
+	public static final  String   Spider_CacheDir="SpiderCache/";
 	//error url
-	public static final  String   Spider_ErrorDir="SpiderScheduler/error/";
+	public static final  String   Spider_ErrorDir="SpiderError/";
 	//mysql记录缓存
 	public static final  String   Spider_SQLCacheDir="MysqlCache/";
 	

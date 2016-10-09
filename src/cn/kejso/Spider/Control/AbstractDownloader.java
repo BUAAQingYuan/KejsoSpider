@@ -52,6 +52,7 @@ public abstract class AbstractDownloader implements Downloader {
 
     protected Page addToCycleRetry(Request request, Site site,SpiderConf template) {
         Page page = new Page();
+        // 每个request都有自己的cycle_tried_times
         Object cycleTriedTimesObject = request.getExtra(Request.CYCLE_TRIED_TIMES);
         if (cycleTriedTimesObject == null) {
             page.addTargetRequest(request.setPriority(0).putExtra(Request.CYCLE_TRIED_TIMES, 1));

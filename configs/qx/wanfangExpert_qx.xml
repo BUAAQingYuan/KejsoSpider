@@ -14,10 +14,10 @@
 	<!-- 列表页配置 -->
 	<ListConfig  name="listconfig">
 		<!-- &=&amp;，URL特殊字符需要转义 -->
-		<ListUrl>http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E5%A4%A7%E6%B0%94&amp;p=#</ListUrl>
+		<ListUrl>http://s.wanfangdata.com.cn/Expert.aspx?q=%E4%B8%93%E4%B8%9A%E9%A2%86%E5%9F%9F%3A%E8%BD%AF%E4%BB%B6&amp;p=#</ListUrl>
 		<PageEnable>true</PageEnable>
 		<PageStart>1</PageStart>
-		<PageEnd>9</PageEnd>
+		<PageEnd>20</PageEnd>
 
 		<!-- 列表页中列表对应的value -->
 		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>
@@ -43,7 +43,7 @@
 		<ConstTag>
 			<!-- 和数据表字段对应 -->
 			<TagName>classify</TagName>
-			<TagValue>大气</TagValue>
+			<TagValue>软件</TagValue>
 		</ConstTag>
 	</ListConfig>
 

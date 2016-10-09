@@ -23,7 +23,7 @@ public class test implements PageProcessor {
 	
 	//final private  String  url="http://d.wanfangdata.com.cn/Periodical/jfjlgdxxb201303012";
 	
-	final private  String  url="http://d.abcde.com.cn/Periodical/jfjlgdxxb201303012";
+	final private  String  url="http://xueshu.baidu.com/s?wd=cnn&pn=";
 	
 	public void run() {
 		String  s=url;

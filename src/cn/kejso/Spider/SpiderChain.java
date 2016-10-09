@@ -15,6 +15,7 @@ import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
 import cn.kejso.Tool.SqlUtil;
 import us.codecraft.webmagic.Spider;
+import us.codecraft.webmagic.scheduler.FileCacheQueueScheduler;
 
 //one.getStatus()
 //one.isExitWhenComplete()
@@ -131,7 +132,8 @@ public class SpiderChain {
 					// 设置下载器
 					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader(currentconf));
 					SqlUtil.cleanTempTable(container.getTemplate());
-					current.run();
+					//设置cache
+					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+currentconf.getName())).setUUID(currentconf.getName()).run();
 
 					// 如果爬虫没有停止
 					logger.info("爬虫状态: " + current.getStatus().toString() + " .");
@@ -242,7 +244,8 @@ public class SpiderChain {
 					// 设置下载器
 					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader(currentconf));
 					SqlUtil.cleanTempTable(container.getTemplate());
-					current.run();
+					//retry过程设置cache
+					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+currentconf.getName())).setUUID(currentconf.getName()+"_retry").run();
 
 					// 如果爬虫没有停止
 					logger.info("爬虫状态: " + current.getStatus().toString() + " .");

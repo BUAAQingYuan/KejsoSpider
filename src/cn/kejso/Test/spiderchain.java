@@ -15,7 +15,7 @@ public static void main(String[] args) throws IOException {
 		Config.setJdbc_config(jdbcconfig);
 		
 		BuildSpiderChain bsc = new BuildSpiderChain(config);
-		bsc.startSpiders();
-		
+		//bsc.startSpiders();
+		bsc.startSpidersForErrorUrls();
 	}
 }
