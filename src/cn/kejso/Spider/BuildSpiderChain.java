@@ -66,7 +66,7 @@ public class BuildSpiderChain {
 		if(args.length!=3)
 		{
 			System.out.println("BuildSpiderChain read KejsoSpider's config and crawl data,then write to the corrsponding database which jdbc-config representation .");
-			System.out.println("Usage: java -jar BuildSpiderChain.jar  configfile  jdbc-config [fetch | retry].");
+			System.out.println("Usage: java -jar BuildSpiderChain.jar  configfile  jdbc-config [fetch | retry | restart].");
 		}
 		
 		String config=args[0];
@@ -76,7 +76,7 @@ public class BuildSpiderChain {
 		Config.setJdbc_config(jdbcconfig);
 		
 		BuildSpiderChain bsc = new BuildSpiderChain(config);
-		if(command.equals("fetch"))
+		if(command.equals("fetch")||command.equals("restart"))
 		{
 			bsc.startSpiders();
 		}else if(command.equals("retry"))
