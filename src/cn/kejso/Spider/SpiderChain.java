@@ -3,6 +3,8 @@ package cn.kejso.Spider;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.management.JMException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,6 +17,7 @@ import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
 import cn.kejso.Tool.SqlUtil;
 import us.codecraft.webmagic.Spider;
+import us.codecraft.webmagic.monitor.SpiderMonitor;
 import us.codecraft.webmagic.scheduler.FileCacheQueueScheduler;
 
 //one.getStatus()
@@ -133,7 +136,15 @@ public class SpiderChain {
 					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader(currentconf));
 					SqlUtil.cleanTempTable(container.getTemplate());
 					//设置cache
-					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+currentconf.getName())).setUUID(currentconf.getName()).run();
+					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+currentconf.getName())).setUUID(currentconf.getName());
+					//添加监控器
+					try {
+						SpiderMonitor.instance().register(current);
+					} catch (JMException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					current.run();
 
 					// 如果爬虫没有停止
 					logger.info("爬虫状态: " + current.getStatus().toString() + " .");
@@ -245,7 +256,15 @@ public class SpiderChain {
 					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader(currentconf));
 					SqlUtil.cleanTempTable(container.getTemplate());
 					//retry过程设置cache
-					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+currentconf.getName())).setUUID(currentconf.getName()+"_retry").run();
+					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+currentconf.getName())).setUUID(currentconf.getName()+"_retry");
+					//添加监控器
+					try {
+						SpiderMonitor.instance().register(current);
+					} catch (JMException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					current.run();
 
 					// 如果爬虫没有停止
 					logger.info("爬虫状态: " + current.getStatus().toString() + " .");
