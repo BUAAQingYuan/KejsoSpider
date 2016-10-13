@@ -74,7 +74,7 @@ public class SpiderChain {
 	}
 
 	// 启动爬虫队列
-	public void startSpiders(boolean chain) {
+	public void startSpiders(boolean chain,boolean restart) {
 		logger.info("Start SpiderChain {} .", chainname);
 
 		long chainstart = System.currentTimeMillis();
@@ -134,7 +134,11 @@ public class SpiderChain {
 					// 添加初始序列、清空临时表并启动爬虫 
 					// 设置下载器
 					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader(currentconf));
-					SqlUtil.cleanTempTable(container.getTemplate());
+					// when fetch ,clean temp table . when restart , don't clean temp table
+					if(!restart)
+					{
+						SqlUtil.cleanTempTable(container.getTemplate());
+					}
 					//设置cache
 					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+currentconf.getName())).setUUID(currentconf.getName());
 					//添加监控器

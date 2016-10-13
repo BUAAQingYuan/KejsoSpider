@@ -72,7 +72,7 @@ public class RunSpiderChainFromFile2 {
 			//System.out.println(xml.configurationAt("ListConfig").getString("ListUrl")+"  "+xml.configurationAt("ListConfig").getString("PageEnd")+"  "+xml.configurationAt("ListConfig").getString("ConstTag.TagValue"));
 			//spdier
 			BuildSpiderChain bsc = new BuildSpiderChain(configfile);
-			bsc.startSpiders();
+			bsc.startSpiders(false);
 		}
 		
 	}

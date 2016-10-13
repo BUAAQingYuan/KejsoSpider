@@ -61,7 +61,7 @@ public class RunSpiderChainExample {
         chain.AddSpiderNode(container1);
         chain.AddSpiderNode(container2);
         
-        chain.startSpiders(true);
+        chain.startSpiders(true,false);
         											
        
 	}

@@ -51,8 +51,9 @@ public class BuildSpiderChain {
 	}
 
 	// 启动爬虫链
-	public void startSpiders() {
-		chain.startSpiders(true);
+	public void startSpiders(boolean restart) {
+		// spider chain
+		chain.startSpiders(true,restart);
 	}
 	
 	// 重试失败的url
@@ -76,12 +77,15 @@ public class BuildSpiderChain {
 		Config.setJdbc_config(jdbcconfig);
 		
 		BuildSpiderChain bsc = new BuildSpiderChain(config);
-		if(command.equals("fetch")||command.equals("restart"))
+		if(command.equals("fetch"))
 		{
-			bsc.startSpiders();
+			bsc.startSpiders(false);
 		}else if(command.equals("retry"))
 		{
 			bsc.startSpidersForErrorUrls();
+		}else if(command.equals("restart"))
+		{
+			bsc.startSpiders(true);
 		}
 		
 		
