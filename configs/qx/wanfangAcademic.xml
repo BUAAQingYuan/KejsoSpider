@@ -4,7 +4,7 @@
 <!-- 万方学术论文-->
 <TaskName>WanfangAcademicPaper</TaskName>
 <!-- 任务线程 -->
-<Thread>1</Thread>
+<Thread>3</Thread>
 <!-- 是否开启代理 -->
 <ProxyEnable>False</ProxyEnable>
 <!-- 爬虫循环重试次数 -->
@@ -16,7 +16,7 @@
 		<ListUrl>http://s.wanfangdata.com.cn/Paper.aspx?q=%E6%B0%94%E8%B1%A1&amp;p=#</ListUrl>
 		<PageEnable>true</PageEnable>
 		<PageStart>1</PageStart>
-		<PageEnd>2</PageEnd>
+		<PageEnd>20895</PageEnd>
 
 		<!-- 列表页中列表对应的value -->
 		<ListValue>//div[@class='record-item-list']/div[@class='record-item']</ListValue>

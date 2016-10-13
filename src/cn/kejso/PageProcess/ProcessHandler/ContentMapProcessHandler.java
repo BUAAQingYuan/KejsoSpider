@@ -150,7 +150,7 @@ public class ContentMapProcessHandler {
 		}
 		System.out.println(result.toString());
 		if (SpiderUtil.ResultIsNull(result, excludeFields)) {
-//			FileUtil.PrintURL(cacheFile, page.getUrl().toString());
+			//FileUtil.PrintURL(cacheFile, page.getUrl().toString());
 			SqlUtil.insertWrongItem(template, page.getRequest().getUrl());
 			logger.info("process a null page {} .", page.getRequest().getUrl());
 			page.setSkip(true);
