@@ -134,7 +134,7 @@ public class SpiderChain {
 					// 添加初始序列、清空临时表并启动爬虫 
 					// 设置下载器
 					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader(currentconf));
-					// when fetch ,clean temp table . when restart , don't clean temp table
+					// when fetch ,clean temp table . when continue , don't clean temp table
 					if(!restart)
 					{
 						SqlUtil.cleanTempTable(container.getTemplate());
