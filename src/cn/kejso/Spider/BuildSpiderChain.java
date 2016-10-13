@@ -51,9 +51,9 @@ public class BuildSpiderChain {
 	}
 
 	// 启动爬虫链
-	public void startSpiders(boolean restart) {
+	public void startSpiders(boolean con) {
 		// spider chain
-		chain.startSpiders(true,restart);
+		chain.startSpiders(true,con);
 	}
 	
 	// 重试失败的url
@@ -67,7 +67,7 @@ public class BuildSpiderChain {
 		if(args.length!=3)
 		{
 			System.out.println("BuildSpiderChain read KejsoSpider's config and crawl data,then write to the corrsponding database which jdbc-config representation .");
-			System.out.println("Usage: java -jar BuildSpiderChain.jar  configfile  jdbc-config [fetch | retry | restart].");
+			System.out.println("Usage: java -jar BuildSpiderChain.jar  configfile  jdbc-config [fetch | retry | continue].");
 		}
 		
 		String config=args[0];
@@ -83,7 +83,7 @@ public class BuildSpiderChain {
 		}else if(command.equals("retry"))
 		{
 			bsc.startSpidersForErrorUrls();
-		}else if(command.equals("restart"))
+		}else if(command.equals("continue"))
 		{
 			bsc.startSpiders(true);
 		}
