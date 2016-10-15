@@ -48,7 +48,6 @@ public class BuildSpider {
 		}
 		
 		spider.setSpiderListeners(getSpiderListeners(conf));
-		spider.setUUID(conf.getCname());
 		return spider;
 	}
 

@@ -75,6 +75,8 @@ public class SpiderChain {
 
 	// 启动爬虫队列
 	public void startSpiders(boolean chain,boolean restart) {
+		
+		
 		logger.info("Start SpiderChain {} .", chainname);
 
 		long chainstart = System.currentTimeMillis();
@@ -119,6 +121,8 @@ public class SpiderChain {
 						container.setStart();
 						current = container.getSpider();
 						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), false,false));
+						//set uuid
+						current.setUUID(currentconf.getName());
 					} else if (container.isStart()&&container.continueCycle() && SqlUtil.hasRetryItem(container.getTemplate())) {
 						//retry
 						// 创建一个新的实例，因为之前的实例无法导入抓取失败的URL
@@ -126,6 +130,8 @@ public class SpiderChain {
 						container.minusCycleTimes();
 						current = BuildSpider.getSpider(container.getTemplate(), GlobalConfig.getCycleTimes() - container.getCycleTimes());
 						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), true,false));
+						//set uuid
+						current.setUUID(currentconf.getName()+"_retry_"+(global.getCycleTimes()-container.getCycleTimes()));
 					} else {
 						//离开循环
 						break;
@@ -140,11 +146,11 @@ public class SpiderChain {
 						SqlUtil.cleanTempTable(container.getTemplate());
 					}
 					//设置cache
-					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+currentconf.getName())).setUUID(currentconf.getName());
-					//添加监控器
+					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+global.getTaskname()+"/"+currentconf.getName()));
+					//添加监控器,监视器的uuid标志要唯一
 					try {
 						SpiderMonitor.instance().register(current);
-					} catch (JMException e) {
+					} catch (JMException e) { 
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
@@ -243,6 +249,8 @@ public class SpiderChain {
 						current = container.getSpider();
 						//第一次就readRetryUrlFromSql
 						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(),false,true));
+						//set uuid
+						current.setUUID(currentconf.getName()+"_error");
 					} else if (container.isStart()&&container.continueCycle() && SqlUtil.hasRetryItem(container.getTemplate())) {
 						//retry
 						// 创建一个新的实例，因为之前的实例无法导入抓取失败的URL
@@ -250,6 +258,8 @@ public class SpiderChain {
 						container.minusCycleTimes();
 						current = BuildSpider.getSpider(container.getTemplate(), GlobalConfig.getCycleTimes() - container.getCycleTimes());
 						container.AddgetStartUrlHandler(BuildSpider.getStartUrlHandler(container.getTemplate(), true,true));
+						//set uuid
+						current.setUUID(currentconf.getName()+"_error_retry_"+(global.getCycleTimes()-container.getCycleTimes()));
 					} else {
 						//离开循环
 						break;
@@ -260,7 +270,7 @@ public class SpiderChain {
 					current.startUrls(container.getStartUrls()).setDownloader(new CustomHttpClientDownloader(currentconf));
 					SqlUtil.cleanTempTable(container.getTemplate());
 					//retry过程设置cache
-					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+currentconf.getName())).setUUID(currentconf.getName()+"_retry");
+					current.scheduler(new FileCacheQueueScheduler(Config.Spider_CacheDir+global.getTaskname()+"/"+currentconf.getName()));
 					//添加监控器
 					try {
 						SpiderMonitor.instance().register(current);
