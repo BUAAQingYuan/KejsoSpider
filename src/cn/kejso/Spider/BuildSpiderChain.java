@@ -1,7 +1,10 @@
 package cn.kejso.Spider;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -74,7 +77,24 @@ public class BuildSpiderChain {
 		String jdbcconfig=args[1];
 		String command=args[2];
 		
+		
 		Config.setJdbc_config(jdbcconfig);
+		//读取jdbc中VM参数
+		Properties prop = new Properties();
+		FileInputStream in;
+		try {
+			in = new FileInputStream(jdbcconfig);
+			prop.load(in);
+		} catch (FileNotFoundException e) {
+			logger.warn("jdbc-file {} not found .",jdbcconfig);
+		} catch (IOException e) {
+			logger.warn("jdbc-file {} not open .",jdbcconfig);
+		}
+		
+		System.setProperty("java.rmi.server.hostname", prop.getProperty("java.rmi.server.hostname").trim());
+		System.setProperty("com.sun.management.jmxremote.port", prop.getProperty("com.sun.management.jmxremote.port").trim());
+		System.setProperty("com.sun.management.jmxremote.ssl", prop.getProperty("com.sun.management.jmxremote.ssl").trim());
+		System.setProperty("com.sun.management.jmxremote.authenticate", prop.getProperty("com.sun.management.jmxremote.authenticate").trim());
 		
 		BuildSpiderChain bsc = new BuildSpiderChain(config);
 		if(command.equals("fetch"))
