@@ -75,7 +75,6 @@ public class SqlUtil {
 
 			map.put("tablename", table);
 			map.put("id", id);
-
 			// 标记url为unique
 			map.put("url", current.getDependField());
 

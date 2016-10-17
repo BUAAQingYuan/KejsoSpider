@@ -186,7 +186,7 @@ public class BuildSpider {
 			
 			if (e.getRecoverConfig().getEnable()) {
 				if (e.getRecoverConfig().isSimpleRecover()) {
-					// 简单地从最后一条抓取成功的记录恢复
+					// 简单地从最后一条抓取成功的记录(当前内容表中)恢复，可能包含上次没爬到当前内容表的url。
 					int currentPos = SqlUtil.getBreakPoint(pre, e);
 					return SqlUtil.getPartTargetUrls(pre, e, currentPos);
 				} else if (e.getRecoverConfig().isDeltaRecover()) {
