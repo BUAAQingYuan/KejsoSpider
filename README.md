@@ -21,19 +21,19 @@ Pipeline 以mysql为基本的pipeline(MysqlPipeline)，pipeline队列中可以�
 
   从当前spider对应的数据表的最后一条记录开始，获得depend table中剩余的url，可能包含上次没有爬到的url。
   
-  ![simple 策略](https://github.com/BUAANLSDE/KejsoSpider/tree/master/doc/images/simple.png)
+  ![simple 策略](https://github.com/BUAANLSDE/KejsoSpider/raw/master/doc/images/simple.png)
   
 2. delta
 
   对当前spider对应的数据表和depend table作对比，获得相差的url。
   
-  ![delta 策略](https://github.com/BUAANLSDE/KejsoSpider/tree/master/doc/images/delta.png)
+  ![delta 策略](https://github.com/BUAANLSDE/KejsoSpider/raw/master/doc/images/delta.png)
   
 3. listdelta
 
   只对depend table中新增的部分抓取，更新到当前spider对应的数据表中。
   
-  ![listdelta 策略](https://github.com/BUAANLSDE/KejsoSpider/tree/master/doc/images/listdelta.png)
+  ![listdelta 策略](https://github.com/BUAANLSDE/KejsoSpider/raw/master/doc/images/listdelta.png)
 
 
 ###配置文件说明
