@@ -20,7 +20,7 @@ Pipeline 以mysql为基本的pipeline(MysqlPipeline)，pipeline队列中可以�
 1. simple
 
   从当前spider对应的数据表的最后一条记录开始，获得depend table中剩余的url，可能包含上次没有爬到的url。
-  
+    
   ![simple 策略](https://github.com/BUAANLSDE/KejsoSpider/raw/master/doc/images/simple.png)
   
 2. delta
