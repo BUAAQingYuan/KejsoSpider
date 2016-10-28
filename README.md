@@ -55,6 +55,19 @@ MoreSleepTime  [True | False]  重试时是否增加抓取间隔
 
 ##### 组件配置
 
+**PreConfig 前导页配置**
+
+  PreUrl      前导页url
+  
+  PreValue    抽取url的定位，目前只支持XPATH。(CSS选择器扩展)
+  
+  SqlTable    存储表
+  
+  TableFields  表字段
+  
+  UniqueField  唯一标识字段  
+  
+
 **ListConfig 列表页面配置**
 
   ListUrl      列表页url模板
