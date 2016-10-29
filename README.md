@@ -10,6 +10,14 @@ Pipeline 以mysql为基本的pipeline(MysqlPipeline)，pipeline队列中可以�
 
 ###常见网页结构和爬取模式
 
+#### 爬虫链模式
+
+##### 注意
+
+1. 爬虫链中，一般只有第一个爬虫的depend依赖ref属性可以指向数据表或生成器。后续的爬虫必须指定依赖的爬虫。 
+
+#### 非爬虫链模式
+
 
 ###增量策略
 
@@ -54,6 +62,19 @@ MoreSleepTime  [True | False]  重试时是否增加抓取间隔
  
 
 ##### 组件配置
+
+**PreConfig 前导页配置**
+
+  PreUrl      前导页url
+  
+  PreValue    抽取url的定位，目前只支持XPATH。(CSS选择器扩展)
+  
+  SqlTable    存储表
+  
+  TableFields  表字段
+  
+  UniqueField  唯一标识字段  
+  
 
 **ListConfig 列表页面配置**
 
