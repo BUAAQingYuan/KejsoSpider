@@ -18,7 +18,7 @@ import cn.kejso.Tool.TemplateConstructor;
 import us.codecraft.webmagic.Spider;
 
 public class BuildSpiderChain {
-
+		
 	private static Logger logger = LoggerFactory.getLogger(BuildSpiderChain.class);
 	
 	private List<SpiderConf> confs;
@@ -91,10 +91,19 @@ public class BuildSpiderChain {
 			logger.warn("jdbc-file {} not open .",jdbcconfig);
 		}
 		
+		//config
+		logger.info("Monitor Config: ");
+		System.out.println("java.rmi.server.hostname: "+prop.getProperty("java.rmi.server.hostname").trim());
+		System.out.println("com.sun.management.jmxremote.port: "+prop.getProperty("com.sun.management.jmxremote.port").trim());
+		System.out.println("com.sun.management.jmxremote.ssl: "+prop.getProperty("com.sun.management.jmxremote.ssl").trim());
+		System.out.println("com.sun.management.jmxremote.authenticate: "+prop.getProperty("com.sun.management.jmxremote.authenticate").trim());
+		
 		System.setProperty("java.rmi.server.hostname", prop.getProperty("java.rmi.server.hostname").trim());
+		System.setProperty("com.sun.management.jmxremote","");
 		System.setProperty("com.sun.management.jmxremote.port", prop.getProperty("com.sun.management.jmxremote.port").trim());
 		System.setProperty("com.sun.management.jmxremote.ssl", prop.getProperty("com.sun.management.jmxremote.ssl").trim());
 		System.setProperty("com.sun.management.jmxremote.authenticate", prop.getProperty("com.sun.management.jmxremote.authenticate").trim());
+		
 		
 		BuildSpiderChain bsc = new BuildSpiderChain(config);
 		if(command.equals("fetch"))

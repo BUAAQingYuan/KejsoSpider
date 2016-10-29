@@ -25,6 +25,9 @@ public class SpiderConf {
 		//依赖的爬虫名称或数据库 
 		private String dependname;
 		
+		//依赖的url生成器
+		private String generator;
+		
 		//当依赖的为数据表时的url字段
 		private String dependField;
 		
@@ -164,5 +167,13 @@ public class SpiderConf {
 
 		public void setUrlfilter(String urlfilter) {
 			this.urlfilter = urlfilter;
+		}
+
+		public String getGenerator() {
+			return generator;
+		}
+
+		public void setGenerator(String generator) {
+			this.generator = generator;
 		}
 }

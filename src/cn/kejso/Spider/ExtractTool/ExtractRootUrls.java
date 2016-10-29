@@ -35,7 +35,6 @@ public class ExtractRootUrls {
 	}
 	
 	//从指定的数据表中
-	
 	public static void main(String[] args){
 		ExtractRootUrls.ExtractUrlAndPagenum("configs\\filetest.xml");
 	}

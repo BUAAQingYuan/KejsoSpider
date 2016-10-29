@@ -24,6 +24,8 @@ import org.slf4j.LoggerFactory;
 
 import cn.kejso.Config.Config;
 import cn.kejso.Template.SpiderConf;
+import cn.kejso.Template.ToolEntity.GeneratorConfig;
+import cn.kejso.Template.ToolEntity.GlobalConfig;
 
 public class SpiderUtil {
 
@@ -135,6 +137,22 @@ public class SpiderUtil {
 		return useragents.get(index);
 	}
 	
+	
+	//从globalconfig中查找指定name的Generator
+	public static GeneratorConfig  getGeneratorByName(String name,GlobalConfig global)
+	{
+		List<GeneratorConfig> generators = global.getGenerators();
+		for(GeneratorConfig one : generators)
+		{
+			if (one.getName().equals(name))
+			{
+				return one;
+			}
+		}
+		
+		return null;
+		
+	}
 	
 
 	// 查看当前IP

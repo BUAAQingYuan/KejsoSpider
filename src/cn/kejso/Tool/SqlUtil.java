@@ -276,6 +276,25 @@ public class SqlUtil {
 			session.close();
 		}
 		
+		
+		//获得table中相应的field字段内容
+		public static List<String> getField(String table, String field)
+		{
+			SqlSession session = SpiderUtil.getSession();
+			
+			String statement = Config.AllUrl_statement;
+			Map<String, Object> map = new HashMap<String, Object>();
+
+			map.put("tablename", table);
+			map.put("url", field);
+
+			List<String> urls = session.selectList(statement, map);
+			
+			session.close();
+			return urls;
+		}
+		
+		
 		public static void main(String[] args){
 			
 			SqlSession session=SpiderUtil.getSession();

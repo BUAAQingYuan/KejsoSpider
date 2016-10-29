@@ -3,6 +3,9 @@ package cn.kejso.Spider;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import cn.kejso.PageProcess.ContentPageProcess;
 import cn.kejso.PageProcess.ListPageProcess;
 import cn.kejso.PageProcess.PreListPageProcess;
@@ -14,6 +17,7 @@ import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.ToolEntity.BaseConfig;
 import cn.kejso.Template.ToolEntity.ContainStartUrls;
 import cn.kejso.Template.ToolEntity.ContentConfig;
+import cn.kejso.Template.ToolEntity.GeneratorConfig;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
 import cn.kejso.Template.ToolEntity.ListConfig;
 import cn.kejso.Template.ToolEntity.PreConfig;
@@ -27,6 +31,8 @@ public class BuildSpider {
 
 	private static List<SpiderConf> confs;
 	private static GlobalConfig global;
+	
+	private static Logger logger = LoggerFactory.getLogger(BuildSpider.class);
 
 	private BuildSpider() {
 
@@ -52,6 +58,7 @@ public class BuildSpider {
 	}
 
 	//retry标志是否为爬虫重试error链接
+	//merge标志表示是否为启动error urls阶段
 	public static Function<Spider, SpiderConf> getStartUrlHandler(SpiderConf conf, boolean retry,boolean merge) {
 
 		Function<Spider, SpiderConf> result = null;
@@ -60,7 +67,16 @@ public class BuildSpider {
 			if (retry) {
 				result = readRetryUrlFromSql;
 			} else if (conf.getDependname() == null) {
-				result = readUrlFromConf;
+				
+				if(conf.getGenerator() == null)
+				{
+					//依赖来源为配置文件
+					result = readUrlFromConf;
+				}else{
+					//依赖来源为generator
+					result = readUrlFromGenerator;
+				}
+				
 			} else if (conf.getDependname() != null) {
 				result = readUrlFromSql;
 			}
@@ -116,6 +132,25 @@ public class BuildSpider {
 		public List<String> apply(Spider t, SpiderConf e) {
 			ContainStartUrls config = (ContainStartUrls) e.getConfig();
 			return config.getStartUrls();
+		}
+	};
+	
+	//从生成器中读取初始urls
+	private static Function<Spider, SpiderConf> readUrlFromGenerator = new Function<Spider, SpiderConf>() {
+		@Override
+		public List<String> apply(Spider t, SpiderConf e) {
+			
+			String generator = e.getGenerator();
+			// 从 globalconfig中查找相应的generator
+			GeneratorConfig result = SpiderUtil.getGeneratorByName(generator, global);
+			if(result != null)
+			{
+				return result.getStartUrls();
+			}else{
+				logger.info("GeneratorConfig is not found.");
+				return new ArrayList<String>();
+			}
+			
 		}
 	};
 	

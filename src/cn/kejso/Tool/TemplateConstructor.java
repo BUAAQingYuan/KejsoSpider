@@ -7,12 +7,14 @@ import java.util.List;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.HierarchicalConfiguration;
 import org.apache.commons.configuration.XMLConfiguration;
+
 import cn.kejso.Template.SpiderConf;
 import cn.kejso.Template.RecoverConfig;
 import cn.kejso.Template.RecoverConfig.RecoverMode;
 import cn.kejso.Template.ToolEntity.BaseConfig;
 import cn.kejso.Template.ToolEntity.ContentConfig;
 import cn.kejso.Template.ToolEntity.FileContentTag;
+import cn.kejso.Template.ToolEntity.GeneratorConfig;
 import cn.kejso.Template.ToolEntity.GlobalConfig;
 import cn.kejso.Template.ToolEntity.ListConfig;
 import cn.kejso.Template.ToolEntity.PreConfig;
@@ -148,7 +150,7 @@ public class TemplateConstructor {
 					base = getContentConfig(sub);
 				} else if (cls.equals("PreConfig")) {
 					base = getPreConfig(sub);
-				}
+				} 
 			}
 		}
 
@@ -204,6 +206,7 @@ public class TemplateConstructor {
 			spider.setDependname(sub.getString("depend[@ref]"));
 			spider.setDependField(sub.getString("depend[@field]"));
 			spider.setUrlfilter(sub.getString("depend[@filter]"));
+			spider.setGenerator(sub.getString("depend[@generator]"));
 			
 			spider.setBeforehandler(sub.getString("before-table-handler[@func]"));
 			spider.setAfterhandler(sub.getString("after-table-handler[@func]"));
@@ -217,6 +220,7 @@ public class TemplateConstructor {
 
 	// 获得全局配置
 	public static GlobalConfig getGlobalConf(String configfile) {
+		
 		XMLConfiguration xml = null;
 		try {
 			xml = new XMLConfiguration(configfile);
@@ -234,6 +238,8 @@ public class TemplateConstructor {
 		GlobalConfig.setCasperjsPath(xml.getString("CasperJsPath"));
 		GlobalConfig.setSleeptime(xml.getInt("SleepTime", 1000));
 		GlobalConfig.setMoresleeptime(xml.getBoolean("MoreSleepTime", false));
+		
+		global.setGenerators(getGeneratorConfig(xml));
 
 		return global;
 	}
@@ -253,6 +259,35 @@ public class TemplateConstructor {
 		return new PreConfig(preurl, prevalue, tablename, SpiderUtil.getMapFields(fields), unique);
 	}
 
+	
+	// 获得GeneratorConfig
+	public static List<GeneratorConfig> getGeneratorConfig(XMLConfiguration xml) {
+		
+		List<GeneratorConfig> generators = new ArrayList<GeneratorConfig>();
+		
+		List items = xml.configurationsAt("GeneratorConfig");
+		
+		for (Iterator it = items.iterator(); it.hasNext();) {
+			
+			// 解析每个Spider配置
+			
+			HierarchicalConfiguration sub = (HierarchicalConfiguration) it.next();
+		
+			String urltemplate = sub.getString("UrlTemplate");
+
+			String tablename= sub.getString("Table");
+
+			String field = sub.getString("Field");
+			
+			String name=sub.getString("[@name]");
+			
+			generators.add(new GeneratorConfig(name,urltemplate,tablename,field));
+		}
+
+		return generators;
+	}
+	
+	
 	public static ProxyAccountConfig getProxyAccountConfig(String configfile) {
 		
 		XMLConfiguration xml = null;

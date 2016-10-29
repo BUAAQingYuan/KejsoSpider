@@ -1,5 +1,7 @@
 package cn.kejso.Template.ToolEntity;
 
+import java.util.List;
+
 //配置文件中的全局配置
 public class GlobalConfig {
 	
@@ -21,6 +23,9 @@ public class GlobalConfig {
 	private  static int			sleeptime;
 	//是否在失败重试时增加重试时间
 	private  static boolean		moresleeptime;
+	
+	//generators
+	private  List<GeneratorConfig>  generators;
 	
 	public static String getTaskname() {
 		return taskname;
@@ -65,6 +70,12 @@ public class GlobalConfig {
 	}
 	public static void setMoresleeptime(boolean moresleeptime) {
 		GlobalConfig.moresleeptime = moresleeptime;
+	}
+	public List<GeneratorConfig> getGenerators() {
+		return generators;
+	}
+	public void setGenerators(List<GeneratorConfig> generators) {
+		this.generators = generators;
 	}
 
 	
