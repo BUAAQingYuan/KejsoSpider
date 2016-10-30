@@ -166,7 +166,7 @@ after-table-handler   启动当前爬虫之前使用func处理数据表(当前�
 
 ###使用说明
 
-Usage: java -jar BuildSpiderChain.jar  configfile  jdbc-config [fetch | retry | continue]
+Usage: ./buildspiderchain.sh host config jdbc-config  [fetch | retry | continue] .
 
 使用JConsole连接,查看运行情况。
 
