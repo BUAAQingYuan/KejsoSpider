@@ -103,8 +103,9 @@ MoreSleepTime  [True | False]  重试时是否增加抓取间隔
        ——TagValue 字段定位
          
   ConstTag   常量字段
-
-
+  
+  OtherTag   非列表字段
+  
 **ContentConfig 内容面配置**
 
   ContentTable  表名
@@ -133,7 +134,14 @@ MoreSleepTime  [True | False]  重试时是否增加抓取间隔
     
       ——Code 页面内容定位
 
-
+  MultiContentSeparator 分隔符
+  
+  MultiContentTag  多段内容拼接
+  
+       ——TagName  对应的字段
+       
+       ——TagValue  多段内容定位
+  
 **Spiders 爬虫链配置**
           
 Spider  爬虫配置 。
